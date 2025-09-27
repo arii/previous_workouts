@@ -171,12 +171,12 @@ function generateEMOMWorkout(categories, intensity) {
         name: 'EMOM',
         exercises: mainExercises.map(exercise => ({
             name: standardizeExerciseName(exercise),
-            sets: '4',
+            sets: '3',
             reps: getRepsForPhase('EMOM', intensity),
             duration: null,
             rest: 'Remaining minute'
         })),
-        timing: '4 rounds, 1 min per exercise'
+        timing: '3 rounds, 1 min per exercise'
     });
     
     return phases;
@@ -427,7 +427,7 @@ function getTimingForPhase(phase) {
         'Cardio': '3-4 rounds, 30 sec rest',
         'Strength': '3-4 rounds',
         'Finisher': '2-3 rounds, 45 sec rest',
-        'EMOM': '4 rounds, 1 min per exercise',
+        'EMOM': '3 rounds, 1 min per exercise',
         'Spartan': '5 sets: 25, 20, 18, 15, 12 reps',
         'Tabata': '8 rounds, 20 sec work, 10 sec rest'
     };

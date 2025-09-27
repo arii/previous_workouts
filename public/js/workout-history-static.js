@@ -265,9 +265,9 @@ function displayWorkouts(workouts, filter) {
     thead.className = 'bg-gray-50';
     thead.innerHTML = `
         <tr>
-            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-24">Date</th>
-            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exercises</th>
-            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-20">Actions</th>
+            <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-20">Date</th>
+            <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exercises</th>
+            <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-16">Actions</th>
         </tr>
     `;
     table.appendChild(thead);
@@ -338,20 +338,20 @@ function createWorkoutTableRow(workout) {
     const exerciseText = displayExercises.join(', ') + (remainingCount > 0 ? ` & ${remainingCount} more` : '');
     
     row.innerHTML = `
-        <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">
+        <td class="px-3 py-1 whitespace-nowrap text-xs font-medium text-gray-900">
             ${formattedDate}
         </td>
-        <td class="px-4 py-2 text-sm text-gray-900">
-            <div class="font-medium text-gray-800 mb-1">${exerciseText}</div>
-            <div class="flex items-center">
-                <span class="text-gray-500 text-xs mr-2">${workout.type || 'Mixed'}</span>
-                <span class="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-medium ${intensityBadge}">
+        <td class="px-3 py-1 text-xs text-gray-900">
+            <div class="font-medium text-gray-800">${exerciseText}</div>
+            <div class="flex items-center mt-0.5">
+                <span class="text-gray-500 text-xs mr-1">${workout.type || 'Mixed'}</span>
+                <span class="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium ${intensityBadge}">
                     ${intensity.charAt(0).toUpperCase() + intensity.slice(1)}
                 </span>
-                <span class="text-gray-400 text-xs ml-2">${allExercises.length} exercises</span>
+                <span class="text-gray-400 text-xs ml-1">${allExercises.length}</span>
             </div>
         </td>
-        <td class="px-4 py-2 whitespace-nowrap text-sm font-medium">
+        <td class="px-3 py-1 whitespace-nowrap text-xs font-medium">
             <button onclick="viewWorkoutDetails('${workout.id || workout.date}')" 
                     class="text-blue-600 hover:text-blue-900 transition-colors text-xs">
                 <i class="fas fa-eye"></i>
