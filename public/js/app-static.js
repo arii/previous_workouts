@@ -417,7 +417,7 @@ function getTimingForPhase(phase) {
     const timingMap = {
         'Warmup': '2-3 rounds, 30 sec rest',
         'Cardio': '3-4 rounds, 30 sec rest',
-        'Strength': '3-4 rounds, 60 sec rest',
+        'Strength': '3-4 rounds',
         'Accessory': '2-3 rounds, 45 sec rest',
         'EMOM': '4 rounds, 1 min per exercise',
         'Spartan': '3-4 rounds, 40 sec work, 20 sec rest',
