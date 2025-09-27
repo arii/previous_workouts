@@ -62,8 +62,19 @@ function loadWorkoutHistory() {
 // Generate historical workouts from static data
 function generateHistoricalWorkouts() {
     const exerciseData = window.EXERCISE_DATA;
+    
+    if (!exerciseData) {
+        console.error('EXERCISE_DATA not found in window object');
+        return [];
+    }
+    
+    console.log('Exercise data loaded:', exerciseData);
+    
     const dailyCounts = exerciseData.metadata.summary.daily_workout_counts || {};
     const categorizedExercises = exerciseData.categorized_exercises || {};
+    
+    console.log('Daily counts:', dailyCounts);
+    console.log('Categorized exercises:', categorizedExercises);
     
     // Convert daily counts to workout objects
     const historicalWorkouts = Object.entries(dailyCounts).map(([date, count]) => {
@@ -114,6 +125,8 @@ function generateHistoricalWorkouts() {
             workout_count: count
         };
     }).sort((a, b) => new Date(b.date) - new Date(a.date)); // Sort by date, newest first
+    
+    console.log('Generated historical workouts:', historicalWorkouts.length, historicalWorkouts);
     
     return historicalWorkouts;
 }
