@@ -469,24 +469,24 @@ function generateAndDisplayTable(workout) {
     
     // Show the table section
     const tableSection = document.createElement('div');
-    tableSection.className = 'mt-8 bg-white rounded-xl shadow-sm p-6';
+    tableSection.className = 'mb-4 bg-white rounded-lg shadow-sm p-4';
     tableSection.innerHTML = `
-        <div class="flex justify-between items-center mb-4">
-            <h3 class="text-xl font-semibold text-gray-800">
+        <div class="flex justify-between items-center mb-3">
+            <h3 class="text-lg font-semibold text-gray-800">
                 <i class="fas fa-table mr-2 text-green-600"></i>
                 Copy-Friendly Table
             </h3>
-            <button onclick="copyTableToClipboard()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors">
-                <i class="fas fa-copy mr-2"></i>
-                Copy to Clipboard
+            <button onclick="copyTableToClipboard()" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1.5 rounded-lg transition-colors text-sm">
+                <i class="fas fa-copy mr-1"></i>
+                Copy
             </button>
         </div>
-        <div class="bg-gray-50 rounded-lg p-4 overflow-x-auto">
+        <div class="bg-gray-50 rounded-lg p-3 overflow-x-auto">
             ${table}
         </div>
-        <p class="text-sm text-gray-600 mt-3">
+        <p class="text-xs text-gray-600 mt-2">
             <i class="fas fa-info-circle mr-1"></i>
-            Click "Copy to Clipboard" to copy this table and paste it into Google Docs or any other document.
+            Click "Copy" to copy this table and paste it into Google Docs.
         </p>
     `;
     
