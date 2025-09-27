@@ -647,8 +647,7 @@ function populateDailyPatterns(data) {
     `;
 }
 
-// Global variable to store current workout
-let currentWorkout = null;
+// Global variable to store current workout (already declared at top)
 
 // Regenerate a single phase
 async function regeneratePhase(phaseIndex) {
