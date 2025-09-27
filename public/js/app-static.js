@@ -543,10 +543,16 @@ function generateAndDisplayTable(workout) {
                 <i class="fas fa-table mr-2 text-green-600"></i>
                 Copy-Friendly Table
             </h3>
-            <button onclick="copyTableToClipboard()" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1.5 rounded-lg transition-colors text-sm">
-                <i class="fas fa-copy mr-1"></i>
-                Copy
-            </button>
+            <div class="flex gap-2">
+                <button onclick="copyTableToClipboard()" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1.5 rounded-lg transition-colors text-sm">
+                    <i class="fas fa-copy mr-1"></i>
+                    Copy Table
+                </button>
+                <button onclick="copyServerFormat()" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1.5 rounded-lg transition-colors text-sm">
+                    <i class="fas fa-server mr-1"></i>
+                    Server Format
+                </button>
+            </div>
         </div>
         <div class="bg-gray-50 rounded-lg p-3 overflow-x-auto">
             ${table}
@@ -616,10 +622,10 @@ function generateCopyFriendlyTable(workout) {
     }
     
     return `
-        <table border="1" style="border-collapse: collapse; width: 100%;">
+        <table border="1" style="border-collapse: collapse; width: 100%; font-family: monospace; font-size: 12px;">
             <thead>
                 <tr>
-                    <th>${headers}</th>
+                    <th style="padding: 4px; background-color: #f5f5f5; text-align: center;">${headers}</th>
                 </tr>
             </thead>
             <tbody>
@@ -627,6 +633,36 @@ function generateCopyFriendlyTable(workout) {
             </tbody>
         </table>
     `;
+}
+
+// Server-friendly export functions
+function generateServerFriendlyFormat(workout) {
+    const phases = workout.phases;
+    
+    // Create clean text format for server integration
+    let output = '';
+    
+    phases.forEach(phase => {
+        output += `${phase.timing || phase.name}:\n`;
+        phase.exercises.forEach(exercise => {
+            output += `  - ${exercise.name}\n`;
+        });
+        output += '\n';
+    });
+    
+    return output.trim();
+}
+
+function copyServerFormat() {
+    if (!currentWorkout) return;
+    
+    const serverFormat = generateServerFriendlyFormat(currentWorkout);
+    
+    navigator.clipboard.writeText(serverFormat).then(() => {
+        showSuccessToast('Server format copied!');
+    }).catch(() => {
+        showError('Failed to copy server format');
+    });
 }
 
 // Utility functions
