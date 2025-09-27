@@ -450,6 +450,28 @@ function escapeHtml(text) {
     return div.innerHTML;
 }
 
+function sanitizeInput(input) {
+    if (!input) return '';
+    
+    // Remove potentially dangerous characters and scripts
+    return input
+        .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '') // Remove script tags
+        .replace(/<[^>]*>/g, '') // Remove all HTML tags
+        .replace(/javascript:/gi, '') // Remove javascript: protocol
+        .replace(/on\w+\s*=/gi, '') // Remove event handlers
+        .replace(/[<>'"&]/g, function(match) { // Escape HTML entities
+            const escapeMap = {
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#x27;',
+                '&': '&amp;'
+            };
+            return escapeMap[match];
+        })
+        .substring(0, 100); // Limit length to 100 characters
+}
+
 function generateCopyFriendlyTable(workout) {
     // Create a single-row table with phases as columns and exercises listed vertically
     let tableHtml = '<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">';
@@ -1119,9 +1141,19 @@ function setupClickAwayHandler(phaseIndex, exerciseIndex) {
     // Create new handler
     clickAwayHandler = function(event) {
         const cardElement = document.querySelector(`[data-phase="${phaseIndex}"][data-exercise="${exerciseIndex}"]`);
+        
+        // Check if we're still editing this exercise
+        if (!editingExercise || editingExercise.phaseIndex !== phaseIndex || editingExercise.exerciseIndex !== exerciseIndex) {
+            return;
+        }
+        
+        // Check if the click is outside the card
         if (cardElement && !cardElement.contains(event.target)) {
-            // Clicked outside the card, save changes
-            saveEdit(phaseIndex, exerciseIndex);
+            // Also check if the click is not on a button or input
+            if (!event.target.closest('button') && !event.target.closest('input')) {
+                // Clicked outside the card, save changes
+                saveEdit(phaseIndex, exerciseIndex);
+            }
         }
     };
     
@@ -1132,11 +1164,18 @@ function setupClickAwayHandler(phaseIndex, exerciseIndex) {
 }
 
 function saveEdit(phaseIndex, exerciseIndex) {
+    console.log('saveEdit called:', { phaseIndex, exerciseIndex, editingExercise });
+    
     if (!editingExercise || editingExercise.phaseIndex !== phaseIndex || editingExercise.exerciseIndex !== exerciseIndex) {
+        console.log('Not currently editing this exercise');
         return; // Not currently editing this exercise
     }
     
     const exercise = currentWorkout.phases[phaseIndex].exercises[exerciseIndex];
+    if (!exercise) {
+        console.error('Exercise not found:', { phaseIndex, exerciseIndex });
+        return;
+    }
     
     // Get values from inputs
     const nameInput = document.getElementById(`edit-name-${phaseIndex}-${exerciseIndex}`);
@@ -1145,18 +1184,22 @@ function saveEdit(phaseIndex, exerciseIndex) {
     const durationInput = document.getElementById(`edit-duration-${phaseIndex}-${exerciseIndex}`);
     const restInput = document.getElementById(`edit-rest-${phaseIndex}-${exerciseIndex}`);
     
-    // Update exercise data
-    if (nameInput) exercise.name = nameInput.value.trim();
-    if (setsInput) exercise.sets = setsInput.value.trim();
-    if (repsInput) exercise.reps = repsInput.value.trim();
-    if (durationInput) exercise.duration = durationInput.value.trim();
-    if (restInput) exercise.rest = restInput.value.trim();
+    console.log('Input elements found:', { nameInput, setsInput, repsInput, durationInput, restInput });
+    
+    // Update exercise data with sanitization
+    if (nameInput) exercise.name = sanitizeInput(nameInput.value.trim());
+    if (setsInput) exercise.sets = sanitizeInput(setsInput.value.trim());
+    if (repsInput) exercise.reps = sanitizeInput(repsInput.value.trim());
+    if (durationInput) exercise.duration = sanitizeInput(durationInput.value.trim());
+    if (restInput) exercise.rest = sanitizeInput(restInput.value.trim());
+    
+    console.log('Updated exercise:', exercise);
     
     // Clean up
     cleanupEditing();
     
     // Re-render the workout
-    displayWorkout(currentWorkout);
+    displayGeneratedWorkout(currentWorkout);
     
     showToast("Exercise updated successfully!", "success");
 }
@@ -1167,7 +1210,7 @@ function cancelEdit() {
         cleanupEditing();
         
         // Re-render the workout to restore original state
-        displayWorkout(currentWorkout);
+        displayGeneratedWorkout(currentWorkout);
     }
 }
 
@@ -1242,7 +1285,7 @@ function drop(event) {
             phase.exercises.splice(newIndex, 0, draggedExercise);
             
             // Re-render the workout
-            displayWorkout(currentWorkout);
+            displayGeneratedWorkout(currentWorkout);
             showToast("Exercise reordered successfully!", "success");
         }
     }

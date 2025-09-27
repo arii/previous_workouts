@@ -5,13 +5,54 @@ const cors = require('cors');
 const path = require('path');
 const fs = require('fs');
 
+// Simple rate limiting
+const rateLimitMap = new Map();
+const RATE_LIMIT_WINDOW = 60000; // 1 minute
+const RATE_LIMIT_MAX_REQUESTS = 10; // 10 requests per minute
+
+function rateLimit(req, res, next) {
+  const clientIP = req.ip || req.connection.remoteAddress;
+  const now = Date.now();
+  
+  if (!rateLimitMap.has(clientIP)) {
+    rateLimitMap.set(clientIP, { count: 1, resetTime: now + RATE_LIMIT_WINDOW });
+    return next();
+  }
+  
+  const clientData = rateLimitMap.get(clientIP);
+  
+  if (now > clientData.resetTime) {
+    clientData.count = 1;
+    clientData.resetTime = now + RATE_LIMIT_WINDOW;
+    return next();
+  }
+  
+  if (clientData.count >= RATE_LIMIT_MAX_REQUESTS) {
+    return res.status(429).json({ error: 'Too many requests. Please try again later.' });
+  }
+  
+  clientData.count++;
+  next();
+}
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+
+// Security headers
+app.use((req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data:;");
+  next();
+});
+
+app.use(bodyParser.json({ limit: '1mb' })); // Limit JSON payload size
+app.use(bodyParser.urlencoded({ extended: true, limit: '1mb' }));
 app.use(express.static('public'));
 
 // Initialize SQLite database
@@ -453,8 +494,36 @@ app.get('/data-exploration', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'data-exploration.html'));
 });
 
+// Input validation middleware
+function validateWorkoutInput(req, res, next) {
+  const { intensity, workoutType } = req.body;
+  
+  // Validate intensity
+  if (!intensity || !['low', 'medium', 'high'].includes(intensity)) {
+    return res.status(400).json({ error: 'Invalid intensity. Must be low, medium, or high.' });
+  }
+  
+  // Validate workout type
+  if (!workoutType || !['balanced', 'emom', 'spartan', 'tabata'].includes(workoutType)) {
+    return res.status(400).json({ error: 'Invalid workout type.' });
+  }
+  
+  next();
+}
+
+// Input sanitization function
+function sanitizeString(input) {
+  if (typeof input !== 'string') return '';
+  return input
+    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+    .replace(/<[^>]*>/g, '')
+    .replace(/javascript:/gi, '')
+    .replace(/on\w+\s*=/gi, '')
+    .substring(0, 100);
+}
+
 // Generate workout endpoint
-app.post('/api/generate-workout', (req, res) => {
+app.post('/api/generate-workout', rateLimit, validateWorkoutInput, (req, res) => {
   try {
     const { intensity, workoutType } = req.body;
     
@@ -575,12 +644,26 @@ app.get('/api/workouts/:id', (req, res) => {
 });
 
 // Add new workout
-app.post('/api/workouts', (req, res) => {
-  const { name, date, duration, notes } = req.body;
+app.post('/api/workouts', rateLimit, (req, res) => {
+  const { name, date, duration, notes, exercises } = req.body;
+  
+  // Validate required fields
+  if (!name || !date) {
+    return res.status(400).json({ error: 'Missing required fields: name, date' });
+  }
+  
+  // Sanitize inputs
+  const sanitizedName = sanitizeString(name);
+  const sanitizedNotes = sanitizeString(notes);
+  const sanitizedDuration = sanitizeString(duration);
+  
+  if (sanitizedName.length === 0) {
+    return res.status(400).json({ error: 'Workout name cannot be empty' });
+  }
   
   const query = 'INSERT INTO workouts (name, date, duration, notes) VALUES (?, ?, ?, ?)';
   
-  db.run(query, [name, date, duration, notes], function(err) {
+  db.run(query, [sanitizedName, date, sanitizedDuration, sanitizedNotes], function(err) {
     if (err) {
       res.status(500).json({ error: err.message });
       return;
