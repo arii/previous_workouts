@@ -170,13 +170,22 @@ function generateBalancedWorkout(categories, distribution, intensity) {
   
   Object.entries(distribution).forEach(([phaseName, count]) => {
     if (count > 0) {
-      const phaseExercises = categories[phaseName] || [];
+      let phaseExercises = categories[phaseName] || [];
+      
+      // For warmup, use proper warmup exercises instead of data
+      if (phaseName === 'Warmup') {
+        phaseExercises = getProperWarmupExercises();
+      } else {
+        // Filter and clean exercises for other phases
+        phaseExercises = filterAndCleanExercises(phaseExercises);
+      }
+      
       const selectedExercises = getRandomExercises(phaseExercises, count);
       
       phases.push({
         name: phaseName,
         exercises: selectedExercises.map(exercise => ({
-          name: exercise,
+          name: standardizeExerciseName(exercise),
           sets: getSetsForPhase(phaseName, intensity),
           reps: getRepsForPhase(phaseName, intensity),
           duration: getDurationForPhase(phaseName, intensity),
@@ -193,9 +202,12 @@ function generateBalancedWorkout(categories, distribution, intensity) {
 function generateEMOMWorkout(categories, exerciseCount, intensity) {
   const exercises = [];
   
-  // Select exercises from all categories
-  Object.values(categories).flat().forEach(exercise => {
-    exercises.push(exercise);
+  // Select exercises from all categories (excluding warmup for EMOM)
+  Object.entries(categories).forEach(([category, categoryExercises]) => {
+    if (category !== 'Warmup') {
+      const filteredExercises = filterAndCleanExercises(categoryExercises);
+      exercises.push(...filteredExercises);
+    }
   });
   
   const selectedExercises = getRandomExercises(exercises, exerciseCount);
@@ -203,7 +215,7 @@ function generateEMOMWorkout(categories, exerciseCount, intensity) {
   return [{
     name: 'EMOM Circuit',
     exercises: selectedExercises.map(exercise => ({
-      name: exercise,
+      name: standardizeExerciseName(exercise),
       sets: '1',
       reps: getEMOMReps(intensity),
       duration: null,
@@ -217,10 +229,11 @@ function generateSpartanWorkout(categories, exerciseCount, intensity) {
   const phases = [];
   
   // Warmup
+  const warmupExercises = getProperWarmupExercises();
   phases.push({
     name: 'Warmup',
-    exercises: getRandomExercises(categories['Warmup'], 2).map(exercise => ({
-      name: exercise,
+    exercises: getRandomExercises(warmupExercises, 2).map(exercise => ({
+      name: standardizeExerciseName(exercise),
       sets: '1',
       reps: '10-15',
       duration: null,
@@ -231,8 +244,11 @@ function generateSpartanWorkout(categories, exerciseCount, intensity) {
   
   // Main circuit
   const circuitExercises = [];
-  Object.values(categories).flat().forEach(exercise => {
-    circuitExercises.push(exercise);
+  Object.entries(categories).forEach(([category, categoryExercises]) => {
+    if (category !== 'Warmup') {
+      const filteredExercises = filterAndCleanExercises(categoryExercises);
+      circuitExercises.push(...filteredExercises);
+    }
   });
   
   const selectedExercises = getRandomExercises(circuitExercises, exerciseCount - 2);
@@ -240,7 +256,7 @@ function generateSpartanWorkout(categories, exerciseCount, intensity) {
   phases.push({
     name: 'Spartan Circuit',
     exercises: selectedExercises.map(exercise => ({
-      name: exercise,
+      name: standardizeExerciseName(exercise),
       sets: '3-5',
       reps: getSpartanReps(intensity),
       duration: null,
@@ -256,16 +272,16 @@ function generateTabataWorkout(categories, exerciseCount, intensity) {
   const exercises = [];
   
   // Focus on cardio and strength for Tabata
-  [...categories['Cardio'], ...categories['Strength']].forEach(exercise => {
-    exercises.push(exercise);
-  });
+  const cardioExercises = filterAndCleanExercises(categories['Cardio'] || []);
+  const strengthExercises = filterAndCleanExercises(categories['Strength'] || []);
+  exercises.push(...cardioExercises, ...strengthExercises);
   
   const selectedExercises = getRandomExercises(exercises, Math.min(exerciseCount, 8));
   
   return [{
     name: 'Tabata Circuit',
     exercises: selectedExercises.map(exercise => ({
-      name: exercise,
+      name: standardizeExerciseName(exercise),
       sets: '8',
       reps: null,
       duration: '20 sec',
@@ -279,6 +295,204 @@ function generateTabataWorkout(categories, exerciseCount, intensity) {
 function getRandomExercises(exercises, count) {
   const shuffled = [...exercises].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, count);
+}
+
+// Get proper warmup exercises (light, mobility-focused)
+function getProperWarmupExercises() {
+  return [
+    'Arm Circles',
+    'Neck Rolls',
+    'Shoulder Rolls',
+    'Hip Circles',
+    'Ankle Circles',
+    'Cat-Cow Stretch',
+    'Bodyweight Squats',
+    'Lunges',
+    'Leg Swings',
+    'Walking High Knees',
+    'Walking Butt Kicks',
+    'Side Steps',
+    'Marching in Place',
+    'Light Jogging',
+    'Dynamic Stretching',
+    'Wrist Circles',
+    'Trunk Twists',
+    'Standing Forward Fold',
+    'Standing Side Bend',
+    'Light Jumping Jacks'
+  ];
+}
+
+// Filter out invalid or nonsensical exercises
+function isValidExercise(exerciseName) {
+  if (!exerciseName || typeof exerciseName !== 'string') return false;
+  
+  const invalidExercises = [
+    '10 Down',
+    '10 Reps',
+    'Reps',
+    'Seconds',
+    'Minutes',
+    'Hold',
+    'Rest',
+    'Break',
+    'Pause',
+    'Stop',
+    'Start',
+    'Begin',
+    'End',
+    'Finish',
+    'Complete',
+    'Done',
+    'Next',
+    'Previous',
+    'Continue',
+    'Skip',
+    'OR',
+    'R',
+    'L',
+    'Up',
+    'Down',
+    'Left',
+    'Right',
+    'Tap',
+    'Taps',
+    'Glide',
+    'Bridge',
+    'Plank',
+    'Deadlift',
+    'Squat',
+    'Lunge',
+    'Push',
+    'Pull',
+    'Press',
+    'Row',
+    'Curl',
+    'Raise',
+    'Lift',
+    'Squeeze',
+    'Clench',
+    'Crunch',
+    'Twist',
+    'Rotate',
+    'Flex',
+    'Extend',
+    'Abduct',
+    'Adduct',
+    'Circumduct',
+    'Pronate',
+    'Supinate',
+    'Invert',
+    'Evert',
+    'Dorsiflex',
+    'Plantarflex'
+  ];
+  
+  // Check if it's just a number or very short
+  if (exerciseName.length < 3) return false;
+  if (/^\d+$/.test(exerciseName)) return false;
+  
+  // Check if it's in the invalid list
+  if (invalidExercises.includes(exerciseName)) return false;
+  
+  // Check for problematic patterns
+  if (/^\d+-\d+$/.test(exerciseName)) return false; // "2-12"
+  if (/^\d+\s+Up$/.test(exerciseName)) return false; // "5 Up"
+  if (/^\d+\s+Down$/.test(exerciseName)) return false; // "10 Down"
+  if (/^[A-Z]$/.test(exerciseName)) return false; // Single letters like "R", "L"
+  if (/^OR$/.test(exerciseName)) return false; // "OR"
+  
+  // Allow legitimate exercise patterns
+  if (/^[A-Z],[A-Z],[A-Z]$/.test(exerciseName)) return true; // "Y,T,W" - shoulder exercise
+  if (/^[A-Z]-[A-Z]-[A-Z]$/.test(exerciseName)) return true; // "Y-T-W" - shoulder exercise
+  
+  // Check if it's just a number followed by a word (but allow longer ones)
+  if (/^\d+\s+\w+$/.test(exerciseName) && exerciseName.length < 10) return false;
+  
+  return true;
+}
+
+// Get paired exercises for unilateral movements
+function getPairedExercises(exerciseName) {
+  const unilateralPatterns = [
+    { pattern: /(.+)\s+L$/, pair: '$1 R' },
+    { pattern: /(.+)\s+R$/, pair: '$1 L' },
+    { pattern: /(.+)\s+Left$/, pair: '$1 Right' },
+    { pattern: /(.+)\s+Right$/, pair: '$1 Left' }
+  ];
+  
+  for (const { pattern, pair } of unilateralPatterns) {
+    if (pattern.test(exerciseName)) {
+      return [exerciseName, exerciseName.replace(pattern, pair)];
+    }
+  }
+  
+  return [exerciseName];
+}
+
+// Standardize exercise names by expanding common abbreviations
+function standardizeExerciseName(exerciseName) {
+  if (!exerciseName) return '';
+  
+  let standardized = exerciseName;
+  
+  // Common abbreviations
+  const abbreviations = {
+    'Ch': 'Chest',
+    'Sh': 'Shoulder',
+    'Sh.': 'Shoulder',
+    'Db': 'Dumbbell',
+    'Dd': 'Dumbbell',
+    'Kb': 'Kettlebell',
+    'Bw': 'Bodyweight',
+    'Bw.': 'Bodyweight',
+    'Reps': 'Repetitions',
+    'Sec': 'Seconds',
+    'Min': 'Minutes',
+    'L': 'Left',
+    'R': 'Right',
+    'Alt': 'Alternating',
+    'Rev': 'Reverse',
+    'Fwd': 'Forward',
+    'Bwd': 'Backward',
+    'Ext': 'Extension',
+    'Flex': 'Flexion',
+    'Ab': 'Abdominal',
+    'Glut': 'Glute',
+    'Quad': 'Quadricep',
+    'Ham': 'Hamstring',
+    'Calv': 'Calf',
+    'Trap': 'Trapezius',
+    'Lat': 'Latissimus',
+    'Del': 'Deltoid',
+    'Pec': 'Pectoral',
+    'Bic': 'Bicep',
+    'Tric': 'Tricep'
+  };
+  
+  // Apply abbreviations (case-insensitive)
+  Object.entries(abbreviations).forEach(([abbrev, full]) => {
+    const regex = new RegExp(`\\b${abbrev}\\b`, 'gi');
+    standardized = standardized.replace(regex, full);
+  });
+  
+  // Clean up common issues
+  standardized = standardized
+    .replace(/\s+/g, ' ') // Multiple spaces to single space
+    .replace(/\s*,\s*/g, ', ') // Clean up commas
+    .replace(/\s*-\s*/g, ' - ') // Clean up dashes
+    .trim();
+  
+  return standardized;
+}
+
+// Filter and clean exercise list
+function filterAndCleanExercises(exercises) {
+  return exercises
+    .filter(isValidExercise)
+    .map(standardizeExerciseName)
+    .filter((exercise, index, arr) => arr.indexOf(exercise) === index) // Remove duplicates
+    .sort();
 }
 
 function getSetsForPhase(phaseName, intensity) {
@@ -614,6 +828,84 @@ app.get('/api/workouts', (req, res) => {
   });
 });
 
+// Get historical workouts from categorized data (must be before /:id route)
+app.get('/api/workouts/historical', (req, res) => {
+  try {
+    const dailyCounts = exerciseMetadata.summary?.daily_workout_counts || {};
+    const categorizedExercises = exerciseData || {};
+    
+    // Convert daily counts to workout objects
+    const historicalWorkouts = Object.entries(dailyCounts).map(([date, count]) => {
+      // Get exercises for this date from the categorized data
+      const dayExercises = [];
+      Object.keys(categorizedExercises).forEach(category => {
+        const categoryExercises = categorizedExercises[category] || [];
+        const dayCategoryExercises = categoryExercises.filter(exercise => 
+          exercise.date === date
+        );
+        dayExercises.push(...dayCategoryExercises);
+      });
+      
+      // Debug logging for first few dates
+      if (date === '2025-09-24') {
+        console.log(`Debug for ${date}:`);
+        console.log(`- Total categories: ${Object.keys(categorizedExercises).length}`);
+        console.log(`- Category keys: ${Object.keys(categorizedExercises)}`);
+        console.log(`- Warmup exercises count: ${categorizedExercises.Warmup?.length || 0}`);
+        console.log(`- Day exercises found: ${dayExercises.length}`);
+        if (dayExercises.length > 0) {
+          console.log(`- Sample exercise:`, dayExercises[0]);
+        }
+      }
+      
+      // Group exercises by phase/filename to create workout phases
+      const workoutPhases = {};
+      dayExercises.forEach(exercise => {
+        const phase = exercise.phase || 'General';
+        const filename = exercise.filename || 'unknown';
+        const key = `${phase}-${filename}`;
+        
+        if (!workoutPhases[key]) {
+          workoutPhases[key] = {
+            name: phase,
+            exercises: []
+          };
+        }
+        
+        workoutPhases[key].exercises.push({
+          name: exercise.exercise,
+          sets: '3', // Default sets
+          reps: '10-15', // Default reps
+          duration: null,
+          rest: '30 sec'
+        });
+      });
+      
+      return {
+        id: `historical-${date}`,
+        name: count > 1 ? `${count} Workouts` : 'Workout',
+        date: date,
+        duration: '40 min', // Default duration for historical workouts
+        notes: `Historical workout${count > 1 ? 's' : ''} from ${date}`,
+        created_at: date,
+        exercise_count: dayExercises.length,
+        phases: Object.values(workoutPhases),
+        is_historical: true,
+        workout_count: count
+      };
+    }).sort((a, b) => new Date(b.date) - new Date(a.date)); // Sort by date, newest first
+    
+    res.json({
+      workouts: historicalWorkouts,
+      total: historicalWorkouts.length,
+      dateRange: exerciseMetadata.summary?.date_range || {}
+    });
+  } catch (error) {
+    console.error('Error loading historical workouts:', error);
+    res.status(500).json({ error: 'Failed to load historical workouts' });
+  }
+});
+
 // Get workout by ID with exercises
 app.get('/api/workouts/:id', (req, res) => {
   const workoutId = req.params.id;
@@ -785,47 +1077,6 @@ app.get('/api/workouts/stats/daily', (req, res) => {
   }
 });
 
-// Get historical workouts from categorized data
-app.get('/api/workouts/historical', (req, res) => {
-  try {
-    const dailyCounts = exerciseMetadata.summary?.daily_workout_counts || {};
-    const dateRange = exerciseMetadata.summary?.date_range || {};
-    
-    // Convert daily counts to workout objects
-    const historicalWorkouts = Object.entries(dailyCounts).map(([date, count]) => {
-      // Get exercises for this date from the categorized data
-      const dayExercises = [];
-      Object.keys(exerciseData).forEach(category => {
-        const categoryExercises = exerciseData[category] || [];
-        const dayCategoryExercises = categoryExercises.filter(exercise => 
-          exercise.date === date
-        );
-        dayExercises.push(...dayCategoryExercises);
-      });
-      
-      return {
-        id: `historical-${date}`,
-        name: count > 1 ? `${count} Workouts` : 'Workout',
-        date: date,
-        duration: '40 min', // Default duration for historical workouts
-        notes: `Historical workout${count > 1 ? 's' : ''} from ${date}`,
-        created_at: date,
-        exercise_count: dayExercises.length,
-        exercises: dayExercises,
-        is_historical: true,
-        workout_count: count
-      };
-    }).sort((a, b) => new Date(b.date) - new Date(a.date)); // Sort by date, newest first
-    
-    res.json({
-      workouts: historicalWorkouts,
-      total: historicalWorkouts.length,
-      dateRange: dateRange
-    });
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to load historical workouts' });
-  }
-});
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
