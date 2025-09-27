@@ -423,8 +423,8 @@ function generateCopyFriendlyTable(workout) {
         tableHtml += '<tr>';
         
         workout.phases.forEach(phase => {
-            // Create column content with phase name as header and exercises below
-            let columnContent = `<div style="font-weight: bold; margin-bottom: 5px;">${phase.name}</div>`;
+            // Create column content with timing protocol as header and exercises below
+            let columnContent = `<div style="font-weight: bold; margin-bottom: 5px;">${phase.timing || phase.name}</div>`;
             
             phase.exercises.forEach(exercise => {
                 let exerciseText = exercise.name;
@@ -444,7 +444,7 @@ function generateCopyFriendlyTable(workout) {
     } else if (workout.type === 'emom') {
         // For EMOM workouts, create one row with exercises in a single column
         const phase = workout.phases[0];
-        let columnContent = `<div style="font-weight: bold; margin-bottom: 5px;">EMOM Circuit</div>`;
+        let columnContent = `<div style="font-weight: bold; margin-bottom: 5px;">${phase.timing || 'EMOM'}</div>`;
         
         phase.exercises.forEach(exercise => {
             let exerciseText = exercise.name;
@@ -461,7 +461,7 @@ function generateCopyFriendlyTable(workout) {
     } else if (workout.type === 'spartan') {
         // For Spartan workouts, create one row with exercises in a single column
         const phase = workout.phases[0];
-        let columnContent = `<div style="font-weight: bold; margin-bottom: 5px;">Spartan Circuit</div>`;
+        let columnContent = `<div style="font-weight: bold; margin-bottom: 5px;">${phase.timing || 'Spartan'}</div>`;
         
         phase.exercises.forEach(exercise => {
             let exerciseText = exercise.name;
@@ -478,7 +478,7 @@ function generateCopyFriendlyTable(workout) {
     } else if (workout.type === 'tabata') {
         // For Tabata workouts, create one row with exercises in a single column
         const phase = workout.phases[0];
-        let columnContent = `<div style="font-weight: bold; margin-bottom: 5px;">Tabata Circuit</div>`;
+        let columnContent = `<div style="font-weight: bold; margin-bottom: 5px;">${phase.timing || 'Tabata'}</div>`;
         
         phase.exercises.forEach(exercise => {
             let exerciseText = exercise.name;
