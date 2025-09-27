@@ -1,0 +1,25 @@
+{
+  "throttling_settings": {
+    "base_delay": 2.0,
+    "max_delay": 60.0,
+    "backoff_factor": 2.0,
+    "jitter": true,
+    "max_retries": 5
+  },
+  "rate_limits": {
+    "requests_per_minute": 100,
+    "requests_per_day": 10000,
+    "burst_limit": 10
+  },
+  "error_handling": {
+    "retry_on_429": true,
+    "retry_on_5xx": true,
+    "retry_on_timeout": true,
+    "respect_retry_after_header": true
+  },
+  "logging": {
+    "log_requests": true,
+    "log_delays": true,
+    "log_errors": true
+  }
+}
