@@ -415,99 +415,80 @@ function escapeHtml(text) {
 }
 
 function generateCopyFriendlyTable(workout) {
-    // Create a proper HTML table that can be copied to Google Docs
+    // Create a single-row table with phases as columns and exercises listed vertically
     let tableHtml = '<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">';
     
     if (workout.type === 'balanced') {
-        // For balanced workouts, organize by phases
-        const phaseHeaders = workout.phases.map(phase => phase.name);
-        const maxExercises = Math.max(...workout.phases.map(phase => phase.exercises.length));
+        // For balanced workouts, create one row with phases as columns
+        tableHtml += '<tr>';
         
-        // Create header row
-        tableHtml += '<tr style="background-color: #f0f0f0; font-weight: bold;">';
-        tableHtml += '<td>Exercise</td>';
-        phaseHeaders.forEach(header => {
-            tableHtml += `<td>${header}</td>`;
-        });
-        tableHtml += '</tr>';
-        
-        // Create exercise rows
-        for (let i = 0; i < maxExercises; i++) {
-            tableHtml += '<tr>';
-            tableHtml += `<td>Exercise ${i + 1}</td>`;
-            
-            workout.phases.forEach(phase => {
-                if (phase.exercises[i]) {
-                    const exercise = phase.exercises[i];
-                    let exerciseText = exercise.name;
-                    if (exercise.sets && exercise.reps) {
-                        exerciseText += ` (${exercise.sets} x ${exercise.reps})`;
-                    }
-                    if (exercise.duration) {
-                        exerciseText += ` (${exercise.duration})`;
-                    }
-                    tableHtml += `<td>${exerciseText}</td>`;
-                } else {
-                    tableHtml += '<td></td>';
-                }
-            });
-            tableHtml += '</tr>';
-        }
-    } else if (workout.type === 'emom') {
-        // For EMOM workouts
-        const phase = workout.phases[0];
-        tableHtml += '<tr style="background-color: #f0f0f0; font-weight: bold;">';
-        tableHtml += '<td colspan="4" style="text-align: center;">EMOM Circuit</td>';
-        tableHtml += '</tr>';
-        tableHtml += '<tr style="background-color: #e0e0e0; font-weight: bold;">';
-        tableHtml += '<td>Exercise</td><td>Sets</td><td>Reps</td><td>Rest</td>';
-        tableHtml += '</tr>';
-        
-        phase.exercises.forEach(exercise => {
-            tableHtml += '<tr>';
-            tableHtml += `<td>${exercise.name}</td>`;
-            tableHtml += `<td>${exercise.sets || ''}</td>`;
-            tableHtml += `<td>${exercise.reps || ''}</td>`;
-            tableHtml += `<td>${exercise.rest || ''}</td>`;
-            tableHtml += '</tr>';
-        });
-    } else if (workout.type === 'spartan') {
-        // For Spartan workouts
         workout.phases.forEach(phase => {
-            tableHtml += '<tr style="background-color: #f0f0f0; font-weight: bold;">';
-            tableHtml += `<td colspan="4" style="text-align: center;">${phase.name}</td>`;
-            tableHtml += '</tr>';
-            tableHtml += '<tr style="background-color: #e0e0e0; font-weight: bold;">';
-            tableHtml += '<td>Exercise</td><td>Sets</td><td>Reps</td><td>Rest</td>';
-            tableHtml += '</tr>';
+            // Create column content with phase name as header and exercises below
+            let columnContent = `<div style="font-weight: bold; margin-bottom: 5px;">${phase.name}</div>`;
             
             phase.exercises.forEach(exercise => {
-                tableHtml += '<tr>';
-                tableHtml += `<td>${exercise.name}</td>`;
-                tableHtml += `<td>${exercise.sets || ''}</td>`;
-                tableHtml += `<td>${exercise.reps || ''}</td>`;
-                tableHtml += `<td>${exercise.rest || ''}</td>`;
-                tableHtml += '</tr>';
+                let exerciseText = exercise.name;
+                if (exercise.sets && exercise.reps) {
+                    exerciseText += ` (${exercise.sets} x ${exercise.reps})`;
+                }
+                if (exercise.duration) {
+                    exerciseText += ` (${exercise.duration})`;
+                }
+                columnContent += `<div>${exerciseText}</div>`;
             });
+            
+            tableHtml += `<td style="vertical-align: top; width: ${100 / workout.phases.length}%;">${columnContent}</td>`;
         });
-    } else if (workout.type === 'tabata') {
-        // For Tabata workouts
+        
+        tableHtml += '</tr>';
+    } else if (workout.type === 'emom') {
+        // For EMOM workouts, create one row with exercises in a single column
         const phase = workout.phases[0];
-        tableHtml += '<tr style="background-color: #f0f0f0; font-weight: bold;">';
-        tableHtml += '<td colspan="4" style="text-align: center;">Tabata Circuit</td>';
-        tableHtml += '</tr>';
-        tableHtml += '<tr style="background-color: #e0e0e0; font-weight: bold;">';
-        tableHtml += '<td>Exercise</td><td>Sets</td><td>Duration</td><td>Rest</td>';
-        tableHtml += '</tr>';
+        let columnContent = `<div style="font-weight: bold; margin-bottom: 5px;">EMOM Circuit</div>`;
         
         phase.exercises.forEach(exercise => {
-            tableHtml += '<tr>';
-            tableHtml += `<td>${exercise.name}</td>`;
-            tableHtml += `<td>${exercise.sets || ''}</td>`;
-            tableHtml += `<td>${exercise.duration || ''}</td>`;
-            tableHtml += `<td>${exercise.rest || ''}</td>`;
-            tableHtml += '</tr>';
+            let exerciseText = exercise.name;
+            if (exercise.sets && exercise.reps) {
+                exerciseText += ` (${exercise.sets} x ${exercise.reps})`;
+            }
+            if (exercise.rest) {
+                exerciseText += ` (${exercise.rest} rest)`;
+            }
+            columnContent += `<div>${exerciseText}</div>`;
         });
+        
+        tableHtml += `<tr><td style="vertical-align: top;">${columnContent}</td></tr>`;
+    } else if (workout.type === 'spartan') {
+        // For Spartan workouts, create one row with exercises in a single column
+        const phase = workout.phases[0];
+        let columnContent = `<div style="font-weight: bold; margin-bottom: 5px;">Spartan Circuit</div>`;
+        
+        phase.exercises.forEach(exercise => {
+            let exerciseText = exercise.name;
+            if (exercise.duration) {
+                exerciseText += ` (${exercise.duration})`;
+            }
+            if (exercise.rest) {
+                exerciseText += ` (${exercise.rest} rest)`;
+            }
+            columnContent += `<div>${exerciseText}</div>`;
+        });
+        
+        tableHtml += `<tr><td style="vertical-align: top;">${columnContent}</td></tr>`;
+    } else if (workout.type === 'tabata') {
+        // For Tabata workouts, create one row with exercises in a single column
+        const phase = workout.phases[0];
+        let columnContent = `<div style="font-weight: bold; margin-bottom: 5px;">Tabata Circuit</div>`;
+        
+        phase.exercises.forEach(exercise => {
+            let exerciseText = exercise.name;
+            if (exercise.duration) {
+                exerciseText += ` (${exercise.duration})`;
+            }
+            columnContent += `<div>${exerciseText}</div>`;
+        });
+        
+        tableHtml += `<tr><td style="vertical-align: top;">${columnContent}</td></tr>`;
     }
     
     tableHtml += '</table>';
