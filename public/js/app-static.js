@@ -72,8 +72,8 @@ function generateWorkoutStatic(intensity, workoutType) {
     let phases = [];
     
     switch (workoutType) {
-        case 'balanced':
-            phases = generateBalancedWorkout(categories, intensity);
+        case 'mixed':
+            phases = generateMixedWorkout(categories, intensity);
             break;
         case 'emom':
             phases = generateEMOMWorkout(categories, intensity);
@@ -81,11 +81,8 @@ function generateWorkoutStatic(intensity, workoutType) {
         case 'spartan':
             phases = generateSpartanWorkout(categories, intensity);
             break;
-        case 'tabata':
-            phases = generateTabataWorkout(categories, intensity);
-            break;
         default:
-            phases = generateBalancedWorkout(categories, intensity);
+            phases = generateMixedWorkout(categories, intensity);
     }
     
     const totalExercises = phases.reduce((total, phase) => total + phase.exercises.length, 0);
@@ -493,8 +490,9 @@ function generateAndDisplayTable(workout) {
         </p>
     `;
     
-    // Insert the table section after the workout structure
-    workoutStructure.parentNode.insertBefore(tableSection, workoutStructure.nextSibling);
+    // Insert the table section right after the workout info (at the top)
+    const workoutInfo = document.getElementById('workoutInfo');
+    workoutInfo.parentNode.insertBefore(tableSection, workoutInfo.nextSibling);
 }
 
 // Copy table functionality
