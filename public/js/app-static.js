@@ -98,7 +98,7 @@ function generateWorkoutStatic(intensity, workoutType) {
 }
 
 // Workout generation functions (copied from server logic)
-function generateBalancedWorkout(categories, intensity) {
+function generateMixedWorkout(categories, intensity) {
     const distribution = {
         'Warmup': 2,
         'Cardio': 3,
