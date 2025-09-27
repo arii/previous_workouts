@@ -25,6 +25,15 @@ const categoryBreakdown = document.getElementById('categoryBreakdown');
 // Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
     setupEventListeners();
+    
+    // Show initial loading state
+    exerciseResults.innerHTML = `
+        <div class="text-center py-8 text-gray-500">
+            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
+            <p>Loading exercise data...</p>
+        </div>
+    `;
+    
     loadData();
 });
 
@@ -52,14 +61,24 @@ async function loadData() {
         
         // Process all exercises from the categorized data
         allExercises = [];
-        Object.keys(exerciseData.categories || {}).forEach(category => {
-            const categoryExercises = exerciseData.categories[category] || [];
-            categoryExercises.forEach(exercise => {
+        
+        // Get exercises by category from the server
+        const categoryPromises = exerciseData.categories.map(category => 
+            fetch(`/api/exercises/${category}`).then(res => res.json())
+        );
+        
+        const categoryData = await Promise.all(categoryPromises);
+        
+        categoryData.forEach(categoryInfo => {
+            const category = categoryInfo.category;
+            const exercises = categoryInfo.exercises || [];
+            
+            exercises.forEach(exerciseName => {
                 allExercises.push({
-                    name: exercise.exercise,
+                    name: exerciseName,
                     category: category,
-                    frequency: exerciseData.metadata?.summary?.most_common_exercises?.[exercise.exercise] || 0,
-                    originalData: exercise
+                    frequency: exerciseData.metadata?.summary?.most_common_exercises?.[exerciseName] || 0,
+                    originalData: { exercise: exerciseName }
                 });
             });
         });
@@ -75,10 +94,26 @@ async function loadData() {
         // Initial display
         displayExercises();
         updateResultCount();
+        
+        // Show success message
+        showToast('Data loaded successfully!', 'success');
 
     } catch (error) {
         console.error('Error loading data:', error);
         showToast('Error loading data. Please try again.', 'error');
+        
+        // Show error state
+        exerciseResults.innerHTML = `
+            <div class="text-center py-8 text-gray-500">
+                <i class="fas fa-exclamation-triangle text-4xl mb-4 text-red-500"></i>
+                <p class="text-lg font-medium">Failed to load data</p>
+                <p class="text-sm mt-2">Please check your connection and try again.</p>
+                <button onclick="loadData()" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+                    <i class="fas fa-redo mr-2"></i>
+                    Retry
+                </button>
+            </div>
+        `;
     } finally {
         hideLoading();
     }
@@ -109,13 +144,7 @@ function populateStatistics(exerciseData, dailyStats) {
 }
 
 function populateCategoryBreakdown() {
-    const categories = exerciseData.categories || {};
-    const categoryStats = {};
-    
-    // Count exercises per category
-    Object.keys(categories).forEach(category => {
-        categoryStats[category] = categories[category].length;
-    });
+    const categoryStats = exerciseData.categoryCounts || {};
     
     // Create category cards
     categoryBreakdown.innerHTML = Object.entries(categoryStats).map(([category, count]) => {
