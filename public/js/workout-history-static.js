@@ -252,11 +252,9 @@ function displayWorkouts(workouts, filter) {
     thead.className = 'bg-gray-50';
     thead.innerHTML = `
         <tr>
-            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Workout</th>
-            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phases</th>
-            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exercises</th>
-            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-24">Date</th>
+            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exercises</th>
+            <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-20">Actions</th>
         </tr>
     `;
     table.appendChild(thead);
@@ -315,30 +313,40 @@ function createWorkoutTableRow(workout) {
     
     const intensityBadge = intensityBadgeColors[intensity.toLowerCase()] || intensityBadgeColors.normal;
     
+    // Get all exercises from all phases
+    const allExercises = workout.phases ? 
+        workout.phases.flatMap(phase => 
+            phase.exercises ? phase.exercises.map(ex => typeof ex === 'string' ? ex : ex.name || ex) : []
+        ) : [];
+    
+    // Create exercise list with timing
+    const exerciseList = workout.phases ? workout.phases.map(phase => {
+        const exercises = phase.exercises ? phase.exercises.map(ex => typeof ex === 'string' ? ex : ex.name || ex) : [];
+        const timing = phase.timing || '';
+        return `${timing ? timing + ': ' : ''}${exercises.join(', ')}`;
+    }).filter(item => item.trim()) : [];
+    
     row.innerHTML = `
-        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+        <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">
             ${formattedDate}
         </td>
-        <td class="px-6 py-4 text-sm text-gray-900">
-            <div class="font-medium">${workoutTitle}</div>
-            <div class="flex items-center mt-1">
+        <td class="px-4 py-3 text-sm text-gray-900">
+            <div class="space-y-1">
+                ${exerciseList.map(item => `
+                    <div class="text-xs text-gray-700">${item}</div>
+                `).join('')}
+            </div>
+            <div class="flex items-center mt-2">
                 <span class="text-gray-500 text-xs mr-2">${workout.type || 'Mixed'}</span>
                 <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${intensityBadge}">
-                    ${intensity.charAt(0).toUpperCase() + intensity.slice(1)} intensity
+                    ${intensity.charAt(0).toUpperCase() + intensity.slice(1)}
                 </span>
             </div>
         </td>
-        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-            ${phaseCount} phases
-        </td>
-        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-            ${exerciseCount} exercises
-        </td>
-        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+        <td class="px-4 py-3 whitespace-nowrap text-sm font-medium">
             <button onclick="viewWorkoutDetails('${workout.id || workout.date}')" 
-                    class="text-blue-600 hover:text-blue-900 transition-colors">
-                <i class="fas fa-eye mr-1"></i>
-                View Details
+                    class="text-blue-600 hover:text-blue-900 transition-colors text-xs">
+                <i class="fas fa-eye"></i>
             </button>
         </td>
     `;
