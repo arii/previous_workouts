@@ -6,33 +6,54 @@ This directory contains the processed workout history data and related files.
 
 ### Data Files
 - **`workout_history_data_categorized.json`** - Main categorized workout data with exercises organized by category (Warmup, Cardio, Strength, Accessory, Recovery)
-- **`workout_history_data.txt`** - Comprehensive text summary of all workout data with statistics, timing protocols, and difficulty analysis
 
 ### Source Files
-- **`revisions/`** - Directory containing all 844 individual workout revision files downloaded from Google Drive
-- **`collect_from_drive.py`** - Script to download workout revisions from Google Drive (requires Google API credentials)
+- **`revisions/`** - Directory containing 147 unique workout revision files downloaded from Google Drive
 - **`token.json`** - Google Drive API authentication token (keep secure)
 
-## Data Structure
+## Data Collection
+
+### API Used
+- **Google Drive API v2** - Used to access historical revisions of Google Docs
+- **Google Docs API** - For exporting document content as plain text
+- **Authentication**: OAuth2 with service account credentials
+
+### Collection Process
+The raw workout data was collected from Google Drive using the following approach:
+1. **Google Drive API v2** was used to list all revisions of the workout document
+2. **Export Links** from API v2 were used to download specific historical versions
+3. **Rate limiting** was implemented with 30-second delays between requests to avoid API quotas
+4. **Deduplication** was performed to remove identical files (80 duplicates removed from 227 total files)
+5. **Data processing** standardized exercise names and categorized exercises by type
+
+### Data Structure
 
 The categorized data includes:
-- **89 workout revisions** from March 28 to September 24, 2025
-- **1,335 total exercises** categorized into 5 phases
-- **5 timing protocols** consistently used across workouts
-- **Difficulty levels** (all current workouts are "Moderate" level)
+- **141 workout revisions** from July 31, 2023 to September 24, 2025
+- **659 unique exercises** categorized into 5 phases
+- **117 workout days** with 24 days having multiple workouts (up to 3 per day)
+- **Exercise frequency tracking** and daily workout counts
 
 ## Categories
-- **Warmup** (20.0%): Basic movements to prepare the body
-- **Cardio** (26.7%): High-intensity interval training and cardiovascular exercises  
-- **Strength** (33.3%): Resistance training with weights and bands
-- **Accessory** (20.0%): Supporting exercises for muscle groups
-- **Recovery** (0.0%): Mobility and stretching (currently not captured)
+- **Warmup** (49 exercises): Basic movements to prepare the body
+- **Cardio** (427 exercises): High-intensity interval training and cardiovascular exercises  
+- **Strength** (492 exercises): Resistance training with weights and bands
+- **Accessory** (544 exercises): Supporting exercises for muscle groups
+- **Recovery** (9 exercises): Mobility and stretching
 
-## Timing Protocols
-- **30/10x3**: 30 seconds work, 10 seconds rest, 3 rounds (Warmup)
-- **Tabata**: 20 seconds work, 10 seconds rest, 8 rounds (Cardio)
-- **40/30/20 (15 off)**: 40/30/20 second intervals (Strength)
-- **2 x 15**: 2 sets of 15 repetitions (Accessory)
-- **Mobility stretches**: Recovery phase
+## Most Common Exercises
+- **Dumbbell Floor Press** (21 times)
+- **Band Clamshells** (21 times)
+- **Glute Bridges** (17 times)
+- **Band Kickbacks** (16 times)
+- **Band Press** (15 times)
+- **Band Drag Curls** (14 times)
+- **Romanian Deadlift** (13 times)
+
+## Technical Notes
+- **File ID**: `1aLn_N1UheWVFKSVQtfBkgQbVDvHNbjVSH9ie3o_trYo`
+- **Collection Method**: Google Drive API v2 with export links for historical revisions
+- **Rate Limiting**: 30-second delays between API requests
+- **Data Processing**: Exercise name standardization and categorization
 
 Last updated: September 27, 2025
