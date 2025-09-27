@@ -319,31 +319,26 @@ function createWorkoutTableRow(workout) {
             phase.exercises ? phase.exercises.map(ex => typeof ex === 'string' ? ex : ex.name || ex) : []
         ) : [];
     
-    // Create exercise list with timing
-    const exerciseList = workout.phases ? workout.phases.map(phase => {
-        const exercises = phase.exercises ? phase.exercises.map(ex => typeof ex === 'string' ? ex : ex.name || ex) : [];
-        const timing = phase.timing || '';
-        return `${timing ? timing + ': ' : ''}${exercises.join(', ')}`;
-    }).filter(item => item.trim()) : [];
+    // Show first 3-4 exercises with "& X more" if there are more
+    const displayExercises = allExercises.slice(0, 3);
+    const remainingCount = allExercises.length - 3;
+    const exerciseText = displayExercises.join(', ') + (remainingCount > 0 ? ` & ${remainingCount} more` : '');
     
     row.innerHTML = `
-        <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">
+        <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">
             ${formattedDate}
         </td>
-        <td class="px-4 py-3 text-sm text-gray-900">
-            <div class="space-y-1">
-                ${exerciseList.map(item => `
-                    <div class="text-xs text-gray-700">${item}</div>
-                `).join('')}
-            </div>
-            <div class="flex items-center mt-2">
+        <td class="px-4 py-2 text-sm text-gray-900">
+            <div class="font-medium text-gray-800 mb-1">${exerciseText}</div>
+            <div class="flex items-center">
                 <span class="text-gray-500 text-xs mr-2">${workout.type || 'Mixed'}</span>
-                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${intensityBadge}">
+                <span class="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-medium ${intensityBadge}">
                     ${intensity.charAt(0).toUpperCase() + intensity.slice(1)}
                 </span>
+                <span class="text-gray-400 text-xs ml-2">${allExercises.length} exercises</span>
             </div>
         </td>
-        <td class="px-4 py-3 whitespace-nowrap text-sm font-medium">
+        <td class="px-4 py-2 whitespace-nowrap text-sm font-medium">
             <button onclick="viewWorkoutDetails('${workout.id || workout.date}')" 
                     class="text-blue-600 hover:text-blue-900 transition-colors text-xs">
                 <i class="fas fa-eye"></i>
