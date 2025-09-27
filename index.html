@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Generator</title>
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-2">
+                <i class="fas fa-dumbbell text-blue-600 mr-3"></i>
+                Workout Generator
+            </h1>
+            <p class="text-gray-600 mb-4">Generate personalized workouts based on your preferences</p>
+            <div class="flex space-x-3 justify-center">
+                <a href="/data-exploration.html" class="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-2 rounded-lg transition-colors">
+                    <i class="fas fa-chart-bar mr-2"></i>
+                    Explore Data & Insights
+                </a>
+                <a href="/workout-history.html" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors">
+                    <i class="fas fa-history mr-2"></i>
+                    Workout History
+                </a>
+            </div>
+        </div>
+
+        <!-- Workout Generator Card -->
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">
+                    <i class="fas fa-magic mr-2 text-purple-600"></i>
+                    Generate Your Workout
+                </h2>
+
+                <!-- Controls -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <!-- Intensity Selection -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-4">
+                            <i class="fas fa-fire mr-2 text-orange-500"></i>
+                            Intensity Level
+                        </h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                                <input type="radio" name="intensity" value="lower" class="mr-3 text-blue-600">
+                                <div>
+                                    <div class="font-medium text-gray-800">Lower Intensity</div>
+                                    <div class="text-sm text-gray-500">Beginner-friendly, moderate pace</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                                <input type="radio" name="intensity" value="normal" class="mr-3 text-blue-600" checked>
+                                <div>
+                                    <div class="font-medium text-gray-800">Normal Intensity</div>
+                                    <div class="text-sm text-gray-500">Balanced workout, standard pace</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                                <input type="radio" name="intensity" value="higher" class="mr-3 text-blue-600">
+                                <div>
+                                    <div class="font-medium text-gray-800">Higher Intensity</div>
+                                    <div class="text-sm text-gray-500">Challenging, high-energy workout</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Workout Type Selection -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-4">
+                            <i class="fas fa-list mr-2 text-green-500"></i>
+                            Workout Type
+                        </h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-green-50 transition-colors">
+                                <input type="radio" name="workoutType" value="balanced" class="mr-3 text-green-600" checked>
+                                <div>
+                                    <div class="font-medium text-gray-800">Balanced</div>
+                                    <div class="text-sm text-gray-500">Mix of all categories</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-green-50 transition-colors">
+                                <input type="radio" name="workoutType" value="emom" class="mr-3 text-green-600">
+                                <div>
+                                    <div class="font-medium text-gray-800">EMOM</div>
+                                    <div class="text-sm text-gray-500">Every Minute On the Minute</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-green-50 transition-colors">
+                                <input type="radio" name="workoutType" value="spartan" class="mr-3 text-green-600">
+                                <div>
+                                    <div class="font-medium text-gray-800">Spartan</div>
+                                    <div class="text-sm text-gray-500">High-intensity circuit training</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-green-50 transition-colors">
+                                <input type="radio" name="workoutType" value="tabata" class="mr-3 text-green-600">
+                                <div>
+                                    <div class="font-medium text-gray-800">Tabata</div>
+                                    <div class="text-sm text-gray-500">20 sec work, 10 sec rest intervals</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generate Button -->
+                <div class="text-center">
+                    <button id="generateWorkoutBtn" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-magic mr-2"></i>
+                        Generate 40-Minute Workout
+                    </button>
+                </div>
+            </div>
+
+            <!-- Generated Workout Display -->
+            <div id="generatedWorkout" class="hidden">
+                <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-semibold text-gray-800">
+                            <i class="fas fa-dumbbell mr-2 text-blue-600"></i>
+                            Your Generated Workout
+                        </h2>
+                        <div class="flex space-x-3">
+                            <button id="regenerateBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+                                <i class="fas fa-redo mr-2"></i>
+                                Regenerate
+                            </button>
+                            <button id="copyTableBtn" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors">
+                                <i class="fas fa-copy mr-2"></i>
+                                Copy Table
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Workout Info -->
+                    <div id="workoutInfo" class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 mb-6">
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+                            <div>
+                                <div class="text-2xl font-bold text-blue-600" id="workoutType">Balanced</div>
+                                <div class="text-sm text-gray-600">Type</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-purple-600" id="workoutIntensity">Normal</div>
+                                <div class="text-sm text-gray-600">Intensity</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-green-600">40 min</div>
+                                <div class="text-sm text-gray-600">Duration</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-orange-600" id="totalExercises">0</div>
+                                <div class="text-sm text-gray-600">Exercises</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Workout Structure -->
+                    <div id="workoutStructure">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+
+                    <!-- Copy-Friendly Table (Hidden) -->
+                    <div id="copyTable" class="hidden"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-xl p-8 text-center">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+            <p class="text-gray-600">Generating your workout...</p>
+        </div>
+    </div>
+
+    <!-- Success Toast -->
+    <div id="successToast" class="hidden fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50">
+        <div class="flex items-center">
+            <i class="fas fa-check mr-2"></i>
+            <span>Table copied to clipboard!</span>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/exercise-data.js"></script>
+    <script src="/js/app-static.js"></script>
+</body>
+</html>

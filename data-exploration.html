@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Exploration & Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-dumbbell mr-2 text-blue-600"></i>
+                        Workout Generator
+                    </a>
+                </div>
+                <nav class="flex space-x-4">
+                    <a href="/" class="text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-home mr-1"></i>
+                        Home
+                    </a>
+                    <a href="/workout-history.html" class="text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-history mr-1"></i>
+                        Workout History
+                    </a>
+                    <span class="text-blue-600 font-medium">
+                        <i class="fas fa-chart-line mr-1"></i>
+                        Data Exploration
+                    </span>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Page Header -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">
+                <i class="fas fa-chart-line mr-3 text-blue-600"></i>
+                Data Exploration & Insights
+            </h1>
+            <p class="text-gray-600">Explore your workout data and discover patterns</p>
+        </div>
+
+        <!-- Data Insights -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Overall Statistics -->
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6">
+                <h3 class="text-lg font-semibold text-blue-800 mb-4">
+                    <i class="fas fa-database mr-2"></i>
+                    Overall Statistics
+                </h3>
+                <div id="overallStats" class="space-y-2">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Most Common Exercises -->
+            <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6">
+                <h3 class="text-lg font-semibold text-green-800 mb-4">
+                    <i class="fas fa-trophy mr-2"></i>
+                    Most Common Exercises
+                </h3>
+                <div id="mostCommonExercises" class="space-y-2">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Exercise Categories -->
+            <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6">
+                <h3 class="text-lg font-semibold text-purple-800 mb-4">
+                    <i class="fas fa-pie-chart mr-2"></i>
+                    Exercise Categories
+                </h3>
+                <div id="categoryBreakdown" class="space-y-2">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Daily Workout Patterns -->
+        <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 mb-8">
+            <h3 class="text-lg font-semibold text-orange-800 mb-4">
+                <i class="fas fa-calendar-alt mr-2"></i>
+                Daily Workout Patterns
+            </h3>
+            <div id="dailyPatterns" class="space-y-2">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Exercise Search -->
+        <div class="bg-white rounded-xl shadow-sm p-6">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">
+                <i class="fas fa-search mr-2"></i>
+                Exercise Search
+            </h3>
+            <div class="mb-4">
+                <input type="text" id="exerciseSearch" placeholder="Search for exercises..." 
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <div id="searchResults" class="space-y-2">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/exercise-data.js"></script>
+    <script src="/js/data-exploration-static.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout History</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-dumbbell mr-2 text-blue-600"></i>
+                        Workout Generator
+                    </a>
+                </div>
+                <nav class="flex space-x-4">
+                    <a href="/" class="text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-home mr-1"></i>
+                        Home
+                    </a>
+                    <a href="/data-exploration.html" class="text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-chart-line mr-1"></i>
+                        Explore Data
+                    </a>
+                    <span class="text-blue-600 font-medium">
+                        <i class="fas fa-history mr-1"></i>
+                        Workout History
+                    </span>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Page Header -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">
+                <i class="fas fa-history mr-3 text-blue-600"></i>
+                Workout History
+            </h1>
+            <p class="text-gray-600">View your historical exercise data from 2023-2025</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+            <div class="flex flex-wrap gap-4 items-center">
+                <div class="flex items-center space-x-4">
+                    <button id="viewAllBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+                        <i class="fas fa-list mr-2"></i>
+                        View All History
+                    </button>
+                    <button id="viewRecentBtn" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors">
+                        <i class="fas fa-calendar-week mr-2"></i>
+                        Recent Workouts
+                    </button>
+                </div>
+                <div class="ml-auto">
+                    <a href="/" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        Back to Workout Generator
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- History Content -->
+        <div id="historyContent" class="space-y-6">
+            <!-- Will be populated by JavaScript -->
+        </div>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="hidden text-center py-12">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+            <p class="text-gray-600">Loading workout history...</p>
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="hidden text-center py-12">
+            <i class="fas fa-history text-6xl text-gray-300 mb-4"></i>
+            <h3 class="text-xl font-semibold text-gray-600 mb-2">No workouts found</h3>
+            <p class="text-gray-500">No historical workouts found for the selected filter.</p>
+        </div>
+    </main>
+
+    <!-- Success Toast -->
+    <div id="successToast" class="hidden fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50">
+        <div class="flex items-center">
+            <i class="fas fa-check mr-2"></i>
+            <span>Data loaded successfully!</span>
+        </div>
+    </div>
+
+    <!-- Error Toast -->
+    <div id="errorToast" class="hidden fixed top-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg z-50">
+        <div class="flex items-center">
+            <i class="fas fa-exclamation-triangle mr-2"></i>
+            <span id="errorMessage">An error occurred</span>
+        </div>
+    </div>
+
+    <script src="/js/exercise-data.js"></script>
+    <script src="/js/workout-history-static.js"></script>
+</body>
+</html>

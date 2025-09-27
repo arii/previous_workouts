@@ -1,143 +1,145 @@
-# Previous Workouts
+# Workout Generator
 
-A modern web application to track and review your previous workout sessions. Built with Node.js, Express, SQLite, and a beautiful responsive UI using Tailwind CSS.
+A static web application for generating personalized workouts and exploring historical exercise data. This application is designed to work with GitHub Pages and requires no server-side components.
 
 ## Features
 
-- 📝 **Add Workouts**: Record new workout sessions with name, date, duration, and notes
-- 📊 **View History**: Browse all your previous workouts in a clean, organized interface
-- 🔍 **Detailed View**: Click on any workout to see detailed information and exercises
-- 🗑️ **Delete Workouts**: Remove workouts you no longer need
-- 📱 **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
-- ⚡ **Fast & Lightweight**: Built with modern web technologies for optimal performance
+- **Workout Generation**: Generate 40-minute workouts with different intensity levels and types (Balanced, EMOM, Spartan, Tabata)
+- **Historical Data**: View workouts from 2023-2025 with 141 total workouts and 659 unique exercises
+- **Data Exploration**: Explore exercise patterns, most common exercises, and workout statistics
+- **Copy-Friendly Tables**: Generate tables that can be easily copied to Google Docs
+- **Static Site**: No server required - works entirely in the browser
 
-## Screenshots
+## Live Demo
 
-The application features a clean, modern interface with:
-- Card-based workout display
-- Modal dialogs for adding and viewing workouts
-- Responsive grid layout
-- Beautiful icons and smooth animations
+Visit the live site: [https://arii.github.io/previous_workouts/](https://arii.github.io/previous_workouts/)
 
-## Installation
+## Local Development
 
-1. **Clone or download the project**
+### Prerequisites
+- Python 3 (for local server)
+- Node.js (for CSS building)
+
+### Setup
+1. Clone the repository:
    ```bash
+   git clone https://github.com/arii/previous_workouts.git
    cd previous_workouts
    ```
 
-2. **Install dependencies**
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-3. **Build CSS (optional - for development)**
+3. Build CSS (optional):
    ```bash
    npm run build:css
    ```
 
-4. **Start the server**
+4. Start local server:
    ```bash
    npm start
+   # or
+   python3 -m http.server 8000
    ```
 
-5. **Open your browser**
-   Navigate to `http://localhost:3000`
+5. Open your browser to `http://localhost:8000`
 
-## Development
+## Data Structure
 
-For development with auto-restart:
+The application uses structured exercise data from Google Drive revisions:
 
-```bash
-npm run dev
-```
+- **141 workouts** from 2023-2025
+- **659 unique exercises** across 5 categories
+- **117 workout days** with historical data
+- **Categories**: Warmup, Cardio, Strength, Accessory, Recovery
 
-For CSS development with auto-rebuild:
+### Data Collection
 
-```bash
-npm run build:css
-```
+Historical data was collected using the Google Drive API v2 with the following process:
+- Accessed Google Docs revision history
+- Downloaded 147 unique revision files
+- Processed and categorized exercises by phase and type
+- Standardized exercise names and removed invalid entries
+- Applied rate limiting (30-second delays) to avoid API quotas
 
 ## Project Structure
 
 ```
-previous_workouts/
-├── server.js              # Main server file
-├── package.json           # Project dependencies and scripts
-├── tailwind.config.js     # Tailwind CSS configuration
-├── views/
-│   └── index.html         # Main HTML template
+├── index.html                 # Main workout generator page
+├── workout-history.html       # Historical workouts viewer
+├── data-exploration.html      # Data insights and exploration
 ├── public/
 │   ├── css/
-│   │   └── style.css      # Compiled CSS (generated)
+│   │   └── style.css         # Tailwind CSS styles
 │   └── js/
-│       └── app.js         # Frontend JavaScript
+│       ├── exercise-data.js   # Embedded exercise data
+│       ├── app-static.js      # Main application logic
+│       ├── workout-history-static.js
+│       └── data-exploration-static.js
+├── exercise_data/
+│   ├── workout_history_data_categorized.json  # Main data file
+│   └── revisions/            # Raw revision files
 ├── src/
-│   └── input.css          # Source CSS with Tailwind directives
-└── README.md              # This file
+│   └── input.css             # Tailwind CSS source
+└── package.json
 ```
 
-## API Endpoints
+## GitHub Pages Deployment
 
-- `GET /` - Serve the main application
-- `GET /api/workouts` - Get all workouts
-- `GET /api/workouts/:id` - Get specific workout with exercises
-- `POST /api/workouts` - Add new workout
-- `POST /api/workouts/:id/exercises` - Add exercise to workout
-- `DELETE /api/workouts/:id` - Delete workout
+This project is configured for GitHub Pages deployment:
 
-## Database Schema
+1. **Repository Settings**: Go to Settings → Pages
+2. **Source**: Deploy from a branch
+3. **Branch**: Select `main` branch
+4. **Folder**: Select `/ (root)`
+5. **Save**: The site will be available at `https://username.github.io/previous_workouts/`
 
-### Workouts Table
-- `id` - Primary key
-- `name` - Workout name
-- `date` - Workout date
-- `duration` - Duration in minutes
-- `notes` - Additional notes
-- `created_at` - Timestamp
+## Features in Detail
 
-### Exercises Table
-- `id` - Primary key
-- `workout_id` - Foreign key to workouts
-- `name` - Exercise name
-- `sets` - Number of sets
-- `reps` - Number of repetitions
-- `weight` - Weight used
-- `duration` - Duration in minutes
-- `notes` - Exercise notes
+### Workout Generation
+- **Intensity Levels**: Lower, Normal, Higher
+- **Workout Types**: 
+  - Balanced: Mix of all categories
+  - EMOM: Every Minute On the Minute
+  - Spartan: High-intensity circuit training
+  - Tabata: 20 sec work, 10 sec rest intervals
 
-## Technologies Used
+### Data Insights
+- Overall statistics (total workouts, exercises, date range)
+- Most common exercises across all historical data
+- Exercise category breakdown
+- Daily workout patterns and frequency analysis
+- Exercise search functionality
 
-- **Backend**: Node.js, Express.js
-- **Database**: SQLite3
-- **Frontend**: Vanilla JavaScript, HTML5, CSS3
-- **Styling**: Tailwind CSS
-- **Icons**: Font Awesome
-- **Build Tools**: npm scripts
+### Historical Workouts
+- View workouts by date with exercise details
+- Filter by recent workouts (last 30 days) or all history
+- Detailed workout breakdowns with phases and timing
+- Exercise standardization and validation
 
-## Contributing
+## Technical Notes
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+- **No Backend**: All functionality runs client-side using embedded JavaScript data
+- **No Database**: Exercise data is embedded in `exercise-data.js`
+- **No API Calls**: All data processing happens in the browser
+- **Responsive Design**: Built with Tailwind CSS for mobile-friendly interface
+- **Copy Functionality**: Uses modern Clipboard API for table copying
+
+## Data Quality
+
+The application includes several data quality improvements:
+- Exercise name standardization (e.g., "Ch" → "Chest", "Sh." → "Shoulder")
+- Invalid exercise filtering (removes "10 Down", "OR", "R", etc.)
+- Unilateral exercise pairing (ensures L/R exercises are paired)
+- Proper warmup exercise selection
+- Phase-based exercise categorization
 
 ## License
 
-MIT License - feel free to use this project for personal or commercial purposes.
+MIT License - see LICENSE file for details.
 
-## Future Enhancements
+## Contributing
 
-- [ ] User authentication and multiple user support
-- [ ] Exercise templates and presets
-- [ ] Workout statistics and analytics
-- [ ] Export functionality (CSV, PDF)
-- [ ] Mobile app (React Native)
-- [ ] Social features and sharing
-- [ ] Integration with fitness trackers
-- [ ] Workout plans and schedules
-
-## Support
-
-If you encounter any issues or have questions, please open an issue on the project repository.
+This is a personal project, but suggestions and improvements are welcome!

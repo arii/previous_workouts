@@ -1,25 +1,23 @@
 {
-  "name": "previous_workouts",
-  "version": "1.0.0",
-  "description": "A web application to track and view previous workout sessions",
-  "main": "index.js",
+  "name": "workout-generator",
+  "version": "2.0.0",
+  "description": "A static workout generator application with historical data - ready for GitHub Pages",
+  "main": "index.html",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
     "build": "npm run build:css",
     "build:css": "tailwindcss -i ./src/input.css -o ./public/css/style.css --watch"
   },
-  "keywords": ["workout", "fitness", "tracking", "exercise"],
-  "author": "",
+  "keywords": ["workout", "fitness", "generator", "exercise", "static", "github-pages"],
+  "author": "Ari",
   "license": "MIT",
-  "dependencies": {
-    "express": "^4.18.2",
-    "sqlite3": "^5.1.6",
-    "body-parser": "^1.20.2",
-    "cors": "^2.8.5"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arii/previous_workouts.git"
   },
+  "homepage": "https://arii.github.io/previous_workouts/",
   "devDependencies": {
-    "nodemon": "^3.0.1",
     "tailwindcss": "^3.3.3"
   }
 }
