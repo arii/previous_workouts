@@ -42,10 +42,19 @@ db.serialize(() => {
 });
 
 // Load exercise data from JSON file
-let exerciseData = [];
+let exerciseData = {};
+let exerciseMetadata = {};
 try {
   const data = fs.readFileSync(path.join(__dirname, 'exercise_data', 'workout_history_data_categorized.json'), 'utf8');
-  exerciseData = JSON.parse(data);
+  const parsedData = JSON.parse(data);
+  exerciseData = parsedData.categorized_exercises || {};
+  exerciseMetadata = parsedData.metadata || {};
+  console.log('Loaded exercise data:', {
+    totalWorkouts: exerciseMetadata.summary?.total_workouts || 0,
+    totalExercises: exerciseMetadata.summary?.total_unique_exercises || 0,
+    dateRange: exerciseMetadata.summary?.date_range || {},
+    categories: Object.keys(exerciseData)
+  });
 } catch (error) {
   console.error('Error loading exercise data:', error);
 }
@@ -64,23 +73,18 @@ function getDifficultyLabel(difficulty) {
 
 // Workout generation logic
 function generateWorkout(intensity, workoutType) {
-  // Get all unique exercises from historical data
-  const allExercises = new Set();
-  exerciseData.forEach(workout => {
-    Object.values(workout.exercises_by_category).forEach(exercises => {
-      exercises.forEach(exercise => allExercises.add(exercise));
-    });
+  // Get exercises from our new categorized data structure
+  const categories = {};
+  
+  // Extract unique exercises from each category
+  Object.keys(exerciseData).forEach(category => {
+    const exercises = exerciseData[category];
+    const uniqueExercises = [...new Set(exercises.map(item => item.exercise))];
+    categories[category] = uniqueExercises;
   });
   
-  const exerciseList = Array.from(allExercises);
-  
-  // Define exercise categories
-  const categories = {
-    'Warmup': ['Basic crunch', 'Penguins', 'Feet over kb', 'Mobility stretches'],
-    'Cardio': ['Band f/b jack', 'Band hydrant', 'Band seal', 'Band jump sq', 'Tabata'],
-    'Strength': ['Db goblet squat', 'Band swims', 'Db sumo dl', 'Band punches', 'Dd toe touch'],
-    'Accessory': ['Band curls', 'Band kickback', 'Slider knee tucks']
-  };
+  console.log('Available categories:', Object.keys(categories));
+  console.log('Exercise counts per category:', Object.keys(categories).map(cat => `${cat}: ${categories[cat].length}`));
   
   // Target 40 minutes - adjust exercise count and structure accordingly
   let exerciseCount = 10; // Base for 40-minute workout
@@ -617,6 +621,80 @@ app.delete('/api/workouts/:id', (req, res) => {
       res.json({ message: 'Workout deleted successfully' });
     });
   });
+});
+
+// Get exercise data and statistics
+app.get('/api/exercise-data', (req, res) => {
+  try {
+    res.json({
+      metadata: exerciseMetadata,
+      categories: Object.keys(exerciseData),
+      categoryCounts: Object.keys(exerciseData).reduce((acc, category) => {
+        acc[category] = exerciseData[category].length;
+        return acc;
+      }, {})
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to load exercise data' });
+  }
+});
+
+// Get exercises by category
+app.get('/api/exercises/:category', (req, res) => {
+  const category = req.params.category;
+  
+  if (!exerciseData[category]) {
+    res.status(404).json({ error: 'Category not found' });
+    return;
+  }
+  
+  // Get unique exercises from this category
+  const uniqueExercises = [...new Set(exerciseData[category].map(item => item.exercise))];
+  
+  res.json({
+    category: category,
+    exercises: uniqueExercises,
+    count: uniqueExercises.length
+  });
+});
+
+// Get most common exercises
+app.get('/api/exercises/stats/most-common', (req, res) => {
+  try {
+    const limit = parseInt(req.query.limit) || 20;
+    const mostCommon = exerciseMetadata.summary?.most_common_exercises || {};
+    
+    const sortedExercises = Object.entries(mostCommon)
+      .sort(([,a], [,b]) => b - a)
+      .slice(0, limit)
+      .map(([exercise, count]) => ({ exercise, count }));
+    
+    res.json({
+      mostCommon: sortedExercises,
+      total: Object.keys(mostCommon).length
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to load exercise statistics' });
+  }
+});
+
+// Get daily workout statistics
+app.get('/api/workouts/stats/daily', (req, res) => {
+  try {
+    const dailyCounts = exerciseMetadata.summary?.daily_workout_counts || {};
+    const multiWorkoutDays = Object.entries(dailyCounts)
+      .filter(([, count]) => count > 1)
+      .sort(([,a], [,b]) => b - a);
+    
+    res.json({
+      totalDays: Object.keys(dailyCounts).length,
+      totalWorkouts: Object.values(dailyCounts).reduce((sum, count) => sum + count, 0),
+      multiWorkoutDays: multiWorkoutDays,
+      averageWorkoutsPerDay: (Object.values(dailyCounts).reduce((sum, count) => sum + count, 0) / Object.keys(dailyCounts).length).toFixed(2)
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to load daily statistics' });
+  }
 });
 
 app.listen(PORT, () => {

@@ -19,6 +19,9 @@ const copyTable = document.getElementById('copyTable');
 const customExerciseSection = document.getElementById('customExerciseSection');
 const addCustomExerciseBtn = document.getElementById('addCustomExerciseBtn');
 const addNewPhaseBtn = document.getElementById('addNewPhaseBtn');
+const showInsightsBtn = document.getElementById('showInsightsBtn');
+const hideInsightsBtn = document.getElementById('hideInsightsBtn');
+const dataInsights = document.getElementById('dataInsights');
 
 // Event listeners
 document.addEventListener('DOMContentLoaded', function() {
@@ -35,6 +38,8 @@ function setupEventListeners() {
     copyTableBtn.addEventListener('click', copyTableToClipboard);
     addCustomExerciseBtn.addEventListener('click', addCustomExercise);
     addNewPhaseBtn.addEventListener('click', addNewPhase);
+    showInsightsBtn.addEventListener('click', showDataInsights);
+    hideInsightsBtn.addEventListener('click', hideDataInsights);
 }
 
 // Workout Generation
@@ -520,6 +525,128 @@ function showCopySuccessToast() {
     }, 3000);
 }
 
+// Data Insights Functions
+async function showDataInsights() {
+    try {
+        showLoading();
+        
+        // Fetch all the data we need
+        const [exerciseData, mostCommon, dailyStats] = await Promise.all([
+            fetch('/api/exercise-data').then(res => res.json()),
+            fetch('/api/exercises/stats/most-common?limit=10').then(res => res.json()),
+            fetch('/api/workouts/stats/daily').then(res => res.json())
+        ]);
+        
+        // Populate overall statistics
+        populateOverallStats(exerciseData);
+        
+        // Populate most common exercises
+        populateMostCommonExercises(mostCommon);
+        
+        // Populate category breakdown
+        populateCategoryBreakdown(exerciseData);
+        
+        // Populate daily patterns
+        populateDailyPatterns(dailyStats);
+        
+        // Show the insights section
+        dataInsights.classList.remove('hidden');
+        dataInsights.scrollIntoView({ behavior: 'smooth' });
+        
+    } catch (error) {
+        console.error('Error loading data insights:', error);
+        showToast('Error loading data insights', 'error');
+    } finally {
+        hideLoading();
+    }
+}
+
+function hideDataInsights() {
+    dataInsights.classList.add('hidden');
+}
+
+function populateOverallStats(data) {
+    const statsContainer = document.getElementById('overallStats');
+    const summary = data.metadata?.summary || {};
+    
+    statsContainer.innerHTML = `
+        <div class="flex justify-between items-center">
+            <span class="text-sm text-blue-700">Total Workouts:</span>
+            <span class="font-semibold text-blue-800">${summary.total_workouts || 0}</span>
+        </div>
+        <div class="flex justify-between items-center">
+            <span class="text-sm text-blue-700">Total Days:</span>
+            <span class="font-semibold text-blue-800">${summary.total_days || 0}</span>
+        </div>
+        <div class="flex justify-between items-center">
+            <span class="text-sm text-blue-700">Unique Exercises:</span>
+            <span class="font-semibold text-blue-800">${summary.total_unique_exercises || 0}</span>
+        </div>
+        <div class="flex justify-between items-center">
+            <span class="text-sm text-blue-700">Date Range:</span>
+            <span class="font-semibold text-blue-800">${summary.date_range?.start || 'N/A'} to ${summary.date_range?.end || 'N/A'}</span>
+        </div>
+    `;
+}
+
+function populateMostCommonExercises(data) {
+    const container = document.getElementById('mostCommonExercises');
+    const exercises = data.mostCommon || [];
+    
+    container.innerHTML = exercises.map((item, index) => `
+        <div class="flex justify-between items-center">
+            <span class="text-sm text-green-700">${index + 1}. ${item.exercise}</span>
+            <span class="font-semibold text-green-800">${item.count}</span>
+        </div>
+    `).join('');
+}
+
+function populateCategoryBreakdown(data) {
+    const container = document.getElementById('categoryBreakdown');
+    const categoryCounts = data.categoryCounts || {};
+    
+    container.innerHTML = Object.entries(categoryCounts).map(([category, count]) => `
+        <div class="flex justify-between items-center">
+            <span class="text-sm text-purple-700">${category}:</span>
+            <span class="font-semibold text-purple-800">${count} exercises</span>
+        </div>
+    `).join('');
+}
+
+function populateDailyPatterns(data) {
+    const container = document.getElementById('dailyPatterns');
+    
+    container.innerHTML = `
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="text-center">
+                <div class="text-2xl font-bold text-orange-800">${data.totalDays || 0}</div>
+                <div class="text-sm text-orange-700">Total Days</div>
+            </div>
+            <div class="text-center">
+                <div class="text-2xl font-bold text-orange-800">${data.totalWorkouts || 0}</div>
+                <div class="text-sm text-orange-700">Total Workouts</div>
+            </div>
+            <div class="text-center">
+                <div class="text-2xl font-bold text-orange-800">${data.averageWorkoutsPerDay || 0}</div>
+                <div class="text-sm text-orange-700">Avg per Day</div>
+            </div>
+        </div>
+        ${data.multiWorkoutDays && data.multiWorkoutDays.length > 0 ? `
+            <div class="mt-4">
+                <h4 class="font-semibold text-orange-800 mb-2">Days with Multiple Workouts:</h4>
+                <div class="space-y-1">
+                    ${data.multiWorkoutDays.slice(0, 5).map(([date, count]) => `
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-orange-700">${date}</span>
+                            <span class="font-semibold text-orange-800">${count} workouts</span>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        ` : ''}
+    `;
+}
+
 // Global variable to store current workout
 let currentWorkout = null;
 
@@ -682,4 +809,126 @@ function showSuccessToast(message) {
     setTimeout(() => {
         toast.remove();
     }, 3000);
+}
+
+// Data Insights Functions
+async function showDataInsights() {
+    try {
+        showLoading();
+        
+        // Fetch all the data we need
+        const [exerciseData, mostCommon, dailyStats] = await Promise.all([
+            fetch('/api/exercise-data').then(res => res.json()),
+            fetch('/api/exercises/stats/most-common?limit=10').then(res => res.json()),
+            fetch('/api/workouts/stats/daily').then(res => res.json())
+        ]);
+        
+        // Populate overall statistics
+        populateOverallStats(exerciseData);
+        
+        // Populate most common exercises
+        populateMostCommonExercises(mostCommon);
+        
+        // Populate category breakdown
+        populateCategoryBreakdown(exerciseData);
+        
+        // Populate daily patterns
+        populateDailyPatterns(dailyStats);
+        
+        // Show the insights section
+        dataInsights.classList.remove('hidden');
+        dataInsights.scrollIntoView({ behavior: 'smooth' });
+        
+    } catch (error) {
+        console.error('Error loading data insights:', error);
+        showToast('Error loading data insights', 'error');
+    } finally {
+        hideLoading();
+    }
+}
+
+function hideDataInsights() {
+    dataInsights.classList.add('hidden');
+}
+
+function populateOverallStats(data) {
+    const statsContainer = document.getElementById('overallStats');
+    const summary = data.metadata?.summary || {};
+    
+    statsContainer.innerHTML = `
+        <div class="flex justify-between items-center">
+            <span class="text-sm text-blue-700">Total Workouts:</span>
+            <span class="font-semibold text-blue-800">${summary.total_workouts || 0}</span>
+        </div>
+        <div class="flex justify-between items-center">
+            <span class="text-sm text-blue-700">Total Days:</span>
+            <span class="font-semibold text-blue-800">${summary.total_days || 0}</span>
+        </div>
+        <div class="flex justify-between items-center">
+            <span class="text-sm text-blue-700">Unique Exercises:</span>
+            <span class="font-semibold text-blue-800">${summary.total_unique_exercises || 0}</span>
+        </div>
+        <div class="flex justify-between items-center">
+            <span class="text-sm text-blue-700">Date Range:</span>
+            <span class="font-semibold text-blue-800">${summary.date_range?.start || 'N/A'} to ${summary.date_range?.end || 'N/A'}</span>
+        </div>
+    `;
+}
+
+function populateMostCommonExercises(data) {
+    const container = document.getElementById('mostCommonExercises');
+    const exercises = data.mostCommon || [];
+    
+    container.innerHTML = exercises.map((item, index) => `
+        <div class="flex justify-between items-center">
+            <span class="text-sm text-green-700">${index + 1}. ${item.exercise}</span>
+            <span class="font-semibold text-green-800">${item.count}</span>
+        </div>
+    `).join('');
+}
+
+function populateCategoryBreakdown(data) {
+    const container = document.getElementById('categoryBreakdown');
+    const categoryCounts = data.categoryCounts || {};
+    
+    container.innerHTML = Object.entries(categoryCounts).map(([category, count]) => `
+        <div class="flex justify-between items-center">
+            <span class="text-sm text-purple-700">${category}:</span>
+            <span class="font-semibold text-purple-800">${count} exercises</span>
+        </div>
+    `).join('');
+}
+
+function populateDailyPatterns(data) {
+    const container = document.getElementById('dailyPatterns');
+    
+    container.innerHTML = `
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="text-center">
+                <div class="text-2xl font-bold text-orange-800">${data.totalDays || 0}</div>
+                <div class="text-sm text-orange-700">Total Days</div>
+            </div>
+            <div class="text-center">
+                <div class="text-2xl font-bold text-orange-800">${data.totalWorkouts || 0}</div>
+                <div class="text-sm text-orange-700">Total Workouts</div>
+            </div>
+            <div class="text-center">
+                <div class="text-2xl font-bold text-orange-800">${data.averageWorkoutsPerDay || 0}</div>
+                <div class="text-sm text-orange-700">Avg per Day</div>
+            </div>
+        </div>
+        ${data.multiWorkoutDays && data.multiWorkoutDays.length > 0 ? `
+            <div class="mt-4">
+                <h4 class="font-semibold text-orange-800 mb-2">Days with Multiple Workouts:</h4>
+                <div class="space-y-1">
+                    ${data.multiWorkoutDays.slice(0, 5).map(([date, count]) => `
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-orange-700">${date}</span>
+                            <span class="font-semibold text-orange-800">${count} workouts</span>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        ` : ''}
+    `;
 }
