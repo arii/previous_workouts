@@ -151,13 +151,140 @@ function displayWorkouts(workouts, filter) {
     `;
     historyContent.appendChild(filterIndicator);
     
-    // Group workouts by date
-    const groupedWorkouts = groupWorkoutsByDate(workouts);
+    // Create table
+    const tableContainer = document.createElement('div');
+    tableContainer.className = 'bg-white rounded-xl shadow-lg overflow-hidden';
     
-    Object.entries(groupedWorkouts).forEach(([date, dayWorkouts]) => {
-        const dateSection = createDateSection(date, dayWorkouts);
-        historyContent.appendChild(dateSection);
+    const table = document.createElement('table');
+    table.className = 'w-full';
+    
+    // Table header
+    const thead = document.createElement('thead');
+    thead.className = 'bg-gray-50';
+    thead.innerHTML = `
+        <tr>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Workout</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phases</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exercises</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+        </tr>
+    `;
+    table.appendChild(thead);
+    
+    // Table body
+    const tbody = document.createElement('tbody');
+    tbody.className = 'bg-white divide-y divide-gray-200';
+    
+    // Sort workouts by date (newest first)
+    const sortedWorkouts = workouts.sort((a, b) => new Date(b.date || b.created_at) - new Date(a.date || a.created_at));
+    
+    sortedWorkouts.forEach(workout => {
+        const row = createWorkoutTableRow(workout);
+        tbody.appendChild(row);
     });
+    
+    table.appendChild(tbody);
+    tableContainer.appendChild(table);
+    historyContent.appendChild(tableContainer);
+}
+
+// Create a table row for a workout
+function createWorkoutTableRow(workout) {
+    const row = document.createElement('tr');
+    
+    // Get intensity and set appropriate background color
+    const intensity = workout.intensity || 'normal';
+    const intensityColors = {
+        'lower': 'bg-green-50 hover:bg-green-100',
+        'normal': 'bg-blue-50 hover:bg-blue-100', 
+        'higher': 'bg-red-50 hover:bg-red-100'
+    };
+    
+    row.className = `${intensityColors[intensity.toLowerCase()] || intensityColors.normal} transition-colors`;
+    
+    const date = new Date(workout.date || workout.created_at);
+    const formattedDate = date.toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric'
+    });
+    
+    const workoutTitle = generateWorkoutTitle(workout);
+    const phaseCount = workout.phases ? workout.phases.length : 0;
+    const exerciseCount = workout.phases ? 
+        workout.phases.reduce((total, phase) => total + (phase.exercises ? phase.exercises.length : 0), 0) : 0;
+    
+    // Get intensity badge color
+    const intensityBadgeColors = {
+        'lower': 'bg-green-100 text-green-800',
+        'normal': 'bg-blue-100 text-blue-800',
+        'higher': 'bg-red-100 text-red-800'
+    };
+    
+    const intensityBadge = intensityBadgeColors[intensity.toLowerCase()] || intensityBadgeColors.normal;
+    
+    row.innerHTML = `
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+            ${formattedDate}
+        </td>
+        <td class="px-6 py-4 text-sm text-gray-900">
+            <div class="font-medium">${workoutTitle}</div>
+            <div class="flex items-center mt-1">
+                <span class="text-gray-500 text-xs mr-2">${workout.type || 'Mixed'}</span>
+                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${intensityBadge}">
+                    ${intensity.charAt(0).toUpperCase() + intensity.slice(1)} intensity
+                </span>
+            </div>
+        </td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+            ${phaseCount} phases
+        </td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+            ${exerciseCount} exercises
+        </td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+            <button onclick="viewWorkoutDetails('${workout.id || workout.date}')" 
+                    class="text-blue-600 hover:text-blue-900 transition-colors">
+                <i class="fas fa-eye mr-1"></i>
+                View Details
+            </button>
+        </td>
+    `;
+    
+    return row;
+}
+
+// Generate a summarized title for a workout
+function generateWorkoutTitle(workout) {
+    if (!workout.phases || workout.phases.length === 0) {
+        return 'Empty Workout';
+    }
+    
+    // Get the main phase (usually the largest or most important)
+    const mainPhase = workout.phases.find(phase => 
+        phase.name && ['Strength', 'EMOM', 'Spartan', 'Cardio'].includes(phase.name)
+    ) || workout.phases[0];
+    
+    if (!mainPhase || !mainPhase.exercises || mainPhase.exercises.length === 0) {
+        return 'Basic Workout';
+    }
+    
+    // Get the first few exercises from the main phase
+    const exercises = mainPhase.exercises.slice(0, 3);
+    const exerciseNames = exercises.map(ex => {
+        if (typeof ex === 'string') return ex;
+        return ex.name || ex;
+    });
+    
+    // Create a title based on the exercises
+    if (exerciseNames.length === 1) {
+        return `${exerciseNames[0]} Focus`;
+    } else if (exerciseNames.length === 2) {
+        return `${exerciseNames[0]} & ${exerciseNames[1]}`;
+    } else {
+        return `${exerciseNames[0]}, ${exerciseNames[1]} & More`;
+    }
 }
 
 // Group workouts by date
