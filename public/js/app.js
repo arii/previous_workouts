@@ -126,15 +126,6 @@ function displayGeneratedWorkout(workout) {
                 </div>
             </div>
             
-            ${phase.timing ? `
-                <div class="mb-4 p-3 bg-gray-50 rounded-lg">
-                    <div class="flex items-center text-sm text-gray-600">
-                        <i class="fas fa-clock mr-2"></i>
-                        <span class="font-medium">Timing:</span>
-                        <span class="ml-2">${phase.timing}</span>
-                    </div>
-                </div>
-            ` : ''}
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 ${phase.exercises.map((exercise, exerciseIndex) => `
