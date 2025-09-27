@@ -406,8 +406,8 @@ function escapeHtml(text) {
 }
 
 function generateCopyFriendlyTable(workout) {
-    // Create a table structure similar to Google Docs format
-    let tableHtml = '';
+    // Create a proper HTML table that can be copied to Google Docs
+    let tableHtml = '<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">';
     
     if (workout.type === 'balanced') {
         // For balanced workouts, organize by phases
@@ -415,15 +415,19 @@ function generateCopyFriendlyTable(workout) {
         const maxExercises = Math.max(...workout.phases.map(phase => phase.exercises.length));
         
         // Create header row
-        tableHtml += 'Phase\t' + phaseHeaders.join('\t') + '\n';
+        tableHtml += '<tr style="background-color: #f0f0f0; font-weight: bold;">';
+        tableHtml += '<td>Exercise</td>';
+        phaseHeaders.forEach(header => {
+            tableHtml += `<td>${header}</td>`;
+        });
+        tableHtml += '</tr>';
         
         // Create exercise rows
         for (let i = 0; i < maxExercises; i++) {
-            let row = '';
-            workout.phases.forEach((phase, phaseIndex) => {
-                if (phaseIndex === 0) {
-                    row += `Exercise ${i + 1}\t`;
-                }
+            tableHtml += '<tr>';
+            tableHtml += `<td>Exercise ${i + 1}</td>`;
+            
+            workout.phases.forEach(phase => {
                 if (phase.exercises[i]) {
                     const exercise = phase.exercises[i];
                     let exerciseText = exercise.name;
@@ -433,57 +437,102 @@ function generateCopyFriendlyTable(workout) {
                     if (exercise.duration) {
                         exerciseText += ` (${exercise.duration})`;
                     }
-                    row += exerciseText;
+                    tableHtml += `<td>${exerciseText}</td>`;
+                } else {
+                    tableHtml += '<td></td>';
                 }
-                row += '\t';
             });
-            tableHtml += row.trim() + '\n';
+            tableHtml += '</tr>';
         }
     } else if (workout.type === 'emom') {
         // For EMOM workouts
         const phase = workout.phases[0];
-        tableHtml += 'EMOM Circuit\n';
-        tableHtml += 'Exercise\tSets\tReps\tRest\n';
+        tableHtml += '<tr style="background-color: #f0f0f0; font-weight: bold;">';
+        tableHtml += '<td colspan="4" style="text-align: center;">EMOM Circuit</td>';
+        tableHtml += '</tr>';
+        tableHtml += '<tr style="background-color: #e0e0e0; font-weight: bold;">';
+        tableHtml += '<td>Exercise</td><td>Sets</td><td>Reps</td><td>Rest</td>';
+        tableHtml += '</tr>';
+        
         phase.exercises.forEach(exercise => {
-            tableHtml += `${exercise.name}\t${exercise.sets}\t${exercise.reps}\t${exercise.rest}\n`;
+            tableHtml += '<tr>';
+            tableHtml += `<td>${exercise.name}</td>`;
+            tableHtml += `<td>${exercise.sets || ''}</td>`;
+            tableHtml += `<td>${exercise.reps || ''}</td>`;
+            tableHtml += `<td>${exercise.rest || ''}</td>`;
+            tableHtml += '</tr>';
         });
     } else if (workout.type === 'spartan') {
         // For Spartan workouts
         workout.phases.forEach(phase => {
-            tableHtml += `${phase.name}\n`;
-            tableHtml += 'Exercise\tSets\tReps\tRest\n';
+            tableHtml += '<tr style="background-color: #f0f0f0; font-weight: bold;">';
+            tableHtml += `<td colspan="4" style="text-align: center;">${phase.name}</td>`;
+            tableHtml += '</tr>';
+            tableHtml += '<tr style="background-color: #e0e0e0; font-weight: bold;">';
+            tableHtml += '<td>Exercise</td><td>Sets</td><td>Reps</td><td>Rest</td>';
+            tableHtml += '</tr>';
+            
             phase.exercises.forEach(exercise => {
-                tableHtml += `${exercise.name}\t${exercise.sets}\t${exercise.reps}\t${exercise.rest}\n`;
+                tableHtml += '<tr>';
+                tableHtml += `<td>${exercise.name}</td>`;
+                tableHtml += `<td>${exercise.sets || ''}</td>`;
+                tableHtml += `<td>${exercise.reps || ''}</td>`;
+                tableHtml += `<td>${exercise.rest || ''}</td>`;
+                tableHtml += '</tr>';
             });
-            tableHtml += '\n';
         });
     } else if (workout.type === 'tabata') {
         // For Tabata workouts
         const phase = workout.phases[0];
-        tableHtml += 'Tabata Circuit\n';
-        tableHtml += 'Exercise\tSets\tDuration\tRest\n';
+        tableHtml += '<tr style="background-color: #f0f0f0; font-weight: bold;">';
+        tableHtml += '<td colspan="4" style="text-align: center;">Tabata Circuit</td>';
+        tableHtml += '</tr>';
+        tableHtml += '<tr style="background-color: #e0e0e0; font-weight: bold;">';
+        tableHtml += '<td>Exercise</td><td>Sets</td><td>Duration</td><td>Rest</td>';
+        tableHtml += '</tr>';
+        
         phase.exercises.forEach(exercise => {
-            tableHtml += `${exercise.name}\t${exercise.sets}\t${exercise.duration}\t${exercise.rest}\n`;
+            tableHtml += '<tr>';
+            tableHtml += `<td>${exercise.name}</td>`;
+            tableHtml += `<td>${exercise.sets || ''}</td>`;
+            tableHtml += `<td>${exercise.duration || ''}</td>`;
+            tableHtml += `<td>${exercise.rest || ''}</td>`;
+            tableHtml += '</tr>';
         });
     }
     
+    tableHtml += '</table>';
+    
     // Display the table in a copy-friendly format
-    copyTable.innerHTML = `<pre>${tableHtml}</pre>`;
+    copyTable.innerHTML = tableHtml;
 }
 
 function copyTableToClipboard() {
-    const tableText = copyTable.querySelector('pre').textContent;
+    const tableElement = copyTable.querySelector('table');
+    
+    if (!tableElement) {
+        console.error('No table found to copy');
+        return;
+    }
     
     // Use the Clipboard API if available
     if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(tableText).then(() => {
+        // Copy the HTML table to clipboard
+        const clipboardData = new ClipboardItem({
+            'text/html': new Blob([tableElement.outerHTML], { type: 'text/html' }),
+            'text/plain': new Blob([tableElement.innerText], { type: 'text/plain' })
+        });
+        
+        navigator.clipboard.write([clipboardData]).then(() => {
             showCopySuccessToast();
         }).catch(err => {
             console.error('Failed to copy: ', err);
-            fallbackCopyTextToClipboard(tableText);
+            // Fallback to plain text
+            fallbackCopyTextToClipboard(tableElement.innerText);
         });
     } else {
-        fallbackCopyTextToClipboard(tableText);
+        // Fallback to plain text
+        fallbackCopyTextToClipboard(tableElement.innerText);
     }
 }
 
