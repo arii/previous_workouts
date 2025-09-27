@@ -1,0 +1,762 @@
+COMPREHENSIVE WORKOUT HISTORY DATA
+======================================================================
+
+Generated: 2025-09-27 12:30:03
+Total Workouts: 89
+Total Exercises: 1335
+Date Range: 2025-03-28 to 2025-09-24
+
+EXECUTIVE SUMMARY
+====================
+• Average exercises per workout: 15.0
+• Most common category: Strength
+• Most used timing protocol: 30/10x3
+• Difficulty distribution:
+  - Moderate: 89 workouts (100.0%)
+
+EXERCISE CATEGORIES OVERVIEW
+===================================
+Warmup      : 267 exercises ( 20.0%)
+Cardio      : 356 exercises ( 26.7%)
+Strength    : 445 exercises ( 33.3%)
+Accessory   : 267 exercises ( 20.0%)
+Recovery    :   0 exercises (  0.0%)
+
+TIMING PROTOCOLS ANALYSIS
+==============================
+Protocols used across all workouts:
+
+• 30/10x3: 89 workouts
+  Examples:
+    - 2025-09-24 (Rev #88): Basic crunch, Penguins, Feet over kb
+    - 2025-09-24 (Rev #89): Basic crunch, Penguins, Feet over kb
+
+• Tabata: 89 workouts
+  Examples:
+    - 2025-09-24 (Rev #88): Band f/b jack, Band hydrant, Band seal +1 more
+    - 2025-09-24 (Rev #89): Band f/b jack, Band hydrant, Band seal +1 more
+
+• 40/30/20 (15 off): 89 workouts
+  Examples:
+    - 2025-09-24 (Rev #88): Db goblet squat, Band swims, Db sumo dl +2 more
+    - 2025-09-24 (Rev #89): Db goblet squat, Band swims, Db sumo dl +2 more
+
+• 2 x 15: 89 workouts
+  Examples:
+    - 2025-09-24 (Rev #88): Band curls, Band kickback, Slider knee tucks
+    - 2025-09-24 (Rev #89): Band curls, Band kickback, Slider knee tucks
+
+• Mobility stretches: 89 workouts
+  Examples:
+    - 2025-09-24 (Rev #88): 
+    - 2025-09-24 (Rev #89): 
+
+WORKOUTS BY DIFFICULTY LEVEL
+===================================
+
+MODERATE LEVEL (89 workouts)
+-----------------------
+• 2025-09-24 (Rev #88): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-09-24 (Rev #89): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-09-22 (Rev #87): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-09-19 (Rev #85): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-09-19 (Rev #86): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-09-17 (Rev #84): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-09-12 (Rev #83): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-09-10 (Rev #81): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-09-10 (Rev #82): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-09-05 (Rev #80): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-09-03 (Rev #78): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-09-03 (Rev #79): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-08-29 (Rev #76): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-08-29 (Rev #77): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-08-27 (Rev #74): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-08-27 (Rev #75): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-08-25 (Rev #73): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-08-22 (Rev #72): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-08-20 (Rev #71): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-08-18 (Rev #69): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-08-18 (Rev #70): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-08-15 (Rev #68): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-08-13 (Rev #67): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-08-11 (Rev #66): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-08-08 (Rev #65): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-08-06 (Rev #63): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-08-06 (Rev #64): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-08-04 (Rev #62): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-07-28 (Rev #61): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-07-25 (Rev #60): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-07-23 (Rev #58): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-07-23 (Rev #59): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-07-18 (Rev #57): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-07-16 (Rev #56): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-07-14 (Rev #55): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-07-11 (Rev #54): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-07-07 (Rev #52): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-07-07 (Rev #53): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-06-30 (Rev #51): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-06-27 (Rev #49): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-06-27 (Rev #50): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-06-25 (Rev #47): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-06-25 (Rev #48): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-06-23 (Rev #46): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-06-20 (Rev #45): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-06-18 (Rev #43): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-06-18 (Rev #44): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-06-16 (Rev #42): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-06-04 (Rev #41): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-06-02 (Rev #40): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-05-30 (Rev #39): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-05-28 (Rev #37): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-05-28 (Rev #38): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-05-23 (Rev #36): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-05-19 (Rev #35): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-05-14 (Rev #33): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-05-14 (Rev #34): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-05-12 (Rev #32): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-05-09 (Rev #29): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-05-09 (Rev #30): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-05-09 (Rev #31): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-05-07 (Rev #28): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-05-05 (Rev #27): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-05-02 (Rev #25): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-05-02 (Rev #26): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-30 (Rev #23): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-30 (Rev #24): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-28 (Rev #20): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-28 (Rev #21): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-28 (Rev #22): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-25 (Rev #18): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-25 (Rev #19): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-23 (Rev #16): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-23 (Rev #17): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-16 (Rev #15): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-14 (Rev #14): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-11 (Rev #10): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-11 (Rev #11): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-11 (Rev #12): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-11 (Rev #13): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-09 (Rev #9): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-07 (Rev #7): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-07 (Rev #8): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-04 (Rev #6): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-02 (Rev #3): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-02 (Rev #4): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-04-02 (Rev #5): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-03-31 (Rev #2): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+• 2025-03-28 (Rev #1): 15 exercises
+  Categories: Warmup(3), Cardio(4), Strength(5), Accessory(3)
+  Protocols: 30/10x3, Tabata, 40/30/20 (15 off), 2 x 15, Mobility stretches
+
+DETAILED WORKOUT HISTORY
+==============================
+
+REVISION #88: 2025-09-24 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #89: 2025-09-24 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #87: 2025-09-22 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #85: 2025-09-19 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #86: 2025-09-19 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #84: 2025-09-17 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #83: 2025-09-12 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #81: 2025-09-10 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #82: 2025-09-10 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #80: 2025-09-05 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #78: 2025-09-03 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #79: 2025-09-03 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #76: 2025-08-29 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #77: 2025-08-29 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #74: 2025-08-27 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #75: 2025-08-27 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #73: 2025-08-25 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #72: 2025-08-22 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #71: 2025-08-20 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+REVISION #69: 2025-08-18 [Moderate]
+Difficulty: 3/5 | Total: 15 exercises
+------------------------------------------------------------
+Timing Structure:
+  • 30/10x3: 3 exercises
+  • Tabata: 4 exercises
+  • 40/30/20 (15 off): 5 exercises
+  • 2 x 15: 3 exercises
+  • Mobility stretches: 0 exercises
+
+WARMUP (3): Basic crunch, Penguins, Feet over kb
+CARDIO (4): Band f/b jack, Band hydrant, Band seal +1 more
+STRENGTH (5): Db goblet squat, Band swims, Db sumo dl +2 more
+ACCESSORY (3): Band curls, Band kickback, Slider knee tucks
+
+EXERCISE LIBRARY BY CATEGORY
+===================================
+
+WARMUP EXERCISES (3 unique):
+--------------------------
+• Basic crunch (used 1 times)
+• Feet over kb (used 1 times)
+• Penguins (used 1 times)
+
+CARDIO EXERCISES (4 unique):
+--------------------------
+• Band f/b jack (used 1 times)
+• Band hydrant (used 1 times)
+• Band jump sq (used 1 times)
+• Band seal (used 1 times)
+
+STRENGTH EXERCISES (5 unique):
+----------------------------
+• Band punches (used 1 times)
+• Band swims (used 1 times)
+• Db goblet squat (used 1 times)
+• Db sumo dl (used 1 times)
+• Dd toe touch (used 1 times)
+
+ACCESSORY EXERCISES (3 unique):
+-----------------------------
+• Band curls (used 1 times)
+• Band kickback (used 1 times)
+• Slider knee tucks (used 1 times)
+
+QUICK REFERENCE
+====================
+Difficulty Scale:
+1 - Beginner: ≤10 exercises, basic movements
+2 - Easy: 11-15 exercises, mixed intensity
+3 - Moderate: 16-20 exercises, balanced categories
+4 - Hard: 21+ exercises, high cardio/strength
+5 - Expert: 21+ exercises, maximum intensity
+
+Timing Protocol Guide:
+• 30/10x3: 30 sec work, 10 sec rest, 3 rounds (Warmup)
+• Tabata: 20 sec work, 10 sec rest, 8 rounds (Cardio)
+• 40/30/20: 40/30/20 sec intervals (Strength)
+• 2 x 15: 2 sets of 15 reps (Accessory)
+• Mobility stretches: Recovery phase

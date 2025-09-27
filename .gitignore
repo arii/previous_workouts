@@ -101,3 +101,8 @@ build/
 
 # CSS build output (will be generated)
 public/css/style.css
+
+# Google Drive API credentials and tokens
+exercise_data/token.json
+exercise_data/credentials.json
+exercise_data/__pycache__/

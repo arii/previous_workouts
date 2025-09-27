@@ -1,0 +1,6855 @@
+[
+  {
+    "revision_number": 88,
+    "date": "2025-09-24",
+    "revision_date": "2025-09-24_14-27-12",
+    "revision_id": "109592",
+    "modified_time": "2025-09-24T14:27:12.577Z",
+    "filename": "revision_088_2025-09-24_14-27-12.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 89,
+    "date": "2025-09-24",
+    "revision_date": "2025-09-24_14-46-23",
+    "revision_id": "109624",
+    "modified_time": "2025-09-24T14:46:23.880Z",
+    "filename": "revision_089_2025-09-24_14-46-23.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 87,
+    "date": "2025-09-22",
+    "revision_date": "2025-09-22_14-29-59",
+    "revision_id": "109591",
+    "modified_time": "2025-09-22T14:29:59.895Z",
+    "filename": "revision_087_2025-09-22_14-29-59.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 85,
+    "date": "2025-09-19",
+    "revision_date": "2025-09-19_14-41-14",
+    "revision_id": "109482",
+    "modified_time": "2025-09-19T14:41:14.252Z",
+    "filename": "revision_085_2025-09-19_14-41-14.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 86,
+    "date": "2025-09-19",
+    "revision_date": "2025-09-19_14-55-55",
+    "revision_id": "109590",
+    "modified_time": "2025-09-19T14:55:55.029Z",
+    "filename": "revision_086_2025-09-19_14-55-55.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 84,
+    "date": "2025-09-17",
+    "revision_date": "2025-09-17_14-51-56",
+    "revision_id": "109481",
+    "modified_time": "2025-09-17T14:51:56.294Z",
+    "filename": "revision_084_2025-09-17_14-51-56.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 83,
+    "date": "2025-09-12",
+    "revision_date": "2025-09-12_14-54-36",
+    "revision_id": "109228",
+    "modified_time": "2025-09-12T14:54:36.456Z",
+    "filename": "revision_083_2025-09-12_14-54-36.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 81,
+    "date": "2025-09-10",
+    "revision_date": "2025-09-10_14-54-41",
+    "revision_id": "108915",
+    "modified_time": "2025-09-10T14:54:41.853Z",
+    "filename": "revision_081_2025-09-10_14-54-41.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 82,
+    "date": "2025-09-10",
+    "revision_date": "2025-09-10_14-57-13",
+    "revision_id": "109021",
+    "modified_time": "2025-09-10T14:57:13.005Z",
+    "filename": "revision_082_2025-09-10_14-57-13.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 80,
+    "date": "2025-09-05",
+    "revision_date": "2025-09-05_14-54-33",
+    "revision_id": "108914",
+    "modified_time": "2025-09-05T14:54:33.553Z",
+    "filename": "revision_080_2025-09-05_14-54-33.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 78,
+    "date": "2025-09-03",
+    "revision_date": "2025-09-03_14-31-08",
+    "revision_id": "108912",
+    "modified_time": "2025-09-03T14:31:08.913Z",
+    "filename": "revision_078_2025-09-03_14-31-08.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 79,
+    "date": "2025-09-03",
+    "revision_date": "2025-09-03_14-43-02",
+    "revision_id": "108913",
+    "modified_time": "2025-09-03T14:43:02.925Z",
+    "filename": "revision_079_2025-09-03_14-43-02.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 76,
+    "date": "2025-08-29",
+    "revision_date": "2025-08-29_14-23-32",
+    "revision_id": "108874",
+    "modified_time": "2025-08-29T14:23:32.782Z",
+    "filename": "revision_076_2025-08-29_14-23-32.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 77,
+    "date": "2025-08-29",
+    "revision_date": "2025-08-29_14-31-29",
+    "revision_id": "108911",
+    "modified_time": "2025-08-29T14:31:29.793Z",
+    "filename": "revision_077_2025-08-29_14-31-29.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 74,
+    "date": "2025-08-27",
+    "revision_date": "2025-08-27_14-51-58",
+    "revision_id": "108858",
+    "modified_time": "2025-08-27T14:51:58.719Z",
+    "filename": "revision_074_2025-08-27_14-51-58.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 75,
+    "date": "2025-08-27",
+    "revision_date": "2025-08-27_14-52-56",
+    "revision_id": "108873",
+    "modified_time": "2025-08-27T14:52:56.950Z",
+    "filename": "revision_075_2025-08-27_14-52-56.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 73,
+    "date": "2025-08-25",
+    "revision_date": "2025-08-25_14-56-11",
+    "revision_id": "108857",
+    "modified_time": "2025-08-25T14:56:11.442Z",
+    "filename": "revision_073_2025-08-25_14-56-11.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 72,
+    "date": "2025-08-22",
+    "revision_date": "2025-08-22_14-25-17",
+    "revision_id": "108856",
+    "modified_time": "2025-08-22T14:25:17.229Z",
+    "filename": "revision_072_2025-08-22_14-25-17.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 71,
+    "date": "2025-08-20",
+    "revision_date": "2025-08-20_14-43-50",
+    "revision_id": "108855",
+    "modified_time": "2025-08-20T14:43:50.722Z",
+    "filename": "revision_071_2025-08-20_14-43-50.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 69,
+    "date": "2025-08-18",
+    "revision_date": "2025-08-18_14-55-24",
+    "revision_id": "108853",
+    "modified_time": "2025-08-18T14:55:24.708Z",
+    "filename": "revision_069_2025-08-18_14-55-24.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 70,
+    "date": "2025-08-18",
+    "revision_date": "2025-08-18_14-56-24",
+    "revision_id": "108854",
+    "modified_time": "2025-08-18T14:56:24.214Z",
+    "filename": "revision_070_2025-08-18_14-56-24.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 68,
+    "date": "2025-08-15",
+    "revision_date": "2025-08-15_14-54-21",
+    "revision_id": "108852",
+    "modified_time": "2025-08-15T14:54:21.350Z",
+    "filename": "revision_068_2025-08-15_14-54-21.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 67,
+    "date": "2025-08-13",
+    "revision_date": "2025-08-13_14-27-12",
+    "revision_id": "108851",
+    "modified_time": "2025-08-13T14:27:12.450Z",
+    "filename": "revision_067_2025-08-13_14-27-12.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 66,
+    "date": "2025-08-11",
+    "revision_date": "2025-08-11_14-50-32",
+    "revision_id": "108850",
+    "modified_time": "2025-08-11T14:50:32.590Z",
+    "filename": "revision_066_2025-08-11_14-50-32.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 65,
+    "date": "2025-08-08",
+    "revision_date": "2025-08-08_14-53-15",
+    "revision_id": "108849",
+    "modified_time": "2025-08-08T14:53:15.170Z",
+    "filename": "revision_065_2025-08-08_14-53-15.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 63,
+    "date": "2025-08-06",
+    "revision_date": "2025-08-06_14-51-12",
+    "revision_id": "108845",
+    "modified_time": "2025-08-06T14:51:12.002Z",
+    "filename": "revision_063_2025-08-06_14-51-12.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 64,
+    "date": "2025-08-06",
+    "revision_date": "2025-08-06_14-53-17",
+    "revision_id": "108848",
+    "modified_time": "2025-08-06T14:53:17.659Z",
+    "filename": "revision_064_2025-08-06_14-53-17.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 62,
+    "date": "2025-08-04",
+    "revision_date": "2025-08-04_14-57-52",
+    "revision_id": "108844",
+    "modified_time": "2025-08-04T14:57:52.328Z",
+    "filename": "revision_062_2025-08-04_14-57-52.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 61,
+    "date": "2025-07-28",
+    "revision_date": "2025-07-28_14-50-25",
+    "revision_id": "108843",
+    "modified_time": "2025-07-28T14:50:25.266Z",
+    "filename": "revision_061_2025-07-28_14-50-25.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 60,
+    "date": "2025-07-25",
+    "revision_date": "2025-07-25_14-41-37",
+    "revision_id": "108842",
+    "modified_time": "2025-07-25T14:41:37.639Z",
+    "filename": "revision_060_2025-07-25_14-41-37.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 58,
+    "date": "2025-07-23",
+    "revision_date": "2025-07-23_14-17-27",
+    "revision_id": "108840",
+    "modified_time": "2025-07-23T14:17:27.150Z",
+    "filename": "revision_058_2025-07-23_14-17-27.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 59,
+    "date": "2025-07-23",
+    "revision_date": "2025-07-23_14-18-34",
+    "revision_id": "108841",
+    "modified_time": "2025-07-23T14:18:34.204Z",
+    "filename": "revision_059_2025-07-23_14-18-34.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 57,
+    "date": "2025-07-18",
+    "revision_date": "2025-07-18_14-56-47",
+    "revision_id": "108839",
+    "modified_time": "2025-07-18T14:56:47.751Z",
+    "filename": "revision_057_2025-07-18_14-56-47.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 56,
+    "date": "2025-07-16",
+    "revision_date": "2025-07-16_14-40-36",
+    "revision_id": "108838",
+    "modified_time": "2025-07-16T14:40:36.723Z",
+    "filename": "revision_056_2025-07-16_14-40-36.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 55,
+    "date": "2025-07-14",
+    "revision_date": "2025-07-14_14-34-04",
+    "revision_id": "108837",
+    "modified_time": "2025-07-14T14:34:04.570Z",
+    "filename": "revision_055_2025-07-14_14-34-04.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 54,
+    "date": "2025-07-11",
+    "revision_date": "2025-07-11_14-58-39",
+    "revision_id": "108836",
+    "modified_time": "2025-07-11T14:58:39.673Z",
+    "filename": "revision_054_2025-07-11_14-58-39.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 52,
+    "date": "2025-07-07",
+    "revision_date": "2025-07-07_14-34-27",
+    "revision_id": "108440",
+    "modified_time": "2025-07-07T14:34:27.760Z",
+    "filename": "revision_052_2025-07-07_14-34-27.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 53,
+    "date": "2025-07-07",
+    "revision_date": "2025-07-07_14-55-39",
+    "revision_id": "108668",
+    "modified_time": "2025-07-07T14:55:39.968Z",
+    "filename": "revision_053_2025-07-07_14-55-39.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 51,
+    "date": "2025-06-30",
+    "revision_date": "2025-06-30_14-39-26",
+    "revision_id": "108439",
+    "modified_time": "2025-06-30T14:39:26.238Z",
+    "filename": "revision_051_2025-06-30_14-39-26.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 49,
+    "date": "2025-06-27",
+    "revision_date": "2025-06-27_14-57-34",
+    "revision_id": "108437",
+    "modified_time": "2025-06-27T14:57:34.677Z",
+    "filename": "revision_049_2025-06-27_14-57-34.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 50,
+    "date": "2025-06-27",
+    "revision_date": "2025-06-27_14-58-11",
+    "revision_id": "108438",
+    "modified_time": "2025-06-27T14:58:11.481Z",
+    "filename": "revision_050_2025-06-27_14-58-11.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 47,
+    "date": "2025-06-25",
+    "revision_date": "2025-06-25_14-39-21",
+    "revision_id": "108435",
+    "modified_time": "2025-06-25T14:39:21.338Z",
+    "filename": "revision_047_2025-06-25_14-39-21.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 48,
+    "date": "2025-06-25",
+    "revision_date": "2025-06-25_14-53-51",
+    "revision_id": "108436",
+    "modified_time": "2025-06-25T14:53:51.856Z",
+    "filename": "revision_048_2025-06-25_14-53-51.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 46,
+    "date": "2025-06-23",
+    "revision_date": "2025-06-23_14-45-18",
+    "revision_id": "108434",
+    "modified_time": "2025-06-23T14:45:18.358Z",
+    "filename": "revision_046_2025-06-23_14-45-18.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 45,
+    "date": "2025-06-20",
+    "revision_date": "2025-06-20_14-37-27",
+    "revision_id": "108433",
+    "modified_time": "2025-06-20T14:37:27.648Z",
+    "filename": "revision_045_2025-06-20_14-37-27.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 43,
+    "date": "2025-06-18",
+    "revision_date": "2025-06-18_14-42-05",
+    "revision_id": "108431",
+    "modified_time": "2025-06-18T14:42:05.447Z",
+    "filename": "revision_043_2025-06-18_14-42-05.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 44,
+    "date": "2025-06-18",
+    "revision_date": "2025-06-18_14-52-37",
+    "revision_id": "108432",
+    "modified_time": "2025-06-18T14:52:37.318Z",
+    "filename": "revision_044_2025-06-18_14-52-37.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 42,
+    "date": "2025-06-16",
+    "revision_date": "2025-06-16_15-04-07",
+    "revision_id": "108430",
+    "modified_time": "2025-06-16T15:04:07.561Z",
+    "filename": "revision_042_2025-06-16_15-04-07.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 41,
+    "date": "2025-06-04",
+    "revision_date": "2025-06-04_14-52-13",
+    "revision_id": "108429",
+    "modified_time": "2025-06-04T14:52:13.772Z",
+    "filename": "revision_041_2025-06-04_14-52-13.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 40,
+    "date": "2025-06-02",
+    "revision_date": "2025-06-02_14-32-48",
+    "revision_id": "108428",
+    "modified_time": "2025-06-02T14:32:48.470Z",
+    "filename": "revision_040_2025-06-02_14-32-48.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 39,
+    "date": "2025-05-30",
+    "revision_date": "2025-05-30_14-54-56",
+    "revision_id": "108427",
+    "modified_time": "2025-05-30T14:54:56.488Z",
+    "filename": "revision_039_2025-05-30_14-54-56.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 37,
+    "date": "2025-05-28",
+    "revision_date": "2025-05-28_14-34-54",
+    "revision_id": "107988",
+    "modified_time": "2025-05-28T14:34:54.558Z",
+    "filename": "revision_037_2025-05-28_14-34-54.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 38,
+    "date": "2025-05-28",
+    "revision_date": "2025-05-28_14-49-18",
+    "revision_id": "108191",
+    "modified_time": "2025-05-28T14:49:18.366Z",
+    "filename": "revision_038_2025-05-28_14-49-18.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 36,
+    "date": "2025-05-23",
+    "revision_date": "2025-05-23_14-43-05",
+    "revision_id": "107987",
+    "modified_time": "2025-05-23T14:43:05.171Z",
+    "filename": "revision_036_2025-05-23_14-43-05.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 35,
+    "date": "2025-05-19",
+    "revision_date": "2025-05-19_14-54-04",
+    "revision_id": "107986",
+    "modified_time": "2025-05-19T14:54:04.933Z",
+    "filename": "revision_035_2025-05-19_14-54-04.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 33,
+    "date": "2025-05-14",
+    "revision_date": "2025-05-14_14-53-40",
+    "revision_id": "107765",
+    "modified_time": "2025-05-14T14:53:40.952Z",
+    "filename": "revision_033_2025-05-14_14-53-40.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 34,
+    "date": "2025-05-14",
+    "revision_date": "2025-05-14_15-34-33",
+    "revision_id": "107831",
+    "modified_time": "2025-05-14T15:34:33.611Z",
+    "filename": "revision_034_2025-05-14_15-34-33.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 32,
+    "date": "2025-05-12",
+    "revision_date": "2025-05-12_14-58-02",
+    "revision_id": "107764",
+    "modified_time": "2025-05-12T14:58:02.144Z",
+    "filename": "revision_032_2025-05-12_14-58-02.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 29,
+    "date": "2025-05-09",
+    "revision_date": "2025-05-09_14-57-03",
+    "revision_id": "107530",
+    "modified_time": "2025-05-09T14:57:03.384Z",
+    "filename": "revision_029_2025-05-09_14-57-03.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 30,
+    "date": "2025-05-09",
+    "revision_date": "2025-05-09_14-57-36",
+    "revision_id": "107531",
+    "modified_time": "2025-05-09T14:57:36.060Z",
+    "filename": "revision_030_2025-05-09_14-57-36.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 31,
+    "date": "2025-05-09",
+    "revision_date": "2025-05-09_15-00-50",
+    "revision_id": "107557",
+    "modified_time": "2025-05-09T15:00:50.585Z",
+    "filename": "revision_031_2025-05-09_15-00-50.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 28,
+    "date": "2025-05-07",
+    "revision_date": "2025-05-07_14-53-38",
+    "revision_id": "107529",
+    "modified_time": "2025-05-07T14:53:38.729Z",
+    "filename": "revision_028_2025-05-07_14-53-38.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 27,
+    "date": "2025-05-05",
+    "revision_date": "2025-05-05_14-53-11",
+    "revision_id": "107528",
+    "modified_time": "2025-05-05T14:53:11.439Z",
+    "filename": "revision_027_2025-05-05_14-53-11.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 25,
+    "date": "2025-05-02",
+    "revision_date": "2025-05-02_14-53-55",
+    "revision_id": "107319",
+    "modified_time": "2025-05-02T14:53:55.255Z",
+    "filename": "revision_025_2025-05-02_14-53-55.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 26,
+    "date": "2025-05-02",
+    "revision_date": "2025-05-02_14-57-57",
+    "revision_id": "107320",
+    "modified_time": "2025-05-02T14:57:57.262Z",
+    "filename": "revision_026_2025-05-02_14-57-57.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 23,
+    "date": "2025-04-30",
+    "revision_date": "2025-04-30_14-47-55",
+    "revision_id": "107139",
+    "modified_time": "2025-04-30T14:47:55.932Z",
+    "filename": "revision_023_2025-04-30_14-47-55.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 24,
+    "date": "2025-04-30",
+    "revision_date": "2025-04-30_14-55-31",
+    "revision_id": "107318",
+    "modified_time": "2025-04-30T14:55:31.528Z",
+    "filename": "revision_024_2025-04-30_14-55-31.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 20,
+    "date": "2025-04-28",
+    "revision_date": "2025-04-28_14-29-50",
+    "revision_id": "106960",
+    "modified_time": "2025-04-28T14:29:50.928Z",
+    "filename": "revision_020_2025-04-28_14-29-50.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 21,
+    "date": "2025-04-28",
+    "revision_date": "2025-04-28_14-31-01",
+    "revision_id": "106961",
+    "modified_time": "2025-04-28T14:31:01.229Z",
+    "filename": "revision_021_2025-04-28_14-31-01.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 22,
+    "date": "2025-04-28",
+    "revision_date": "2025-04-28_14-55-47",
+    "revision_id": "107138",
+    "modified_time": "2025-04-28T14:55:47.968Z",
+    "filename": "revision_022_2025-04-28_14-55-47.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 18,
+    "date": "2025-04-25",
+    "revision_date": "2025-04-25_14-24-40",
+    "revision_id": "106907",
+    "modified_time": "2025-04-25T14:24:40.597Z",
+    "filename": "revision_018_2025-04-25_14-24-40.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 19,
+    "date": "2025-04-25",
+    "revision_date": "2025-04-25_14-54-54",
+    "revision_id": "106959",
+    "modified_time": "2025-04-25T14:54:54.077Z",
+    "filename": "revision_019_2025-04-25_14-54-54.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 16,
+    "date": "2025-04-23",
+    "revision_date": "2025-04-23_14-28-26",
+    "revision_id": "106895",
+    "modified_time": "2025-04-23T14:28:26.933Z",
+    "filename": "revision_016_2025-04-23_14-28-26.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 17,
+    "date": "2025-04-23",
+    "revision_date": "2025-04-23_15-00-35",
+    "revision_id": "106906",
+    "modified_time": "2025-04-23T15:00:35.681Z",
+    "filename": "revision_017_2025-04-23_15-00-35.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 15,
+    "date": "2025-04-16",
+    "revision_date": "2025-04-16_14-52-11",
+    "revision_id": "106894",
+    "modified_time": "2025-04-16T14:52:11.103Z",
+    "filename": "revision_015_2025-04-16_14-52-11.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 14,
+    "date": "2025-04-14",
+    "revision_date": "2025-04-14_14-56-25",
+    "revision_id": "106741",
+    "modified_time": "2025-04-14T14:56:25.828Z",
+    "filename": "revision_014_2025-04-14_14-56-25.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 10,
+    "date": "2025-04-11",
+    "revision_date": "2025-04-11_14-39-29",
+    "revision_id": "106564",
+    "modified_time": "2025-04-11T14:39:29.252Z",
+    "filename": "revision_010_2025-04-11_14-39-29.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 11,
+    "date": "2025-04-11",
+    "revision_date": "2025-04-11_14-40-32",
+    "revision_id": "106565",
+    "modified_time": "2025-04-11T14:40:32.761Z",
+    "filename": "revision_011_2025-04-11_14-40-32.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 12,
+    "date": "2025-04-11",
+    "revision_date": "2025-04-11_14-48-23",
+    "revision_id": "106566",
+    "modified_time": "2025-04-11T14:48:23.268Z",
+    "filename": "revision_012_2025-04-11_14-48-23.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 13,
+    "date": "2025-04-11",
+    "revision_date": "2025-04-11_15-04-56",
+    "revision_id": "106567",
+    "modified_time": "2025-04-11T15:04:56.947Z",
+    "filename": "revision_013_2025-04-11_15-04-56.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 9,
+    "date": "2025-04-09",
+    "revision_date": "2025-04-09_14-56-42",
+    "revision_id": "106563",
+    "modified_time": "2025-04-09T14:56:42.876Z",
+    "filename": "revision_009_2025-04-09_14-56-42.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 7,
+    "date": "2025-04-07",
+    "revision_date": "2025-04-07_14-20-02",
+    "revision_id": "106332",
+    "modified_time": "2025-04-07T14:20:02.283Z",
+    "filename": "revision_007_2025-04-07_14-20-02.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 8,
+    "date": "2025-04-07",
+    "revision_date": "2025-04-07_14-51-26",
+    "revision_id": "106397",
+    "modified_time": "2025-04-07T14:51:26.967Z",
+    "filename": "revision_008_2025-04-07_14-51-26.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 6,
+    "date": "2025-04-04",
+    "revision_date": "2025-04-04_14-58-51",
+    "revision_id": "106331",
+    "modified_time": "2025-04-04T14:58:51.317Z",
+    "filename": "revision_006_2025-04-04_14-58-51.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 3,
+    "date": "2025-04-02",
+    "revision_date": "2025-04-02_14-25-39",
+    "revision_id": "106036",
+    "modified_time": "2025-04-02T14:25:39.336Z",
+    "filename": "revision_003_2025-04-02_14-25-39.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 4,
+    "date": "2025-04-02",
+    "revision_date": "2025-04-02_14-27-23",
+    "revision_id": "106037",
+    "modified_time": "2025-04-02T14:27:23.051Z",
+    "filename": "revision_004_2025-04-02_14-27-23.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 5,
+    "date": "2025-04-02",
+    "revision_date": "2025-04-02_14-49-37",
+    "revision_id": "106058",
+    "modified_time": "2025-04-02T14:49:37.221Z",
+    "filename": "revision_005_2025-04-02_14-49-37.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 2,
+    "date": "2025-03-31",
+    "revision_date": "2025-03-31_14-47-30",
+    "revision_id": "106035",
+    "modified_time": "2025-03-31T14:47:30.465Z",
+    "filename": "revision_002_2025-03-31_14-47-30.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  },
+  {
+    "revision_number": 1,
+    "date": "2025-03-28",
+    "revision_date": "2025-03-28_15-25-33",
+    "revision_id": "106034",
+    "modified_time": "2025-03-28T15:25:33.255Z",
+    "filename": "revision_001_2025-03-28_15-25-33.txt",
+    "column_structure": {
+      "headers": [
+        "30/10x3",
+        "Tabata",
+        "40/30/20 (15 off)",
+        "2 x 15",
+        "Mobility stretches"
+      ],
+      "exercises": {
+        "30/10x3": [
+          "Basic crunch",
+          "Penguins",
+          "Feet over kb"
+        ],
+        "Tabata": [
+          "Band f/b jack",
+          "Band hydrant",
+          "Band seal",
+          "Band jump sq"
+        ],
+        "40/30/20 (15 off)": [
+          "Db goblet squat",
+          "Band swims",
+          "Db sumo dl",
+          "Band punches",
+          "Dd toe touch"
+        ],
+        "2 x 15": [
+          "Band curls",
+          "Band kickback",
+          "Slider knee tucks"
+        ]
+      }
+    },
+    "exercises_by_category": {
+      "Warmup": [
+        "Basic crunch",
+        "Penguins",
+        "Feet over kb"
+      ],
+      "Cardio": [
+        "Band f/b jack",
+        "Band hydrant",
+        "Band seal",
+        "Band jump sq"
+      ],
+      "Strength": [
+        "Db goblet squat",
+        "Band swims",
+        "Db sumo dl",
+        "Band punches",
+        "Dd toe touch"
+      ],
+      "Accessory": [
+        "Band curls",
+        "Band kickback",
+        "Slider knee tucks"
+      ],
+      "Recovery": []
+    },
+    "total_exercises": 15,
+    "category_counts": {
+      "Warmup": 3,
+      "Cardio": 4,
+      "Strength": 5,
+      "Accessory": 3,
+      "Recovery": 0
+    },
+    "difficulty": 3
+  }
+]

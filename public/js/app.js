@@ -1,5 +1,18 @@
 // Global variables
 let currentWorkoutId = null;
+let availableExercises = [];
+
+// Helper function for category colors
+function getCategoryColor(category) {
+    const colors = {
+        'Warmup': 'bg-yellow-400',
+        'Cardio': 'bg-red-400', 
+        'Strength': 'bg-blue-400',
+        'Accessory': 'bg-green-400',
+        'Recovery': 'bg-purple-400'
+    };
+    return colors[category] || 'bg-gray-400';
+}
 
 // DOM elements
 const workoutsList = document.getElementById('workoutsList');
@@ -10,6 +23,8 @@ const detailModal = document.getElementById('detailModal');
 const workoutForm = document.getElementById('workoutForm');
 const addWorkoutBtn = document.getElementById('addWorkoutBtn');
 const addFirstWorkoutBtn = document.getElementById('addFirstWorkoutBtn');
+const viewWorkoutHistoryBtn = document.getElementById('viewWorkoutHistoryBtn');
+const viewCurrentWorkoutsBtn = document.getElementById('viewCurrentWorkoutsBtn');
 const closeModal = document.getElementById('closeModal');
 const closeDetailModal = document.getElementById('closeDetailModal');
 const closeDetailModalBtn = document.getElementById('closeDetailModalBtn');
@@ -18,6 +33,7 @@ const deleteWorkoutBtn = document.getElementById('deleteWorkoutBtn');
 
 // Event listeners
 document.addEventListener('DOMContentLoaded', function() {
+    loadExercises();
     loadWorkouts();
     setupEventListeners();
     setDefaultDate();
@@ -26,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function setupEventListeners() {
     addWorkoutBtn.addEventListener('click', openWorkoutModal);
     addFirstWorkoutBtn.addEventListener('click', openWorkoutModal);
+    viewWorkoutHistoryBtn.addEventListener('click', loadWorkoutHistory);
+    viewCurrentWorkoutsBtn.addEventListener('click', loadWorkouts);
     closeModal.addEventListener('click', closeWorkoutModal);
     closeDetailModal.addEventListener('click', closeDetailModal);
     closeDetailModalBtn.addEventListener('click', closeDetailModal);
@@ -53,6 +71,16 @@ function setDefaultDate() {
 }
 
 // API functions
+async function loadExercises() {
+    try {
+        const response = await fetch('/api/exercises');
+        availableExercises = await response.json();
+        console.log('Loaded exercises:', availableExercises);
+    } catch (error) {
+        console.error('Error loading exercises:', error);
+    }
+}
+
 async function loadWorkouts() {
     showLoading();
     
@@ -72,6 +100,33 @@ async function loadWorkouts() {
         hideLoading();
         console.error('Error loading workouts:', error);
         showError('Failed to load workouts');
+    }
+}
+
+async function loadWorkoutHistory() {
+    console.log('Loading workout history...');
+    showLoading();
+    
+    try {
+        const response = await fetch('/api/workout-history');
+        console.log('Response status:', response.status);
+        const workoutHistory = await response.json();
+        console.log('Workout history data:', workoutHistory);
+        
+        hideLoading();
+        
+        if (workoutHistory.length === 0) {
+            console.log('No workout history found');
+            showEmptyState();
+        } else {
+            console.log(`Found ${workoutHistory.length} workout history entries`);
+            hideEmptyState();
+            renderWorkoutHistory(workoutHistory);
+        }
+    } catch (error) {
+        hideLoading();
+        console.error('Error loading workout history:', error);
+        showError('Failed to load workout history');
     }
 }
 
@@ -139,6 +194,51 @@ async function deleteWorkout() {
 }
 
 // UI functions
+function renderWorkoutHistory(workoutHistory) {
+    console.log('Rendering workout history:', workoutHistory);
+    console.log('Workouts list element:', workoutsList);
+    workoutsList.innerHTML = workoutHistory.map(workout => `
+        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+            <div class="flex justify-between items-start mb-4">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-1">${escapeHtml(workout.name)}</h3>
+                    <p class="text-gray-600">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        ${formatDate(workout.date)}
+                    </p>
+                    <p class="text-sm text-gray-500">
+                        <i class="fas fa-history mr-2"></i>
+                        Revision ${workout.revision_number}
+                    </p>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-gray-500 mb-2">
+                        <i class="fas fa-dumbbell mr-1"></i>
+                        ${workout.total_exercises || workout.exercise_count || 0} exercises
+                    </div>
+                    ${workout.difficulty_label ? `
+                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
+                            ${workout.difficulty_label}
+                        </span>
+                    ` : ''}
+                </div>
+            </div>
+            
+            <div class="flex justify-between items-center">
+                <div class="text-sm text-gray-500">
+                    <i class="fas fa-clock mr-1"></i>
+                    Modified ${formatDate(workout.modified_time)}
+                </div>
+                <button onclick="viewWorkoutHistoryDetails(${workout.id})" 
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-200">
+                    <i class="fas fa-eye mr-1"></i>
+                    View Exercises
+                </button>
+            </div>
+        </div>
+    `).join('');
+}
+
 function renderWorkouts(workouts) {
     workoutsList.innerHTML = workouts.map(workout => `
         <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
@@ -221,6 +321,52 @@ async function viewWorkoutDetails(workoutId) {
         
         document.getElementById('workoutDetails').innerHTML = detailsHtml;
         detailModal.classList.remove('hidden');
+    }
+}
+
+async function viewWorkoutHistoryDetails(workoutId) {
+    try {
+        const response = await fetch('/api/workout-history');
+        const workoutHistory = await response.json();
+        const workout = workoutHistory.find(w => w.id === workoutId);
+        
+        if (workout) {
+            document.getElementById('detailTitle').textContent = `${workout.name} - Revision ${workout.revision_number}`;
+            
+            const detailsHtml = `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-gray-700 mb-2">Workout Info</h4>
+                        <p class="text-sm text-gray-600"><strong>Date:</strong> ${formatDate(workout.date)}</p>
+                        <p class="text-sm text-gray-600"><strong>Revision:</strong> ${workout.revision_number}</p>
+                        <p class="text-sm text-gray-600"><strong>Modified:</strong> ${formatDate(workout.modified_time)}</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-gray-700 mb-2">Statistics</h4>
+                        <p class="text-sm text-gray-600"><strong>Total Exercises:</strong> ${workout.exercises ? workout.exercises.length : 0}</p>
+                    </div>
+                </div>
+                
+                ${workout.exercises && workout.exercises.length > 0 ? `
+                    <div>
+                        <h4 class="font-semibold text-gray-700 mb-3">Exercises</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            ${workout.exercises.map(exercise => `
+                                <div class="bg-white border border-gray-200 p-3 rounded-lg">
+                                    <h5 class="font-medium text-gray-800">${escapeHtml(exercise.name)}</h5>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                ` : '<p class="text-gray-500 text-center py-4">No exercises found for this workout.</p>'}
+            `;
+            
+            document.getElementById('workoutDetails').innerHTML = detailsHtml;
+            detailModal.classList.remove('hidden');
+        }
+    } catch (error) {
+        console.error('Error loading workout history details:', error);
+        showError('Failed to load workout history details');
     }
 }
 

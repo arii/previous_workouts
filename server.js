@@ -3,6 +3,7 @@ const sqlite3 = require('sqlite3').verbose();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -40,9 +41,84 @@ db.serialize(() => {
   )`);
 });
 
+// Load exercise data from JSON file
+let exerciseData = [];
+try {
+  const data = fs.readFileSync(path.join(__dirname, 'exercise_data', 'workout_history_data_categorized.json'), 'utf8');
+  exerciseData = JSON.parse(data);
+} catch (error) {
+  console.error('Error loading exercise data:', error);
+}
+
+// Helper function for difficulty labels
+function getDifficultyLabel(difficulty) {
+  const labels = {
+    1: "Beginner",
+    2: "Easy", 
+    3: "Moderate",
+    4: "Hard",
+    5: "Expert"
+  };
+  return labels[difficulty] || "Unknown";
+}
+
 // Routes
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
+
+// Get all exercises from JSON data
+app.get('/api/exercises', (req, res) => {
+  try {
+    // Extract unique exercises from all revisions
+    const allExercises = new Set();
+    
+    exerciseData.forEach(revision => {
+      if (revision.content && revision.content.all_exercises) {
+        revision.content.all_exercises.forEach(exercise => {
+          // Filter out non-exercise entries (like dates, numbers, etc.)
+          if (exercise && 
+              typeof exercise === 'string' && 
+              exercise.trim() && 
+              !exercise.match(/^\d+/) && // Not starting with numbers
+              !exercise.includes('/') && // Not date-like
+              exercise.length > 2) { // Reasonable length
+            allExercises.add(exercise.trim());
+          }
+        });
+      }
+    });
+    
+    const exercises = Array.from(allExercises).sort();
+    res.json(exercises);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to load exercises' });
+  }
+});
+
+// Get workout history from JSON data
+app.get('/api/workout-history', (req, res) => {
+  try {
+    // Use the categorized data structure
+    const workoutHistory = exerciseData.map((workout, index) => ({
+      id: index + 1,
+      name: `Workout ${workout.date}`,
+      date: workout.date,
+      revision_number: workout.revision_number,
+      modified_time: workout.modified_time,
+      difficulty: workout.difficulty || 3,
+      difficulty_label: getDifficultyLabel(workout.difficulty || 3),
+      exercises_by_category: workout.exercises_by_category,
+      category_counts: workout.category_counts,
+      timing_protocols: workout.column_structure?.headers || [],
+      total_exercises: workout.total_exercises,
+      created_at: workout.modified_time
+    }));
+    
+    res.json(workoutHistory);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to load workout history' });
+  }
 });
 
 // Get all workouts
