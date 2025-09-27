@@ -22,6 +22,7 @@ const addNewPhaseBtn = document.getElementById('addNewPhaseBtn');
 const showInsightsBtn = document.getElementById('showInsightsBtn');
 const hideInsightsBtn = document.getElementById('hideInsightsBtn');
 const dataInsights = document.getElementById('dataInsights');
+const backToWorkoutBtn = document.getElementById('backToWorkoutBtn');
 
 // Event listeners
 document.addEventListener('DOMContentLoaded', function() {
@@ -40,6 +41,13 @@ function setupEventListeners() {
     addNewPhaseBtn.addEventListener('click', addNewPhase);
     showInsightsBtn.addEventListener('click', showDataInsights);
     hideInsightsBtn.addEventListener('click', hideDataInsights);
+    backToWorkoutBtn.addEventListener('click', showWorkoutGeneration);
+}
+
+// Hide history and show workout generation
+function showWorkoutGeneration() {
+    historyContent.classList.add('hidden');
+    generatedWorkout.classList.remove('hidden');
 }
 
 // Workout Generation
@@ -80,8 +88,8 @@ function displayGeneratedWorkout(workout) {
     // Store the current workout globally
     currentWorkout = workout;
     
-    // Show the workout container
-    generatedWorkout.classList.remove('hidden');
+    // Show the workout container and hide history
+    showWorkoutGeneration();
     
     // Populate workout info
     workoutInfo.innerHTML = `
@@ -225,6 +233,9 @@ async function loadWorkoutHistory() {
 
 // Show history
 function showHistory(type) {
+    // Show the history section
+    historyContent.classList.remove('hidden');
+    
     let workouts = workoutHistory;
     
     if (type === 'generated') {
@@ -238,6 +249,7 @@ function showHistory(type) {
             <div class="text-center py-8 text-gray-500">
                 <i class="fas fa-dumbbell text-4xl mb-4"></i>
                 <p>No ${type === 'generated' ? 'generated ' : ''}workouts found.</p>
+                <p class="text-sm mt-2">Generate and save a workout to see it here!</p>
             </div>
         `;
         return;
@@ -981,10 +993,12 @@ function populateDailyPatterns(data) {
 // Exercise editing and drag-and-drop functionality
 let draggedElement = null;
 let editingExercise = null;
+let clickAwayHandler = null;
 
 function editExercise(phaseIndex, exerciseIndex) {
+    // If already editing, save current changes first
     if (editingExercise) {
-        cancelEdit();
+        saveEdit(editingExercise.phaseIndex, editingExercise.exerciseIndex);
     }
     
     editingExercise = { phaseIndex, exerciseIndex };
@@ -1058,10 +1072,53 @@ function editExercise(phaseIndex, exerciseIndex) {
     cardElement.appendChild(buttonContainer);
     
     // Focus on name input
-    document.getElementById(`edit-name-${phaseIndex}-${exerciseIndex}`).focus();
+    const nameInput = document.getElementById(`edit-name-${phaseIndex}-${exerciseIndex}`);
+    if (nameInput) {
+        nameInput.focus();
+        nameInput.select();
+        
+        // Add keyboard event listeners
+        nameInput.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                saveEdit(phaseIndex, exerciseIndex);
+            } else if (event.key === 'Escape') {
+                event.preventDefault();
+                cancelEdit();
+            }
+        });
+    }
+    
+    // Add click-away handler
+    setupClickAwayHandler(phaseIndex, exerciseIndex);
+}
+
+function setupClickAwayHandler(phaseIndex, exerciseIndex) {
+    // Remove existing handler
+    if (clickAwayHandler) {
+        document.removeEventListener('click', clickAwayHandler);
+    }
+    
+    // Create new handler
+    clickAwayHandler = function(event) {
+        const cardElement = document.querySelector(`[data-phase="${phaseIndex}"][data-exercise="${exerciseIndex}"]`);
+        if (cardElement && !cardElement.contains(event.target)) {
+            // Clicked outside the card, save changes
+            saveEdit(phaseIndex, exerciseIndex);
+        }
+    };
+    
+    // Add the handler with a small delay to prevent immediate triggering
+    setTimeout(() => {
+        document.addEventListener('click', clickAwayHandler);
+    }, 100);
 }
 
 function saveEdit(phaseIndex, exerciseIndex) {
+    if (!editingExercise || editingExercise.phaseIndex !== phaseIndex || editingExercise.exerciseIndex !== exerciseIndex) {
+        return; // Not currently editing this exercise
+    }
+    
     const exercise = currentWorkout.phases[phaseIndex].exercises[exerciseIndex];
     
     // Get values from inputs
@@ -1072,34 +1129,60 @@ function saveEdit(phaseIndex, exerciseIndex) {
     const restInput = document.getElementById(`edit-rest-${phaseIndex}-${exerciseIndex}`);
     
     // Update exercise data
-    exercise.name = nameInput.value.trim();
+    if (nameInput) exercise.name = nameInput.value.trim();
     if (setsInput) exercise.sets = setsInput.value.trim();
     if (repsInput) exercise.reps = repsInput.value.trim();
     if (durationInput) exercise.duration = durationInput.value.trim();
     if (restInput) exercise.rest = restInput.value.trim();
     
+    // Clean up
+    cleanupEditing();
+    
     // Re-render the workout
     displayWorkout(currentWorkout);
-    editingExercise = null;
     
     showToast("Exercise updated successfully!", "success");
 }
 
 function cancelEdit() {
     if (editingExercise) {
+        // Clean up without saving
+        cleanupEditing();
+        
         // Re-render the workout to restore original state
         displayWorkout(currentWorkout);
-        editingExercise = null;
     }
+}
+
+function cleanupEditing() {
+    // Remove click-away handler
+    if (clickAwayHandler) {
+        document.removeEventListener('click', clickAwayHandler);
+        clickAwayHandler = null;
+    }
+    
+    // Clear editing state
+    editingExercise = null;
 }
 
 // Drag and drop functionality
 function dragStart(event) {
+    // Don't allow dragging if currently editing
+    if (editingExercise) {
+        event.preventDefault();
+        return;
+    }
+    
     draggedElement = event.target;
     event.target.style.opacity = "0.5";
 }
 
 function dragOver(event) {
+    // Don't allow drop if currently editing
+    if (editingExercise) {
+        return;
+    }
+    
     event.preventDefault();
     event.target.style.borderTop = "2px solid #3b82f6";
 }
@@ -1109,6 +1192,11 @@ function dragLeave(event) {
 }
 
 function drop(event) {
+    // Don't allow drop if currently editing
+    if (editingExercise) {
+        return;
+    }
+    
     event.preventDefault();
     event.target.style.borderTop = "";
     
