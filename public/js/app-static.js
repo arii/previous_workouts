@@ -161,9 +161,22 @@ function generateEMOMWorkout(categories, intensity) {
         timing: '2-3 rounds'
     });
     
+    // Cardio
+    const cardioExercises = getRandomExercises(categories.Cardio || [], 3);
+    phases.push({
+        name: 'Cardio',
+        exercises: cardioExercises.map(exercise => ({
+            name: standardizeExerciseName(exercise),
+            sets: getSetsForPhase('Cardio', intensity),
+            reps: getRepsForPhase('Cardio', intensity),
+            duration: getDurationForPhase('Cardio', intensity),
+            rest: getRestForPhase('Cardio', intensity)
+        })),
+        timing: getTimingForPhase('Cardio')
+    });
+    
     // EMOM Main
     const mainExercises = getRandomExercises(filterAndCleanExercises([
-        ...(categories.Cardio || []),
         ...(categories.Strength || [])
     ]), 4);
     
@@ -177,6 +190,20 @@ function generateEMOMWorkout(categories, intensity) {
             rest: 'Remaining minute'
         })),
         timing: '3 rounds, 1 min per exercise'
+    });
+    
+    // Finisher
+    const finisherExercises = getRandomExercises(categories.Finisher || [], 2);
+    phases.push({
+        name: 'Finisher',
+        exercises: finisherExercises.map(exercise => ({
+            name: standardizeExerciseName(exercise),
+            sets: getSetsForPhase('Finisher', intensity),
+            reps: getRepsForPhase('Finisher', intensity),
+            duration: getDurationForPhase('Finisher', intensity),
+            rest: getRestForPhase('Finisher', intensity)
+        })),
+        timing: getTimingForPhase('Finisher')
     });
     
     return phases;
@@ -199,11 +226,23 @@ function generateSpartanWorkout(categories, intensity) {
         timing: '2-3 rounds'
     });
     
+    // Cardio
+    const cardioExercises = getRandomExercises(categories.Cardio || [], 3);
+    phases.push({
+        name: 'Cardio',
+        exercises: cardioExercises.map(exercise => ({
+            name: standardizeExerciseName(exercise),
+            sets: getSetsForPhase('Cardio', intensity),
+            reps: getRepsForPhase('Cardio', intensity),
+            duration: getDurationForPhase('Cardio', intensity),
+            rest: getRestForPhase('Cardio', intensity)
+        })),
+        timing: getTimingForPhase('Cardio')
+    });
+    
     // Spartan Circuit - Special format: 5 sets of 25, 20, 18, 15, 12 reps
     const circuitExercises = getRandomExercises(filterAndCleanExercises([
-        ...(categories.Cardio || []),
-        ...(categories.Strength || []),
-        ...(categories.Finisher || [])
+        ...(categories.Strength || [])
     ]), 4); // Reduced to 4 exercises for Spartan format
     
     phases.push({
@@ -216,6 +255,20 @@ function generateSpartanWorkout(categories, intensity) {
             rest: '60 sec'
         })),
         timing: '5 sets: 25, 20, 18, 15, 12 reps'
+    });
+    
+    // Finisher
+    const finisherExercises = getRandomExercises(categories.Finisher || [], 2);
+    phases.push({
+        name: 'Finisher',
+        exercises: finisherExercises.map(exercise => ({
+            name: standardizeExerciseName(exercise),
+            sets: getSetsForPhase('Finisher', intensity),
+            reps: getRepsForPhase('Finisher', intensity),
+            duration: getDurationForPhase('Finisher', intensity),
+            rest: getRestForPhase('Finisher', intensity)
+        })),
+        timing: getTimingForPhase('Finisher')
     });
     
     return phases;
