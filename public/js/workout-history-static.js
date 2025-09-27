@@ -326,32 +326,51 @@ function createWorkoutTableRow(workout) {
     
     const intensityBadge = intensityBadgeColors[intensity.toLowerCase()] || intensityBadgeColors.normal;
     
-    // Get all exercises from all phases
-    const allExercises = workout.phases ? 
-        workout.phases.flatMap(phase => 
-            phase.exercises ? phase.exercises.map(ex => typeof ex === 'string' ? ex : ex.name || ex) : []
-        ) : [];
+    // Create copy-friendly table format for each row
+    const phases = workout.phases || [];
+    const phaseColumns = phases.map(phase => {
+        const exercises = phase.exercises ? phase.exercises.map(ex => typeof ex === 'string' ? ex : ex.name || ex) : [];
+        const timing = phase.timing || phase.name;
+        return {
+            timing: timing,
+            exercises: exercises
+        };
+    });
     
-    // Show first 3-4 exercises with "& X more" if there are more
-    const displayExercises = allExercises.slice(0, 3);
-    const remainingCount = allExercises.length - 3;
-    const exerciseText = displayExercises.join(', ') + (remainingCount > 0 ? ` & ${remainingCount} more` : '');
+    // Create table structure for this row
+    const tableHTML = `
+        <table class="w-full text-xs">
+            <thead>
+                <tr>
+                    ${phaseColumns.map(col => `<th class="px-1 py-0.5 text-center font-medium text-gray-600 border-b">${col.timing}</th>`).join('')}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    ${phaseColumns.map(col => `
+                        <td class="px-1 py-0.5 text-center border-b align-top">
+                            ${col.exercises.map(ex => `<div class="mb-0.5">${ex}</div>`).join('')}
+                        </td>
+                    `).join('')}
+                </tr>
+            </tbody>
+        </table>
+    `;
     
     row.innerHTML = `
-        <td class="px-3 py-1 whitespace-nowrap text-xs font-medium text-gray-900">
+        <td class="px-3 py-1 whitespace-nowrap text-xs font-medium text-gray-900 w-20">
             ${formattedDate}
         </td>
         <td class="px-3 py-1 text-xs text-gray-900">
-            <div class="font-medium text-gray-800">${exerciseText}</div>
-            <div class="flex items-center mt-0.5">
+            ${tableHTML}
+            <div class="flex items-center mt-1">
                 <span class="text-gray-500 text-xs mr-1">${workout.type || 'Mixed'}</span>
                 <span class="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium ${intensityBadge}">
                     ${intensity.charAt(0).toUpperCase() + intensity.slice(1)}
                 </span>
-                <span class="text-gray-400 text-xs ml-1">${allExercises.length}</span>
             </div>
         </td>
-        <td class="px-3 py-1 whitespace-nowrap text-xs font-medium">
+        <td class="px-3 py-1 whitespace-nowrap text-xs font-medium w-16">
             <button onclick="viewWorkoutDetails('${workout.id || workout.date}')" 
                     class="text-blue-600 hover:text-blue-900 transition-colors text-xs">
                 <i class="fas fa-eye"></i>
