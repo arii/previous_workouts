@@ -133,7 +133,7 @@ window.EXERCISE_DATA = {
         "Warmup": 49,
         "Cardio": 427,
         "Strength": 492,
-        "Accessory": 544,
+        "Finisher": 544,
         "Recovery": 9
       },
       "most_common_exercises": {
@@ -5976,7 +5976,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_99918_2024-09-16_14-44-15.txt"
       }
     ],
-    "Accessory": [
+    "Finisher": [
       {
         "exercise": "Dumbbell T Flies",
         "phase": "3 x 10",

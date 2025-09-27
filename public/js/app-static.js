@@ -103,7 +103,7 @@ function generateMixedWorkout(categories, intensity) {
         'Warmup': 2,
         'Cardio': 3,
         'Strength': 3,
-        'Accessory': 2
+        'Finisher': 2
     };
     
     const phases = [];
@@ -196,7 +196,7 @@ function generateSpartanWorkout(categories, intensity) {
     const circuitExercises = getRandomExercises(filterAndCleanExercises([
         ...(categories.Cardio || []),
         ...(categories.Strength || []),
-        ...(categories.Accessory || [])
+        ...(categories.Finisher || [])
     ]), 6);
     
     phases.push({
@@ -322,6 +322,7 @@ function standardizeExerciseName(exerciseName) {
         'Alt': 'Alternating',
         'Rev': 'Reverse',
         'Fwd': 'Forward',
+        'F.': 'Forward',
         'Bwd': 'Backward',
         'Ext': 'Extension',
         'Flex': 'Flexion',
@@ -362,7 +363,7 @@ function getSetsForPhase(phase, intensity) {
         'Warmup': { lower: '3', normal: '4', higher: '4' },
         'Cardio': { lower: '2', normal: '3', higher: '4' },
         'Strength': { lower: '3', normal: '4', higher: '5' },
-        'Accessory': { lower: '2', normal: '3', higher: '4' },
+        'Finisher': { lower: '2', normal: '3', higher: '4' },
         'EMOM': { lower: '3', normal: '4', higher: '5' },
         'Spartan': { lower: '2', normal: '3', higher: '4' },
         'Tabata': { lower: '6', normal: '8', higher: '10' }
@@ -376,7 +377,7 @@ function getRepsForPhase(phase, intensity) {
         'Warmup': { lower: '8-12', normal: '10-15', higher: '12-18' },
         'Cardio': { lower: '12-15', normal: '15-20', higher: '20-25' },
         'Strength': { lower: '6-10', normal: '8-12', higher: '10-15' },
-        'Accessory': { lower: '10-12', normal: '12-15', higher: '15-20' },
+        'Finisher': { lower: '10-12', normal: '12-15', higher: '15-20' },
         'EMOM': { lower: '8-12', normal: '12-15', higher: '15-20' },
         'Spartan': { lower: '10-15', normal: '15-20', higher: '20-25' },
         'Tabata': { lower: 'Max effort', normal: 'Max effort', higher: 'Max effort' }
@@ -390,7 +391,7 @@ function getDurationForPhase(phase, intensity) {
         'Warmup': { lower: null, normal: null, higher: null },
         'Cardio': { lower: '30 sec', normal: '40 sec', higher: '50 sec' },
         'Strength': { lower: null, normal: null, higher: null },
-        'Accessory': { lower: null, normal: null, higher: null },
+        'Finisher': { lower: null, normal: null, higher: null },
         'EMOM': { lower: null, normal: null, higher: null },
         'Spartan': { lower: '30 sec', normal: '40 sec', higher: '50 sec' },
         'Tabata': { lower: '20 sec', normal: '20 sec', higher: '20 sec' }
@@ -404,7 +405,7 @@ function getRestForPhase(phase, intensity) {
         'Warmup': { lower: '30 sec', normal: '30 sec', higher: '30 sec' },
         'Cardio': { lower: '30 sec', normal: '30 sec', higher: '30 sec' },
         'Strength': { lower: '45 sec', normal: '60 sec', higher: '75 sec' },
-        'Accessory': { lower: '30 sec', normal: '45 sec', higher: '60 sec' },
+        'Finisher': { lower: '30 sec', normal: '45 sec', higher: '60 sec' },
         'EMOM': { lower: 'Remaining minute', normal: 'Remaining minute', higher: 'Remaining minute' },
         'Spartan': { lower: '20 sec', normal: '20 sec', higher: '20 sec' },
         'Tabata': { lower: '10 sec', normal: '10 sec', higher: '10 sec' }
@@ -418,7 +419,7 @@ function getTimingForPhase(phase) {
         'Warmup': '2-3 rounds, 30 sec rest',
         'Cardio': '3-4 rounds, 30 sec rest',
         'Strength': '3-4 rounds',
-        'Accessory': '2-3 rounds, 45 sec rest',
+        'Finisher': '2-3 rounds, 45 sec rest',
         'EMOM': '4 rounds, 1 min per exercise',
         'Spartan': '3-4 rounds, 40 sec work, 20 sec rest',
         'Tabata': '8 rounds, 20 sec work, 10 sec rest'
