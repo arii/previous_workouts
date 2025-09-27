@@ -493,21 +493,21 @@ function displayGeneratedWorkout(workout) {
     currentWorkout = workout;
     
     workoutStructure.innerHTML = workout.phases.map(phase => `
-        <div class="mb-8">
-            <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-4 rounded-t-xl">
-                <h3 class="text-xl font-semibold">${phase.name}</h3>
-                <p class="text-blue-100 text-sm">${phase.timing}</p>
+        <div class="mb-4">
+            <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-2 rounded-t-lg">
+                <h3 class="text-sm font-semibold">${phase.name}</h3>
+                <p class="text-blue-100 text-xs">${phase.timing}</p>
             </div>
-            <div class="bg-white border border-gray-200 rounded-b-xl p-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-white border border-gray-200 rounded-b-lg p-3">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                     ${phase.exercises.map(exercise => `
-                        <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition-shadow">
-                            <h4 class="font-semibold text-gray-800 mb-2">${exercise.name}</h4>
-                            <div class="space-y-1 text-sm text-gray-600">
-                                <div><i class="fas fa-layer-group mr-2"></i>Sets: ${exercise.sets}</div>
-                                <div><i class="fas fa-repeat mr-2"></i>Reps: ${exercise.reps}</div>
-                                ${exercise.duration ? `<div><i class="fas fa-clock mr-2"></i>Duration: ${exercise.duration}</div>` : ''}
-                                <div><i class="fas fa-pause mr-2"></i>Rest: ${exercise.rest}</div>
+                        <div class="bg-gray-50 rounded-lg p-3 hover:shadow-md transition-shadow">
+                            <h4 class="font-semibold text-gray-800 mb-1 text-sm">${exercise.name}</h4>
+                            <div class="space-y-1 text-xs text-gray-600">
+                                <div><i class="fas fa-layer-group mr-1"></i>Sets: ${exercise.sets}</div>
+                                <div><i class="fas fa-repeat mr-1"></i>Reps: ${exercise.reps}</div>
+                                ${exercise.duration ? `<div><i class="fas fa-clock mr-1"></i>Duration: ${exercise.duration}</div>` : ''}
+                                <div><i class="fas fa-pause mr-1"></i>Rest: ${exercise.rest}</div>
                             </div>
                         </div>
                     `).join('')}
