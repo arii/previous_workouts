@@ -448,6 +448,11 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
+// Serve the data exploration page
+app.get('/data-exploration', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'data-exploration.html'));
+});
+
 // Generate workout endpoint
 app.post('/api/generate-workout', (req, res) => {
   try {
@@ -694,6 +699,48 @@ app.get('/api/workouts/stats/daily', (req, res) => {
     });
   } catch (error) {
     res.status(500).json({ error: 'Failed to load daily statistics' });
+  }
+});
+
+// Get historical workouts from categorized data
+app.get('/api/workouts/historical', (req, res) => {
+  try {
+    const dailyCounts = exerciseMetadata.summary?.daily_workout_counts || {};
+    const dateRange = exerciseMetadata.summary?.date_range || {};
+    
+    // Convert daily counts to workout objects
+    const historicalWorkouts = Object.entries(dailyCounts).map(([date, count]) => {
+      // Get exercises for this date from the categorized data
+      const dayExercises = [];
+      Object.keys(exerciseData).forEach(category => {
+        const categoryExercises = exerciseData[category] || [];
+        const dayCategoryExercises = categoryExercises.filter(exercise => 
+          exercise.date === date
+        );
+        dayExercises.push(...dayCategoryExercises);
+      });
+      
+      return {
+        id: `historical-${date}`,
+        name: count > 1 ? `${count} Workouts` : 'Workout',
+        date: date,
+        duration: '40 min', // Default duration for historical workouts
+        notes: `Historical workout${count > 1 ? 's' : ''} from ${date}`,
+        created_at: date,
+        exercise_count: dayExercises.length,
+        exercises: dayExercises,
+        is_historical: true,
+        workout_count: count
+      };
+    }).sort((a, b) => new Date(b.date) - new Date(a.date)); // Sort by date, newest first
+    
+    res.json({
+      workouts: historicalWorkouts,
+      total: historicalWorkouts.length,
+      dateRange: dateRange
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to load historical workouts' });
   }
 });
 

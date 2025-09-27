@@ -223,8 +223,23 @@ async function saveWorkout() {
 // Load workout history
 async function loadWorkoutHistory() {
     try {
-        const response = await fetch('/api/workouts');
-        workoutHistory = await response.json();
+        // Load both saved workouts and historical workouts
+        const [savedResponse, historicalResponse] = await Promise.all([
+            fetch('/api/workouts').then(res => res.json()),
+            fetch('/api/workouts/historical').then(res => res.json())
+        ]);
+        
+        // Combine saved workouts and historical workouts
+        const savedWorkouts = savedResponse || [];
+        const historicalWorkouts = historicalResponse.workouts || [];
+        
+        // Merge and sort by date (newest first)
+        workoutHistory = [...savedWorkouts, ...historicalWorkouts].sort((a, b) => {
+            const dateA = new Date(a.date || a.created_at);
+            const dateB = new Date(b.date || b.created_at);
+            return dateB - dateA;
+        });
+        
         showHistory('all');
     } catch (error) {
         console.error('Error loading workout history:', error);
@@ -255,50 +270,71 @@ function showHistory(type) {
         return;
     }
     
-    historyContent.innerHTML = workouts.map(workout => `
-        <div class="bg-gray-50 rounded-lg p-6 mb-4 hover:shadow-md transition-shadow">
-            <div class="flex justify-between items-start mb-3">
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-800">${escapeHtml(workout.name)}</h3>
-                    <p class="text-gray-600">
-                        <i class="fas fa-calendar-alt mr-2"></i>
-                        ${formatDate(workout.date)}
-                    </p>
-                </div>
-                <div class="text-right">
-                    <div class="text-sm text-gray-500">
-                        <i class="fas fa-dumbbell mr-1"></i>
-                        ${workout.exercises ? workout.exercises.length : 0} exercises
-                    </div>
-                    ${workout.duration ? `
-                        <div class="text-sm text-gray-500">
-                            <i class="fas fa-clock mr-1"></i>
-                            ${workout.duration}
+    historyContent.innerHTML = workouts.map(workout => {
+        const isHistorical = workout.is_historical;
+        const bgColor = isHistorical ? 'bg-blue-50' : 'bg-gray-50';
+        const borderColor = isHistorical ? 'border-blue-200' : 'border-gray-200';
+        const badgeColor = isHistorical ? 'bg-blue-100 text-blue-800' : 'bg-gray-100 text-gray-800';
+        const badgeText = isHistorical ? 'Historical' : 'Saved';
+        const badgeIcon = isHistorical ? 'fas fa-history' : 'fas fa-save';
+        
+        return `
+            <div class="${bgColor} border ${borderColor} rounded-lg p-6 mb-4 hover:shadow-md transition-shadow">
+                <div class="flex justify-between items-start mb-3">
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <h3 class="text-lg font-semibold text-gray-800">${escapeHtml(workout.name)}</h3>
+                            <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${badgeColor}">
+                                <i class="${badgeIcon} mr-1"></i>
+                                ${badgeText}
+                            </span>
                         </div>
-                    ` : ''}
+                        <p class="text-gray-600">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            ${formatDate(workout.date || workout.created_at)}
+                        </p>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-dumbbell mr-1"></i>
+                            ${workout.exercise_count || (workout.exercises ? workout.exercises.length : 0)} exercises
+                        </div>
+                        ${workout.workout_count > 1 ? `
+                            <div class="text-sm text-gray-500">
+                                <i class="fas fa-layer-group mr-1"></i>
+                                ${workout.workout_count} workouts
+                            </div>
+                        ` : ''}
+                        ${workout.duration ? `
+                            <div class="text-sm text-gray-500">
+                                <i class="fas fa-clock mr-1"></i>
+                                ${workout.duration}
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+                
+                ${workout.notes ? `
+                    <div class="text-sm text-gray-600 mb-3">
+                        <i class="fas fa-sticky-note mr-2"></i>
+                        ${escapeHtml(workout.notes)}
+                    </div>
+                ` : ''}
+                
+                <div class="flex justify-between items-center">
+                    <div class="text-sm text-gray-500">
+                        <i class="fas fa-clock mr-1"></i>
+                        ${isHistorical ? 'Historical data' : 'Saved on ' + formatDate(workout.created_at)}
+                    </div>
+                    <button onclick="viewWorkoutDetails('${workout.id}')" 
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-200">
+                        <i class="fas fa-eye mr-1"></i>
+                        View Details
+                    </button>
                 </div>
             </div>
-            
-            ${workout.notes ? `
-                <div class="text-sm text-gray-600 mb-3">
-                    <i class="fas fa-sticky-note mr-2"></i>
-                    ${escapeHtml(workout.notes)}
-                </div>
-            ` : ''}
-            
-            <div class="flex justify-between items-center">
-                <div class="text-sm text-gray-500">
-                    <i class="fas fa-clock mr-1"></i>
-                    Created ${formatDate(workout.created_at)}
-                </div>
-                <button onclick="viewWorkoutDetails(${workout.id})" 
-                        class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-200">
-                    <i class="fas fa-eye mr-1"></i>
-                    View Details
-                </button>
-            </div>
-        </div>
-    `).join('');
+        `;
+    }).join('');
 }
 
 // View workout details
