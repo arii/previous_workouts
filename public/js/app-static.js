@@ -39,6 +39,9 @@ function generateWorkout() {
         // Display the workout
         displayGeneratedWorkout(workout);
         
+        // Generate and display the copy-friendly table automatically
+        generateAndDisplayTable(workout);
+        
         // Update workout info
         updateWorkoutInfo(workout, intensity, workoutType);
         
@@ -460,6 +463,38 @@ function updateWorkoutInfo(workout, intensity, workoutType) {
     document.getElementById('workoutType').textContent = workoutType.charAt(0).toUpperCase() + workoutType.slice(1);
     document.getElementById('workoutIntensity').textContent = intensity.charAt(0).toUpperCase() + intensity.slice(1);
     document.getElementById('totalExercises').textContent = workout.totalExercises;
+}
+
+// Generate and display table automatically
+function generateAndDisplayTable(workout) {
+    const table = generateCopyFriendlyTable(workout);
+    copyTable.innerHTML = table;
+    
+    // Show the table section
+    const tableSection = document.createElement('div');
+    tableSection.className = 'mt-8 bg-white rounded-xl shadow-sm p-6';
+    tableSection.innerHTML = `
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="text-xl font-semibold text-gray-800">
+                <i class="fas fa-table mr-2 text-green-600"></i>
+                Copy-Friendly Table
+            </h3>
+            <button onclick="copyTableToClipboard()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors">
+                <i class="fas fa-copy mr-2"></i>
+                Copy to Clipboard
+            </button>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4 overflow-x-auto">
+            ${table}
+        </div>
+        <p class="text-sm text-gray-600 mt-3">
+            <i class="fas fa-info-circle mr-1"></i>
+            Click "Copy to Clipboard" to copy this table and paste it into Google Docs or any other document.
+        </p>
+    `;
+    
+    // Insert the table section after the workout structure
+    workoutStructure.parentNode.insertBefore(tableSection, workoutStructure.nextSibling);
 }
 
 // Copy table functionality
