@@ -158,7 +158,7 @@ function generateEMOMWorkout(categories, intensity) {
             duration: null,
             rest: '30 sec'
         })),
-        timing: '2-3 rounds, 30 sec rest'
+        timing: '2-3 rounds'
     });
     
     // EMOM Main
@@ -196,7 +196,7 @@ function generateSpartanWorkout(categories, intensity) {
             duration: null,
             rest: '30 sec'
         })),
-        timing: '2-3 rounds, 30 sec rest'
+        timing: '2-3 rounds'
     });
     
     // Spartan Circuit - Special format: 5 sets of 25, 20, 18, 15, 12 reps
@@ -235,7 +235,7 @@ function generateTabataWorkout(categories, intensity) {
             duration: null,
             rest: '30 sec'
         })),
-        timing: '2-3 rounds, 30 sec rest'
+        timing: '2-3 rounds'
     });
     
     // Tabata
@@ -423,7 +423,7 @@ function getRestForPhase(phase, intensity) {
 
 function getTimingForPhase(phase) {
     const timingMap = {
-        'Warmup': '2-3 rounds, 30 sec rest',
+        'Warmup': '2-3 rounds',
         'Cardio': '3-4 rounds, 30 sec rest',
         'Strength': '3-4 rounds',
         'Finisher': '2-3 rounds, 45 sec rest',
