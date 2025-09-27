@@ -78,7 +78,14 @@
                         </h3>
                         <div class="space-y-3">
                             <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-green-50 transition-colors">
-                                <input type="radio" name="workoutType" value="mixed" class="mr-3 text-green-600" checked>
+                                <input type="radio" name="workoutType" value="any" class="mr-3 text-green-600" checked>
+                                <div>
+                                    <div class="font-medium text-gray-800">Any</div>
+                                    <div class="text-sm text-gray-500">Random: Mixed, EMOM, or Spartan</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-green-50 transition-colors">
+                                <input type="radio" name="workoutType" value="mixed" class="mr-3 text-green-600">
                                 <div>
                                     <div class="font-medium text-gray-800">Mixed</div>
                                     <div class="text-sm text-gray-500">Varied timing protocols</div>
@@ -95,7 +102,7 @@
                                 <input type="radio" name="workoutType" value="spartan" class="mr-3 text-green-600">
                                 <div>
                                     <div class="font-medium text-gray-800">Spartan</div>
-                                    <div class="text-sm text-gray-500">High-intensity circuit training</div>
+                                    <div class="text-sm text-gray-500">5 sets: 25, 20, 18, 15, 12 reps</div>
                                 </div>
                             </label>
                         </div>

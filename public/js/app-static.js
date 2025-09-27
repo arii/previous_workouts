@@ -71,7 +71,14 @@ function generateWorkoutStatic(intensity, workoutType) {
     
     let phases = [];
     
-    switch (workoutType) {
+    // Handle "any" option by randomly selecting a workout type
+    let actualWorkoutType = workoutType;
+    if (workoutType === 'any') {
+        const workoutTypes = ['mixed', 'emom', 'spartan'];
+        actualWorkoutType = workoutTypes[Math.floor(Math.random() * workoutTypes.length)];
+    }
+    
+    switch (actualWorkoutType) {
         case 'mixed':
             phases = generateMixedWorkout(categories, intensity);
             break;
@@ -88,7 +95,7 @@ function generateWorkoutStatic(intensity, workoutType) {
     const totalExercises = phases.reduce((total, phase) => total + phase.exercises.length, 0);
     
     return {
-        type: workoutType,
+        type: actualWorkoutType, // Use the actual workout type that was generated
         intensity: intensity,
         duration: '40 minutes',
         totalExercises: totalExercises,
