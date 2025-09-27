@@ -467,9 +467,15 @@ function generateAndDisplayTable(workout) {
     const table = generateCopyFriendlyTable(workout);
     copyTable.innerHTML = table;
     
+    // Remove existing table section if it exists
+    const existingTableSection = document.querySelector('.copy-table-section');
+    if (existingTableSection) {
+        existingTableSection.remove();
+    }
+    
     // Show the table section
     const tableSection = document.createElement('div');
-    tableSection.className = 'mb-4 bg-white rounded-lg shadow-sm p-4';
+    tableSection.className = 'copy-table-section mb-4 bg-white rounded-lg shadow-sm p-4';
     tableSection.innerHTML = `
         <div class="flex justify-between items-center mb-3">
             <h3 class="text-lg font-semibold text-gray-800">
