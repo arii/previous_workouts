@@ -1,8 +1,13 @@
 // Static version of workout history - no API calls needed
 
 // DOM elements
-const viewAllBtn = document.getElementById('viewAllBtn');
-const viewRecentBtn = document.getElementById('viewRecentBtn');
+const intensityFilter = document.getElementById('intensityFilter');
+const typeFilter = document.getElementById('typeFilter');
+const dateRangeFilter = document.getElementById('dateRangeFilter');
+const exerciseCountFilter = document.getElementById('exerciseCountFilter');
+const applyFiltersBtn = document.getElementById('applyFiltersBtn');
+const clearFiltersBtn = document.getElementById('clearFiltersBtn');
+const filterResults = document.getElementById('filterResults');
 const historyContent = document.getElementById('historyContent');
 const loadingState = document.getElementById('loadingState');
 const emptyState = document.getElementById('emptyState');
@@ -20,8 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function setupEventListeners() {
-    viewAllBtn.addEventListener('click', () => showHistory('all'));
-    viewRecentBtn.addEventListener('click', () => showHistory('recent'));
+    applyFiltersBtn.addEventListener('click', applyFilters);
+    clearFiltersBtn.addEventListener('click', clearFilters);
+    
+    // Auto-apply filters when selections change
+    intensityFilter.addEventListener('change', applyFilters);
+    typeFilter.addEventListener('change', applyFilters);
+    dateRangeFilter.addEventListener('change', applyFilters);
+    exerciseCountFilter.addEventListener('change', applyFilters);
 }
 
 // Load workout history from static data
@@ -36,7 +47,7 @@ function loadWorkoutHistory() {
         allWorkouts = historicalWorkouts;
         
         // Show all history by default
-        showHistory('all');
+        applyFilters();
         
         showSuccessToast('Historical data loaded successfully!');
         
@@ -107,30 +118,108 @@ function generateHistoricalWorkouts() {
     return historicalWorkouts;
 }
 
-// Show history based on filter
-function showHistory(filter) {
+// Apply filters to workouts
+function applyFilters() {
     if (!allWorkouts || allWorkouts.length === 0) {
         showEmpty();
         return;
     }
     
-    let filteredWorkouts = allWorkouts;
+    let filteredWorkouts = [...allWorkouts];
     
-    if (filter === 'recent') {
-        // Show only last 30 days
-        const thirtyDaysAgo = new Date();
-        thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-        filteredWorkouts = allWorkouts.filter(workout => 
-            new Date(workout.date) >= thirtyDaysAgo
+    // Intensity filter
+    const intensity = intensityFilter.value;
+    if (intensity) {
+        filteredWorkouts = filteredWorkouts.filter(workout => 
+            (workout.intensity || 'normal').toLowerCase() === intensity.toLowerCase()
         );
     }
+    
+    // Type filter
+    const type = typeFilter.value;
+    if (type) {
+        filteredWorkouts = filteredWorkouts.filter(workout => 
+            (workout.type || 'mixed').toLowerCase() === type.toLowerCase()
+        );
+    }
+    
+    // Date range filter
+    const dateRange = dateRangeFilter.value;
+    if (dateRange && dateRange !== 'all') {
+        const now = new Date();
+        let cutoffDate;
+        
+        switch (dateRange) {
+            case 'week':
+                cutoffDate = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+                break;
+            case 'recent':
+                cutoffDate = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+                break;
+            case 'month':
+                cutoffDate = new Date(now.getTime() - 90 * 24 * 60 * 60 * 1000);
+                break;
+            case 'year':
+                cutoffDate = new Date(now.getTime() - 365 * 24 * 60 * 60 * 1000);
+                break;
+        }
+        
+        if (cutoffDate) {
+            filteredWorkouts = filteredWorkouts.filter(workout => 
+                new Date(workout.date || workout.created_at) >= cutoffDate
+            );
+        }
+    }
+    
+    // Exercise count filter
+    const exerciseCount = exerciseCountFilter.value;
+    if (exerciseCount) {
+        filteredWorkouts = filteredWorkouts.filter(workout => {
+            const totalExercises = workout.phases ? 
+                workout.phases.reduce((total, phase) => total + (phase.exercises ? phase.exercises.length : 0), 0) : 0;
+            
+            switch (exerciseCount) {
+                case '1-5':
+                    return totalExercises >= 1 && totalExercises <= 5;
+                case '6-10':
+                    return totalExercises >= 6 && totalExercises <= 10;
+                case '11-15':
+                    return totalExercises >= 11 && totalExercises <= 15;
+                case '16+':
+                    return totalExercises >= 16;
+                default:
+                    return true;
+            }
+        });
+    }
+    
+    // Update filter results display
+    updateFilterResults(filteredWorkouts.length, allWorkouts.length);
     
     if (filteredWorkouts.length === 0) {
         showEmpty();
         return;
     }
     
-    displayWorkouts(filteredWorkouts, filter);
+    displayWorkouts(filteredWorkouts, 'filtered');
+}
+
+// Clear all filters
+function clearFilters() {
+    intensityFilter.value = '';
+    typeFilter.value = '';
+    dateRangeFilter.value = 'all';
+    exerciseCountFilter.value = '';
+    applyFilters();
+}
+
+// Update filter results display
+function updateFilterResults(filteredCount, totalCount) {
+    if (filteredCount === totalCount) {
+        filterResults.textContent = `Showing all ${totalCount} workouts`;
+    } else {
+        filterResults.textContent = `Showing ${filteredCount} of ${totalCount} workouts`;
+    }
 }
 
 // Display workouts in the UI
@@ -204,7 +293,9 @@ function createWorkoutTableRow(workout) {
     row.className = `${intensityColors[intensity.toLowerCase()] || intensityColors.normal} transition-colors`;
     
     const date = new Date(workout.date || workout.created_at);
-    const formattedDate = date.toLocaleDateString('en-US', {
+    // Ensure we're using the correct date by adding timezone offset
+    const adjustedDate = new Date(date.getTime() + date.getTimezoneOffset() * 60000);
+    const formattedDate = adjustedDate.toLocaleDateString('en-US', {
         month: 'short',
         day: 'numeric',
         year: 'numeric'
@@ -290,8 +381,10 @@ function generateWorkoutTitle(workout) {
 // Group workouts by date
 function groupWorkoutsByDate(workouts) {
     return workouts.reduce((groups, workout) => {
-        const date = workout.date || workout.created_at;
-        const dateKey = new Date(date).toLocaleDateString('en-US', {
+        const date = new Date(workout.date || workout.created_at);
+        // Ensure we're using the correct date by adding timezone offset
+        const adjustedDate = new Date(date.getTime() + date.getTimezoneOffset() * 60000);
+        const dateKey = adjustedDate.toLocaleDateString('en-US', {
             weekday: 'long',
             year: 'numeric',
             month: 'long',
