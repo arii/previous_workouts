@@ -192,23 +192,23 @@ function generateSpartanWorkout(categories, intensity) {
         timing: '2-3 rounds, 30 sec rest'
     });
     
-    // Spartan Circuit
+    // Spartan Circuit - Special format: 5 sets of 25, 20, 18, 15, 12 reps
     const circuitExercises = getRandomExercises(filterAndCleanExercises([
         ...(categories.Cardio || []),
         ...(categories.Strength || []),
         ...(categories.Finisher || [])
-    ]), 6);
+    ]), 4); // Reduced to 4 exercises for Spartan format
     
     phases.push({
         name: 'Spartan Circuit',
         exercises: circuitExercises.map(exercise => ({
             name: standardizeExerciseName(exercise),
-            sets: '3',
-            reps: getRepsForPhase('Spartan', intensity),
-            duration: '40 sec',
-            rest: '20 sec'
+            sets: '5',
+            reps: '25, 20, 18, 15, 12',
+            duration: null,
+            rest: '60 sec'
         })),
-        timing: '3-4 rounds, 40 sec work, 20 sec rest'
+        timing: '5 sets: 25, 20, 18, 15, 12 reps'
     });
     
     return phases;
@@ -421,7 +421,7 @@ function getTimingForPhase(phase) {
         'Strength': '3-4 rounds',
         'Finisher': '2-3 rounds, 45 sec rest',
         'EMOM': '4 rounds, 1 min per exercise',
-        'Spartan': '3-4 rounds, 40 sec work, 20 sec rest',
+        'Spartan': '5 sets: 25, 20, 18, 15, 12 reps',
         'Tabata': '8 rounds, 20 sec work, 10 sec rest'
     };
     
