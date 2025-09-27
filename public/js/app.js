@@ -129,15 +129,21 @@ function displayGeneratedWorkout(workout) {
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 ${phase.exercises.map((exercise, exerciseIndex) => `
-                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow relative">
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow relative cursor-pointer draggable-exercise" 
+                         data-phase="${phaseIndex}" data-exercise="${exerciseIndex}"
+                         ondblclick="editExercise(${phaseIndex}, ${exerciseIndex})"
+                         draggable="true" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondrop="drop(event)">
                         <button onclick="removeExercise(${phaseIndex}, ${exerciseIndex})" class="absolute top-2 right-2 text-red-500 hover:text-red-700 text-sm">
                             <i class="fas fa-times"></i>
                         </button>
-                        <div class="font-medium text-gray-800 mb-1 pr-6">${exercise.name}</div>
-                        ${exercise.sets ? `<div class="text-sm text-gray-600">Sets: ${exercise.sets}</div>` : ''}
-                        ${exercise.reps ? `<div class="text-sm text-gray-600">Reps: ${exercise.reps}</div>` : ''}
-                        ${exercise.duration ? `<div class="text-sm text-gray-600">Duration: ${exercise.duration}</div>` : ''}
-                        ${exercise.rest ? `<div class="text-sm text-gray-600">Rest: ${exercise.rest}</div>` : ''}
+                        <div class="absolute top-2 left-2 text-gray-400 text-xs cursor-move">
+                            <i class="fas fa-grip-vertical"></i>
+                        </div>
+                        <div class="font-medium text-gray-800 mb-1 pr-6 pl-4" id="exercise-name-${phaseIndex}-${exerciseIndex}">${exercise.name}</div>
+                        ${exercise.sets ? `<div class="text-sm text-gray-600" id="exercise-sets-${phaseIndex}-${exerciseIndex}">Sets: ${exercise.sets}</div>` : ''}
+                        ${exercise.reps ? `<div class="text-sm text-gray-600" id="exercise-reps-${phaseIndex}-${exerciseIndex}">Reps: ${exercise.reps}</div>` : ''}
+                        ${exercise.duration ? `<div class="text-sm text-gray-600" id="exercise-duration-${phaseIndex}-${exerciseIndex}">Duration: ${exercise.duration}</div>` : ''}
+                        ${exercise.rest ? `<div class="text-sm text-gray-600" id="exercise-rest-${phaseIndex}-${exerciseIndex}">Rest: ${exercise.rest}</div>` : ''}
                     </div>
                 `).join('')}
             </div>
@@ -971,3 +977,180 @@ function populateDailyPatterns(data) {
         ` : ''}
     `;
 }
+
+// Exercise editing and drag-and-drop functionality
+let draggedElement = null;
+let editingExercise = null;
+
+function editExercise(phaseIndex, exerciseIndex) {
+    if (editingExercise) {
+        cancelEdit();
+    }
+    
+    editingExercise = { phaseIndex, exerciseIndex };
+    const exercise = currentWorkout.phases[phaseIndex].exercises[exerciseIndex];
+    
+    // Create edit form
+    const nameElement = document.getElementById(`exercise-name-${phaseIndex}-${exerciseIndex}`);
+    const setsElement = document.getElementById(`exercise-sets-${phaseIndex}-${exerciseIndex}`);
+    const repsElement = document.getElementById(`exercise-reps-${phaseIndex}-${exerciseIndex}`);
+    const durationElement = document.getElementById(`exercise-duration-${phaseIndex}-${exerciseIndex}`);
+    const restElement = document.getElementById(`exercise-rest-${phaseIndex}-${exerciseIndex}`);
+    
+    // Replace name with input
+    nameElement.innerHTML = `
+        <input type="text" value="${exercise.name}" class="w-full px-2 py-1 border border-gray-300 rounded text-sm font-medium" 
+               id="edit-name-${phaseIndex}-${exerciseIndex}">
+    `;
+    
+    // Replace sets with input if it exists
+    if (setsElement) {
+        setsElement.innerHTML = `
+            <div class="text-sm text-gray-600">
+                Sets: <input type="text" value="${exercise.sets || ""}" class="w-16 px-1 py-0.5 border border-gray-300 rounded text-xs" 
+                             id="edit-sets-${phaseIndex}-${exerciseIndex}">
+            </div>
+        `;
+    }
+    
+    // Replace reps with input if it exists
+    if (repsElement) {
+        repsElement.innerHTML = `
+            <div class="text-sm text-gray-600">
+                Reps: <input type="text" value="${exercise.reps || ""}" class="w-16 px-1 py-0.5 border border-gray-300 rounded text-xs" 
+                             id="edit-reps-${phaseIndex}-${exerciseIndex}">
+            </div>
+        `;
+    }
+    
+    // Replace duration with input if it exists
+    if (durationElement) {
+        durationElement.innerHTML = `
+            <div class="text-sm text-gray-600">
+                Duration: <input type="text" value="${exercise.duration || ""}" class="w-20 px-1 py-0.5 border border-gray-300 rounded text-xs" 
+                                 id="edit-duration-${phaseIndex}-${exerciseIndex}">
+            </div>
+        `;
+    }
+    
+    // Replace rest with input if it exists
+    if (restElement) {
+        restElement.innerHTML = `
+            <div class="text-sm text-gray-600">
+                Rest: <input type="text" value="${exercise.rest || ""}" class="w-16 px-1 py-0.5 border border-gray-300 rounded text-xs" 
+                             id="edit-rest-${phaseIndex}-${exerciseIndex}">
+            </div>
+        `;
+    }
+    
+    // Add save/cancel buttons
+    const cardElement = document.querySelector(`[data-phase="${phaseIndex}"][data-exercise="${exerciseIndex}"]`);
+    const buttonContainer = document.createElement("div");
+    buttonContainer.className = "mt-3 flex gap-2";
+    buttonContainer.innerHTML = `
+        <button onclick="saveEdit(${phaseIndex}, ${exerciseIndex})" class="px-3 py-1 bg-green-500 text-white text-xs rounded hover:bg-green-600">
+            <i class="fas fa-check mr-1"></i>Save
+        </button>
+        <button onclick="cancelEdit()" class="px-3 py-1 bg-gray-500 text-white text-xs rounded hover:bg-gray-600">
+            <i class="fas fa-times mr-1"></i>Cancel
+        </button>
+    `;
+    cardElement.appendChild(buttonContainer);
+    
+    // Focus on name input
+    document.getElementById(`edit-name-${phaseIndex}-${exerciseIndex}`).focus();
+}
+
+function saveEdit(phaseIndex, exerciseIndex) {
+    const exercise = currentWorkout.phases[phaseIndex].exercises[exerciseIndex];
+    
+    // Get values from inputs
+    const nameInput = document.getElementById(`edit-name-${phaseIndex}-${exerciseIndex}`);
+    const setsInput = document.getElementById(`edit-sets-${phaseIndex}-${exerciseIndex}`);
+    const repsInput = document.getElementById(`edit-reps-${phaseIndex}-${exerciseIndex}`);
+    const durationInput = document.getElementById(`edit-duration-${phaseIndex}-${exerciseIndex}`);
+    const restInput = document.getElementById(`edit-rest-${phaseIndex}-${exerciseIndex}`);
+    
+    // Update exercise data
+    exercise.name = nameInput.value.trim();
+    if (setsInput) exercise.sets = setsInput.value.trim();
+    if (repsInput) exercise.reps = repsInput.value.trim();
+    if (durationInput) exercise.duration = durationInput.value.trim();
+    if (restInput) exercise.rest = restInput.value.trim();
+    
+    // Re-render the workout
+    displayWorkout(currentWorkout);
+    editingExercise = null;
+    
+    showToast("Exercise updated successfully!", "success");
+}
+
+function cancelEdit() {
+    if (editingExercise) {
+        // Re-render the workout to restore original state
+        displayWorkout(currentWorkout);
+        editingExercise = null;
+    }
+}
+
+// Drag and drop functionality
+function dragStart(event) {
+    draggedElement = event.target;
+    event.target.style.opacity = "0.5";
+}
+
+function dragOver(event) {
+    event.preventDefault();
+    event.target.style.borderTop = "2px solid #3b82f6";
+}
+
+function dragLeave(event) {
+    event.target.style.borderTop = "";
+}
+
+function drop(event) {
+    event.preventDefault();
+    event.target.style.borderTop = "";
+    
+    if (draggedElement && draggedElement !== event.target) {
+        const draggedData = {
+            phaseIndex: parseInt(draggedElement.dataset.phase),
+            exerciseIndex: parseInt(draggedElement.dataset.exercise)
+        };
+        
+        const targetData = {
+            phaseIndex: parseInt(event.target.dataset.phase),
+            exerciseIndex: parseInt(event.target.dataset.exercise)
+        };
+        
+        // Only allow reordering within the same phase
+        if (draggedData.phaseIndex === targetData.phaseIndex) {
+            const phase = currentWorkout.phases[draggedData.phaseIndex];
+            const draggedExercise = phase.exercises[draggedData.exerciseIndex];
+            
+            // Remove from original position
+            phase.exercises.splice(draggedData.exerciseIndex, 1);
+            
+            // Insert at new position
+            const newIndex = targetData.exerciseIndex > draggedData.exerciseIndex ? 
+                targetData.exerciseIndex - 1 : targetData.exerciseIndex;
+            phase.exercises.splice(newIndex, 0, draggedExercise);
+            
+            // Re-render the workout
+            displayWorkout(currentWorkout);
+            showToast("Exercise reordered successfully!", "success");
+        }
+    }
+    
+    draggedElement = null;
+}
+
+// Add event listeners for drag events
+document.addEventListener("DOMContentLoaded", function() {
+    // Add drag leave event listeners to all draggable elements
+    document.addEventListener("dragleave", function(event) {
+        if (event.target.classList.contains("draggable-exercise")) {
+            dragLeave(event);
+        }
+    });
+});
