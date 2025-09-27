@@ -3,139 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Previous Workouts</title>
+    <title>Workout Generator</title>
     <link href="/css/style.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
     <div class="container mx-auto px-4 py-8">
         <!-- Header -->
-        <header class="mb-8">
+        <div class="text-center mb-8">
             <h1 class="text-4xl font-bold text-gray-800 mb-2">
                 <i class="fas fa-dumbbell text-blue-600 mr-3"></i>
-                Previous Workouts
+                Workout Generator
             </h1>
-            <p class="text-gray-600">Track and review your fitness journey</p>
-        </header>
-
-        <!-- Action Buttons -->
-        <div class="mb-6 flex flex-wrap gap-4">
-            <button id="addWorkoutBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-200 flex items-center">
-                <i class="fas fa-plus mr-2"></i>
-                Add New Workout
-            </button>
-            <button id="viewWorkoutHistoryBtn" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-200 flex items-center">
-                <i class="fas fa-history mr-2"></i>
-                View Exercise History
-            </button>
-            <button id="viewCurrentWorkoutsBtn" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-200 flex items-center">
-                <i class="fas fa-dumbbell mr-2"></i>
-                View Current Workouts
-            </button>
+            <p class="text-gray-600">Generate personalized workouts based on your preferences</p>
         </div>
 
-        <!-- Workouts List -->
-        <div id="workoutsList" class="space-y-4">
-            <!-- Workouts will be loaded here -->
-        </div>
+        <!-- Workout Generator Card -->
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">
+                    <i class="fas fa-magic mr-2 text-purple-600"></i>
+                    Generate Your Workout
+                </h2>
 
-        <!-- Loading Spinner -->
-        <div id="loadingSpinner" class="text-center py-8 hidden">
-            <i class="fas fa-spinner fa-spin text-3xl text-blue-600"></i>
-            <p class="mt-2 text-gray-600">Loading workouts...</p>
-        </div>
+                <!-- Controls -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <!-- Intensity Selection -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-4">
+                            <i class="fas fa-fire mr-2 text-orange-500"></i>
+                            Intensity Level
+                        </h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                                <input type="radio" name="intensity" value="lower" class="mr-3 text-blue-600">
+                                <div>
+                                    <div class="font-medium text-gray-800">Lower Intensity</div>
+                                    <div class="text-sm text-gray-500">Beginner-friendly, moderate pace</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                                <input type="radio" name="intensity" value="normal" class="mr-3 text-blue-600" checked>
+                                <div>
+                                    <div class="font-medium text-gray-800">Normal Intensity</div>
+                                    <div class="text-sm text-gray-500">Balanced workout, standard pace</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                                <input type="radio" name="intensity" value="higher" class="mr-3 text-blue-600">
+                                <div>
+                                    <div class="font-medium text-gray-800">Higher Intensity</div>
+                                    <div class="text-sm text-gray-500">Challenging, high-energy workout</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
 
-        <!-- Empty State -->
-        <div id="emptyState" class="text-center py-12 hidden">
-            <i class="fas fa-dumbbell text-6xl text-gray-300 mb-4"></i>
-            <h3 class="text-xl font-semibold text-gray-600 mb-2">No workouts yet</h3>
-            <p class="text-gray-500 mb-4">Start your fitness journey by adding your first workout!</p>
-            <button id="addFirstWorkoutBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg">
-                Add Your First Workout
-            </button>
-        </div>
-    </div>
+                    <!-- Workout Type Selection -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-4">
+                            <i class="fas fa-list mr-2 text-green-500"></i>
+                            Workout Type
+                        </h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-green-50 transition-colors">
+                                <input type="radio" name="workoutType" value="balanced" class="mr-3 text-green-600" checked>
+                                <div>
+                                    <div class="font-medium text-gray-800">Balanced</div>
+                                    <div class="text-sm text-gray-500">Mix of all categories</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-green-50 transition-colors">
+                                <input type="radio" name="workoutType" value="emom" class="mr-3 text-green-600">
+                                <div>
+                                    <div class="font-medium text-gray-800">EMOM</div>
+                                    <div class="text-sm text-gray-500">Every Minute On the Minute</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-green-50 transition-colors">
+                                <input type="radio" name="workoutType" value="spartan" class="mr-3 text-green-600">
+                                <div>
+                                    <div class="font-medium text-gray-800">Spartan</div>
+                                    <div class="text-sm text-gray-500">High-intensity circuit training</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-3 bg-white rounded-lg cursor-pointer hover:bg-green-50 transition-colors">
+                                <input type="radio" name="workoutType" value="tabata" class="mr-3 text-green-600">
+                                <div>
+                                    <div class="font-medium text-gray-800">Tabata</div>
+                                    <div class="text-sm text-gray-500">20 sec work, 10 sec rest</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Add Workout Modal -->
-    <div id="workoutModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
-        <div class="flex items-center justify-center min-h-screen p-4">
-            <div class="bg-white rounded-lg shadow-xl max-w-md w-full max-h-screen overflow-y-auto">
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-2xl font-bold text-gray-800">Add New Workout</h2>
-                        <button id="closeModal" class="text-gray-500 hover:text-gray-700">
-                            <i class="fas fa-times text-xl"></i>
+                <!-- Duration Info -->
+                <div class="bg-blue-50 rounded-xl p-4 mb-8 text-center">
+                    <div class="flex items-center justify-center">
+                        <i class="fas fa-clock text-blue-600 mr-2"></i>
+                        <span class="text-blue-800 font-medium">All workouts are designed for 40 minutes</span>
+                    </div>
+                </div>
+
+                <!-- Generate Button -->
+                <div class="text-center">
+                    <button id="generateWorkoutBtn" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center mx-auto">
+                        <i class="fas fa-magic mr-3"></i>
+                        Generate My Workout
+                    </button>
+                </div>
+            </div>
+
+            <!-- Generated Workout Display -->
+            <div id="generatedWorkout" class="hidden bg-white rounded-2xl shadow-xl p-8 mb-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-800">
+                        <i class="fas fa-dumbbell mr-2 text-blue-600"></i>
+                        Your Generated Workout
+                    </h2>
+                    <div class="flex space-x-2">
+                        <button id="regenerateBtn" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors">
+                            <i class="fas fa-redo mr-2"></i>
+                            Regenerate
+                        </button>
+                        <button id="saveWorkoutBtn" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors">
+                            <i class="fas fa-save mr-2"></i>
+                            Save Workout
                         </button>
                     </div>
-                    
-                    <form id="workoutForm">
+                </div>
+
+                <!-- Workout Info -->
+                <div id="workoutInfo" class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+                    <!-- Info cards will be populated here -->
+                </div>
+
+                <!-- Workout Structure -->
+                <div id="workoutStructure" class="space-y-6">
+                    <!-- Workout phases will be populated here -->
+                </div>
+
+                <!-- Custom Exercise Entry -->
+                <div id="customExerciseSection" class="mt-8 border-t pt-6" style="display: none;">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">
+                        <i class="fas fa-plus-circle mr-2 text-green-600"></i>
+                        Add Custom Exercise
+                    </h3>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Phase</label>
+                                <select id="customPhaseSelect" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="Warmup">Warmup</option>
+                                    <option value="Cardio">Cardio</option>
+                                    <option value="Strength">Strength</option>
+                                    <option value="Accessory">Accessory</option>
+                                    <option value="Recovery">Recovery</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Exercise Name</label>
+                                <input type="text" id="customExerciseName" placeholder="Enter exercise name" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Sets</label>
+                                <input type="text" id="customSets" placeholder="e.g., 3" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Reps</label>
+                                <input type="text" id="customReps" placeholder="e.g., 12-15" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Rest</label>
+                                <input type="text" id="customRest" placeholder="e.g., 30s" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                        </div>
                         <div class="mb-4">
-                            <label for="workoutName" class="block text-sm font-medium text-gray-700 mb-2">Workout Name</label>
-                            <input type="text" id="workoutName" name="name" required 
-                                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Duration (optional)</label>
+                            <input type="text" id="customDuration" placeholder="e.g., 20s (for timed exercises)" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                         </div>
-                        
-                        <div class="mb-4">
-                            <label for="workoutDate" class="block text-sm font-medium text-gray-700 mb-2">Date</label>
-                            <input type="date" id="workoutDate" name="date" required 
-                                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="workoutDuration" class="block text-sm font-medium text-gray-700 mb-2">Duration (minutes)</label>
-                            <input type="number" id="workoutDuration" name="duration" 
-                                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="workoutNotes" class="block text-sm font-medium text-gray-700 mb-2">Notes</label>
-                            <textarea id="workoutNotes" name="notes" rows="3" 
-                                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                        </div>
-                        
-                        <div class="flex justify-end space-x-3">
-                            <button type="button" id="cancelWorkout" 
-                                    class="px-4 py-2 text-gray-600 border border-gray-300 rounded-md hover:bg-gray-50">
-                                Cancel
+                        <div class="flex gap-3">
+                            <button id="addCustomExerciseBtn" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors">
+                                <i class="fas fa-plus mr-2"></i>
+                                Add Exercise
                             </button>
-                            <button type="submit" 
-                                    class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
-                                Add Workout
+                            <button id="addNewPhaseBtn" class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg transition-colors">
+                                <i class="fas fa-plus-circle mr-2"></i>
+                                Add New Phase
                             </button>
                         </div>
-                    </form>
+                    </div>
+                </div>
+
+                <!-- Copy-Friendly Table View -->
+                <div class="mt-8 border-t pt-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-semibold text-gray-800">
+                            <i class="fas fa-table mr-2 text-blue-600"></i>
+                            Copy-Friendly Table View
+                        </h3>
+                        <button id="copyTableBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+                            <i class="fas fa-copy mr-2"></i>
+                            Copy Table
+                        </button>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <div id="copyTable" class="font-mono text-sm">
+                            <!-- Table will be populated here -->
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2">
+                        <i class="fas fa-info-circle mr-1"></i>
+                        Click "Copy Table" to copy the formatted table, then paste it directly into your Google Doc
+                    </p>
+                </div>
+            </div>
+
+            <!-- Workout History -->
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-800">
+                        <i class="fas fa-history mr-2 text-indigo-600"></i>
+                        Workout History
+                    </h2>
+                    <div class="flex space-x-2">
+                        <button id="viewHistoryBtn" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg transition-colors">
+                            <i class="fas fa-list mr-2"></i>
+                            View All History
+                        </button>
+                        <button id="viewGeneratedBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+                            <i class="fas fa-magic mr-2"></i>
+                            View Generated
+                        </button>
+                    </div>
+                </div>
+
+                <!-- History Content -->
+                <div id="historyContent">
+                    <div class="text-center py-8 text-gray-500">
+                        <i class="fas fa-dumbbell text-4xl mb-4"></i>
+                        <p>Generate your first workout to see it here!</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Workout Detail Modal -->
-    <div id="detailModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
-        <div class="flex items-center justify-center min-h-screen p-4">
-            <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-screen overflow-y-auto">
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-4">
-                        <h2 id="detailTitle" class="text-2xl font-bold text-gray-800"></h2>
-                        <button id="closeDetailModal" class="text-gray-500 hover:text-gray-700">
-                            <i class="fas fa-times text-xl"></i>
-                        </button>
-                    </div>
-                    
-                    <div id="workoutDetails" class="space-y-4">
-                        <!-- Workout details will be loaded here -->
-                    </div>
-                    
-                    <div class="mt-6 flex justify-end">
-                        <button id="deleteWorkoutBtn" class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 mr-3">
-                            <i class="fas fa-trash mr-2"></i>
-                            Delete Workout
-                        </button>
-                        <button id="closeDetailModalBtn" class="px-4 py-2 text-gray-600 border border-gray-300 rounded-md hover:bg-gray-50">
-                            Close
-                        </button>
-                    </div>
-                </div>
-            </div>
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-xl p-8 text-center">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+            <p class="text-gray-600">Generating your workout...</p>
+        </div>
+    </div>
+
+    <!-- Success Toast -->
+    <div id="successToast" class="hidden fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50">
+        <div class="flex items-center">
+            <i class="fas fa-check mr-2"></i>
+            <span>Workout saved successfully!</span>
         </div>
     </div>
 

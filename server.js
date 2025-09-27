@@ -62,9 +62,403 @@ function getDifficultyLabel(difficulty) {
   return labels[difficulty] || "Unknown";
 }
 
+// Workout generation logic
+function generateWorkout(intensity, workoutType) {
+  // Get all unique exercises from historical data
+  const allExercises = new Set();
+  exerciseData.forEach(workout => {
+    Object.values(workout.exercises_by_category).forEach(exercises => {
+      exercises.forEach(exercise => allExercises.add(exercise));
+    });
+  });
+  
+  const exerciseList = Array.from(allExercises);
+  
+  // Define exercise categories
+  const categories = {
+    'Warmup': ['Basic crunch', 'Penguins', 'Feet over kb', 'Mobility stretches'],
+    'Cardio': ['Band f/b jack', 'Band hydrant', 'Band seal', 'Band jump sq', 'Tabata'],
+    'Strength': ['Db goblet squat', 'Band swims', 'Db sumo dl', 'Band punches', 'Dd toe touch'],
+    'Accessory': ['Band curls', 'Band kickback', 'Slider knee tucks']
+  };
+  
+  // Target 40 minutes - adjust exercise count and structure accordingly
+  let exerciseCount = 10; // Base for 40-minute workout
+  let phaseDistribution = { 'Warmup': 2, 'Cardio': 3, 'Strength': 3, 'Accessory': 2 };
+  
+  if (intensity === 'lower') {
+    exerciseCount = 8;
+    phaseDistribution = { 'Warmup': 2, 'Cardio': 2, 'Strength': 2, 'Accessory': 2 };
+  } else if (intensity === 'higher') {
+    exerciseCount = 12;
+    phaseDistribution = { 'Warmup': 2, 'Cardio': 4, 'Strength': 4, 'Accessory': 2 };
+  }
+  
+  // Generate workout based on type
+  let phases = [];
+  
+  if (workoutType === 'emom') {
+    phases = generateEMOMWorkout(categories, exerciseCount, intensity);
+  } else if (workoutType === 'spartan') {
+    phases = generateSpartanWorkout(categories, exerciseCount, intensity);
+  } else if (workoutType === 'tabata') {
+    phases = generateTabataWorkout(categories, exerciseCount, intensity);
+  } else {
+    phases = generateBalancedWorkout(categories, phaseDistribution, intensity);
+  }
+  
+  // Adjust phases to target 40 minutes
+  phases = adjustWorkoutFor40Minutes(phases, intensity, workoutType);
+  
+  return {
+    type: workoutType,
+    intensity: intensity,
+    duration: "40 minutes",
+    totalExercises: exerciseCount,
+    phases: phases,
+    generatedAt: new Date().toISOString()
+  };
+}
+
+function generateBalancedWorkout(categories, distribution, intensity) {
+  const phases = [];
+  
+  Object.entries(distribution).forEach(([phaseName, count]) => {
+    if (count > 0) {
+      const phaseExercises = categories[phaseName] || [];
+      const selectedExercises = getRandomExercises(phaseExercises, count);
+      
+      phases.push({
+        name: phaseName,
+        exercises: selectedExercises.map(exercise => ({
+          name: exercise,
+          sets: getSetsForPhase(phaseName, intensity),
+          reps: getRepsForPhase(phaseName, intensity),
+          duration: getDurationForPhase(phaseName, intensity),
+          rest: getRestForPhase(phaseName, intensity)
+        })),
+        timing: getTimingForPhase(phaseName)
+      });
+    }
+  });
+  
+  return phases;
+}
+
+function generateEMOMWorkout(categories, exerciseCount, intensity) {
+  const exercises = [];
+  
+  // Select exercises from all categories
+  Object.values(categories).flat().forEach(exercise => {
+    exercises.push(exercise);
+  });
+  
+  const selectedExercises = getRandomExercises(exercises, exerciseCount);
+  
+  return [{
+    name: 'EMOM Circuit',
+    exercises: selectedExercises.map(exercise => ({
+      name: exercise,
+      sets: '1',
+      reps: getEMOMReps(intensity),
+      duration: null,
+      rest: 'Remaining minute'
+    })),
+    timing: 'Every Minute On the Minute - Complete exercise within 1 minute'
+  }];
+}
+
+function generateSpartanWorkout(categories, exerciseCount, intensity) {
+  const phases = [];
+  
+  // Warmup
+  phases.push({
+    name: 'Warmup',
+    exercises: getRandomExercises(categories['Warmup'], 2).map(exercise => ({
+      name: exercise,
+      sets: '1',
+      reps: '10-15',
+      duration: null,
+      rest: '30 sec'
+    })),
+    timing: '2 rounds, 30 sec rest between exercises'
+  });
+  
+  // Main circuit
+  const circuitExercises = [];
+  Object.values(categories).flat().forEach(exercise => {
+    circuitExercises.push(exercise);
+  });
+  
+  const selectedExercises = getRandomExercises(circuitExercises, exerciseCount - 2);
+  
+  phases.push({
+    name: 'Spartan Circuit',
+    exercises: selectedExercises.map(exercise => ({
+      name: exercise,
+      sets: '3-5',
+      reps: getSpartanReps(intensity),
+      duration: null,
+      rest: '15-30 sec'
+    })),
+    timing: '3-5 rounds, minimal rest between exercises'
+  });
+  
+  return phases;
+}
+
+function generateTabataWorkout(categories, exerciseCount, intensity) {
+  const exercises = [];
+  
+  // Focus on cardio and strength for Tabata
+  [...categories['Cardio'], ...categories['Strength']].forEach(exercise => {
+    exercises.push(exercise);
+  });
+  
+  const selectedExercises = getRandomExercises(exercises, Math.min(exerciseCount, 8));
+  
+  return [{
+    name: 'Tabata Circuit',
+    exercises: selectedExercises.map(exercise => ({
+      name: exercise,
+      sets: '8',
+      reps: null,
+      duration: '20 sec',
+      rest: '10 sec'
+    })),
+    timing: '20 seconds work, 10 seconds rest, 8 rounds per exercise'
+  }];
+}
+
+// Helper functions for workout generation
+function getRandomExercises(exercises, count) {
+  const shuffled = [...exercises].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+}
+
+function getSetsForPhase(phaseName, intensity) {
+  // Special case for warmup - always 2-3 sets
+  if (phaseName === 'Warmup') {
+    if (intensity === 'lower') {
+      return '2';
+    } else if (intensity === 'higher') {
+      return '3';
+    } else {
+      return '2-3';
+    }
+  }
+  
+  const baseSets = {
+    'Cardio': 3,
+    'Strength': 3,
+    'Accessory': 2
+  };
+  
+  let sets = baseSets[phaseName] || 2;
+  
+  if (intensity === 'higher') {
+    sets += 1;
+  } else if (intensity === 'lower') {
+    sets = Math.max(1, sets - 1);
+  }
+  
+  return sets.toString();
+}
+
+function getRepsForPhase(phaseName, intensity) {
+  const baseReps = {
+    'Warmup': '10-15',
+    'Cardio': '15-20',
+    'Strength': '8-12',
+    'Accessory': '12-15'
+  };
+  
+  return baseReps[phaseName] || '10-15';
+}
+
+function getDurationForPhase(phaseName, intensity) {
+  if (phaseName === 'Cardio') {
+    return intensity === 'higher' ? '45 sec' : intensity === 'lower' ? '30 sec' : '40 sec';
+  }
+  return null;
+}
+
+function getRestForPhase(phaseName, intensity) {
+  const baseRest = {
+    'Warmup': '30 sec',
+    'Cardio': '30 sec',
+    'Strength': '60 sec',
+    'Accessory': '45 sec'
+  };
+  
+  let rest = baseRest[phaseName] || '45 sec';
+  
+  if (intensity === 'higher') {
+    rest = rest.replace(/\d+/, match => Math.max(15, parseInt(match) - 15));
+  } else if (intensity === 'lower') {
+    rest = rest.replace(/\d+/, match => parseInt(match) + 15);
+  }
+  
+  return rest;
+}
+
+function getTimingForPhase(phaseName) {
+  const timings = {
+    'Warmup': '2-3 rounds, 30 sec rest',
+    'Cardio': '3-4 rounds, 30 sec rest',
+    'Strength': '3-4 rounds, 60 sec rest',
+    'Accessory': '2-3 rounds, 45 sec rest'
+  };
+  
+  return timings[phaseName] || '2-3 rounds';
+}
+
+function getEMOMReps(intensity) {
+  const reps = {
+    'lower': '8-12',
+    'normal': '12-15',
+    'higher': '15-20'
+  };
+  
+  return reps[intensity] || '12-15';
+}
+
+function getSpartanReps(intensity) {
+  const reps = {
+    'lower': '8-12',
+    'normal': '12-15',
+    'higher': '15-25'
+  };
+  
+  return reps[intensity] || '12-15';
+}
+
+function adjustWorkoutFor40Minutes(phases, intensity, workoutType) {
+  // Calculate current estimated duration
+  let currentDuration = calculateWorkoutDuration(phases, intensity, workoutType);
+  const targetMinutes = 40;
+  
+  // If we're close to 40 minutes (within 5 minutes), return as is
+  if (Math.abs(currentDuration - targetMinutes) <= 5) {
+    return phases;
+  }
+  
+  // Adjust sets to get closer to 40 minutes
+  const adjustmentFactor = targetMinutes / currentDuration;
+  
+  phases.forEach(phase => {
+    phase.exercises.forEach(exercise => {
+      if (exercise.sets && !exercise.duration) {
+        // Adjust sets for rep-based exercises
+        const currentSets = parseSets(exercise.sets);
+        const newSets = Math.max(1, Math.round(currentSets * adjustmentFactor));
+        exercise.sets = newSets.toString();
+      }
+    });
+  });
+  
+  return phases;
+}
+
+function calculateWorkoutDuration(phases, intensity, workoutType) {
+  let totalMinutes = 0;
+  
+  phases.forEach(phase => {
+    phase.exercises.forEach(exercise => {
+      // Parse sets (handle ranges like "3-5" by taking average)
+      const sets = parseSets(exercise.sets);
+      
+      // Estimate time per set based on exercise type and intensity
+      let timePerSet = 0;
+      
+      if (exercise.duration) {
+        // For timed exercises (like Tabata)
+        const durationSeconds = parseInt(exercise.duration);
+        timePerSet = durationSeconds + parseInt(exercise.rest || 0);
+      } else {
+        // For rep-based exercises
+        const avgReps = parseReps(exercise.reps);
+        timePerSet = estimateTimeForReps(avgReps, phase.name, intensity);
+      }
+      
+      totalMinutes += (sets * timePerSet) / 60;
+    });
+    
+    // Add transition time between phases (1-2 minutes)
+    totalMinutes += 1.5;
+  });
+  
+  // Add warmup and cooldown time
+  totalMinutes += 5; // 5 minutes for warmup/cooldown
+  
+  return Math.round(totalMinutes);
+}
+
+function parseSets(setsString) {
+  if (!setsString) return 1;
+  
+  // Handle ranges like "3-5" by taking average
+  if (setsString.includes('-')) {
+    const [min, max] = setsString.split('-').map(Number);
+    return Math.round((min + max) / 2);
+  }
+  
+  return parseInt(setsString) || 1;
+}
+
+function parseReps(repsString) {
+  if (!repsString) return 10;
+  
+  // Handle ranges like "8-12" by taking average
+  if (repsString.includes('-')) {
+    const [min, max] = repsString.split('-').map(Number);
+    return Math.round((min + max) / 2);
+  }
+  
+  return parseInt(repsString) || 10;
+}
+
+function estimateTimeForReps(reps, phaseName, intensity) {
+  // Base time per rep in seconds
+  const baseTimePerRep = {
+    'Warmup': 2,
+    'Cardio': 1.5,
+    'Strength': 3,
+    'Accessory': 2.5
+  };
+  
+  let timePerRep = baseTimePerRep[phaseName] || 2;
+  
+  // Adjust for intensity
+  if (intensity === 'higher') {
+    timePerRep *= 0.8; // Faster pace
+  } else if (intensity === 'lower') {
+    timePerRep *= 1.2; // Slower pace
+  }
+  
+  return reps * timePerRep;
+}
+
 // Routes
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
+
+// Generate workout endpoint
+app.post('/api/generate-workout', (req, res) => {
+  try {
+    const { intensity, workoutType } = req.body;
+    
+    if (!intensity || !workoutType) {
+      return res.status(400).json({ error: 'Missing required parameters' });
+    }
+    
+    const workout = generateWorkout(intensity, workoutType);
+    res.json(workout);
+  } catch (error) {
+    console.error('Error generating workout:', error);
+    res.status(500).json({ error: 'Failed to generate workout' });
+  }
 });
 
 // Get all exercises from JSON data

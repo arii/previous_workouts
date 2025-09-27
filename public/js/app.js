@@ -1,270 +1,281 @@
 // Global variables
-let currentWorkoutId = null;
-let availableExercises = [];
-
-// Helper function for category colors
-function getCategoryColor(category) {
-    const colors = {
-        'Warmup': 'bg-yellow-400',
-        'Cardio': 'bg-red-400', 
-        'Strength': 'bg-blue-400',
-        'Accessory': 'bg-green-400',
-        'Recovery': 'bg-purple-400'
-    };
-    return colors[category] || 'bg-gray-400';
-}
+let currentWorkout = null;
+let workoutHistory = [];
 
 // DOM elements
-const workoutsList = document.getElementById('workoutsList');
-const loadingSpinner = document.getElementById('loadingSpinner');
-const emptyState = document.getElementById('emptyState');
-const workoutModal = document.getElementById('workoutModal');
-const detailModal = document.getElementById('detailModal');
-const workoutForm = document.getElementById('workoutForm');
-const addWorkoutBtn = document.getElementById('addWorkoutBtn');
-const addFirstWorkoutBtn = document.getElementById('addFirstWorkoutBtn');
-const viewWorkoutHistoryBtn = document.getElementById('viewWorkoutHistoryBtn');
-const viewCurrentWorkoutsBtn = document.getElementById('viewCurrentWorkoutsBtn');
-const closeModal = document.getElementById('closeModal');
-const closeDetailModal = document.getElementById('closeDetailModal');
-const closeDetailModalBtn = document.getElementById('closeDetailModalBtn');
-const cancelWorkout = document.getElementById('cancelWorkout');
-const deleteWorkoutBtn = document.getElementById('deleteWorkoutBtn');
+const generateWorkoutBtn = document.getElementById('generateWorkoutBtn');
+const regenerateBtn = document.getElementById('regenerateBtn');
+const saveWorkoutBtn = document.getElementById('saveWorkoutBtn');
+const viewHistoryBtn = document.getElementById('viewHistoryBtn');
+const viewGeneratedBtn = document.getElementById('viewGeneratedBtn');
+const generatedWorkout = document.getElementById('generatedWorkout');
+const workoutInfo = document.getElementById('workoutInfo');
+const workoutStructure = document.getElementById('workoutStructure');
+const historyContent = document.getElementById('historyContent');
+const loadingOverlay = document.getElementById('loadingOverlay');
+const successToast = document.getElementById('successToast');
+const copyTableBtn = document.getElementById('copyTableBtn');
+const copyTable = document.getElementById('copyTable');
+const customExerciseSection = document.getElementById('customExerciseSection');
+const addCustomExerciseBtn = document.getElementById('addCustomExerciseBtn');
+const addNewPhaseBtn = document.getElementById('addNewPhaseBtn');
 
 // Event listeners
 document.addEventListener('DOMContentLoaded', function() {
-    loadExercises();
-    loadWorkouts();
     setupEventListeners();
-    setDefaultDate();
+    loadWorkoutHistory();
 });
 
 function setupEventListeners() {
-    addWorkoutBtn.addEventListener('click', openWorkoutModal);
-    addFirstWorkoutBtn.addEventListener('click', openWorkoutModal);
-    viewWorkoutHistoryBtn.addEventListener('click', loadWorkoutHistory);
-    viewCurrentWorkoutsBtn.addEventListener('click', loadWorkouts);
-    closeModal.addEventListener('click', closeWorkoutModal);
-    closeDetailModal.addEventListener('click', closeDetailModal);
-    closeDetailModalBtn.addEventListener('click', closeDetailModal);
-    cancelWorkout.addEventListener('click', closeWorkoutModal);
-    deleteWorkoutBtn.addEventListener('click', deleteWorkout);
-    workoutForm.addEventListener('submit', handleWorkoutSubmit);
-    
-    // Close modals when clicking outside
-    workoutModal.addEventListener('click', function(e) {
-        if (e.target === workoutModal) {
-            closeWorkoutModal();
-        }
-    });
-    
-    detailModal.addEventListener('click', function(e) {
-        if (e.target === detailModal) {
-            closeDetailModal();
-        }
-    });
+    generateWorkoutBtn.addEventListener('click', generateWorkout);
+    regenerateBtn.addEventListener('click', generateWorkout);
+    saveWorkoutBtn.addEventListener('click', saveWorkout);
+    viewHistoryBtn.addEventListener('click', () => showHistory('all'));
+    viewGeneratedBtn.addEventListener('click', () => showHistory('generated'));
+    copyTableBtn.addEventListener('click', copyTableToClipboard);
+    addCustomExerciseBtn.addEventListener('click', addCustomExercise);
+    addNewPhaseBtn.addEventListener('click', addNewPhase);
 }
 
-function setDefaultDate() {
-    const today = new Date().toISOString().split('T')[0];
-    document.getElementById('workoutDate').value = today;
-}
-
-// API functions
-async function loadExercises() {
-    try {
-        const response = await fetch('/api/exercises');
-        availableExercises = await response.json();
-        console.log('Loaded exercises:', availableExercises);
-    } catch (error) {
-        console.error('Error loading exercises:', error);
-    }
-}
-
-async function loadWorkouts() {
+// Workout Generation
+async function generateWorkout() {
     showLoading();
     
     try {
-        const response = await fetch('/api/workouts');
-        const workouts = await response.json();
+        const intensity = document.querySelector('input[name="intensity"]:checked').value;
+        const workoutType = document.querySelector('input[name="workoutType"]:checked').value;
         
+        const response = await fetch('/api/generate-workout', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                intensity,
+                workoutType
+            })
+        });
+        
+        if (!response.ok) {
+            throw new Error('Failed to generate workout');
+        }
+        
+        currentWorkout = await response.json();
+        displayGeneratedWorkout(currentWorkout);
         hideLoading();
         
-        if (workouts.length === 0) {
-            showEmptyState();
-        } else {
-            hideEmptyState();
-            renderWorkouts(workouts);
-        }
     } catch (error) {
         hideLoading();
-        console.error('Error loading workouts:', error);
-        showError('Failed to load workouts');
+        console.error('Error generating workout:', error);
+        showError('Failed to generate workout. Please try again.');
     }
 }
 
-async function loadWorkoutHistory() {
-    console.log('Loading workout history...');
-    showLoading();
+function displayGeneratedWorkout(workout) {
+    // Store the current workout globally
+    currentWorkout = workout;
     
-    try {
-        const response = await fetch('/api/workout-history');
-        console.log('Response status:', response.status);
-        const workoutHistory = await response.json();
-        console.log('Workout history data:', workoutHistory);
-        
-        hideLoading();
-        
-        if (workoutHistory.length === 0) {
-            console.log('No workout history found');
-            showEmptyState();
-        } else {
-            console.log(`Found ${workoutHistory.length} workout history entries`);
-            hideEmptyState();
-            renderWorkoutHistory(workoutHistory);
-        }
-    } catch (error) {
-        hideLoading();
-        console.error('Error loading workout history:', error);
-        showError('Failed to load workout history');
-    }
+    // Show the workout container
+    generatedWorkout.classList.remove('hidden');
+    
+    // Populate workout info
+    workoutInfo.innerHTML = `
+        <div class="bg-blue-50 rounded-lg p-4 text-center">
+            <div class="text-2xl font-bold text-blue-600">${workout.duration}</div>
+            <div class="text-sm text-gray-600">Duration</div>
+        </div>
+        <div class="bg-green-50 rounded-lg p-4 text-center">
+            <div class="text-2xl font-bold text-green-600">${workout.intensity}</div>
+            <div class="text-sm text-gray-600">Intensity</div>
+        </div>
+        <div class="bg-purple-50 rounded-lg p-4 text-center">
+            <div class="text-2xl font-bold text-purple-600">${workout.type}</div>
+            <div class="text-sm text-gray-600">Type</div>
+        </div>
+        <div class="bg-orange-50 rounded-lg p-4 text-center">
+            <div class="text-2xl font-bold text-orange-600">${workout.totalExercises}</div>
+            <div class="text-sm text-gray-600">Exercises</div>
+        </div>
+    `;
+    
+    // Populate workout structure
+    workoutStructure.innerHTML = workout.phases.map((phase, phaseIndex) => `
+        <div class="border border-gray-200 rounded-xl p-6">
+            <div class="flex items-center mb-4">
+                <div class="w-8 h-8 rounded-full ${getPhaseColor(phase.name)} flex items-center justify-center text-white font-bold mr-3">
+                    ${phase.name.charAt(0)}
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800">${phase.name}</h3>
+                <span class="ml-auto bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">
+                    ${phase.exercises.length} exercises
+                </span>
+                <div class="ml-3 flex gap-2">
+                    <button onclick="regeneratePhase(${phaseIndex})" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-lg text-sm transition-colors">
+                        <i class="fas fa-sync-alt mr-1"></i>
+                        Regenerate
+                    </button>
+                    <button onclick="removePhase(${phaseIndex})" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-lg text-sm transition-colors">
+                        <i class="fas fa-trash mr-1"></i>
+                        Remove
+                    </button>
+                </div>
+            </div>
+            
+            ${phase.timing ? `
+                <div class="mb-4 p-3 bg-gray-50 rounded-lg">
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-clock mr-2"></i>
+                        <span class="font-medium">Timing:</span>
+                        <span class="ml-2">${phase.timing}</span>
+                    </div>
+                </div>
+            ` : ''}
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                ${phase.exercises.map((exercise, exerciseIndex) => `
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow relative">
+                        <button onclick="removeExercise(${phaseIndex}, ${exerciseIndex})" class="absolute top-2 right-2 text-red-500 hover:text-red-700 text-sm">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <div class="font-medium text-gray-800 mb-1 pr-6">${exercise.name}</div>
+                        ${exercise.sets ? `<div class="text-sm text-gray-600">Sets: ${exercise.sets}</div>` : ''}
+                        ${exercise.reps ? `<div class="text-sm text-gray-600">Reps: ${exercise.reps}</div>` : ''}
+                        ${exercise.duration ? `<div class="text-sm text-gray-600">Duration: ${exercise.duration}</div>` : ''}
+                        ${exercise.rest ? `<div class="text-sm text-gray-600">Rest: ${exercise.rest}</div>` : ''}
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `).join('');
+    
+    // Generate copy-friendly table
+    generateCopyFriendlyTable(workout);
+    
+    // Show custom exercise section
+    customExerciseSection.style.display = 'block';
+    
+    // Scroll to the generated workout
+    generatedWorkout.scrollIntoView({ behavior: 'smooth' });
 }
 
-async function loadWorkoutDetails(workoutId) {
-    try {
-        const response = await fetch(`/api/workouts/${workoutId}`);
-        const workout = await response.json();
-        return workout;
-    } catch (error) {
-        console.error('Error loading workout details:', error);
-        showError('Failed to load workout details');
-        return null;
-    }
+function getPhaseColor(phaseName) {
+    const colors = {
+        'Warmup': 'bg-yellow-500',
+        'Cardio': 'bg-red-500',
+        'Strength': 'bg-blue-500',
+        'Accessory': 'bg-green-500',
+        'Recovery': 'bg-purple-500'
+    };
+    return colors[phaseName] || 'bg-gray-500';
 }
 
-async function addWorkout(workoutData) {
+// Save workout
+async function saveWorkout() {
+    if (!currentWorkout) return;
+    
     try {
         const response = await fetch('/api/workouts', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(workoutData)
+            body: JSON.stringify({
+                name: `Generated ${currentWorkout.type} Workout`,
+                date: new Date().toISOString().split('T')[0],
+                duration: currentWorkout.duration,
+                notes: `Generated workout - ${currentWorkout.intensity} intensity, ${currentWorkout.type} type`,
+                exercises: currentWorkout.phases.flatMap(phase => 
+                    phase.exercises.map(exercise => ({
+                        name: exercise.name,
+                        sets: exercise.sets || null,
+                        reps: exercise.reps || null,
+                        weight: null,
+                        duration: exercise.duration || null,
+                        notes: null
+                    }))
+                )
+            })
         });
         
-        const result = await response.json();
-        
-        if (response.ok) {
-            showSuccess('Workout added successfully!');
-            closeWorkoutModal();
-            loadWorkouts();
-        } else {
-            showError(result.error || 'Failed to add workout');
+        if (!response.ok) {
+            throw new Error('Failed to save workout');
         }
+        
+        showSuccessToast();
+        loadWorkoutHistory();
+        
     } catch (error) {
-        console.error('Error adding workout:', error);
-        showError('Failed to add workout');
+        console.error('Error saving workout:', error);
+        showError('Failed to save workout. Please try again.');
     }
 }
 
-async function deleteWorkout() {
-    if (!currentWorkoutId) return;
+// Load workout history
+async function loadWorkoutHistory() {
+    try {
+        const response = await fetch('/api/workouts');
+        workoutHistory = await response.json();
+        showHistory('all');
+    } catch (error) {
+        console.error('Error loading workout history:', error);
+    }
+}
+
+// Show history
+function showHistory(type) {
+    let workouts = workoutHistory;
     
-    if (!confirm('Are you sure you want to delete this workout? This action cannot be undone.')) {
+    if (type === 'generated') {
+        workouts = workoutHistory.filter(workout => 
+            workout.name.includes('Generated') || workout.notes?.includes('Generated')
+        );
+    }
+    
+    if (workouts.length === 0) {
+        historyContent.innerHTML = `
+            <div class="text-center py-8 text-gray-500">
+                <i class="fas fa-dumbbell text-4xl mb-4"></i>
+                <p>No ${type === 'generated' ? 'generated ' : ''}workouts found.</p>
+            </div>
+        `;
         return;
     }
     
-    try {
-        const response = await fetch(`/api/workouts/${currentWorkoutId}`, {
-            method: 'DELETE'
-        });
-        
-        if (response.ok) {
-            showSuccess('Workout deleted successfully!');
-            closeDetailModal();
-            loadWorkouts();
-        } else {
-            const result = await response.json();
-            showError(result.error || 'Failed to delete workout');
-        }
-    } catch (error) {
-        console.error('Error deleting workout:', error);
-        showError('Failed to delete workout');
-    }
-}
-
-// UI functions
-function renderWorkoutHistory(workoutHistory) {
-    console.log('Rendering workout history:', workoutHistory);
-    console.log('Workouts list element:', workoutsList);
-    workoutsList.innerHTML = workoutHistory.map(workout => `
-        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
-            <div class="flex justify-between items-start mb-4">
+    historyContent.innerHTML = workouts.map(workout => `
+        <div class="bg-gray-50 rounded-lg p-6 mb-4 hover:shadow-md transition-shadow">
+            <div class="flex justify-between items-start mb-3">
                 <div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-1">${escapeHtml(workout.name)}</h3>
+                    <h3 class="text-lg font-semibold text-gray-800">${escapeHtml(workout.name)}</h3>
                     <p class="text-gray-600">
                         <i class="fas fa-calendar-alt mr-2"></i>
                         ${formatDate(workout.date)}
                     </p>
-                    <p class="text-sm text-gray-500">
-                        <i class="fas fa-history mr-2"></i>
-                        Revision ${workout.revision_number}
-                    </p>
                 </div>
                 <div class="text-right">
-                    <div class="text-sm text-gray-500 mb-2">
+                    <div class="text-sm text-gray-500">
                         <i class="fas fa-dumbbell mr-1"></i>
-                        ${workout.total_exercises || workout.exercise_count || 0} exercises
+                        ${workout.exercises ? workout.exercises.length : 0} exercises
                     </div>
-                    ${workout.difficulty_label ? `
-                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
-                            ${workout.difficulty_label}
-                        </span>
+                    ${workout.duration ? `
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-clock mr-1"></i>
+                            ${workout.duration}
+                        </div>
                     ` : ''}
                 </div>
             </div>
             
-            <div class="flex justify-between items-center">
-                <div class="text-sm text-gray-500">
-                    <i class="fas fa-clock mr-1"></i>
-                    Modified ${formatDate(workout.modified_time)}
+            ${workout.notes ? `
+                <div class="text-sm text-gray-600 mb-3">
+                    <i class="fas fa-sticky-note mr-2"></i>
+                    ${escapeHtml(workout.notes)}
                 </div>
-                <button onclick="viewWorkoutHistoryDetails(${workout.id})" 
-                        class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-200">
-                    <i class="fas fa-eye mr-1"></i>
-                    View Exercises
-                </button>
-            </div>
-        </div>
-    `).join('');
-}
-
-function renderWorkouts(workouts) {
-    workoutsList.innerHTML = workouts.map(workout => `
-        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
-            <div class="flex justify-between items-start mb-4">
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-1">${escapeHtml(workout.name)}</h3>
-                    <p class="text-gray-600">
-                        <i class="fas fa-calendar-alt mr-2"></i>
-                        ${formatDate(workout.date)}
-                    </p>
-                </div>
-                <div class="text-right">
-                    ${workout.duration ? `<p class="text-sm text-gray-500"><i class="fas fa-clock mr-1"></i>${workout.duration} min</p>` : ''}
-                    <p class="text-sm text-gray-500">
-                        <i class="fas fa-dumbbell mr-1"></i>
-                        ${workout.exercise_count || 0} exercises
-                    </p>
-                </div>
-            </div>
-            
-            ${workout.notes ? `<p class="text-gray-600 mb-4">${escapeHtml(workout.notes)}</p>` : ''}
+            ` : ''}
             
             <div class="flex justify-between items-center">
                 <div class="text-sm text-gray-500">
                     <i class="fas fa-clock mr-1"></i>
-                    Added ${formatDate(workout.created_at)}
+                    Created ${formatDate(workout.created_at)}
                 </div>
                 <button onclick="viewWorkoutDetails(${workout.id})" 
                         class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-200">
@@ -276,159 +287,109 @@ function renderWorkouts(workouts) {
     `).join('');
 }
 
+// View workout details
 async function viewWorkoutDetails(workoutId) {
-    currentWorkoutId = workoutId;
-    const workout = await loadWorkoutDetails(workoutId);
+    try {
+        const response = await fetch(`/api/workouts/${workoutId}`);
+        const workout = await response.json();
     
     if (workout) {
-        document.getElementById('detailTitle').textContent = workout.name;
-        
-        const detailsHtml = `
+            // Create a modal or detailed view
+            showWorkoutDetailsModal(workout);
+        }
+    } catch (error) {
+        console.error('Error loading workout details:', error);
+        showError('Failed to load workout details');
+    }
+}
+
+function showWorkoutDetailsModal(workout) {
+    // Create modal HTML
+    const modal = document.createElement('div');
+    modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+    modal.innerHTML = `
+        <div class="bg-white rounded-xl p-8 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold text-gray-800">${escapeHtml(workout.name)}</h2>
+                <button onclick="this.closest('.fixed').remove()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div class="bg-gray-50 p-4 rounded-lg">
                     <h4 class="font-semibold text-gray-700 mb-2">Workout Info</h4>
                     <p class="text-sm text-gray-600"><strong>Date:</strong> ${formatDate(workout.date)}</p>
-                    ${workout.duration ? `<p class="text-sm text-gray-600"><strong>Duration:</strong> ${workout.duration} minutes</p>` : ''}
+                    ${workout.duration ? `<p class="text-sm text-gray-600"><strong>Duration:</strong> ${workout.duration}</p>` : ''}
                     ${workout.notes ? `<p class="text-sm text-gray-600"><strong>Notes:</strong> ${escapeHtml(workout.notes)}</p>` : ''}
                 </div>
                 <div class="bg-gray-50 p-4 rounded-lg">
                     <h4 class="font-semibold text-gray-700 mb-2">Statistics</h4>
                     <p class="text-sm text-gray-600"><strong>Total Exercises:</strong> ${workout.exercises ? workout.exercises.length : 0}</p>
-                    <p class="text-sm text-gray-600"><strong>Created:</strong> ${formatDate(workout.created_at)}</p>
                 </div>
             </div>
             
             ${workout.exercises && workout.exercises.length > 0 ? `
                 <div>
                     <h4 class="font-semibold text-gray-700 mb-3">Exercises</h4>
-                    <div class="space-y-3">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                         ${workout.exercises.map(exercise => `
-                            <div class="bg-white border border-gray-200 p-4 rounded-lg">
-                                <h5 class="font-medium text-gray-800 mb-2">${escapeHtml(exercise.name)}</h5>
-                                <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm text-gray-600">
-                                    ${exercise.sets ? `<span><strong>Sets:</strong> ${exercise.sets}</span>` : ''}
-                                    ${exercise.reps ? `<span><strong>Reps:</strong> ${exercise.reps}</span>` : ''}
-                                    ${exercise.weight ? `<span><strong>Weight:</strong> ${exercise.weight} lbs</span>` : ''}
-                                    ${exercise.duration ? `<span><strong>Duration:</strong> ${exercise.duration} min</span>` : ''}
-                                </div>
-                                ${exercise.notes ? `<p class="text-sm text-gray-600 mt-2">${escapeHtml(exercise.notes)}</p>` : ''}
+                            <div class="bg-white border border-gray-200 p-3 rounded-lg">
+                                <h5 class="font-medium text-gray-800">${escapeHtml(exercise.name)}</h5>
+                                ${exercise.sets ? `<p class="text-sm text-gray-600">Sets: ${exercise.sets}</p>` : ''}
+                                ${exercise.reps ? `<p class="text-sm text-gray-600">Reps: ${exercise.reps}</p>` : ''}
+                                ${exercise.duration ? `<p class="text-sm text-gray-600">Duration: ${exercise.duration}</p>` : ''}
+                                ${exercise.notes ? `<p class="text-sm text-gray-600">Notes: ${escapeHtml(exercise.notes)}</p>` : ''}
                             </div>
                         `).join('')}
                     </div>
                 </div>
-            ` : '<p class="text-gray-500 text-center py-4">No exercises recorded for this workout.</p>'}
-        `;
-        
-        document.getElementById('workoutDetails').innerHTML = detailsHtml;
-        detailModal.classList.remove('hidden');
-    }
-}
-
-async function viewWorkoutHistoryDetails(workoutId) {
-    try {
-        const response = await fetch('/api/workout-history');
-        const workoutHistory = await response.json();
-        const workout = workoutHistory.find(w => w.id === workoutId);
-        
-        if (workout) {
-            document.getElementById('detailTitle').textContent = `${workout.name} - Revision ${workout.revision_number}`;
-            
-            const detailsHtml = `
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h4 class="font-semibold text-gray-700 mb-2">Workout Info</h4>
-                        <p class="text-sm text-gray-600"><strong>Date:</strong> ${formatDate(workout.date)}</p>
-                        <p class="text-sm text-gray-600"><strong>Revision:</strong> ${workout.revision_number}</p>
-                        <p class="text-sm text-gray-600"><strong>Modified:</strong> ${formatDate(workout.modified_time)}</p>
-                    </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <h4 class="font-semibold text-gray-700 mb-2">Statistics</h4>
-                        <p class="text-sm text-gray-600"><strong>Total Exercises:</strong> ${workout.exercises ? workout.exercises.length : 0}</p>
-                    </div>
-                </div>
-                
-                ${workout.exercises && workout.exercises.length > 0 ? `
-                    <div>
-                        <h4 class="font-semibold text-gray-700 mb-3">Exercises</h4>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                            ${workout.exercises.map(exercise => `
-                                <div class="bg-white border border-gray-200 p-3 rounded-lg">
-                                    <h5 class="font-medium text-gray-800">${escapeHtml(exercise.name)}</h5>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                ` : '<p class="text-gray-500 text-center py-4">No exercises found for this workout.</p>'}
-            `;
-            
-            document.getElementById('workoutDetails').innerHTML = detailsHtml;
-            detailModal.classList.remove('hidden');
-        }
-    } catch (error) {
-        console.error('Error loading workout history details:', error);
-        showError('Failed to load workout history details');
-    }
-}
-
-function openWorkoutModal() {
-    workoutModal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeWorkoutModal() {
-    workoutModal.classList.add('hidden');
-    document.body.style.overflow = 'auto';
-    workoutForm.reset();
-    setDefaultDate();
-}
-
-function closeDetailModal() {
-    detailModal.classList.add('hidden');
-    document.body.style.overflow = 'auto';
-    currentWorkoutId = null;
-}
-
-function handleWorkoutSubmit(e) {
-    e.preventDefault();
+            ` : '<p class="text-gray-500 text-center py-4">No exercises found for this workout.</p>'}
+        </div>
+    `;
     
-    const formData = new FormData(workoutForm);
-    const workoutData = {
-        name: formData.get('name'),
-        date: formData.get('date'),
-        duration: formData.get('duration') ? parseInt(formData.get('duration')) : null,
-        notes: formData.get('notes')
-    };
-    
-    addWorkout(workoutData);
+    document.body.appendChild(modal);
 }
 
 // Utility functions
 function showLoading() {
-    loadingSpinner.classList.remove('hidden');
-    workoutsList.classList.add('hidden');
-    emptyState.classList.add('hidden');
+    loadingOverlay.classList.remove('hidden');
 }
 
 function hideLoading() {
-    loadingSpinner.classList.add('hidden');
-    workoutsList.classList.remove('hidden');
+    loadingOverlay.classList.add('hidden');
 }
 
-function showEmptyState() {
-    emptyState.classList.remove('hidden');
-    workoutsList.classList.add('hidden');
+function showSuccessToast() {
+    successToast.classList.remove('hidden');
+    setTimeout(() => {
+        successToast.classList.add('hidden');
+    }, 3000);
 }
 
-function hideEmptyState() {
-    emptyState.classList.add('hidden');
-    workoutsList.classList.remove('hidden');
+function showError(message) {
+    // Create error toast
+    const errorToast = document.createElement('div');
+    errorToast.className = 'fixed top-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+    errorToast.innerHTML = `
+        <div class="flex items-center">
+            <i class="fas fa-exclamation-triangle mr-2"></i>
+            <span>${message}</span>
+        </div>
+    `;
+    
+    document.body.appendChild(errorToast);
+    
+    setTimeout(() => {
+        errorToast.remove();
+    }, 5000);
 }
 
 function formatDate(dateString) {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
         year: 'numeric',
-        month: 'long',
+        month: 'short',
         day: 'numeric'
     });
 }
@@ -439,26 +400,286 @@ function escapeHtml(text) {
     return div.innerHTML;
 }
 
-function showSuccess(message) {
-    // Simple success notification
-    const notification = document.createElement('div');
-    notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
-    notification.innerHTML = `<i class="fas fa-check mr-2"></i>${message}`;
-    document.body.appendChild(notification);
+function generateCopyFriendlyTable(workout) {
+    // Create a table structure similar to Google Docs format
+    let tableHtml = '';
+    
+    if (workout.type === 'balanced') {
+        // For balanced workouts, organize by phases
+        const phaseHeaders = workout.phases.map(phase => phase.name);
+        const maxExercises = Math.max(...workout.phases.map(phase => phase.exercises.length));
+        
+        // Create header row
+        tableHtml += 'Phase\t' + phaseHeaders.join('\t') + '\n';
+        
+        // Create exercise rows
+        for (let i = 0; i < maxExercises; i++) {
+            let row = '';
+            workout.phases.forEach((phase, phaseIndex) => {
+                if (phaseIndex === 0) {
+                    row += `Exercise ${i + 1}\t`;
+                }
+                if (phase.exercises[i]) {
+                    const exercise = phase.exercises[i];
+                    let exerciseText = exercise.name;
+                    if (exercise.sets && exercise.reps) {
+                        exerciseText += ` (${exercise.sets} x ${exercise.reps})`;
+                    }
+                    if (exercise.duration) {
+                        exerciseText += ` (${exercise.duration})`;
+                    }
+                    row += exerciseText;
+                }
+                row += '\t';
+            });
+            tableHtml += row.trim() + '\n';
+        }
+    } else if (workout.type === 'emom') {
+        // For EMOM workouts
+        const phase = workout.phases[0];
+        tableHtml += 'EMOM Circuit\n';
+        tableHtml += 'Exercise\tSets\tReps\tRest\n';
+        phase.exercises.forEach(exercise => {
+            tableHtml += `${exercise.name}\t${exercise.sets}\t${exercise.reps}\t${exercise.rest}\n`;
+        });
+    } else if (workout.type === 'spartan') {
+        // For Spartan workouts
+        workout.phases.forEach(phase => {
+            tableHtml += `${phase.name}\n`;
+            tableHtml += 'Exercise\tSets\tReps\tRest\n';
+            phase.exercises.forEach(exercise => {
+                tableHtml += `${exercise.name}\t${exercise.sets}\t${exercise.reps}\t${exercise.rest}\n`;
+            });
+            tableHtml += '\n';
+        });
+    } else if (workout.type === 'tabata') {
+        // For Tabata workouts
+        const phase = workout.phases[0];
+        tableHtml += 'Tabata Circuit\n';
+        tableHtml += 'Exercise\tSets\tDuration\tRest\n';
+        phase.exercises.forEach(exercise => {
+            tableHtml += `${exercise.name}\t${exercise.sets}\t${exercise.duration}\t${exercise.rest}\n`;
+        });
+    }
+    
+    // Display the table in a copy-friendly format
+    copyTable.innerHTML = `<pre>${tableHtml}</pre>`;
+}
+
+function copyTableToClipboard() {
+    const tableText = copyTable.querySelector('pre').textContent;
+    
+    // Use the Clipboard API if available
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(tableText).then(() => {
+            showCopySuccessToast();
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+            fallbackCopyTextToClipboard(tableText);
+        });
+    } else {
+        fallbackCopyTextToClipboard(tableText);
+    }
+}
+
+function fallbackCopyTextToClipboard(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        document.execCommand('copy');
+        showCopySuccessToast();
+    } catch (err) {
+        console.error('Fallback: Oops, unable to copy', err);
+        showError('Failed to copy table. Please select and copy manually.');
+    }
+    
+    document.body.removeChild(textArea);
+}
+
+function showCopySuccessToast() {
+    const toast = document.createElement('div');
+    toast.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+    toast.innerHTML = `
+        <div class="flex items-center">
+            <i class="fas fa-check mr-2"></i>
+            <span>Table copied to clipboard!</span>
+        </div>
+    `;
+    
+    document.body.appendChild(toast);
     
     setTimeout(() => {
-        notification.remove();
+        toast.remove();
     }, 3000);
 }
 
-function showError(message) {
-    // Simple error notification
-    const notification = document.createElement('div');
-    notification.className = 'fixed top-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
-    notification.innerHTML = `<i class="fas fa-exclamation-triangle mr-2"></i>${message}`;
-    document.body.appendChild(notification);
+// Global variable to store current workout
+let currentWorkout = null;
+
+// Regenerate a single phase
+async function regeneratePhase(phaseIndex) {
+    if (!currentWorkout) return;
+    
+    try {
+        const intensity = document.querySelector('input[name="intensity"]:checked').value;
+        const workoutType = document.querySelector('input[name="workoutType"]:checked').value;
+        
+        const response = await fetch('/api/generate-workout', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                intensity,
+                workoutType
+            })
+        });
+        
+        if (!response.ok) {
+            throw new Error('Failed to generate workout');
+        }
+        
+        const newWorkout = await response.json();
+        
+        // Replace the specific phase
+        currentWorkout.phases[phaseIndex] = newWorkout.phases[phaseIndex];
+        
+        // Re-render the workout
+        displayGeneratedWorkout(currentWorkout);
+        
+        showSuccessToast('Phase regenerated successfully!');
+    } catch (error) {
+        console.error('Error regenerating phase:', error);
+        showError('Failed to regenerate phase. Please try again.');
+    }
+}
+
+// Remove an exercise from a phase
+function removeExercise(phaseIndex, exerciseIndex) {
+    if (!currentWorkout) return;
+    
+    currentWorkout.phases[phaseIndex].exercises.splice(exerciseIndex, 1);
+    
+    // Re-render the workout
+    displayGeneratedWorkout(currentWorkout);
+    
+    showSuccessToast('Exercise removed successfully!');
+}
+
+// Remove an entire phase
+function removePhase(phaseIndex) {
+    if (!currentWorkout) return;
+    
+    // Don't allow removing all phases
+    if (currentWorkout.phases.length <= 1) {
+        showError('Cannot remove the last remaining phase');
+        return;
+    }
+    
+    const phaseName = currentWorkout.phases[phaseIndex].name;
+    currentWorkout.phases.splice(phaseIndex, 1);
+    
+    // Re-render the workout
+    displayGeneratedWorkout(currentWorkout);
+    
+    showSuccessToast(`${phaseName} phase removed successfully!`);
+}
+
+// Add a custom exercise
+function addCustomExercise() {
+    if (!currentWorkout) return;
+    
+    const phaseName = document.getElementById('customPhaseSelect').value;
+    const exerciseName = document.getElementById('customExerciseName').value;
+    const sets = document.getElementById('customSets').value;
+    const reps = document.getElementById('customReps').value;
+    const rest = document.getElementById('customRest').value;
+    const duration = document.getElementById('customDuration').value;
+    
+    if (!exerciseName.trim()) {
+        showError('Please enter an exercise name');
+        return;
+    }
+    
+    // Find the phase
+    const phase = currentWorkout.phases.find(p => p.name === phaseName);
+    if (!phase) {
+        showError('Phase not found');
+        return;
+    }
+    
+    // Create the exercise object
+    const exercise = {
+        name: exerciseName.trim()
+    };
+    
+    if (sets) exercise.sets = sets;
+    if (reps) exercise.reps = reps;
+    if (rest) exercise.rest = rest;
+    if (duration) exercise.duration = duration;
+    
+    // Add the exercise to the phase
+    phase.exercises.push(exercise);
+    
+    // Clear the form
+    document.getElementById('customExerciseName').value = '';
+    document.getElementById('customSets').value = '';
+    document.getElementById('customReps').value = '';
+    document.getElementById('customRest').value = '';
+    document.getElementById('customDuration').value = '';
+    
+    // Re-render the workout
+    displayGeneratedWorkout(currentWorkout);
+    
+    showSuccessToast('Custom exercise added successfully!');
+}
+
+// Add a new phase
+function addNewPhase() {
+    if (!currentWorkout) return;
+    
+    // Get phase name from user
+    const phaseName = prompt('Enter the name for the new phase:');
+    if (!phaseName || !phaseName.trim()) {
+        return;
+    }
+    
+    // Create new empty phase
+    const newPhase = {
+        name: phaseName.trim(),
+        exercises: [],
+        timing: null
+    };
+    
+    // Add the phase to the workout
+    currentWorkout.phases.push(newPhase);
+    
+    // Re-render the workout
+    displayGeneratedWorkout(currentWorkout);
+    
+    showSuccessToast(`${phaseName} phase added successfully!`);
+}
+
+function showSuccessToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+    toast.innerHTML = `
+        <div class="flex items-center">
+            <i class="fas fa-check mr-2"></i>
+            <span>${message}</span>
+        </div>
+    `;
+    
+    document.body.appendChild(toast);
     
     setTimeout(() => {
-        notification.remove();
-    }, 5000);
+        toast.remove();
+    }, 3000);
 }
