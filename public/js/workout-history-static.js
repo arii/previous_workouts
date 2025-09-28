@@ -686,14 +686,25 @@ function createWorkoutTableRow(workout) {
     const totalExercises = phases.reduce((sum, phase) => sum + (phase.exercises ? phase.exercises.length : 0), 0);
     const phaseSummary = phases.map(phase => `${phase.name} (${phase.exercises ? phase.exercises.length : 0})`).join(', ');
     
+    // Helper function to extract exercise names
+    const getExerciseNames = (exercises) => {
+        if (!exercises) return [];
+        return exercises.map(ex => {
+            if (typeof ex === 'string') return ex;
+            if (ex && typeof ex === 'object') return ex.name || ex.exercise || String(ex);
+            return String(ex);
+        });
+    };
+    
     const tableHTML = `
         <div class="text-xs">
             <div class="font-medium text-gray-800 mb-1">${totalExercises} exercises</div>
             <div class="text-gray-600 mb-2">${phaseSummary}</div>
             <div class="text-gray-500">
-                ${phases.slice(0, 2).map(phase => 
-                    `${phase.name}: ${(phase.exercises || []).slice(0, 3).join(', ')}${(phase.exercises || []).length > 3 ? '...' : ''}`
-                ).join(' | ')}
+                ${phases.slice(0, 2).map(phase => {
+                    const exerciseNames = getExerciseNames(phase.exercises);
+                    return `${phase.name}: ${exerciseNames.slice(0, 3).join(', ')}${exerciseNames.length > 3 ? '...' : ''}`;
+                }).join(' | ')}
             </div>
         </div>
     `;
@@ -707,9 +718,10 @@ function createWorkoutTableRow(workout) {
                 <div class="font-medium text-gray-800">${totalExercises} exercises</div>
                 <div class="text-gray-600 text-xs">${phaseSummary}</div>
                 <div class="text-gray-500 text-xs">
-                    ${phases.slice(0, 2).map(phase => 
-                        `${phase.name}: ${(phase.exercises || []).slice(0, 3).join(', ')}${(phase.exercises || []).length > 3 ? '...' : ''}`
-                    ).join(' | ')}
+                    ${phases.slice(0, 2).map(phase => {
+                        const exerciseNames = getExerciseNames(phase.exercises);
+                        return `${phase.name}: ${exerciseNames.slice(0, 3).join(', ')}${exerciseNames.length > 3 ? '...' : ''}`;
+                    }).join(' | ')}
                 </div>
                 <div class="flex items-center mt-1 space-x-2">
                     <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${intensityBadge}">
