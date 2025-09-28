@@ -70,65 +70,410 @@ function generateHistoricalWorkouts() {
     
     console.log('Exercise data loaded:', exerciseData);
     
-    const dailyCounts = exerciseData.metadata.summary.daily_workout_counts || {};
-    const categorizedExercises = exerciseData.categorized_exercises || {};
+    const dailyWorkouts = exerciseData.daily_workouts || {};
     
-    console.log('Daily counts:', dailyCounts);
-    console.log('Categorized exercises:', categorizedExercises);
+    console.log('Daily workouts:', dailyWorkouts);
     
-    // Convert daily counts to workout objects
-    const historicalWorkouts = Object.entries(dailyCounts).map(([date, count]) => {
-        // Get exercises for this date from the categorized data
-        const dayExercises = [];
-        Object.keys(categorizedExercises).forEach(category => {
-            const categoryExercises = categorizedExercises[category] || [];
-            const dayCategoryExercises = categoryExercises.filter(exercise => 
-                exercise.date === date
-            );
-            dayExercises.push(...dayCategoryExercises);
-        });
-        
-        // Group exercises by phase/filename to create workout phases
-        const workoutPhases = {};
-        dayExercises.forEach(exercise => {
-            const phase = exercise.phase || 'General';
-            const filename = exercise.filename || 'unknown';
-            const key = `${phase}-${filename}`;
+    // Convert daily workouts to workout objects
+    const historicalWorkouts = [];
+    
+    Object.entries(dailyWorkouts).forEach(([date, workouts]) => {
+        workouts.forEach((workout, index) => {
+            // Clean up exercise names and filter out invalid exercises
+            const cleanedPhases = workout.phases.map(phase => ({
+                ...phase,
+                exercises: phase.exercises
+                    .filter(exercise => isValidExercise(exercise))
+                    .map(exercise => standardizeExerciseName(exercise))
+            }));
             
-            if (!workoutPhases[key]) {
-                workoutPhases[key] = {
-                    name: phase,
-                    exercises: [],
-                    timing: getTimingForPhase(phase)
-                };
-            }
-            
-            workoutPhases[key].exercises.push({
-                name: standardizeExerciseName(exercise.exercise),
-                sets: getSetsForPhase(phase, 'medium'),
-                reps: getRepsForPhase(phase, 'medium'),
-                duration: getDurationForPhase(phase, 'medium'),
-                rest: getRestForPhase(phase, 'medium')
+            historicalWorkouts.push({
+                id: `${date}-${index}`,
+                date: date,
+                type: 'Mixed', // Default type
+                intensity: 'Normal', // Default intensity
+                phases: cleanedPhases.map(phase => ({
+                    name: phase.phase,
+                    timing: phase.phase, // Use phase name as timing
+                    exercises: phase.exercises.map(exercise => ({
+                        name: exercise,
+                        sets: getSetsForPhase(phase.phase, 'normal'),
+                        reps: getRepsForPhase(phase.phase, 'normal'),
+                        duration: getDurationForPhase(phase.phase, 'normal'),
+                        rest: getRestForPhase(phase.phase, 'normal')
+                    }))
+                }))
             });
         });
-        
-        return {
-            id: `historical-${date}`,
-            name: count > 1 ? `${count} Workouts` : 'Workout',
-            date: date,
-            duration: '40 min',
-            notes: `Historical workout${count > 1 ? 's' : ''} from ${date}`,
-            created_at: date,
-            exercise_count: dayExercises.length,
-            phases: Object.values(workoutPhases),
-            is_historical: true,
-            workout_count: count
-        };
-    }).sort((a, b) => new Date(b.date) - new Date(a.date)); // Sort by date, newest first
+    });
     
-    console.log('Generated historical workouts:', historicalWorkouts.length, historicalWorkouts);
+    return historicalWorkouts.sort((a, b) => new Date(b.date) - new Date(a.date));
+}
+
+// Helper functions for workout generation
+function isValidExercise(exerciseName) {
+    if (!exerciseName || typeof exerciseName !== 'string') return false;
     
-    return historicalWorkouts;
+    // Filter out timing protocols that were incorrectly categorized as exercises
+    const invalidExercises = [
+        '40/30/20 (15 Off)',
+        '2 Rounds',
+        '3 Rounds',
+        '5 Rounds',
+        '10 Rounds',
+        '15 Rounds',
+        '20 Rounds',
+        '30 Rounds',
+        '40 Rounds',
+        '50 Rounds',
+        '60 Rounds',
+        'OR',
+        'R',
+        'L',
+        'Left',
+        'Right',
+        '10 Down',
+        '5 Up',
+        '2-12',
+        '1-10',
+        '1-5',
+        '1-3',
+        '1-2',
+        '1-1',
+        '2-2',
+        '3-3',
+        '4-4',
+        '5-5',
+        '10-10',
+        '15-15',
+        '20-20',
+        '25-25',
+        '30-30',
+        '40-40',
+        '50-50',
+        '60-60',
+        '1 min',
+        '2 min',
+        '3 min',
+        '4 min',
+        '5 min',
+        '10 min',
+        '15 min',
+        '20 min',
+        '30 min',
+        '45 min',
+        '60 min',
+        '90 min',
+        '120 min',
+        '1 sec',
+        '2 sec',
+        '3 sec',
+        '4 sec',
+        '5 sec',
+        '10 sec',
+        '15 sec',
+        '20 sec',
+        '30 sec',
+        '45 sec',
+        '60 sec',
+        '90 sec',
+        '120 sec',
+        '1 rep',
+        '2 rep',
+        '3 rep',
+        '4 rep',
+        '5 rep',
+        '10 rep',
+        '15 rep',
+        '20 rep',
+        '25 rep',
+        '30 rep',
+        '40 rep',
+        '50 rep',
+        '60 rep',
+        '100 rep',
+        '1 set',
+        '2 set',
+        '3 set',
+        '4 set',
+        '5 set',
+        '10 set',
+        '15 set',
+        '20 set',
+        '25 set',
+        '30 set',
+        '40 set',
+        '50 set',
+        '60 set',
+        '100 set',
+        '1 round',
+        '2 round',
+        '3 round',
+        '4 round',
+        '5 round',
+        '10 round',
+        '15 round',
+        '20 round',
+        '25 round',
+        '30 round',
+        '40 round',
+        '50 round',
+        '60 round',
+        '100 round',
+        '1 time',
+        '2 time',
+        '3 time',
+        '4 time',
+        '5 time',
+        '10 time',
+        '15 time',
+        '20 time',
+        '25 time',
+        '30 time',
+        '40 time',
+        '50 time',
+        '60 time',
+        '100 time',
+        '1 x',
+        '2 x',
+        '3 x',
+        '4 x',
+        '5 x',
+        '10 x',
+        '15 x',
+        '20 x',
+        '25 x',
+        '30 x',
+        '40 x',
+        '50 x',
+        '60 x',
+        '100 x',
+        'x 1',
+        'x 2',
+        'x 3',
+        'x 4',
+        'x 5',
+        'x 10',
+        'x 15',
+        'x 20',
+        'x 25',
+        'x 30',
+        'x 40',
+        'x 50',
+        'x 60',
+        'x 100',
+        '1-1-1',
+        '2-2-2',
+        '3-3-3',
+        '4-4-4',
+        '5-5-5',
+        '10-10-10',
+        '15-15-15',
+        '20-20-20',
+        '25-25-25',
+        '30-30-30',
+        '40-40-40',
+        '50-50-50',
+        '60-60-60',
+        '100-100-100',
+        '1-2-3',
+        '2-4-6',
+        '3-6-9',
+        '4-8-12',
+        '5-10-15',
+        '10-20-30',
+        '15-30-45',
+        '20-40-60',
+        '25-50-75',
+        '30-60-90',
+        '40-80-120',
+        '50-100-150',
+        '60-120-180',
+        '100-200-300',
+        '1-2-3-4',
+        '2-4-6-8',
+        '3-6-9-12',
+        '4-8-12-16',
+        '5-10-15-20',
+        '10-20-30-40',
+        '15-30-45-60',
+        '20-40-60-80',
+        '25-50-75-100',
+        '30-60-90-120',
+        '40-80-120-160',
+        '50-100-150-200',
+        '60-120-180-240',
+        '100-200-300-400',
+        '1-2-3-4-5',
+        '2-4-6-8-10',
+        '3-6-9-12-15',
+        '4-8-12-16-20',
+        '5-10-15-20-25',
+        '10-20-30-40-50',
+        '15-30-45-60-75',
+        '20-40-60-80-100',
+        '25-50-75-100-125',
+        '30-60-90-120-150',
+        '40-80-120-160-200',
+        '50-100-150-200-250',
+        '60-120-180-240-300',
+        '100-200-300-400-500',
+        '1-2-3-4-5-6',
+        '2-4-6-8-10-12',
+        '3-6-9-12-15-18',
+        '4-8-12-16-20-24',
+        '5-10-15-20-25-30',
+        '10-20-30-40-50-60',
+        '15-30-45-60-75-90',
+        '20-40-60-80-100-120',
+        '25-50-75-100-125-150',
+        '30-60-90-120-150-180',
+        '40-80-120-160-200-240',
+        '50-100-150-200-250-300',
+        '60-120-180-240-300-360',
+        '100-200-300-400-500-600',
+        '1-2-3-4-5-6-7',
+        '2-4-6-8-10-12-14',
+        '3-6-9-12-15-18-21',
+        '4-8-12-16-20-24-28',
+        '5-10-15-20-25-30-35',
+        '10-20-30-40-50-60-70',
+        '15-30-45-60-75-90-105',
+        '20-40-60-80-100-120-140',
+        '25-50-75-100-125-150-175',
+        '30-60-90-120-150-180-210',
+        '40-80-120-160-200-240-280',
+        '50-100-150-200-250-300-350',
+        '60-120-180-240-300-360-420',
+        '100-200-300-400-500-600-700',
+        '1-2-3-4-5-6-7-8',
+        '2-4-6-8-10-12-14-16',
+        '3-6-9-12-15-18-21-24',
+        '4-8-12-16-20-24-28-32',
+        '5-10-15-20-25-30-35-40',
+        '10-20-30-40-50-60-70-80',
+        '15-30-45-60-75-90-105-120',
+        '20-40-60-80-100-120-140-160',
+        '25-50-75-100-125-150-175-200',
+        '30-60-90-120-150-180-210-240',
+        '40-80-120-160-200-240-280-320',
+        '50-100-150-200-250-300-350-400',
+        '60-120-180-240-300-360-420-480',
+        '100-200-300-400-500-600-700-800',
+        '1-2-3-4-5-6-7-8-9',
+        '2-4-6-8-10-12-14-16-18',
+        '3-6-9-12-15-18-21-24-27',
+        '4-8-12-16-20-24-28-32-36',
+        '5-10-15-20-25-30-35-40-45',
+        '10-20-30-40-50-60-70-80-90',
+        '15-30-45-60-75-90-105-120-135',
+        '20-40-60-80-100-120-140-160-180',
+        '25-50-75-100-125-150-175-200-225',
+        '30-60-90-120-150-180-210-240-270',
+        '40-80-120-160-200-240-280-320-360',
+        '50-100-150-200-250-300-350-400-450',
+        '60-120-180-240-300-360-420-480-540',
+        '100-200-300-400-500-600-700-800-900',
+        '1-2-3-4-5-6-7-8-9-10',
+        '2-4-6-8-10-12-14-16-18-20',
+        '3-6-9-12-15-18-21-24-27-30',
+        '4-8-12-16-20-24-28-32-36-40',
+        '5-10-15-20-25-30-35-40-45-50',
+        '10-20-30-40-50-60-70-80-90-100',
+        '15-30-45-60-75-90-105-120-135-150',
+        '20-40-60-80-100-120-140-160-180-200',
+        '25-50-75-100-125-150-175-200-225-250',
+        '30-60-90-120-150-180-210-240-270-300',
+        '40-80-120-160-200-240-280-320-360-400',
+        '50-100-150-200-250-300-350-400-450-500',
+        '60-120-180-240-300-360-420-480-540-600',
+        '100-200-300-400-500-600-700-800-900-1000'
+    ];
+    
+    if (invalidExercises.includes(exerciseName)) return false;
+    
+    // Filter out exercises that are just numbers or very short
+    if (exerciseName.length < 3) return false;
+    if (/^\d+$/.test(exerciseName)) return false;
+    
+    return true;
+}
+
+function standardizeExerciseName(exerciseName) {
+    if (!exerciseName) return exerciseName;
+    
+    // Fix common typos and abbreviations
+    const replacements = {
+        'Band Puncheses': 'Band Punches',
+        'Mobility Stretchinges': 'Mobility Stretches',
+        'Dd Toe Touch': 'Dumbbell Toe Touch',
+        'F. lunge': 'Forward Lunge',
+        'F Lunge': 'Forward Lunge',
+        'Ch.': 'Chest',
+        'Ch': 'Chest',
+        'Sh.': 'Shoulder',
+        'Sh': 'Shoulder',
+        'Db': 'Dumbbell',
+        'Kb': 'Kettlebell',
+        'B.': 'Bulgarian',
+        'B': 'Bulgarian',
+        'R.': 'Right',
+        'R': 'Right',
+        'L.': 'Left',
+        'L': 'Left'
+    };
+    
+    let standardized = exerciseName;
+    Object.entries(replacements).forEach(([old, newVal]) => {
+        standardized = standardized.replace(new RegExp(`\\b${old}\\b`, 'g'), newVal);
+    });
+    
+    return standardized;
+}
+
+function getSetsForPhase(phase, intensity) {
+    if (phase.includes('Tabata') || phase.includes('20/10')) return '8';
+    if (phase.includes('3 x')) return '3';
+    if (phase.includes('2 x')) return '2';
+    if (phase.includes('4 x')) return '4';
+    if (phase.includes('5 x')) return '5';
+    if (phase.includes('Emom') || phase.includes('EMOM')) return '3';
+    if (phase.includes('Spartan')) return '5';
+    return '3';
+}
+
+function getRepsForPhase(phase, intensity) {
+    if (phase.includes('Tabata') || phase.includes('20/10')) return '20 sec work';
+    if (phase.includes('3 x 10')) return '10';
+    if (phase.includes('3 x 15')) return '15';
+    if (phase.includes('3 x 20')) return '20';
+    if (phase.includes('2 x 15')) return '15';
+    if (phase.includes('2 x 10')) return '10';
+    if (phase.includes('4 x 10')) return '10';
+    if (phase.includes('4 x 15')) return '15';
+    if (phase.includes('5 x 10')) return '10';
+    if (phase.includes('5 x 15')) return '15';
+    if (phase.includes('Emom') || phase.includes('EMOM')) return '12-15';
+    if (phase.includes('Spartan')) return '25, 20, 18, 15, 12';
+    return '10-15';
+}
+
+function getDurationForPhase(phase, intensity) {
+    if (phase.includes('Tabata') || phase.includes('20/10')) return '20 sec';
+    if (phase.includes('Emom') || phase.includes('EMOM')) return '1 min';
+    if (phase.includes('Spartan')) return null;
+    return null;
+}
+
+function getRestForPhase(phase, intensity) {
+    if (phase.includes('Tabata') || phase.includes('20/10')) return '10 sec rest';
+    if (phase.includes('Emom') || phase.includes('EMOM')) return 'Remaining minute';
+    if (phase.includes('Spartan')) return '60 sec';
+    if (phase.includes('3 x')) return '30 sec';
+    if (phase.includes('2 x')) return '30 sec';
+    if (phase.includes('4 x')) return '30 sec';
+    if (phase.includes('5 x')) return '30 sec';
+    return '30 sec';
 }
 
 // Apply filters to workouts

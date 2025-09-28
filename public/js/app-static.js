@@ -121,6 +121,7 @@ function generateMixedWorkout(categories, intensity) {
             
             if (phaseName === 'Warmup') {
                 phaseExercises = getProperWarmupExercises();
+                count = 4; // More exercises for warmup
             } else {
                 phaseExercises = filterAndCleanExercises(phaseExercises);
             }
@@ -131,12 +132,12 @@ function generateMixedWorkout(categories, intensity) {
                 name: phaseName,
                 exercises: selectedExercises.map(exercise => ({
                     name: standardizeExerciseName(exercise),
-                    sets: getSetsForPhase(phaseName, intensity),
-                    reps: getRepsForPhase(phaseName, intensity),
+                    sets: phaseName === 'Warmup' ? '8' : getSetsForPhase(phaseName, intensity),
+                    reps: phaseName === 'Warmup' ? '20 sec work' : getRepsForPhase(phaseName, intensity),
                     duration: getDurationForPhase(phaseName, intensity),
-                    rest: getRestForPhase(phaseName, intensity)
+                    rest: phaseName === 'Warmup' ? '10 sec rest' : getRestForPhase(phaseName, intensity)
                 })),
-                timing: getTimingForPhase(phaseName)
+                timing: phaseName === 'Warmup' ? '8 rounds, 20 sec work, 10 sec rest' : getTimingForPhase(phaseName)
             });
         }
     });
@@ -147,18 +148,18 @@ function generateMixedWorkout(categories, intensity) {
 function generateEMOMWorkout(categories, intensity) {
     const phases = [];
     
-    // Warmup
-    const warmupExercises = getRandomExercises(getProperWarmupExercises(), 2);
+    // Warmup - Tabata style (20/10)
+    const warmupExercises = getRandomExercises(getProperWarmupExercises(), 4);
     phases.push({
         name: 'Warmup',
         exercises: warmupExercises.map(exercise => ({
             name: standardizeExerciseName(exercise),
-            sets: '4',
-            reps: '10-15',
+            sets: '8',
+            reps: '20 sec work',
             duration: null,
-            rest: '30 sec'
+            rest: '10 sec rest'
         })),
-        timing: '2-3 rounds'
+        timing: '8 rounds, 20 sec work, 10 sec rest'
     });
     
     // Cardio
@@ -212,18 +213,18 @@ function generateEMOMWorkout(categories, intensity) {
 function generateSpartanWorkout(categories, intensity) {
     const phases = [];
     
-    // Warmup
-    const warmupExercises = getRandomExercises(getProperWarmupExercises(), 2);
+    // Warmup - Tabata style (20/10)
+    const warmupExercises = getRandomExercises(getProperWarmupExercises(), 4);
     phases.push({
         name: 'Warmup',
         exercises: warmupExercises.map(exercise => ({
             name: standardizeExerciseName(exercise),
-            sets: '4',
-            reps: '10-15',
+            sets: '8',
+            reps: '20 sec work',
             duration: null,
-            rest: '30 sec'
+            rest: '10 sec rest'
         })),
-        timing: '2-3 rounds'
+        timing: '8 rounds, 20 sec work, 10 sec rest'
     });
     
     // Cardio
@@ -277,18 +278,18 @@ function generateSpartanWorkout(categories, intensity) {
 function generateTabataWorkout(categories, intensity) {
     const phases = [];
     
-    // Warmup
-    const warmupExercises = getRandomExercises(getProperWarmupExercises(), 2);
+    // Warmup - Tabata style (20/10)
+    const warmupExercises = getRandomExercises(getProperWarmupExercises(), 4);
     phases.push({
         name: 'Warmup',
         exercises: warmupExercises.map(exercise => ({
             name: standardizeExerciseName(exercise),
-            sets: '4',
-            reps: '10-15',
+            sets: '8',
+            reps: '20 sec work',
             duration: null,
-            rest: '30 sec'
+            rest: '10 sec rest'
         })),
-        timing: '2-3 rounds'
+        timing: '8 rounds, 20 sec work, 10 sec rest'
     });
     
     // Tabata
@@ -306,7 +307,7 @@ function generateTabataWorkout(categories, intensity) {
             duration: '20 sec',
             rest: '10 sec'
         })),
-        timing: '8 rounds, 20 sec work, 10 sec rest'
+        timing: '2-3 rounds'
     });
     
     return phases;
