@@ -604,7 +604,7 @@ function generateCopyFriendlyTable(workout) {
     const phases = workout.phases;
     
     // Create table headers (timing protocols)
-    const headers = phases.map(phase => phase.timing || phase.name).join('</th><th>');
+    const headers = phases.map(phase => getSimplifiedTiming(phase)).join('</th><th>');
     
     // Create table rows (exercises)
     const maxExercises = Math.max(...phases.map(phase => phase.exercises.length));
@@ -649,6 +649,48 @@ function generateServerFriendlyFormat(workout) {
     });
     
     return output.trim();
+}
+
+// Get simplified timing protocol for headers
+function getSimplifiedTiming(phase) {
+    const phaseName = phase.name || phase.phase || phase.timing || '';
+    
+    // Map common phase names to simplified timing
+    const timingMap = {
+        'Warmup': 'Tabata',
+        'Cardio': 'Cardio',
+        'Strength': 'Strength',
+        'Finisher': 'Finisher',
+        'Recovery': 'Recovery',
+        'EMOM': 'EMOM',
+        'Spartan': 'Spartan'
+    };
+    
+    // If it's a common phase name, use the simplified version
+    if (timingMap[phaseName]) {
+        return timingMap[phaseName];
+    }
+    
+    // For timing protocols, extract the key parts
+    if (phaseName.includes('rounds') && phaseName.includes('sec')) {
+        // Extract timing like "8 rounds, 20 sec work, 10 sec rest" -> "20/10"
+        const workMatch = phaseName.match(/(\d+)\s*sec\s*work/);
+        const restMatch = phaseName.match(/(\d+)\s*sec\s*rest/);
+        if (workMatch && restMatch) {
+            return `${workMatch[1]}/${restMatch[1]}`;
+        }
+    }
+    
+    if (phaseName.includes('x')) {
+        // Extract sets/reps like "3 x 10" -> "3 x 10"
+        const match = phaseName.match(/(\d+)\s*x\s*(\d+)/);
+        if (match) {
+            return `${match[1]} x ${match[2]}`;
+        }
+    }
+    
+    // Default to the original phase name if no simplification found
+    return phaseName;
 }
 
 function copyServerFormat() {

@@ -251,7 +251,7 @@ function createGoogleDocsStyleTable(phases) {
     phases.forEach(phase => {
         const th = document.createElement('th');
         th.className = 'border border-gray-300 bg-gray-100 p-2 font-semibold text-center';
-        th.textContent = phase.name || phase.phase || 'Unknown Phase';
+        th.textContent = getSimplifiedTiming(phase);
         headerRow.appendChild(th);
     });
     table.appendChild(headerRow);
@@ -281,6 +281,48 @@ function createGoogleDocsStyleTable(phases) {
     }
     
     return table.outerHTML;
+}
+
+// Get simplified timing protocol for headers
+function getSimplifiedTiming(phase) {
+    const phaseName = phase.name || phase.phase || '';
+    
+    // Map common phase names to simplified timing
+    const timingMap = {
+        'Warmup': 'Tabata',
+        'Cardio': 'Cardio',
+        'Strength': 'Strength',
+        'Finisher': 'Finisher',
+        'Recovery': 'Recovery',
+        'EMOM': 'EMOM',
+        'Spartan': 'Spartan'
+    };
+    
+    // If it's a common phase name, use the simplified version
+    if (timingMap[phaseName]) {
+        return timingMap[phaseName];
+    }
+    
+    // For timing protocols, extract the key parts
+    if (phaseName.includes('rounds') && phaseName.includes('sec')) {
+        // Extract timing like "8 rounds, 20 sec work, 10 sec rest" -> "20/10"
+        const workMatch = phaseName.match(/(\d+)\s*sec\s*work/);
+        const restMatch = phaseName.match(/(\d+)\s*sec\s*rest/);
+        if (workMatch && restMatch) {
+            return `${workMatch[1]}/${restMatch[1]}`;
+        }
+    }
+    
+    if (phaseName.includes('x')) {
+        // Extract sets/reps like "3 x 10" -> "3 x 10"
+        const match = phaseName.match(/(\d+)\s*x\s*(\d+)/);
+        if (match) {
+            return `${match[1]} x ${match[2]}`;
+        }
+    }
+    
+    // Default to the original phase name if no simplification found
+    return phaseName;
 }
 
 // Helper function to format dates
