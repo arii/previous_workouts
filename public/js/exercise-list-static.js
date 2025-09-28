@@ -195,13 +195,13 @@ function displayExercises() {
     console.log('Filtered exercises:', filteredExercises.length);
     console.log('All exercises:', allExercises.length);
     
-    const exerciseList = document.getElementById('exerciseList');
+    const exerciseGrid = document.getElementById('exerciseGrid');
     const showingCount = document.getElementById('showingCount');
     const totalCount = document.getElementById('totalCount');
     const noResults = document.getElementById('noResults');
 
-    if (!exerciseList) {
-        console.error('exerciseList element not found');
+    if (!exerciseGrid) {
+        console.error('exerciseGrid element not found');
         return;
     }
 
@@ -210,7 +210,7 @@ function displayExercises() {
     if (totalCount) totalCount.textContent = allExercises.length;
 
     // Clear existing content
-    exerciseList.innerHTML = '';
+    exerciseGrid.innerHTML = '';
 
     if (filteredExercises.length === 0) {
         console.log('No exercises to display, showing no results message');
@@ -221,13 +221,39 @@ function displayExercises() {
     if (noResults) noResults.classList.add('hidden');
 
     console.log('Creating exercise items...');
-    // Create exercise items
-    filteredExercises.forEach((exercise, index) => {
-        if (index < 5) { // Log first 5 exercises
-            console.log(`Creating item for: ${exercise.name}`);
+    
+    // Group exercises by category
+    const exercisesByCategory = {};
+    filteredExercises.forEach(exercise => {
+        if (!exercisesByCategory[exercise.category]) {
+            exercisesByCategory[exercise.category] = [];
         }
-        const exerciseItem = createExerciseItem(exercise);
-        exerciseList.appendChild(exerciseItem);
+        exercisesByCategory[exercise.category].push(exercise);
+    });
+
+    // Create category sections
+    Object.entries(exercisesByCategory).forEach(([category, exercises]) => {
+        const categorySection = document.createElement('div');
+        categorySection.className = 'mb-6';
+        
+        const categoryHeader = document.createElement('div');
+        categoryHeader.className = 'flex items-center justify-between mb-3';
+        categoryHeader.innerHTML = `
+            <h3 class="text-lg font-semibold text-gray-800">${category}</h3>
+            <span class="text-sm text-gray-500">${exercises.length} exercises</span>
+        `;
+        
+        const exerciseGrid = document.createElement('div');
+        exerciseGrid.className = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2';
+        
+        exercises.forEach(exercise => {
+            const exerciseItem = createExerciseItem(exercise);
+            exerciseGrid.appendChild(exerciseItem);
+        });
+        
+        categorySection.appendChild(categoryHeader);
+        categorySection.appendChild(exerciseGrid);
+        exerciseGrid.parentNode.appendChild(categorySection);
     });
     
     console.log('Exercise items created and added to DOM');
@@ -235,7 +261,7 @@ function displayExercises() {
 
 function createExerciseItem(exercise) {
     const item = document.createElement('div');
-    item.className = 'bg-white rounded-lg p-6 hover:bg-gray-50 transition-colors cursor-pointer border border-gray-200 shadow-sm';
+    item.className = 'bg-white rounded-lg p-3 hover:bg-gray-50 transition-colors cursor-pointer border border-gray-200 shadow-sm';
     
     const categoryColors = {
         'Warmup': 'bg-orange-100 text-orange-800',
@@ -248,20 +274,16 @@ function createExerciseItem(exercise) {
     const categoryClass = categoryColors[exercise.category] || 'bg-gray-100 text-gray-800';
 
     item.innerHTML = `
-        <div class="flex justify-between items-start">
+        <div class="flex justify-between items-center">
             <div class="flex-1">
-                <h3 class="font-bold text-gray-900 mb-3 text-lg">${exercise.name}</h3>
-                <div class="flex items-center space-x-3 mb-3">
-                    <span class="px-3 py-1 rounded-full text-sm font-semibold ${categoryClass}">
+                <h3 class="font-semibold text-gray-900 text-sm mb-1">${exercise.name}</h3>
+                <div class="flex items-center space-x-2">
+                    <span class="px-2 py-1 rounded-full text-xs font-medium ${categoryClass}">
                         ${exercise.category}
                     </span>
-                    <span class="text-base text-gray-700 font-medium">
-                        Used ${exercise.frequency} time${exercise.frequency !== 1 ? 's' : ''}
+                    <span class="text-xs text-gray-600">
+                        ${exercise.frequency}x
                     </span>
-                </div>
-                <div class="text-base text-gray-600">
-                    <div class="mb-1">Phases: ${exercise.phases.slice(0, 3).join(', ')}${exercise.phases.length > 3 ? '...' : ''}</div>
-                    <div>Recent: ${exercise.dates.slice(0, 2).join(', ')}${exercise.dates.length > 2 ? '...' : ''}</div>
                 </div>
             </div>
         </div>
