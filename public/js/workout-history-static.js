@@ -682,24 +682,19 @@ function createWorkoutTableRow(workout) {
         };
     });
     
-    // Create table structure for this row
+    // Create more compact table structure
     const tableHTML = `
-        <table class="w-full text-xs">
-            <thead>
-                <tr>
-                    ${phaseColumns.map(col => `<th class="px-1 py-0.5 text-center font-medium text-gray-600 border-b">${col.timing}</th>`).join('')}
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    ${phaseColumns.map(col => `
-                        <td class="px-1 py-0.5 text-center border-b align-top">
-                            ${col.exercises.map(ex => `<div class="mb-0.5">${ex}</div>`).join('')}
-                        </td>
-                    `).join('')}
-                </tr>
-            </tbody>
-        </table>
+        <div class="text-xs">
+            ${phaseColumns.map(col => `
+                <div class="mb-2">
+                    <div class="font-medium text-gray-700 bg-gray-100 px-2 py-1 rounded-t text-center">${col.timing}</div>
+                    <div class="bg-gray-50 px-2 py-1 rounded-b border-l border-r border-b border-gray-200">
+                        ${col.exercises.slice(0, 4).map(ex => `<div class="text-gray-600">• ${ex}</div>`).join('')}
+                        ${col.exercises.length > 4 ? `<div class="text-gray-500 text-xs mt-1">+ ${col.exercises.length - 4} more</div>` : ''}
+                    </div>
+                </div>
+            `).join('')}
+        </div>
     `;
     
     row.innerHTML = `

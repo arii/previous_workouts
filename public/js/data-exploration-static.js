@@ -131,19 +131,6 @@ function populateDailyPatterns(data) {
                 <div class="text-sm text-orange-700">Avg per Day</div>
             </div>
         </div>
-        ${multiWorkoutDays.length > 0 ? `
-            <div class="mt-4">
-                <h4 class="font-semibold text-orange-800 mb-2">Days with Multiple Workouts:</h4>
-                <div class="space-y-1">
-                    ${multiWorkoutDays.map(([date, count]) => `
-                        <div class="flex justify-between items-center text-sm">
-                            <span class="text-orange-700">${formatDate(date)}</span>
-                            <span class="font-semibold text-orange-800">${count} workouts</span>
-                        </div>
-                    `).join('')}
-                </div>
-            </div>
-        ` : ''}
     `;
 }
 

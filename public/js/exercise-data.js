@@ -1000,7 +1000,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
       },
       {
-        "exercise": "Band Punches",
+        "exercise": "Band Punch",
         "phase": "Tabata",
         "date": "2025-09-24",
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
@@ -2296,7 +2296,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_108851_2025-08-13_14-27-12.txt"
       },
       {
-        "exercise": "Band Punches",
+        "exercise": "Band Punch",
         "phase": "Tabata",
         "date": "2025-08-13",
         "filename": "revision_108851_2025-08-13_14-27-12.txt"
@@ -2368,7 +2368,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
       },
       {
-        "exercise": "Band Punches",
+        "exercise": "Band Punch",
         "phase": "Tabata",
         "date": "2025-09-24",
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
@@ -9836,7 +9836,7 @@ window.EXERCISE_DATA = {
               "Dumbbell Goblet Squat",
               "Band Swim",
               "Dumbbell Sumo Deadlift",
-              "Band Punches",
+              "Band Punch",
               "Step Ups"
             ]
           },
@@ -9864,7 +9864,7 @@ window.EXERCISE_DATA = {
               "Dumbbell Goblet Squat",
               "Band Swim",
               "Dumbbell Sumo Deadlift",
-              "Band Punches",
+              "Band Punch",
               "Dumbbell Toe Touch"
             ]
           },
@@ -12868,7 +12868,7 @@ window.EXERCISE_DATA = {
               "Dumbbell Goblet Squat",
               "Band Swim",
               "Dumbbell Sumo Deadlift",
-              "Band Punches"
+              "Band Punch"
             ]
           },
           {
