@@ -265,37 +265,21 @@ function createExerciseCard(exercise) {
     const frequencyEmoji = getFrequencyEmoji(exercise.frequency);
     
     return `
-        <div class="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105 active:scale-95 border-2 ${intensityColors.border} hover:border-opacity-100 touch-manipulation" 
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105 active:scale-95 border-2 ${intensityColors.border} hover:border-opacity-100 touch-manipulation" 
              onclick="viewExerciseDetails('${safeExerciseName}')"
              role="button"
              tabindex="0"
              aria-label="View details for ${exercise.name} exercise"
              onkeydown="handleCardKeydown(event, '${safeExerciseName}')">
-            <div class="p-4 sm:p-5">
-                <!-- Header with category icon and intensity -->
-                <div class="flex justify-between items-start mb-3 sm:mb-4">
-                    <div class="flex items-center space-x-2 sm:space-x-3 flex-1 min-w-0">
-                        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full ${categoryInfo.color} flex items-center justify-center flex-shrink-0">
-                            <i class="${categoryInfo.icon} text-white text-sm sm:text-lg"></i>
-                        </div>
-                        <div class="min-w-0 flex-1">
-                            <h3 class="font-bold text-gray-800 text-sm sm:text-lg leading-tight truncate">${exercise.name}</h3>
-                            <span class="text-xs sm:text-sm text-gray-500 font-medium">${exercise.category}</span>
-                        </div>
+            <div class="p-6">
+                <!-- Simple, clean layout -->
+                <div class="text-center">
+                    <h3 class="font-bold text-gray-900 text-lg mb-2">${exercise.name}</h3>
+                    <div class="flex items-center justify-center space-x-3 mb-3">
+                        <span class="text-3xl">${frequencyEmoji}</span>
+                        <span class="text-3xl font-bold text-gray-900">${exercise.frequency}</span>
                     </div>
-                    <span class="text-xs px-2 sm:px-3 py-1 rounded-full ${intensityColors.bg} ${intensityColors.text} font-semibold flex-shrink-0 ml-2" 
-                          aria-label="Intensity level: ${intensity}">
-                        ${intensity}
-                    </span>
-                </div>
-                
-                <!-- Simple usage display -->
-                <div class="flex items-center justify-center">
-                    <div class="flex items-center space-x-1 sm:space-x-2">
-                        <span class="text-xl sm:text-2xl">${frequencyEmoji}</span>
-                        <span class="text-xl sm:text-2xl font-bold text-gray-800">${exercise.frequency}</span>
-                        <span class="text-xs sm:text-sm text-gray-500 font-medium">uses</span>
-                    </div>
+                    <span class="text-sm text-gray-500">${exercise.category}</span>
                 </div>
             </div>
         </div>
@@ -345,58 +329,9 @@ function getFrequencyEmoji(frequency) {
 }
 
 function viewExerciseDetails(exerciseName) {
-    const exercise = allExercises.find(ex => ex.name === exerciseName);
-    if (!exercise) return;
-
-    const modal = document.getElementById('exerciseModal');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalContent = document.getElementById('modalContent');
-
-    if (!modal || !modalTitle || !modalContent) return;
-
-    // Store the currently focused element
-    const currentlyFocused = document.activeElement;
-    if (currentlyFocused) {
-        currentlyFocused.setAttribute('data-last-focused', 'true');
-    }
-
-    modalTitle.textContent = exercise.name;
-    
-    const categoryColors = {
-        'Warmup': 'bg-orange-100 text-orange-800',
-        'Cardio': 'bg-red-100 text-red-800',
-        'Strength': 'bg-blue-100 text-blue-800',
-        'Accessory': 'bg-purple-100 text-purple-800',
-        'Recovery': 'bg-green-100 text-green-800'
-    };
-
-    const categoryClass = categoryColors[exercise.category] || 'bg-gray-100 text-gray-800';
-
-    const categoryInfo = getCategoryInfo(exercise.category);
-    const intensity = getExerciseIntensity(exercise);
-    const intensityColors = getIntensityColors(intensity);
-    const frequencyEmoji = getFrequencyEmoji(exercise.frequency);
-
-    modalContent.innerHTML = `
-        <div class="text-center space-y-6">
-            <div class="text-6xl font-bold text-gray-800">${exercise.frequency}</div>
-            <div class="text-lg text-gray-600">total uses</div>
-            ${exercise.dates[0] ? `
-                <div class="text-sm text-gray-500">
-                    Last used: ${new Date(exercise.dates[0]).toLocaleDateString()}
-                </div>
-            ` : ''}
-        </div>
-    `;
-
-    modal.classList.remove('hidden');
-    modal.setAttribute('aria-hidden', 'false');
-    
-    // Focus the close button for keyboard navigation
-    const closeButton = document.getElementById('closeModal');
-    if (closeButton) {
-        closeButton.focus();
-    }
+    // Remove the popup entirely - it's not helpful
+    // Just show a brief tooltip or do nothing
+    console.log(`Exercise clicked: ${exerciseName}`);
 }
 
 // Utility function for debouncing

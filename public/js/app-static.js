@@ -578,16 +578,16 @@ function displayGeneratedWorkout(workout) {
         });
         
         return `
-        <div class="mb-4">
-            <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-3 rounded-lg mb-2">
-                <h3 class="text-sm font-bold">${phase.name}</h3>
-                <p class="text-blue-100 text-xs mt-1">${phase.timing}</p>
+        <div class="mb-6">
+            <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-4 rounded-lg mb-3">
+                <h3 class="text-lg font-bold">${phase.name}</h3>
+                <p class="text-blue-100 text-sm mt-1">${phase.timing}</p>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 ${separatedExercises.map(exercise => `
-                    <div class="bg-white border border-gray-200 rounded-lg p-3 hover:shadow-md transition-shadow">
-                        <h4 class="font-semibold text-gray-800 text-sm mb-1">${exercise.name}</h4>
-                        ${exercise.reps ? `<div class="text-xs text-blue-600 font-medium">${exercise.reps}</div>` : ''}
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                        <h4 class="font-semibold text-gray-900 text-base">${exercise.name}</h4>
+                        ${exercise.reps ? `<div class="text-sm text-blue-600 font-medium mt-1">${exercise.reps}</div>` : ''}
                     </div>
                 `).join('')}
             </div>
