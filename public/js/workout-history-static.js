@@ -682,18 +682,19 @@ function createWorkoutTableRow(workout) {
         };
     });
     
-    // Create more compact table structure
+    // Create simple, useful summary
+    const totalExercises = phases.reduce((sum, phase) => sum + (phase.exercises ? phase.exercises.length : 0), 0);
+    const phaseSummary = phases.map(phase => `${phase.name} (${phase.exercises ? phase.exercises.length : 0})`).join(', ');
+    
     const tableHTML = `
         <div class="text-xs">
-            ${phaseColumns.map(col => `
-                <div class="mb-2">
-                    <div class="font-medium text-gray-700 bg-gray-100 px-2 py-1 rounded-t text-center">${col.timing}</div>
-                    <div class="bg-gray-50 px-2 py-1 rounded-b border-l border-r border-b border-gray-200">
-                        ${col.exercises.slice(0, 4).map(ex => `<div class="text-gray-600">• ${ex}</div>`).join('')}
-                        ${col.exercises.length > 4 ? `<div class="text-gray-500 text-xs mt-1">+ ${col.exercises.length - 4} more</div>` : ''}
-                    </div>
-                </div>
-            `).join('')}
+            <div class="font-medium text-gray-800 mb-1">${totalExercises} exercises</div>
+            <div class="text-gray-600 mb-2">${phaseSummary}</div>
+            <div class="text-gray-500">
+                ${phases.slice(0, 2).map(phase => 
+                    `${phase.name}: ${(phase.exercises || []).slice(0, 3).join(', ')}${(phase.exercises || []).length > 3 ? '...' : ''}`
+                ).join(' | ')}
+            </div>
         </div>
     `;
     
