@@ -125,5 +125,45 @@
 
     <script src="public/js/exercise-data.js"></script>
     <script src="public/js/data-exploration-static.js"></script>
+    
+    <script>
+    // Keyboard shortcuts and accessibility improvements
+    document.addEventListener('keydown', function(e) {
+        // Escape to close modals
+        if (e.key === 'Escape') {
+            const modals = document.querySelectorAll('.fixed.inset-0');
+            modals.forEach(modal => modal.remove());
+        }
+        
+        // Tab navigation improvements
+        if (e.key === 'Tab') {
+            const focusableElements = document.querySelectorAll(
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
+            
+            if (e.shiftKey && document.activeElement === firstElement) {
+                e.preventDefault();
+                lastElement.focus();
+            } else if (!e.shiftKey && document.activeElement === lastElement) {
+                e.preventDefault();
+                firstElement.focus();
+            }
+        }
+    });
+    
+    // Add focus indicators for better keyboard navigation
+    document.addEventListener('DOMContentLoaded', function() {
+        const style = document.createElement('style');
+        style.textContent = `
+            button:focus, input:focus, select:focus, textarea:focus {
+                outline: 2px solid #3b82f6;
+                outline-offset: 2px;
+            }
+        `;
+        document.head.appendChild(style);
+    });
+    </script>
 </body>
 </html>
