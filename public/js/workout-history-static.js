@@ -600,19 +600,19 @@ function displayWorkouts(workouts, filter) {
     
     // Create table
     const tableContainer = document.createElement('div');
-    tableContainer.className = 'bg-white rounded-xl shadow-lg overflow-hidden';
+    tableContainer.className = 'bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden';
     
     const table = document.createElement('table');
-    table.className = 'w-full';
+    table.className = 'w-full text-sm';
     
     // Table header
     const thead = document.createElement('thead');
-    thead.className = 'bg-gray-50';
+    thead.className = 'bg-gray-50 border-b border-gray-200';
     thead.innerHTML = `
         <tr>
-            <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-20">Date</th>
-            <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exercises</th>
-            <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-16">Actions</th>
+            <th class="px-3 py-3 text-left font-semibold text-gray-700 text-xs uppercase tracking-wide">Date</th>
+            <th class="px-3 py-3 text-left font-semibold text-gray-700 text-xs uppercase tracking-wide">Workout Summary</th>
+            <th class="px-3 py-3 text-center font-semibold text-gray-700 text-xs uppercase tracking-wide">View</th>
         </tr>
     `;
     table.appendChild(thead);
@@ -699,21 +699,29 @@ function createWorkoutTableRow(workout) {
     `;
     
     row.innerHTML = `
-        <td class="px-3 py-1 whitespace-nowrap text-xs font-medium text-gray-900 w-20">
+        <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900 w-24">
             ${formattedDate}
         </td>
-        <td class="px-3 py-1 text-xs text-gray-900">
-            ${tableHTML}
-            <div class="flex items-center mt-1">
-                <span class="text-gray-500 text-xs mr-1">${workout.type || 'Mixed'}</span>
-                <span class="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium ${intensityBadge}">
-                    ${intensity.charAt(0).toUpperCase() + intensity.slice(1)}
-                </span>
+        <td class="px-3 py-2 text-sm text-gray-900">
+            <div class="space-y-1">
+                <div class="font-medium text-gray-800">${totalExercises} exercises</div>
+                <div class="text-gray-600 text-xs">${phaseSummary}</div>
+                <div class="text-gray-500 text-xs">
+                    ${phases.slice(0, 2).map(phase => 
+                        `${phase.name}: ${(phase.exercises || []).slice(0, 3).join(', ')}${(phase.exercises || []).length > 3 ? '...' : ''}`
+                    ).join(' | ')}
+                </div>
+                <div class="flex items-center mt-1 space-x-2">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${intensityBadge}">
+                        ${intensity.charAt(0).toUpperCase() + intensity.slice(1)}
+                    </span>
+                    <span class="text-gray-400 text-xs">${workout.type || 'Mixed'}</span>
+                </div>
             </div>
         </td>
-        <td class="px-3 py-1 whitespace-nowrap text-xs font-medium w-16">
+        <td class="px-3 py-2 whitespace-nowrap text-sm font-medium w-16">
             <button onclick="viewWorkoutDetails('${workout.id || workout.date}')" 
-                    class="text-blue-600 hover:text-blue-900 transition-colors text-xs">
+                    class="text-blue-600 hover:text-blue-900 transition-colors">
                 <i class="fas fa-eye"></i>
             </button>
         </td>
