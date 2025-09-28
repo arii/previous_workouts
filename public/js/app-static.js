@@ -549,27 +549,15 @@ function generateAndDisplayTable(workout) {
                     <i class="fas fa-copy mr-1"></i>
                     Copy Table
                 </button>
-                <button onclick="copyServerFormat()" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1.5 rounded-lg transition-colors text-sm">
-                    <i class="fas fa-server mr-1"></i>
-                    Server Format
-                </button>
             </div>
         </div>
         <div class="bg-gray-50 rounded-lg p-3 overflow-x-auto">
             ${table}
         </div>
         
-        <!-- Server Format Preview -->
-        <div class="mt-4">
-            <h4 class="text-sm font-medium text-gray-700 mb-2">Server Format Preview:</h4>
-            <div class="bg-gray-100 rounded p-3 text-xs font-mono whitespace-pre-line max-h-32 overflow-y-auto" id="serverFormatPreview">
-                ${generateServerFriendlyFormat(workout)}
-            </div>
-        </div>
-        
         <p class="text-xs text-gray-600 mt-2">
             <i class="fas fa-info-circle mr-1"></i>
-            Click "Copy Table" for Google Docs or "Server Format" for server integration.
+            Click "Copy Table" to copy the workout in Google Docs format.
         </p>
     `;
     
