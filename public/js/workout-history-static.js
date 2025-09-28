@@ -611,7 +611,8 @@ function displayWorkouts(workouts, filter) {
     thead.innerHTML = `
         <tr>
             <th class="px-3 py-3 text-left font-semibold text-gray-700 text-xs uppercase tracking-wide">Date</th>
-            <th class="px-3 py-3 text-left font-semibold text-gray-700 text-xs uppercase tracking-wide">Workout Summary</th>
+            <th class="px-3 py-3 text-center font-semibold text-gray-700 text-xs uppercase tracking-wide">Intensity</th>
+            <th class="px-3 py-3 text-center font-semibold text-gray-700 text-xs uppercase tracking-wide">Type</th>
             <th class="px-3 py-3 text-center font-semibold text-gray-700 text-xs uppercase tracking-wide">View</th>
         </tr>
     `;
@@ -627,6 +628,10 @@ function displayWorkouts(workouts, filter) {
     sortedWorkouts.forEach(workout => {
         const row = createWorkoutTableRow(workout);
         tbody.appendChild(row);
+        // Add the workout detail row after the main row
+        if (row.workoutDetailRow) {
+            tbody.appendChild(row.workoutDetailRow);
+        }
     });
     
     table.appendChild(tbody);
@@ -709,29 +714,22 @@ function createWorkoutTableRow(workout) {
         </div>
     `;
     
+    // Create Google Docs style workout display
+    const workoutTable = createGoogleDocsStyleTable(phases);
+    
     row.innerHTML = `
-        <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900 w-24">
+        <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">
             ${formattedDate}
         </td>
-        <td class="px-3 py-2 text-sm text-gray-900">
-            <div class="space-y-1">
-                <div class="font-medium text-gray-800">${totalExercises} exercises</div>
-                <div class="text-gray-600 text-xs">${phaseSummary}</div>
-                <div class="text-gray-500 text-xs">
-                    ${phases.slice(0, 2).map(phase => {
-                        const exerciseNames = getExerciseNames(phase.exercises);
-                        return `${phase.name}: ${exerciseNames.slice(0, 3).join(', ')}${exerciseNames.length > 3 ? '...' : ''}`;
-                    }).join(' | ')}
-                </div>
-                <div class="flex items-center mt-1 space-x-2">
-                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${intensityBadge}">
-                        ${intensity.charAt(0).toUpperCase() + intensity.slice(1)}
-                    </span>
-                    <span class="text-gray-400 text-xs">${workout.type || 'Mixed'}</span>
-                </div>
-            </div>
+        <td class="px-3 py-2 text-center">
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${intensityBadge}">
+                ${intensity.charAt(0).toUpperCase() + intensity.slice(1)}
+            </span>
         </td>
-        <td class="px-3 py-2 whitespace-nowrap text-sm font-medium w-16">
+        <td class="px-3 py-2 text-center text-sm text-gray-900">
+            ${workout.type || 'Mixed'}
+        </td>
+        <td class="px-3 py-2 text-center">
             <button onclick="viewWorkoutDetails('${workout.id || workout.date}')" 
                     class="text-blue-600 hover:text-blue-900 transition-colors">
                 <i class="fas fa-eye"></i>
@@ -739,7 +737,71 @@ function createWorkoutTableRow(workout) {
         </td>
     `;
     
+    // Add the workout table as a collapsible row
+    const workoutRow = document.createElement('tr');
+    workoutRow.className = 'hidden workout-detail-row';
+    workoutRow.innerHTML = `
+        <td colspan="4" class="px-3 py-4 bg-gray-50">
+            ${workoutTable}
+        </td>
+    `;
+    
+    // Add click handler to toggle workout details
+    row.addEventListener('click', function() {
+        workoutRow.classList.toggle('hidden');
+    });
+    
+    // Store reference to workout row
+    row.workoutDetailRow = workoutRow;
+    
     return row;
+}
+
+// Create Google Docs style table with timing as headers and exercises vertically
+function createGoogleDocsStyleTable(phases) {
+    if (!phases || phases.length === 0) {
+        return '<p class="text-gray-500 text-sm">No workout data available</p>';
+    }
+    
+    // Create table with timing protocols as headers
+    const table = document.createElement('table');
+    table.className = 'w-full border-collapse border border-gray-300 text-sm';
+    
+    // Create header row with timing protocols
+    const headerRow = document.createElement('tr');
+    phases.forEach(phase => {
+        const th = document.createElement('th');
+        th.className = 'border border-gray-300 bg-gray-100 p-2 font-semibold text-center';
+        th.textContent = phase.name || phase.phase || 'Unknown Phase';
+        headerRow.appendChild(th);
+    });
+    table.appendChild(headerRow);
+    
+    // Find the maximum number of exercises in any phase
+    const maxExercises = Math.max(...phases.map(phase => 
+        phase.exercises ? getExerciseNames(phase.exercises).length : 0
+    ));
+    
+    // Create rows for exercises
+    for (let i = 0; i < maxExercises; i++) {
+        const row = document.createElement('tr');
+        phases.forEach(phase => {
+            const td = document.createElement('td');
+            td.className = 'border border-gray-300 p-2 text-center';
+            
+            const exerciseNames = getExerciseNames(phase.exercises);
+            if (i < exerciseNames.length) {
+                td.textContent = exerciseNames[i];
+            } else {
+                td.innerHTML = '&nbsp;'; // Empty cell
+            }
+            
+            row.appendChild(td);
+        });
+        table.appendChild(row);
+    }
+    
+    return table.outerHTML;
 }
 
 // Generate a summarized title for a workout

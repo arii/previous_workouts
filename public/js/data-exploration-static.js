@@ -225,20 +225,7 @@ function showWorkoutFromDate(date) {
                     ${workouts.map((workout, index) => `
                         <div class="border border-gray-200 rounded-lg p-4">
                             <h4 class="font-medium text-gray-800 mb-3">Workout ${index + 1}</h4>
-                            <div class="space-y-3">
-                                ${workout.phases.map(phase => `
-                                    <div class="bg-gray-50 rounded-lg p-3">
-                                        <h5 class="font-medium text-gray-700 mb-2">${phase.phase}</h5>
-                                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-                                            ${phase.exercises.map(exercise => `
-                                                <div class="bg-white rounded p-2 text-sm">
-                                                    ${exercise}
-                                                </div>
-                                            `).join('')}
-                                        </div>
-                                    </div>
-                                `).join('')}
-                            </div>
+                            ${createGoogleDocsStyleTable(workout.phases)}
                         </div>
                     `).join('')}
                 </div>
@@ -247,6 +234,53 @@ function showWorkoutFromDate(date) {
     `;
     
     document.body.appendChild(modal);
+}
+
+// Create Google Docs style table with timing as headers and exercises vertically
+function createGoogleDocsStyleTable(phases) {
+    if (!phases || phases.length === 0) {
+        return '<p class="text-gray-500 text-sm">No workout data available</p>';
+    }
+    
+    // Create table with timing protocols as headers
+    const table = document.createElement('table');
+    table.className = 'w-full border-collapse border border-gray-300 text-sm';
+    
+    // Create header row with timing protocols
+    const headerRow = document.createElement('tr');
+    phases.forEach(phase => {
+        const th = document.createElement('th');
+        th.className = 'border border-gray-300 bg-gray-100 p-2 font-semibold text-center';
+        th.textContent = phase.name || phase.phase || 'Unknown Phase';
+        headerRow.appendChild(th);
+    });
+    table.appendChild(headerRow);
+    
+    // Find the maximum number of exercises in any phase
+    const maxExercises = Math.max(...phases.map(phase => 
+        phase.exercises ? phase.exercises.length : 0
+    ));
+    
+    // Create rows for exercises
+    for (let i = 0; i < maxExercises; i++) {
+        const row = document.createElement('tr');
+        phases.forEach(phase => {
+            const td = document.createElement('td');
+            td.className = 'border border-gray-300 p-2 text-center';
+            
+            if (i < (phase.exercises ? phase.exercises.length : 0)) {
+                const exercise = phase.exercises[i];
+                td.textContent = typeof exercise === 'string' ? exercise : (exercise.name || exercise.exercise || String(exercise));
+            } else {
+                td.innerHTML = '&nbsp;'; // Empty cell
+            }
+            
+            row.appendChild(td);
+        });
+        table.appendChild(row);
+    }
+    
+    return table.outerHTML;
 }
 
 // Helper function to format dates

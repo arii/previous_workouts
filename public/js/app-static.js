@@ -632,10 +632,10 @@ function generateCopyFriendlyTable(workout) {
     }
     
     return `
-        <table border="1" style="border-collapse: collapse; width: 100%; font-family: monospace; font-size: 12px;">
+        <table border="1" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; font-size: 12px;">
             <thead>
                 <tr>
-                    <th style="padding: 4px; background-color: #f5f5f5; text-align: center;">${headers}</th>
+                    <th style="padding: 8px; background-color: #f5f5f5; text-align: center; font-weight: bold;">${headers}</th>
                 </tr>
             </thead>
             <tbody>
