@@ -138,8 +138,11 @@ function displayTableView(workouts) {
     noResults.classList.add('hidden');
     loadingState.classList.add('hidden');
     
-    const tableRows = workouts.map(workout => createWorkoutTableRow(workout)).join('');
-    tableBody.innerHTML = tableRows;
+    tableBody.innerHTML = '';
+    workouts.forEach(workout => {
+        const row = createWorkoutTableRow(workout);
+        tableBody.appendChild(row);
+    });
 }
 
 function displayCardView(workouts) {
@@ -208,7 +211,7 @@ function createWorkoutTableRow(workout) {
         viewWorkoutDetails(workout.id || workout.date);
     });
     
-    return row.outerHTML;
+    return row;
 }
 
 function createWorkoutCard(workout) {

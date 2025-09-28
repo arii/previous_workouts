@@ -578,23 +578,18 @@ function displayGeneratedWorkout(workout) {
         });
         
         return `
-        <div class="mb-3">
-            <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-1.5 rounded-t-md">
-                <h3 class="text-xs font-semibold">${phase.name}</h3>
-                <p class="text-blue-100 text-xs">${phase.timing}</p>
+        <div class="mb-4">
+            <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-3 rounded-lg mb-2">
+                <h3 class="text-sm font-bold">${phase.name}</h3>
+                <p class="text-blue-100 text-xs mt-1">${phase.timing}</p>
             </div>
-            <div class="bg-white border border-gray-200 rounded-b-md p-2">
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-                    ${separatedExercises.map(exercise => `
-                        <div class="bg-gray-50 rounded p-2 hover:shadow-sm transition-shadow">
-                            <h4 class="font-medium text-gray-800 text-xs mb-1">${exercise.name}</h4>
-                            <div class="text-xs text-gray-600 space-y-0.5">
-                                ${exercise.reps ? `<div class="font-medium">${exercise.reps}</div>` : ''}
-                                ${exercise.duration ? `<div>${exercise.duration}</div>` : ''}
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                ${separatedExercises.map(exercise => `
+                    <div class="bg-white border border-gray-200 rounded-lg p-3 hover:shadow-md transition-shadow">
+                        <h4 class="font-semibold text-gray-800 text-sm mb-1">${exercise.name}</h4>
+                        ${exercise.reps ? `<div class="text-xs text-blue-600 font-medium">${exercise.reps}</div>` : ''}
+                    </div>
+                `).join('')}
             </div>
         </div>
     `;
