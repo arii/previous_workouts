@@ -5,8 +5,8 @@ const overallStats = document.getElementById('overallStats');
 const mostCommonExercises = document.getElementById('mostCommonExercises');
 const categoryBreakdown = document.getElementById('categoryBreakdown');
 const dailyPatterns = document.getElementById('dailyPatterns');
-const exerciseSearch = document.getElementById('exerciseSearch');
-const searchResults = document.getElementById('searchResults');
+const exerciseSearch = document.getElementById('exerciseSearchInput');
+const searchResults = document.getElementById('exerciseSearchResults');
 
 // Event listeners
 document.addEventListener('DOMContentLoaded', function() {
