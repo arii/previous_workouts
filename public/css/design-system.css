@@ -359,4 +359,25 @@
   .mb-6 {
     margin-bottom: 1.5rem !important;
   }
+  
+  /* Compact grid layouts for mobile */
+  .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .grid-cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .grid-cols-5 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .grid-cols-6 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  
+  /* Smaller gaps on mobile */
+  .gap-6 { gap: 0.75rem !important; }
+  .gap-4 { gap: 0.5rem !important; }
+  .gap-3 { gap: 0.375rem !important; }
+  .gap-2 { gap: 0.25rem !important; }
+  
+  /* Compact cards */
+  .rounded-lg { border-radius: 0.375rem !important; }
+  .rounded-xl { border-radius: 0.5rem !important; }
+  
+  /* Better button sizing */
+  .px-6 { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+  .py-3 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
 }
