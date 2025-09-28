@@ -117,7 +117,7 @@ function populateDailyPatterns(data) {
         .slice(0, 5);
     
     dailyPatterns.innerHTML = `
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="text-center">
                 <div class="text-2xl font-bold text-orange-800">${totalDays}</div>
                 <div class="text-sm text-orange-700">Total Days</div>
@@ -125,10 +125,6 @@ function populateDailyPatterns(data) {
             <div class="text-center">
                 <div class="text-2xl font-bold text-orange-800">${totalWorkouts}</div>
                 <div class="text-sm text-orange-700">Total Workouts</div>
-            </div>
-            <div class="text-center">
-                <div class="text-2xl font-bold text-orange-800">${averageWorkoutsPerDay}</div>
-                <div class="text-sm text-orange-700">Avg per Day</div>
             </div>
         </div>
     `;
@@ -201,6 +197,10 @@ function searchExercises(query) {
 function showWorkoutFromDate(date) {
     const exerciseData = window.EXERCISE_DATA;
     const dailyWorkouts = exerciseData.daily_workouts || {};
+    
+    console.log('Looking for date:', date);
+    console.log('Available dates:', Object.keys(dailyWorkouts));
+    console.log('Workout data for date:', dailyWorkouts[date]);
     
     if (!dailyWorkouts[date]) {
         alert('No workout found for this date');
