@@ -578,16 +578,16 @@ function displayGeneratedWorkout(workout) {
         });
         
         return `
-        <div class="mb-6">
-            <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-4 rounded-lg mb-3">
-                <h3 class="text-lg font-bold">${phase.name}</h3>
-                <p class="text-blue-100 text-sm mt-1">${phase.timing}</p>
+        <div class="mb-8">
+            <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-6 rounded-lg mb-4">
+                <h3 class="text-2xl font-bold">${phase.name}</h3>
+                <p class="text-blue-100 text-lg mt-2">${phase.timing}</p>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 ${separatedExercises.map(exercise => `
-                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
-                        <h4 class="font-semibold text-gray-900 text-base">${exercise.name}</h4>
-                        ${exercise.reps ? `<div class="text-sm text-blue-600 font-medium mt-1">${exercise.reps}</div>` : ''}
+                    <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <h4 class="font-bold text-gray-900 text-xl mb-2">${exercise.name}</h4>
+                        ${exercise.reps ? `<div class="text-lg text-blue-600 font-semibold">${exercise.reps}</div>` : ''}
                     </div>
                 `).join('')}
             </div>
@@ -711,10 +711,10 @@ function generateCopyFriendlyTable(workout) {
     }
     
     return `
-        <table border="1" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; font-size: 12px;">
+        <table border="1" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; font-size: 14px;">
             <thead>
                 <tr>
-                    <th style="padding: 8px; background-color: #f5f5f5; text-align: center; font-weight: bold;">${headers}</th>
+                    <th style="padding: 12px; background-color: #f5f5f5; text-align: center; font-weight: bold; font-size: 16px;">${headers}</th>
                 </tr>
             </thead>
             <tbody>

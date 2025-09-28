@@ -170,36 +170,36 @@ function createWorkoutCard(workout) {
     const moreCount = totalExercises - previewExercises.length;
     
     return `
-        <div class="workout-card bg-white rounded-xl shadow-lg p-4 sm:p-6 border-l-4 ${intensityClass}">
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+        <div class="workout-card bg-white rounded-xl shadow-lg p-6 sm:p-8 border-l-4 ${intensityClass}">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
                 <div>
-                    <h3 class="text-lg font-semibold text-gray-800 mb-1">${formattedDate}</h3>
-                    <div class="flex flex-wrap items-center gap-2 text-sm text-gray-600">
-                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${intensityClass}">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">${formattedDate}</h3>
+                    <div class="flex flex-wrap items-center gap-3 text-base text-gray-700">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold ${intensityClass}">
                             ${workout.intensity.charAt(0).toUpperCase() + workout.intensity.slice(1)}
                         </span>
-                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-gray-100 text-gray-800">
                             ${workout.type}
                         </span>
-                        <span class="text-gray-500">•</span>
-                        <span>${totalExercises} exercises</span>
-                        <span class="text-gray-500">•</span>
-                        <span>${workout.phases.length} phases</span>
+                        <span class="text-gray-500 text-lg">•</span>
+                        <span class="text-base font-medium">${totalExercises} exercises</span>
+                        <span class="text-gray-500 text-lg">•</span>
+                        <span class="text-base font-medium">${workout.phases.length} phases</span>
                     </div>
                 </div>
                 <button onclick="viewWorkoutDetails('${workout.id}')" 
-                        class="mt-2 sm:mt-0 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+                        class="mt-3 sm:mt-0 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors text-base font-semibold">
                     <i class="fas fa-eye mr-2"></i>
                     View Details
                 </button>
             </div>
             
-            <div class="space-y-2">
-                <div class="text-sm text-gray-700">
-                    <strong>Phases:</strong> ${phaseSummary}
+            <div class="space-y-3">
+                <div class="text-base text-gray-800">
+                    <strong class="text-lg">Phases:</strong> ${phaseSummary}
                 </div>
-                <div class="text-sm text-gray-600">
-                    <strong>Exercises:</strong> ${exercisePreview}${moreCount > 0 ? ` + ${moreCount} more` : ''}
+                <div class="text-base text-gray-700">
+                    <strong class="text-lg">Exercises:</strong> ${exercisePreview}${moreCount > 0 ? ` + ${moreCount} more` : ''}
                 </div>
             </div>
         </div>

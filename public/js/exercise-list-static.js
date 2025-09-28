@@ -235,7 +235,7 @@ function displayExercises() {
 
 function createExerciseItem(exercise) {
     const item = document.createElement('div');
-    item.className = 'bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors cursor-pointer';
+    item.className = 'bg-white rounded-lg p-6 hover:bg-gray-50 transition-colors cursor-pointer border border-gray-200 shadow-sm';
     
     const categoryColors = {
         'Warmup': 'bg-orange-100 text-orange-800',
@@ -250,95 +250,33 @@ function createExerciseItem(exercise) {
     item.innerHTML = `
         <div class="flex justify-between items-start">
             <div class="flex-1">
-                <h3 class="font-semibold text-gray-800 mb-1">${exercise.name}</h3>
-                <div class="flex items-center space-x-2 mb-2">
-                    <span class="px-2 py-1 rounded-full text-xs font-medium ${categoryClass}">
+                <h3 class="font-bold text-gray-900 mb-3 text-lg">${exercise.name}</h3>
+                <div class="flex items-center space-x-3 mb-3">
+                    <span class="px-3 py-1 rounded-full text-sm font-semibold ${categoryClass}">
                         ${exercise.category}
                     </span>
-                    <span class="text-sm text-gray-600">
+                    <span class="text-base text-gray-700 font-medium">
                         Used ${exercise.frequency} time${exercise.frequency !== 1 ? 's' : ''}
                     </span>
                 </div>
-                <div class="text-sm text-gray-500">
-                    <div>Phases: ${exercise.phases.slice(0, 3).join(', ')}${exercise.phases.length > 3 ? '...' : ''}</div>
+                <div class="text-base text-gray-600">
+                    <div class="mb-1">Phases: ${exercise.phases.slice(0, 3).join(', ')}${exercise.phases.length > 3 ? '...' : ''}</div>
                     <div>Recent: ${exercise.dates.slice(0, 2).join(', ')}${exercise.dates.length > 2 ? '...' : ''}</div>
                 </div>
-            </div>
-            <div class="ml-4">
-                <button class="text-blue-600 hover:text-blue-800" onclick="viewExerciseDetails('${exercise.name}')">
-                    <i class="fas fa-eye"></i>
-                </button>
             </div>
         </div>
     `;
 
-    // Make entire item clickable
+    // Make entire item clickable - removed the popup functionality
     item.addEventListener('click', function(e) {
-        if (e.target.tagName === 'BUTTON' || e.target.tagName === 'I') {
-            return;
-        }
-        viewExerciseDetails(exercise.name);
+        // Just highlight the card, no popup
+        item.classList.toggle('ring-2', 'ring-blue-500');
     });
 
     return item;
 }
 
-function viewExerciseDetails(exerciseName) {
-    const exercise = allExercises.find(ex => ex.name === exerciseName);
-    if (!exercise) return;
-
-    // Create modal content
-    const modalContent = `
-        <div class="space-y-4">
-            <div class="text-center">
-                <h3 class="text-xl font-bold text-gray-800 mb-2">${exercise.name}</h3>
-                <span class="px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
-                    ${exercise.category}
-                </span>
-            </div>
-            
-            <div class="grid grid-cols-2 gap-4 text-center">
-                <div class="bg-gray-50 rounded-lg p-3">
-                    <div class="text-2xl font-bold text-blue-600">${exercise.frequency}</div>
-                    <div class="text-sm text-gray-600">Total Uses</div>
-                </div>
-                <div class="bg-gray-50 rounded-lg p-3">
-                    <div class="text-2xl font-bold text-green-600">${exercise.phases.length}</div>
-                    <div class="text-sm text-gray-600">Different Phases</div>
-                </div>
-            </div>
-            
-            <div>
-                <h4 class="font-semibold text-gray-800 mb-2">Used in Phases:</h4>
-                <div class="flex flex-wrap gap-2">
-                    ${exercise.phases.map(phase => 
-                        `<span class="px-2 py-1 bg-gray-200 rounded text-sm">${phase}</span>`
-                    ).join('')}
-                </div>
-            </div>
-            
-            <div>
-                <h4 class="font-semibold text-gray-800 mb-2">Recent Workouts:</h4>
-                <div class="space-y-1 max-h-32 overflow-y-auto">
-                    ${exercise.dates.slice(0, 10).map(date => 
-                        `<div class="text-sm text-gray-600">${new Date(date).toLocaleDateString()}</div>`
-                    ).join('')}
-                </div>
-            </div>
-        </div>
-    `;
-
-    // Show modal (reuse workout modal structure)
-    const modal = document.getElementById('workoutModal');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalContentDiv = document.getElementById('modalContent');
-
-    if (modal && modalTitle && modalContentDiv) {
-        modalTitle.textContent = `Exercise: ${exercise.name}`;
-        modalContentDiv.innerHTML = modalContent;
-        modal.classList.remove('hidden');
-    }
-}
+// Removed unhelpful popup function - exercise cards now just highlight when clicked
 
 function showError(message) {
     console.error(message);
