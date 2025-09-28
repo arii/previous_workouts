@@ -724,12 +724,19 @@ function createWorkoutTableRow(workout) {
             ${workoutSummary}
         </td>
         <td class="px-2 sm:px-3 py-2 text-center">
-            <button onclick="viewWorkoutDetails('${workout.id || workout.date}')" 
-                    class="text-blue-600 hover:text-blue-900 transition-colors p-1">
-                <i class="fas fa-eye text-sm sm:text-base"></i>
-            </button>
+            <i class="fas fa-eye text-sm sm:text-base text-blue-600"></i>
         </td>
     `;
+    
+    // Make the entire row clickable
+    row.style.cursor = 'pointer';
+    row.addEventListener('click', function(e) {
+        // Don't trigger if clicking on a button or link
+        if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A') {
+            return;
+        }
+        viewWorkoutDetails(workout.id || workout.date);
+    });
     
     return row;
 }
@@ -793,53 +800,58 @@ function createWorkoutSummary(phases, intensity, workoutType) {
 
 // Create Google Docs style table with timing as headers and exercises vertically
 function createGoogleDocsStyleTable(phases) {
+    console.log('Creating Google Docs table for phases:', phases);
+    
     if (!phases || phases.length === 0) {
         return '<p class="text-gray-500 text-sm">No workout data available</p>';
     }
     
     try {
-    
-    // Create table with timing protocols as headers
-    const table = document.createElement('table');
-    table.className = 'w-full border-collapse border border-gray-300 text-sm';
-    
-    // Create header row with timing protocols
-    const headerRow = document.createElement('tr');
-    phases.forEach(phase => {
-        const th = document.createElement('th');
-        th.className = 'border border-gray-300 bg-gray-100 p-2 font-semibold text-center';
-        th.textContent = getSimplifiedTiming(phase);
-        headerRow.appendChild(th);
-    });
-    table.appendChild(headerRow);
-    
-    // Find the maximum number of exercises in any phase
-    const maxExercises = Math.max(...phases.map(phase => 
-        phase.exercises ? getExerciseNames(phase.exercises).length : 0
-    ));
-    
-    // Create rows for exercises
-    for (let i = 0; i < maxExercises; i++) {
-        const row = document.createElement('tr');
+        // Create table with timing protocols as headers
+        const table = document.createElement('table');
+        table.className = 'w-full border-collapse border border-gray-300 text-sm';
+        
+        // Create header row with timing protocols
+        const headerRow = document.createElement('tr');
         phases.forEach(phase => {
-            const td = document.createElement('td');
-            td.className = 'border border-gray-300 p-2 text-center';
-            
-            const exerciseNames = getExerciseNames(phase.exercises);
-            if (i < exerciseNames.length) {
-                td.textContent = exerciseNames[i];
-            } else {
-                td.innerHTML = '&nbsp;'; // Empty cell
-            }
-            
-            row.appendChild(td);
+            const th = document.createElement('th');
+            th.className = 'border border-gray-300 bg-gray-100 p-2 font-semibold text-center';
+            th.textContent = getSimplifiedTiming(phase);
+            headerRow.appendChild(th);
         });
-        table.appendChild(row);
-    }
-    
-    return table.outerHTML;
+        table.appendChild(headerRow);
+        
+        // Find the maximum number of exercises in any phase
+        const maxExercises = Math.max(...phases.map(phase => {
+            if (phase.exercises && Array.isArray(phase.exercises)) {
+                return phase.exercises.length;
+            }
+            return 0;
+        }));
+        
+        console.log('Max exercises:', maxExercises);
+        
+        // Create rows for exercises
+        for (let i = 0; i < maxExercises; i++) {
+            const row = document.createElement('tr');
+            phases.forEach(phase => {
+                const td = document.createElement('td');
+                td.className = 'border border-gray-300 p-2 text-center';
+                
+                if (phase.exercises && Array.isArray(phase.exercises) && i < phase.exercises.length) {
+                    td.textContent = phase.exercises[i]; // Now exercises are simple strings
+                } else {
+                    td.innerHTML = '&nbsp;'; // Empty cell
+                }
+                
+                row.appendChild(td);
+            });
+            table.appendChild(row);
+        }
+        
+        return table.outerHTML;
     } catch (error) {
-        console.error('Error creating Google Docs style table:', error);
+        console.error('Error creating Google Docs style table:', error, phases);
         return '<p class="text-red-500 text-sm">Error displaying workout data</p>';
     }
 }
@@ -1048,6 +1060,8 @@ function viewWorkoutDetails(workoutId) {
 
 // Show workout details modal
 function showWorkoutDetailsModal(workout) {
+    console.log('Showing workout details modal for:', workout);
+    
     const modal = document.createElement('div');
     modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
     
@@ -1059,7 +1073,7 @@ function showWorkoutDetailsModal(workout) {
     });
     
     modal.innerHTML = `
-        <div class="bg-white rounded-xl p-6 max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+        <div class="bg-white rounded-xl p-6 max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-xl font-semibold text-gray-800">Workout from ${formattedDate}</h2>
                 <button onclick="this.closest('.fixed').remove()" class="text-gray-500 hover:text-gray-700">
@@ -1080,6 +1094,22 @@ function showWorkoutDetailsModal(workout) {
             </div>
         </div>
     `;
+    
+    // Add click-outside-to-close functionality
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.remove();
+        }
+    });
+    
+    // Add escape key to close
+    const handleEscape = function(e) {
+        if (e.key === 'Escape') {
+            modal.remove();
+            document.removeEventListener('keydown', handleEscape);
+        }
+    };
+    document.addEventListener('keydown', handleEscape);
     
     document.body.appendChild(modal);
 }
