@@ -357,11 +357,12 @@ function generateTabataWorkout(categories, intensity) {
 
 // Helper functions (copied from server logic)
 function getProperWarmupExercises() {
+    // Use actual warmup exercises from historical data
     return [
-        'Arm Circles', 'Leg Swings', 'Hip Circles', 'Shoulder Rolls', 'Neck Rolls',
-        'Ankle Circles', 'Wrist Circles', 'Bodyweight Squats', 'Lunges', 'Push-ups',
-        'Jumping Jacks', 'High Knees', 'Butt Kicks', 'Side Steps', 'Light Jogging',
-        'Dynamic Stretching', 'Cat-Cow Stretch', 'World\'s Greatest Stretch'
+        'Jump Squats', 'Dd Toe Touch', 'Plank Jack', 'Lateral Raises', 'Mountain Climbers',
+        'Half Burpees', 'Pull Aparts', 'Burpees', 'Slider Mountain Climbers', 'Dumbbell Jump Squats',
+        'Bodyweight Squats', 'Lunges', 'Push-ups', 'Jumping Jacks', 'High Knees',
+        'Butt Kicks', 'Side Steps', 'Arm Circles', 'Leg Swings', 'Hip Circles'
     ];
 }
 
