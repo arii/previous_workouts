@@ -16,7 +16,7 @@
                 <i class="fas fa-dumbbell"></i>
                 Exercise Database
             </h1>
-            <p>Browse and search all exercises from your workout history</p>
+            <p>Browse and search your exercises</p>
         </div>
 
         <!-- Navigation -->
@@ -41,23 +41,23 @@
         </div>
 
         <!-- Search and Filters -->
-        <div class="bg-white rounded-xl shadow-sm p-6 mb-6">
-            <div class="flex flex-col lg:flex-row gap-4">
+        <div class="bg-white rounded-xl shadow-sm p-4 sm:p-6 mb-6">
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <!-- Search -->
                 <div class="flex-1">
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Search Exercises</label>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Search</label>
                     <div class="relative">
-                        <input type="text" id="searchInput" placeholder="Type exercise name..." 
-                               class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                        <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                        <input type="text" id="searchInput" placeholder="Exercise name..." 
+                               class="w-full pl-10 pr-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base">
+                        <i class="fas fa-search absolute left-3 top-3 sm:top-4 text-gray-400"></i>
                     </div>
                 </div>
                 
                 <!-- Category Filter -->
-                <div class="lg:w-48">
+                <div class="sm:w-48">
                     <label class="block text-sm font-medium text-gray-700 mb-2">Category</label>
-                    <select id="categoryFilter" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                        <option value="">All Categories</option>
+                    <select id="categoryFilter" class="w-full px-3 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base">
+                        <option value="">All</option>
                         <option value="Warmup">Warmup</option>
                         <option value="Cardio">Cardio</option>
                         <option value="Strength">Strength</option>
@@ -67,9 +67,9 @@
                 </div>
                 
                 <!-- Sort -->
-                <div class="lg:w-48">
+                <div class="sm:w-48">
                     <label class="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
-                    <select id="sortBy" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <select id="sortBy" class="w-full px-3 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base">
                         <option value="name">Name A-Z</option>
                         <option value="frequency">Most Used</option>
                         <option value="recent">Most Recent</option>
@@ -79,29 +79,57 @@
         </div>
 
         <!-- Stats -->
-        <div class="app-stats-grid">
-            <div class="app-stat-card">
-                <div class="app-stat-number text-blue-600" id="totalCount">-</div>
-                <div class="app-stat-label">Total Exercises</div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-8">
+            <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-4 sm:p-6 text-white shadow-lg">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <div class="text-xl sm:text-3xl font-bold" id="totalCount">-</div>
+                        <div class="text-blue-100 text-xs sm:text-sm font-medium">Total</div>
+                    </div>
+                    <div class="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                        <i class="fas fa-dumbbell text-white text-sm sm:text-xl"></i>
+                    </div>
+                </div>
             </div>
-            <div class="app-stat-card">
-                <div class="app-stat-number text-green-600" id="uniqueCount">-</div>
-                <div class="app-stat-label">Unique Exercises</div>
+            <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-xl p-4 sm:p-6 text-white shadow-lg">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <div class="text-xl sm:text-3xl font-bold" id="uniqueCount">-</div>
+                        <div class="text-green-100 text-xs sm:text-sm font-medium">Unique</div>
+                    </div>
+                    <div class="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                        <i class="fas fa-list text-white text-sm sm:text-xl"></i>
+                    </div>
+                </div>
             </div>
-            <div class="app-stat-card">
-                <div class="app-stat-number text-purple-600" id="mostUsed">-</div>
-                <div class="app-stat-label">Most Used</div>
+            <div class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-4 sm:p-6 text-white shadow-lg">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <div class="text-lg sm:text-2xl font-bold truncate" id="mostUsed">-</div>
+                        <div class="text-purple-100 text-xs sm:text-sm font-medium">Most Used</div>
+                    </div>
+                    <div class="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                        <i class="fas fa-star text-white text-sm sm:text-xl"></i>
+                    </div>
+                </div>
             </div>
-            <div class="app-stat-card">
-                <div class="app-stat-number text-orange-600" id="categoriesCount">-</div>
-                <div class="app-stat-label">Categories</div>
+            <div class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl p-4 sm:p-6 text-white shadow-lg">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <div class="text-xl sm:text-3xl font-bold" id="categoriesCount">-</div>
+                        <div class="text-orange-100 text-xs sm:text-sm font-medium">Categories</div>
+                    </div>
+                    <div class="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                        <i class="fas fa-tags text-white text-sm sm:text-xl"></i>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Showing Count -->
         <div class="text-center mb-4">
             <div class="text-sm text-gray-600">
-                Showing <span id="showingCount" class="font-semibold">0</span> exercises
+                <span id="showingCount" class="font-semibold">0</span> exercises
             </div>
         </div>
 
@@ -112,19 +140,19 @@
         
         <div id="noResults" class="hidden p-8 text-center text-gray-500">
             <i class="fas fa-search text-4xl mb-4"></i>
-            <p class="text-lg">No exercises found matching your search</p>
+            <p class="text-lg">No exercises found</p>
         </div>
     </div>
 
     <!-- Exercise Detail Modal -->
-    <div id="exerciseModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" 
+    <div id="exerciseModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-end sm:items-center justify-center z-50 hidden" 
          role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
-        <div class="bg-white rounded-xl p-6 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+        <div class="bg-white rounded-t-xl sm:rounded-xl p-4 sm:p-6 max-w-2xl w-full mx-0 sm:mx-4 max-h-[85vh] sm:max-h-[90vh] overflow-y-auto transform transition-transform duration-300 ease-out">
             <div class="flex justify-between items-center mb-4">
-                <h3 id="modalTitle" class="text-xl font-semibold text-gray-800">Exercise Details</h3>
-                <button id="closeModal" class="text-gray-500 hover:text-gray-700 app-focus-visible" 
+                <h3 id="modalTitle" class="text-lg sm:text-xl font-semibold text-gray-800">Exercise Details</h3>
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-full p-2 transition-colors" 
                         aria-label="Close exercise details">
-                    <i class="fas fa-times text-xl"></i>
+                    <i class="fas fa-times text-lg sm:text-xl"></i>
                 </button>
             </div>
             <div id="modalContent">

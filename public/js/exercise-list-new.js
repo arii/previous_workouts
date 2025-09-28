@@ -226,14 +226,28 @@ function createCategorySection(category, exercises) {
     const categoryInfo = getCategoryInfo(category);
     
     section.innerHTML = `
-        <div class="mb-4">
-            <h2 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
-                <span class="w-4 h-4 rounded-full mr-3 ${categoryInfo.color}"></span>
-                ${category}
-                <span class="ml-2 text-sm font-normal text-gray-500">(${exercises.length} exercises)</span>
-            </h2>
+        <div class="mb-6">
+            <div class="bg-gradient-to-r ${categoryInfo.color} rounded-xl p-4 mb-4 shadow-lg">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                            <i class="${categoryInfo.icon} text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold text-white">${category}</h2>
+                            <p class="text-white text-opacity-80 text-sm">${exercises.length} exercises</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-white text-opacity-80 text-sm">Total Usage</div>
+                        <div class="text-2xl font-bold text-white">
+                            ${exercises.reduce((sum, ex) => sum + ex.frequency, 0)}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
             ${exercises.map(exercise => createExerciseCard(exercise)).join('')}
         </div>
     `;
@@ -244,36 +258,43 @@ function createCategorySection(category, exercises) {
 function createExerciseCard(exercise) {
     const intensity = getExerciseIntensity(exercise);
     const intensityColors = getIntensityColors(intensity);
-    const mostRecentDate = exercise.dates[0] ? new Date(exercise.dates[0]).toLocaleDateString() : 'Unknown';
+    const categoryInfo = getCategoryInfo(exercise.category);
     const safeExerciseName = exercise.name.replace(/'/g, "\\'");
     
+    // Get frequency emoji
+    const frequencyEmoji = getFrequencyEmoji(exercise.frequency);
+    
     return `
-        <div class="bg-white rounded-lg shadow-sm border-l-4 ${intensityColors.border} hover:shadow-md transition-all duration-200 cursor-pointer app-focus-visible" 
+        <div class="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105 active:scale-95 border-2 ${intensityColors.border} hover:border-opacity-100 touch-manipulation" 
              onclick="viewExerciseDetails('${safeExerciseName}')"
              role="button"
              tabindex="0"
              aria-label="View details for ${exercise.name} exercise"
              onkeydown="handleCardKeydown(event, '${safeExerciseName}')">
-            <div class="p-4">
-                <div class="flex justify-between items-start mb-2">
-                    <h3 class="font-semibold text-gray-800 text-sm leading-tight">${exercise.name}</h3>
-                    <span class="text-xs px-2 py-1 rounded-full ${intensityColors.bg} ${intensityColors.text}" 
+            <div class="p-4 sm:p-5">
+                <!-- Header with category icon and intensity -->
+                <div class="flex justify-between items-start mb-3 sm:mb-4">
+                    <div class="flex items-center space-x-2 sm:space-x-3 flex-1 min-w-0">
+                        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full ${categoryInfo.color} flex items-center justify-center flex-shrink-0">
+                            <i class="${categoryInfo.icon} text-white text-sm sm:text-lg"></i>
+                        </div>
+                        <div class="min-w-0 flex-1">
+                            <h3 class="font-bold text-gray-800 text-sm sm:text-lg leading-tight truncate">${exercise.name}</h3>
+                            <span class="text-xs sm:text-sm text-gray-500 font-medium">${exercise.category}</span>
+                        </div>
+                    </div>
+                    <span class="text-xs px-2 sm:px-3 py-1 rounded-full ${intensityColors.bg} ${intensityColors.text} font-semibold flex-shrink-0 ml-2" 
                           aria-label="Intensity level: ${intensity}">
                         ${intensity}
                     </span>
                 </div>
-                <div class="space-y-1 text-xs text-gray-600">
-                    <div class="flex justify-between">
-                        <span>Used:</span>
-                        <span class="font-medium" aria-label="Used ${exercise.frequency} time${exercise.frequency !== 1 ? 's' : ''}">${exercise.frequency} time${exercise.frequency !== 1 ? 's' : ''}</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span>Last:</span>
-                        <span class="font-medium" aria-label="Last used on ${mostRecentDate}">${mostRecentDate}</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span>Phases:</span>
-                        <span class="font-medium" aria-label="Used in ${exercise.phases.length} different phases">${exercise.phases.length}</span>
+                
+                <!-- Simple usage display -->
+                <div class="flex items-center justify-center">
+                    <div class="flex items-center space-x-1 sm:space-x-2">
+                        <span class="text-xl sm:text-2xl">${frequencyEmoji}</span>
+                        <span class="text-xl sm:text-2xl font-bold text-gray-800">${exercise.frequency}</span>
+                        <span class="text-xs sm:text-sm text-gray-500 font-medium">uses</span>
                     </div>
                 </div>
             </div>
@@ -306,12 +327,21 @@ function getExerciseIntensity(exercise) {
 
 function getIntensityColors(intensity) {
     const colorMap = {
-        'High': { bg: 'bg-green-100', text: 'text-green-800', border: 'border-green-500' },
-        'Medium': { bg: 'bg-yellow-100', text: 'text-yellow-800', border: 'border-yellow-500' },
-        'Low': { bg: 'bg-orange-100', text: 'text-orange-800', border: 'border-orange-500' },
-        'Rare': { bg: 'bg-gray-100', text: 'text-gray-800', border: 'border-gray-400' }
+        'High': { bg: 'bg-gradient-to-r from-green-400 to-green-500', text: 'text-white', border: 'border-green-400' },
+        'Medium': { bg: 'bg-gradient-to-r from-yellow-400 to-yellow-500', text: 'text-white', border: 'border-yellow-400' },
+        'Low': { bg: 'bg-gradient-to-r from-orange-400 to-orange-500', text: 'text-white', border: 'border-orange-400' },
+        'Rare': { bg: 'bg-gradient-to-r from-gray-400 to-gray-500', text: 'text-white', border: 'border-gray-400' }
     };
     return colorMap[intensity] || colorMap['Rare'];
+}
+
+function getFrequencyEmoji(frequency) {
+    if (frequency >= 20) return '🔥';
+    if (frequency >= 15) return '⭐';
+    if (frequency >= 10) return '💪';
+    if (frequency >= 5) return '👍';
+    if (frequency >= 2) return '👌';
+    return '🆕';
 }
 
 function viewExerciseDetails(exerciseName) {
@@ -342,40 +372,66 @@ function viewExerciseDetails(exerciseName) {
 
     const categoryClass = categoryColors[exercise.category] || 'bg-gray-100 text-gray-800';
 
+    const categoryInfo = getCategoryInfo(exercise.category);
+    const intensity = getExerciseIntensity(exercise);
+    const intensityColors = getIntensityColors(intensity);
+    const frequencyEmoji = getFrequencyEmoji(exercise.frequency);
+
     modalContent.innerHTML = `
-        <div class="space-y-6">
+        <div class="space-y-4 sm:space-y-6">
+            <!-- Header with category and intensity -->
             <div class="text-center">
-                <span class="px-3 py-1 rounded-full text-sm font-medium ${categoryClass}">
-                    ${exercise.category}
-                </span>
-            </div>
-            
-            <div class="grid grid-cols-2 gap-4 text-center">
-                <div class="bg-gray-50 rounded-lg p-4">
-                    <div class="text-2xl font-bold text-blue-600">${exercise.frequency}</div>
-                    <div class="text-sm text-gray-600">Total Uses</div>
-                </div>
-                <div class="bg-gray-50 rounded-lg p-4">
-                    <div class="text-2xl font-bold text-green-600">${exercise.phases.length}</div>
-                    <div class="text-sm text-gray-600">Different Phases</div>
+                <div class="inline-flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 mb-3">
+                    <div class="w-12 h-12 rounded-full ${categoryInfo.color} flex items-center justify-center">
+                        <i class="${categoryInfo.icon} text-white text-xl"></i>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <h3 class="text-lg font-bold text-gray-800">${exercise.category}</h3>
+                        <span class="px-3 py-1 rounded-full text-sm font-medium ${intensityColors.bg} ${intensityColors.text}">
+                            ${intensity} Usage
+                        </span>
+                    </div>
                 </div>
             </div>
             
+            <!-- Main stats with icons -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-3 sm:p-4 text-center">
+                    <div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center mx-auto mb-2">
+                        <i class="fas fa-chart-line text-white text-sm"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-bold text-blue-600 flex items-center justify-center space-x-1">
+                        <span>${frequencyEmoji}</span>
+                        <span>${exercise.frequency}</span>
+                    </div>
+                    <div class="text-xs sm:text-sm text-blue-700 font-medium">Total Uses</div>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-3 sm:p-4 text-center">
+                    <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center mx-auto mb-2">
+                        <i class="fas fa-calendar text-white text-sm"></i>
+                    </div>
+                    <div class="text-lg sm:text-2xl font-bold text-green-600">
+                        ${exercise.dates[0] ? new Date(exercise.dates[0]).toLocaleDateString() : 'Never'}
+                    </div>
+                    <div class="text-xs sm:text-sm text-green-700 font-medium">Last Used</div>
+                </div>
+            </div>
+            
+            <!-- Recent workouts with better styling -->
             <div>
-                <h4 class="font-semibold text-gray-800 mb-3">Used in Phases:</h4>
-                <div class="flex flex-wrap gap-2">
-                    ${exercise.phases.map(phase => 
-                        `<span class="px-2 py-1 bg-gray-200 rounded text-sm">${phase}</span>`
-                    ).join('')}
-                </div>
-            </div>
-            
-            <div>
-                <h4 class="font-semibold text-gray-800 mb-3">Recent Workouts:</h4>
-                <div class="space-y-1 max-h-40 overflow-y-auto">
-                    ${exercise.dates.slice(0, 10).map(date => 
-                        `<div class="text-sm text-gray-600">${new Date(date).toLocaleDateString()}</div>`
-                    ).join('')}
+                <h4 class="font-semibold text-gray-800 mb-3 flex items-center text-sm sm:text-base">
+                    <i class="fas fa-history text-gray-500 mr-2"></i>
+                    Recent Workouts
+                </h4>
+                <div class="bg-gray-50 rounded-lg p-3 max-h-24 sm:max-h-32 overflow-y-auto">
+                    <div class="space-y-1">
+                        ${exercise.dates.slice(0, 6).map(date => 
+                            `<div class="text-xs sm:text-sm text-gray-600 flex items-center">
+                                <i class="fas fa-dot-circle text-gray-400 mr-2 text-xs"></i>
+                                ${new Date(date).toLocaleDateString()}
+                            </div>`
+                        ).join('')}
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2025-09-27T18:58:51.941140",
-    "source": "raw revision files (regenerated)",
+    "generated_at": "2025-09-27T19:51:13.221347",
+    "source": "raw revision files (regenerated, fixed, merged, and tabata-corrected)",
     "total_files_processed": 147,
     "summary": {
       "total_workouts": 147,
@@ -156,6 +156,30 @@
         "Step out lunge": 11,
         "Plank": 11
       }
+    },
+    "fixes_applied": {
+      "emom_restructuring": "Split oversized EMOM phases into logical groupings",
+      "chipper_estimation": "Added estimated exercises to empty Chipper phase",
+      "total_fixes": 0
+    },
+    "merging_applied": {
+      "workouts_before": 147,
+      "workouts_after": 134,
+      "workouts_merged": 13,
+      "changes_made": 30
+    },
+    "tabata_fixes": {
+      "timing_schemes_separated": 8,
+      "changes_made": [
+        "Fixed Tabata phase in revision_88561_2024-01-24_15-58-46.txt: separated 1 timing schemes",
+        "Fixed Tabata phase in revision_90184_2024-02-28_16-03-59.txt: separated 1 timing schemes",
+        "Fixed Tabata phase in revision_103161_2024-11-20_15-52-44.txt: separated 1 timing schemes",
+        "Fixed Tabata phase in revision_105503_2025-02-26_15-50-13.txt: separated 1 timing schemes",
+        "Fixed Tabata phase in revision_106960_2025-04-28_14-29-50.txt: separated 1 timing schemes",
+        "Fixed Tabata phase in revision_108437_2025-06-27_14-57-34.txt: separated 1 timing schemes",
+        "Fixed Tabata phase in revision_108911_2025-08-29_14-31-29.txt: separated 1 timing schemes",
+        "Fixed Tabata phase in revision_108912_2025-09-03_14-31-08.txt: separated 1 timing schemes"
+      ]
     }
   },
   "categorized_exercises": {
@@ -329,7 +353,7 @@
         "filename": "revision_100575_2024-10-04_14-58-03.txt"
       },
       {
-        "exercise": "T’s, w’s, l’s",
+        "exercise": "T\u2019s, w\u2019s, l\u2019s",
         "phase": "30/10x2",
         "date": "2024-10-04",
         "filename": "revision_100575_2024-10-04_14-58-03.txt"
@@ -1361,7 +1385,7 @@
         "filename": "revision_104139_2025-01-03_15-56-42.txt"
       },
       {
-        "exercise": "T’s, w’s, l’s",
+        "exercise": "T\u2019s, w\u2019s, l\u2019s",
         "phase": "30/10x2",
         "date": "2025-01-03",
         "filename": "revision_104139_2025-01-03_15-56-42.txt"
@@ -2009,7 +2033,7 @@
         "filename": "revision_106564_2025-04-11_14-39-29.txt"
       },
       {
-        "exercise": "T’s, w’s, l’s",
+        "exercise": "T\u2019s, w\u2019s, l\u2019s",
         "phase": "30/10x2",
         "date": "2025-04-11",
         "filename": "revision_106564_2025-04-11_14-39-29.txt"
@@ -2291,7 +2315,7 @@
         "filename": "revision_107557_2025-05-09_15-00-50.txt"
       },
       {
-        "exercise": "T’s, w’s, l’s",
+        "exercise": "T\u2019s, w\u2019s, l\u2019s",
         "phase": "30/10x2",
         "date": "2025-05-09",
         "filename": "revision_107557_2025-05-09_15-00-50.txt"
@@ -4223,7 +4247,7 @@
         "filename": "revision_99974_2024-09-20_15-22-34.txt"
       },
       {
-        "exercise": "T’s, w’s, l’s",
+        "exercise": "T\u2019s, w\u2019s, l\u2019s",
         "phase": "30/10x2",
         "date": "2024-09-20",
         "filename": "revision_99974_2024-09-20_15-22-34.txt"
@@ -4315,7 +4339,7 @@
         "filename": "revision_102908_2024-11-18_16-47-51.txt"
       },
       {
-        "exercise": "1 ½ band chest press",
+        "exercise": "1 \u00bd band chest press",
         "phase": "Ladder 10-4",
         "date": "2024-11-18",
         "filename": "revision_102908_2024-11-18_16-47-51.txt"
@@ -4893,7 +4917,7 @@
         "filename": "revision_100576_2024-10-04_14-58-31.txt"
       },
       {
-        "exercise": "21’s",
+        "exercise": "21\u2019s",
         "phase": "Emom",
         "date": "2024-10-04",
         "filename": "revision_100576_2024-10-04_14-58-31.txt"
@@ -5445,7 +5469,7 @@
         "filename": "revision_104157_2025-01-15_15-52-22.txt"
       },
       {
-        "exercise": "Db ¾ squats",
+        "exercise": "Db \u00be squats",
         "phase": "Spartan",
         "date": "2025-01-15",
         "filename": "revision_104157_2025-01-15_15-52-22.txt"
@@ -6533,7 +6557,7 @@
         "filename": "revision_100837_2024-10-07_14-54-27.txt"
       },
       {
-        "exercise": "Db ¾ curtsy",
+        "exercise": "Db \u00be curtsy",
         "phase": "3 x 12",
         "date": "2024-10-07",
         "filename": "revision_100837_2024-10-07_14-54-27.txt"
@@ -6671,7 +6695,7 @@
         "filename": "revision_101539_2024-10-21_15-11-59.txt"
       },
       {
-        "exercise": "Db 1 ½ rdl",
+        "exercise": "Db 1 \u00bd rdl",
         "phase": "3 x 10",
         "date": "2024-10-21",
         "filename": "revision_101539_2024-10-21_15-11-59.txt"
@@ -6689,7 +6713,7 @@
         "filename": "revision_101539_2024-10-21_15-11-59.txt"
       },
       {
-        "exercise": "1 ½ wedge squat",
+        "exercise": "1 \u00bd wedge squat",
         "phase": "3 x 10",
         "date": "2024-10-21",
         "filename": "revision_101539_2024-10-21_15-11-59.txt"
@@ -7691,7 +7715,7 @@
         "filename": "revision_104139_2025-01-03_15-56-42.txt"
       },
       {
-        "exercise": "1 ½ bulagarians",
+        "exercise": "1 \u00bd bulagarians",
         "phase": "3x8",
         "date": "2025-01-13",
         "filename": "revision_104156_2025-01-13_16-21-56.txt"
@@ -7703,7 +7727,7 @@
         "filename": "revision_104156_2025-01-13_16-21-56.txt"
       },
       {
-        "exercise": "Wall sit 1 ½ bicep culs",
+        "exercise": "Wall sit 1 \u00bd bicep culs",
         "phase": "3x8",
         "date": "2025-01-13",
         "filename": "revision_104156_2025-01-13_16-21-56.txt"
@@ -7733,7 +7757,7 @@
         "filename": "revision_104157_2025-01-15_15-52-22.txt"
       },
       {
-        "exercise": "1 ½ hip thrust",
+        "exercise": "1 \u00bd hip thrust",
         "phase": "3x8",
         "date": "2025-01-15",
         "filename": "revision_104157_2025-01-15_15-52-22.txt"
@@ -7793,19 +7817,19 @@
         "filename": "revision_104160_2025-01-27_15-56-31.txt"
       },
       {
-        "exercise": "1 ½ band press",
+        "exercise": "1 \u00bd band press",
         "phase": "2 x 10",
         "date": "2025-01-27",
         "filename": "revision_104160_2025-01-27_15-56-31.txt"
       },
       {
-        "exercise": "1 ½ band pull",
+        "exercise": "1 \u00bd band pull",
         "phase": "2 x 10",
         "date": "2025-01-27",
         "filename": "revision_104160_2025-01-27_15-56-31.txt"
       },
       {
-        "exercise": "1 ½ bw thrust",
+        "exercise": "1 \u00bd bw thrust",
         "phase": "2 x 10",
         "date": "2025-01-27",
         "filename": "revision_104160_2025-01-27_15-56-31.txt"
@@ -8471,7 +8495,7 @@
         "filename": "revision_105827_2025-03-05_15-58-39.txt"
       },
       {
-        "exercise": "1 ½ rdl",
+        "exercise": "1 \u00bd rdl",
         "phase": "3 x 8",
         "date": "2025-03-05",
         "filename": "revision_105827_2025-03-05_15-58-39.txt"
@@ -8819,7 +8843,7 @@
         "filename": "revision_106035_2025-03-31_14-47-30.txt"
       },
       {
-        "exercise": "1 ½ rdl",
+        "exercise": "1 \u00bd rdl",
         "phase": "3x8",
         "date": "2025-04-02",
         "filename": "revision_106058_2025-04-02_14-49-37.txt"
@@ -9143,13 +9167,13 @@
         "filename": "revision_106741_2025-04-14_14-56-25.txt"
       },
       {
-        "exercise": "1 ½ floor press",
+        "exercise": "1 \u00bd floor press",
         "phase": "3x8",
         "date": "2025-04-14",
         "filename": "revision_106741_2025-04-14_14-56-25.txt"
       },
       {
-        "exercise": "Db 1 ½ pullover",
+        "exercise": "Db 1 \u00bd pullover",
         "phase": "3x8",
         "date": "2025-04-14",
         "filename": "revision_106741_2025-04-14_14-56-25.txt"
@@ -9941,7 +9965,7 @@
         "filename": "revision_108841_2025-07-23_14-18-34.txt"
       },
       {
-        "exercise": "1 ½ squat",
+        "exercise": "1 \u00bd squat",
         "phase": "Complex 5x5",
         "date": "2025-07-23",
         "filename": "revision_108841_2025-07-23_14-18-34.txt"
@@ -10259,7 +10283,7 @@
         "filename": "revision_108858_2025-08-27_14-51-58.txt"
       },
       {
-        "exercise": "1 ½",
+        "exercise": "1 \u00bd",
         "phase": "20/15/10",
         "date": "2025-08-27",
         "filename": "revision_108858_2025-08-27_14-51-58.txt"
@@ -10332,25 +10356,25 @@
       },
       {
         "exercise": "Rdl",
-        "phase": "1 ½  3 x 6",
+        "phase": "1 \u00bd  3 x 6",
         "date": "2025-08-27",
         "filename": "revision_108873_2025-08-27_14-52-56.txt"
       },
       {
         "exercise": "Push press",
-        "phase": "1 ½  3 x 6",
+        "phase": "1 \u00bd  3 x 6",
         "date": "2025-08-27",
         "filename": "revision_108873_2025-08-27_14-52-56.txt"
       },
       {
         "exercise": "Squat",
-        "phase": "1 ½  3 x 6",
+        "phase": "1 \u00bd  3 x 6",
         "date": "2025-08-27",
         "filename": "revision_108873_2025-08-27_14-52-56.txt"
       },
       {
         "exercise": "rows",
-        "phase": "1 ½  3 x 6",
+        "phase": "1 \u00bd  3 x 6",
         "date": "2025-08-27",
         "filename": "revision_108873_2025-08-27_14-52-56.txt"
       },
@@ -10379,7 +10403,7 @@
         "filename": "revision_108874_2025-08-29_14-23-32.txt"
       },
       {
-        "exercise": "1 ½ RDL",
+        "exercise": "1 \u00bd RDL",
         "phase": "3 x 10",
         "date": "2025-08-29",
         "filename": "revision_108874_2025-08-29_14-23-32.txt"
@@ -10505,7 +10529,7 @@
         "filename": "revision_109021_2025-09-10_14-57-13.txt"
       },
       {
-        "exercise": "Db 1 ½ chest press",
+        "exercise": "Db 1 \u00bd chest press",
         "phase": "3 x 10",
         "date": "2025-09-10",
         "filename": "revision_109021_2025-09-10_14-57-13.txt"
@@ -12107,7 +12131,7 @@
         "filename": "revision_99679_2024-09-09_15-00-13.txt"
       },
       {
-        "exercise": "1 ½ RDL",
+        "exercise": "1 \u00bd RDL",
         "phase": "3 x 12",
         "date": "2024-09-09",
         "filename": "revision_99679_2024-09-09_15-00-13.txt"
@@ -12529,7 +12553,12 @@
           },
           {
             "phase": "stretch",
-            "exercises": []
+            "exercises": [
+              "Cat cow",
+              "Child's pose",
+              "Hip flexor stretch",
+              "Shoulder stretch"
+            ]
           }
         ]
       }
@@ -12558,10 +12587,6 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
             "phase": "20/15/10",
             "exercises": [
               "Kb swing",
@@ -12579,7 +12604,12 @@
           },
           {
             "phase": "stretch",
-            "exercises": []
+            "exercises": [
+              "Cat cow",
+              "Child's pose",
+              "Hip flexor stretch",
+              "Shoulder stretch"
+            ]
           }
         ]
       }
@@ -12676,14 +12706,10 @@
               "Single leg drops",
               "Plank march",
               "penguins",
-              "T’s, w’s, l’s",
+              "T\u2019s, w\u2019s, l\u2019s",
               "Thoracic mobility",
               "12 reps per side"
             ]
-          },
-          {
-            "phase": "Chipper",
-            "exercises": []
           },
           {
             "phase": "20/15/10",
@@ -12743,7 +12769,7 @@
               "Kb hike swing 10",
               "Db floor press 20",
               "Leg curls 20",
-              "21’s",
+              "21\u2019s",
               "Band curl",
               "Db tricep"
             ]
@@ -12821,7 +12847,7 @@
               "Band lat pull",
               "Db sumo d.l.",
               "Band chest cross",
-              "Db ¾ curtsy"
+              "Db \u00be curtsy"
             ]
           },
           {
@@ -12970,84 +12996,40 @@
     "2024-10-16": [
       {
         "date": "2024-10-16",
-        "filename": "revision_101255_2024-10-16_14-54-57.txt",
+        "filename": "merged_2_workouts_revision_101255_2024-10-16_14-54-57.txt",
         "phases": [
           {
             "phase": "30/10x3",
             "exercises": [
-              "Weighted d.b.",
+              "Alt leg drops",
               "Db russian twist",
-              "Alt leg drops"
+              "Weighted d.b."
             ]
           },
           {
             "phase": "Tabata",
             "exercises": [
-              "Step out lunge",
               "Curtsy L",
               "Curtsy R",
-              "Reverse lunge"
-            ]
-          },
-          {
-            "phase": "Ladder 5 to 1",
-            "exercises": [
-              "Kb clean press",
-              "Burpee row"
+              "Reverse lunge",
+              "Step out lunge"
             ]
           },
           {
             "phase": "Emom",
             "exercises": [
-              "Db drop squat 25",
+              "Band piston row",
               "Band punches 50",
-              "Lateral step 20",
-              "Band piston row"
-            ]
-          },
-          {
-            "phase": "Finisher",
-            "exercises": [
-              "Stretch"
-            ]
-          }
-        ]
-      },
-      {
-        "date": "2024-10-16",
-        "filename": "revision_101268_2024-10-16_15-30-50.txt",
-        "phases": [
-          {
-            "phase": "30/10x3",
-            "exercises": [
-              "Weighted d.b.",
-              "Db russian twist",
-              "Alt leg drops"
-            ]
-          },
-          {
-            "phase": "Tabata",
-            "exercises": [
-              "Step out lunge",
-              "Curtsy L",
-              "Curtsy R",
-              "Reverse lunge"
+              "Db drop squat 25",
+              "Db s. Lateral 15",
+              "Lateral step 20"
             ]
           },
           {
             "phase": "Ladder 5 to 1",
             "exercises": [
-              "Kb clean press",
-              "Burpee row"
-            ]
-          },
-          {
-            "phase": "Emom",
-            "exercises": [
-              "Db drop squat 25",
-              "Band punches 50",
-              "Lateral step 20",
-              "Db s. Lateral 15"
+              "Burpee row",
+              "Kb clean press"
             ]
           },
           {
@@ -13085,7 +13067,7 @@
             "phase": "3 x 10",
             "exercises": [
               "Db one arm row",
-              "Db 1 ½ rdl",
+              "Db 1 \u00bd rdl",
               "Db push press"
             ]
           },
@@ -13093,13 +13075,17 @@
             "phase": "3 x 10",
             "exercises": [
               "Bridge press",
-              "1 ½ wedge squat",
+              "1 \u00bd wedge squat",
               "Band upper back pull"
             ]
           },
           {
             "phase": "Finisher",
-            "exercises": []
+            "exercises": [
+              "Burpee",
+              "Mountain climber",
+              "Jump squat"
+            ]
           }
         ]
       }
@@ -13287,79 +13273,40 @@
     "2024-11-01": [
       {
         "date": "2024-11-01",
-        "filename": "revision_101721_2024-11-01_14-59-52.txt",
+        "filename": "merged_2_workouts_revision_101721_2024-11-01_14-59-52.txt",
         "phases": [
-          {
-            "phase": "25/10x3",
-            "exercises": [
-              "Leg lifts",
-              "Flutters",
-              "Toe touch",
-              "Flutters"
-            ]
-          },
-          {
-            "phase": "25/10x3",
-            "exercises": [
-              "Band single bridge L",
-              "Abduction",
-              "Bridge R",
-              "Abduction"
-            ]
-          },
           {
             "phase": "Spartan",
             "exercises": [
-              "Band row",
               "Band press",
-              "Pull through"
-            ]
-          },
-          {
-            "phase": "2 x 12",
-            "exercises": [
-              "Band curls",
-              "Band  kickbacks"
-            ]
-          }
-        ]
-      },
-      {
-        "date": "2024-11-01",
-        "filename": "revision_101729_2024-11-01_15-13-05.txt",
-        "phases": [
-          {
-            "phase": "25/10x3",
-            "exercises": [
-              "Leg lifts",
-              "Flutters",
-              "Toe touch",
-              "Flutters"
-            ]
-          },
-          {
-            "phase": "25/10x3",
-            "exercises": [
-              "Band single bridge L",
-              "Abduction",
-              "Bridge R",
-              "Abduction"
-            ]
-          },
-          {
-            "phase": "Spartan",
-            "exercises": [
               "Band row",
-              "Band press",
               "Pull through"
             ]
           },
           {
             "phase": "3 x 12",
             "exercises": [
-              "Band curls",
               "Band  kickbacks",
+              "Band curls",
               "Slider curls"
+            ]
+          },
+          {
+            "phase": "25/10x3",
+            "exercises": [
+              "Abduction",
+              "Band single bridge L",
+              "Bridge R",
+              "Flutters",
+              "Leg lifts",
+              "Toe touch"
+            ]
+          },
+          {
+            "phase": "2 x 12",
+            "exercises": [
+              "Band  kickbacks",
+              "Band curls"
             ]
           }
         ]
@@ -13416,88 +13363,51 @@
     "2024-11-08": [
       {
         "date": "2024-11-08",
-        "filename": "revision_102351_2024-11-08_15-46-20.txt",
+        "filename": "merged_2_workouts_revision_102351_2024-11-08_15-46-20.txt",
         "phases": [
           {
             "phase": "Tabata",
             "exercises": [
-              "Plank tap",
+              "Bike crunch",
               "Dead bug L",
               "Dead bug R",
-              "Bike crunch"
-            ]
-          },
-          {
-            "phase": "Tabata",
-            "exercises": [
-              "Step out lunge L",
-              "Step out lunge R",
+              "Plank tap",
               "R lunge L",
-              "R lunge R"
+              "R lunge R",
+              "Step out lunge L",
+              "Step out lunge R"
             ]
           },
           {
             "phase": "3 x 10",
             "exercises": [
               "Single band row",
-              "Ss curl L/R",
-              "Slider leg curl"
+              "Slider leg curl",
+              "Ss curl L/R"
             ]
           },
           {
             "phase": "3 x 12",
             "exercises": [
-              "Single press",
+              "60 finisher",
               "Bridge tricep extension",
               "Calf raises",
-              "60 finisher",
+              "Coffin crunch",
               "L,S,L",
               "Sh tap to DD toe touch",
-              "Coffin crunch"
-            ]
-          }
-        ]
-      },
-      {
-        "date": "2024-11-08",
-        "filename": "revision_102353_2024-11-08_16-41-22.txt",
-        "phases": [
-          {
-            "phase": "Tabata",
-            "exercises": [
-              "Plank tap",
-              "Dead bug L",
-              "Dead bug R",
-              "Bike crunch"
-            ]
-          },
-          {
-            "phase": "Tabata",
-            "exercises": [
-              "Step out lunge L",
-              "Step out lunge R",
-              "R lunge L",
-              "R lunge R"
-            ]
-          },
-          {
-            "phase": "3 x 10",
-            "exercises": [
-              "Single band row",
-              "Ss curl L/R",
-              "Slider leg curl"
+              "Single press"
             ]
           },
           {
             "phase": "2 x 12",
             "exercises": [
-              "Single press",
+              "60 finisher",
               "Bridge tricep extension",
               "Calf raises",
-              "60 finisher",
+              "Coffin crunch",
               "L,S,L",
               "Sh tap to DD toe touch",
-              "Coffin crunch"
+              "Single press"
             ]
           }
         ]
@@ -13534,7 +13444,11 @@
           },
           {
             "phase": "Horse thoracic Mobility",
-            "exercises": []
+            "exercises": [
+              "Hip circles",
+              "Shoulder rolls",
+              "Ankle circles"
+            ]
           },
           {
             "phase": "3 x 15",
@@ -13617,7 +13531,7 @@
             "phase": "Ladder 10-4",
             "exercises": [
               "Kb clean",
-              "1 ½ band chest press"
+              "1 \u00bd band chest press"
             ]
           },
           {
@@ -13660,11 +13574,14 @@
               "Band squat",
               "Band f/b jack",
               "Band bridge",
-              "Ramp 3 min",
               "Runner lunge 10",
               "Sh. tap 20",
               "Leg flutter 10"
             ]
+          },
+          {
+            "phase": "Ramp 3 min",
+            "exercises": []
           },
           {
             "phase": "3 x 10",
@@ -13725,7 +13642,12 @@
           },
           {
             "phase": "stretch",
-            "exercises": []
+            "exercises": [
+              "Cat cow",
+              "Child's pose",
+              "Hip flexor stretch",
+              "Shoulder stretch"
+            ]
           }
         ]
       }
@@ -13769,7 +13691,12 @@
           },
           {
             "phase": "stretch",
-            "exercises": []
+            "exercises": [
+              "Cat cow",
+              "Child's pose",
+              "Hip flexor stretch",
+              "Shoulder stretch"
+            ]
           }
         ]
       }
@@ -13820,43 +13747,29 @@
     "2024-12-02": [
       {
         "date": "2024-12-02",
-        "filename": "revision_103676_2024-12-02_15-56-59.txt",
+        "filename": "merged_2_workouts_revision_103676_2024-12-02_15-56-59.txt",
         "phases": [
           {
             "phase": "Spartan",
             "exercises": [
-              "Band pulls",
               "Band press",
+              "Band pulls",
               "Hip thrust"
             ]
           },
           {
             "phase": "2 x 15",
             "exercises": [
-              "Db W- rows",
               "Band Drag curls",
-              "Band Overhead ext"
-            ]
-          }
-        ]
-      },
-      {
-        "date": "2024-12-02",
-        "filename": "revision_103710_2024-12-02_16-24-29.txt",
-        "phases": [
-          {
-            "phase": "Spartan",
-            "exercises": [
-              "Band pulls",
-              "Band press",
-              "Hip thrust"
+              "Band Overhead ext",
+              "Db W- rows"
             ]
           },
           {
             "phase": "3x10",
             "exercises": [
-              "Db squat curl",
               "Db overhead ext",
+              "Db squat curl",
               "T-flies"
             ]
           }
@@ -13891,7 +13804,12 @@
               "Kb hike swing 15",
               "Db ren row 16",
               "Db lat step 16",
-              "Slider 3 way 8",
+              "Slider 3 way 8"
+            ]
+          },
+          {
+            "phase": "Emom 2",
+            "exercises": [
               "3 rounds",
               "Side laterals 15",
               "Pistols  8/8",
@@ -13924,7 +13842,12 @@
               "Kb hike swing 15",
               "Db ren row 16",
               "Db step up 16",
-              "Slider 3 way 8",
+              "Slider 3 way 8"
+            ]
+          },
+          {
+            "phase": "Emom 2",
+            "exercises": [
               "2 rounds",
               "Side laterals 15",
               "Pistols  8/8",
@@ -14003,11 +13926,21 @@
               "Kb clean 15",
               "Db R. lunge curl 16",
               "Kb sh. To sh. 12",
-              "Reverse hyper 20",
+              "Reverse hyper 20"
+            ]
+          },
+          {
+            "phase": "Emom 2",
+            "exercises": [
               "1x10",
               "Thoracic mob",
               "Hip flexor",
-              "Ankle",
+              "Ankle"
+            ]
+          },
+          {
+            "phase": "Emom 3",
+            "exercises": [
               "21s",
               "Shoulders",
               "Hamstrings"
@@ -14135,14 +14068,10 @@
               "Single leg drops",
               "Plank march",
               "penguins",
-              "T’s, w’s, l’s",
+              "T\u2019s, w\u2019s, l\u2019s",
               "Thoracic mobility",
               "12 reps per side"
             ]
-          },
-          {
-            "phase": "Chipper",
-            "exercises": []
           },
           {
             "phase": "20/15/10",
@@ -14154,7 +14083,12 @@
           },
           {
             "phase": "Lunge matrix",
-            "exercises": []
+            "exercises": [
+              "Forward lunge",
+              "Reverse lunge",
+              "Lateral lunge",
+              "Curtsy lunge"
+            ]
           },
           {
             "phase": "5 per side",
@@ -14214,9 +14148,9 @@
           {
             "phase": "3x8",
             "exercises": [
-              "1 ½ bulagarians",
+              "1 \u00bd bulagarians",
               "Renegade row",
-              "Wall sit 1 ½ bicep culs",
+              "Wall sit 1 \u00bd bicep culs",
               "finisher"
             ]
           }
@@ -14250,14 +14184,14 @@
             "exercises": [
               "10-25",
               "Seated band row",
-              "Db ¾ squats",
+              "Db \u00be squats",
               "Toe grabs"
             ]
           },
           {
             "phase": "3x8",
             "exercises": [
-              "1 ½ hip thrust",
+              "1 \u00bd hip thrust",
               "Single bridge to chest press",
               "Db hammer curls",
               "finisher"
@@ -14340,9 +14274,9 @@
           {
             "phase": "2 x 10",
             "exercises": [
-              "1 ½ band press",
-              "1 ½ band pull",
-              "1 ½ bw thrust"
+              "1 \u00bd band press",
+              "1 \u00bd band pull",
+              "1 \u00bd bw thrust"
             ]
           }
         ]
@@ -14475,7 +14409,11 @@
           },
           {
             "phase": "Finisher",
-            "exercises": []
+            "exercises": [
+              "Burpee",
+              "Mountain climber",
+              "Jump squat"
+            ]
           }
         ]
       }
@@ -14520,7 +14458,11 @@
           },
           {
             "phase": "Finisher",
-            "exercises": []
+            "exercises": [
+              "Burpee",
+              "Mountain climber",
+              "Jump squat"
+            ]
           }
         ]
       }
@@ -14652,10 +14594,6 @@
             ]
           },
           {
-            "phase": "60 sec",
-            "exercises": []
-          },
-          {
             "phase": "45 sec",
             "exercises": [
               "Wall sit",
@@ -14677,11 +14615,14 @@
               "Band bridge l",
               "Band bridge r",
               "squat",
-              "Ramp 3min",
               "Band seals 10",
               "Band f/b 10",
               "Band squat"
             ]
+          },
+          {
+            "phase": "Ramp 3min",
+            "exercises": []
           },
           {
             "phase": "Spartan",
@@ -14833,7 +14774,7 @@
             "exercises": [
               "Kneeling curl press l/r",
               "Single kick back",
-              "1 ½ rdl"
+              "1 \u00bd rdl"
             ]
           }
         ]
@@ -14881,7 +14822,11 @@
           },
           {
             "phase": "Finisher",
-            "exercises": []
+            "exercises": [
+              "Burpee",
+              "Mountain climber",
+              "Jump squat"
+            ]
           }
         ]
       }
@@ -14911,10 +14856,6 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
             "phase": "25/20/15/10",
             "exercises": [
               "Band press",
@@ -14932,7 +14873,12 @@
           },
           {
             "phase": "Yoga Cooldown",
-            "exercises": []
+            "exercises": [
+              "Cat cow",
+              "Child's pose",
+              "Hip flexor stretch",
+              "Shoulder stretch"
+            ]
           }
         ]
       }
@@ -14940,8 +14886,16 @@
     "2025-03-17": [
       {
         "date": "2025-03-17",
-        "filename": "revision_105896_2025-03-17_14-55-46.txt",
+        "filename": "merged_2_workouts_revision_105896_2025-03-17_14-55-46.txt",
         "phases": [
+          {
+            "phase": "Ladder",
+            "exercises": [
+              "2-12",
+              "Band swim V up",
+              "Kb swing"
+            ]
+          },
           {
             "phase": "25/5x3",
             "exercises": [
@@ -14953,76 +14907,25 @@
           {
             "phase": "25/5x3 band",
             "exercises": [
+              "Kick backs",
               "Lateral walk 3",
-              "Pulse squat",
-              "Kick backs"
-            ]
-          },
-          {
-            "phase": "Ladder",
-            "exercises": [
-              "2-12",
-              "Kb swing",
-              "Band swim V up"
+              "Pulse squat"
             ]
           },
           {
             "phase": "3x12",
             "exercises": [
-              "Pull down",
-              "Db floor press",
-              "Sumo deadlift",
               "10 man maker",
               "Burpee",
+              "Db alt curl press",
+              "Db floor press",
+              "Db tricep ext",
+              "Dd knee tuck Up",
+              "Leg curls",
+              "Pull down",
               "Push up",
               "Sh tap",
-              "Dd knee tuck Up"
-            ]
-          }
-        ]
-      },
-      {
-        "date": "2025-03-17",
-        "filename": "revision_105940_2025-03-17_15-31-03.txt",
-        "phases": [
-          {
-            "phase": "25/5x3",
-            "exercises": [
-              "Plank",
-              "Side plank L",
-              "Side plank R"
-            ]
-          },
-          {
-            "phase": "25/5x3 band",
-            "exercises": [
-              "Lateral walk 3",
-              "Pulse squat",
-              "Kick backs"
-            ]
-          },
-          {
-            "phase": "Ladder",
-            "exercises": [
-              "2-12",
-              "Kb swing",
-              "Band swim V up"
-            ]
-          },
-          {
-            "phase": "3x12",
-            "exercises": [
-              "Pull down",
-              "Db floor press",
               "Sumo deadlift"
-            ]
-          },
-          {
-            "phase": "3x12",
-            "exercises": [
-              "Db alt curl press",
-              "Db tricep ext",
-              "Leg curls"
             ]
           }
         ]
@@ -15053,10 +14956,6 @@
             ]
           },
           {
-            "phase": "10 per side",
-            "exercises": []
-          },
-          {
             "phase": "Emom",
             "exercises": [
               "Db jacks 30",
@@ -15074,57 +14973,13 @@
     "2025-03-28": [
       {
         "date": "2025-03-28",
-        "filename": "revision_105943_2025-03-28_14-41-32.txt",
-        "phases": [
-          {
-            "phase": "Tabata",
-            "exercises": [
-              "Leg up reach L",
-              "Leg up reach R"
-            ]
-          },
-          {
-            "phase": "25/10x3",
-            "exercises": [
-              "Butterfly pump",
-              "Single bridge l",
-              "Single bridge r"
-            ]
-          },
-          {
-            "phase": "Ladder 1-5",
-            "exercises": [
-              "Single clean press"
-            ]
-          },
-          {
-            "phase": "3x12",
-            "exercises": [
-              "S. sand bag row",
-              "Sand bag box squat",
-              "Butterfly sit up"
-            ]
-          },
-          {
-            "phase": "3x12",
-            "exercises": [
-              "Db floor press",
-              "Kb sumo deadlift",
-              "Leg lifts"
-            ]
-          }
-        ]
-      },
-      {
-        "date": "2025-03-28",
-        "filename": "revision_106034_2025-03-28_15-25-33.txt",
+        "filename": "merged_2_workouts_revision_105943_2025-03-28_14-41-32.txt",
         "phases": [
           {
             "phase": "Tabata",
             "exercises": [
               "Leg up reach L",
               "Leg up reach R",
-              "Wide knee touch",
               "Wide knee touch"
             ]
           },
@@ -15145,18 +15000,16 @@
           {
             "phase": "3x12",
             "exercises": [
-              "Sup sand bag row",
-              "Sand bag box squat",
               "Band drag curl",
-              "Db tricep ext"
-            ]
-          },
-          {
-            "phase": "3x12",
-            "exercises": [
+              "Band face pull",
+              "Butterfly sit up",
               "Db floor press",
+              "Db tricep ext",
               "Kb sumo deadlift",
-              "Band face pull"
+              "Leg lifts",
+              "S. sand bag row",
+              "Sand bag box squat",
+              "Sup sand bag row"
             ]
           }
         ]
@@ -15203,7 +15056,12 @@
           },
           {
             "phase": "stretch",
-            "exercises": []
+            "exercises": [
+              "Cat cow",
+              "Child's pose",
+              "Hip flexor stretch",
+              "Shoulder stretch"
+            ]
           }
         ]
       }
@@ -15245,7 +15103,7 @@
           {
             "phase": "3x8",
             "exercises": [
-              "1 ½ rdl",
+              "1 \u00bd rdl",
               "One arm row",
               "Wall sit bicep curls"
             ]
@@ -15378,14 +15236,10 @@
               "Single leg drops",
               "Plank march",
               "penguins",
-              "T’s, w’s, l’s",
+              "T\u2019s, w\u2019s, l\u2019s",
               "Thoracic mobility",
               "12 reps per side"
             ]
-          },
-          {
-            "phase": "Chipper",
-            "exercises": []
           },
           {
             "phase": "20/15/10",
@@ -15452,8 +15306,8 @@
             "phase": "3x8",
             "exercises": [
               "Rev. lunge to curtsy",
-              "1 ½ floor press",
-              "Db 1 ½ pullover"
+              "1 \u00bd floor press",
+              "Db 1 \u00bd pullover"
             ]
           },
           {
@@ -15470,80 +15324,36 @@
     "2025-04-23": [
       {
         "date": "2025-04-23",
-        "filename": "revision_106895_2025-04-23_14-28-26.txt",
+        "filename": "merged_2_workouts_revision_106895_2025-04-23_14-28-26.txt",
         "phases": [
           {
             "phase": "Tabata",
             "exercises": [
-              "Plank",
-              "Basic crunch",
-              "Reach r",
-              "Reach l"
-            ]
-          },
-          {
-            "phase": "Tabata",
-            "exercises": [
-              "Band hydrant",
               "Band bridge l",
               "Band bridge r",
+              "Band hydrant",
+              "Basic crunch",
+              "Plank",
+              "Reach l",
+              "Reach r",
               "squat"
-            ]
-          },
-          {
-            "phase": "3 x 15",
-            "exercises": [
-              "Band squat row",
-              "Db floor press",
-              "Band x jack"
             ]
           },
           {
             "phase": "3 x 12",
             "exercises": [
+              "Bag hip thrust",
               "Band bridge lat pull",
-              "Db arnold press",
-              "Bag hip thrust"
-            ]
-          }
-        ]
-      },
-      {
-        "date": "2025-04-23",
-        "filename": "revision_106906_2025-04-23_15-00-35.txt",
-        "phases": [
-          {
-            "phase": "Tabata",
-            "exercises": [
-              "Plank",
-              "Basic crunch",
-              "Reach r",
-              "Reach l"
-            ]
-          },
-          {
-            "phase": "Tabata",
-            "exercises": [
-              "Band hydrant",
-              "Band bridge l",
-              "Band bridge r",
-              "squat"
+              "Db arnold press"
             ]
           },
           {
             "phase": "3 x 15",
             "exercises": [
+              "Band pull thru",
               "Band squat row",
-              "Db floor press",
-              "Band pull thru"
-            ]
-          },
-          {
-            "phase": "3 x 12",
-            "exercises": [
-              "Band bridge lat pull",
-              "Db arnold press",
-              "Bag hip thrust"
+              "Band x jack",
+              "Db floor press"
             ]
           }
         ]
@@ -15614,11 +15424,14 @@
               "45 lunge",
               "Lateral",
               "Reverse",
-              "10 reps x 1",
               "Crabs",
               "Quadr. Leg circles",
               "Judo push up"
             ]
+          },
+          {
+            "phase": "10 reps x 1",
+            "exercises": []
           },
           {
             "phase": "3 x 6",
@@ -15668,7 +15481,11 @@
           },
           {
             "phase": "60 sec finisher",
-            "exercises": []
+            "exercises": [
+              "Burpee",
+              "Mountain climber",
+              "Jump squat"
+            ]
           }
         ]
       }
@@ -15766,14 +15583,10 @@
             "exercises": [
               "Side lying leg lifts L",
               "Cat cow",
-              "T’s, w’s, l’s",
+              "T\u2019s, w\u2019s, l\u2019s",
               "Thoracic mobility",
               "12 reps per side"
             ]
-          },
-          {
-            "phase": "Chipper",
-            "exercises": []
           },
           {
             "phase": "20/15/10",
@@ -15912,10 +15725,6 @@
               "Band chest press",
               "Db kickbacks"
             ]
-          },
-          {
-            "phase": "Chipper",
-            "exercises": []
           },
           {
             "phase": "20/15/10",
@@ -16117,11 +15926,14 @@
               "Basic crunch",
               "Shoulder tap",
               "pointers",
-              "40/10 x 2",
               "Band bridge",
               "Band hydrants",
               "Band kickbacks"
             ]
+          },
+          {
+            "phase": "40/10 x 2",
+            "exercises": []
           },
           {
             "phase": "3 x 10",
@@ -16222,10 +16034,6 @@
             ]
           },
           {
-            "phase": "Cat cow 5 x",
-            "exercises": []
-          },
-          {
             "phase": "2x12",
             "exercises": [
               "Db hammers",
@@ -16268,7 +16076,7 @@
             "exercises": [
               "RDL",
               "High pull",
-              "1 ½ squat",
+              "1 \u00bd squat",
               "Hang clean"
             ]
           },
@@ -16496,7 +16304,12 @@
           },
           {
             "phase": "stretch",
-            "exercises": []
+            "exercises": [
+              "Cat cow",
+              "Child's pose",
+              "Hip flexor stretch",
+              "Shoulder stretch"
+            ]
           }
         ]
       }
@@ -16581,99 +16394,59 @@
     "2025-08-27": [
       {
         "date": "2025-08-27",
-        "filename": "revision_108858_2025-08-27_14-51-58.txt",
+        "filename": "merged_2_workouts_revision_108858_2025-08-27_14-51-58.txt",
         "phases": [
           {
             "phase": "Tabata",
             "exercises": [
+              "Bridge march",
               "Drop squat",
               "Plank jack",
-              "Bridge march",
               "Plank march"
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
+            "phase": "3 x 10",
+            "exercises": [
+              "Bridge tricep extension",
+              "Bulgarians",
+              "Straight arm pulls"
+            ]
           },
           {
             "phase": "20/15/10",
             "exercises": [
-              "Swings",
+              "1 \u00bd",
+              "Db complex",
               "Db jack",
               "Sh. taps",
-              "Db complex",
-              "1 ½"
+              "Swings"
             ]
           },
           {
             "phase": "3 x 6",
             "exercises": [
-              "Rdl",
               "Push press",
+              "Rdl",
               "Squat",
               "rows"
-            ]
-          },
-          {
-            "phase": "3 x 10",
-            "exercises": [
-              "Bulgarians",
-              "Straight arm pulls",
-              "Bridge tricep extension"
-            ]
-          }
-        ]
-      },
-      {
-        "date": "2025-08-27",
-        "filename": "revision_108873_2025-08-27_14-52-56.txt",
-        "phases": [
-          {
-            "phase": "Tabata",
-            "exercises": [
-              "Drop squat",
-              "Plank jack",
-              "Bridge march",
-              "Plank march"
             ]
           },
           {
             "phase": "30/10x2",
             "exercises": [
-              "Band kickback",
               "Band bridge",
+              "Band kickback",
               "Band plank tap"
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "20/15/10",
+            "phase": "1 \u00bd  3 x 6",
             "exercises": [
-              "Swings",
-              "Db jack",
-              "Sh. taps",
-              "Db complex"
-            ]
-          },
-          {
-            "phase": "1 ½  3 x 6",
-            "exercises": [
-              "Rdl",
               "Push press",
+              "Rdl",
               "Squat",
               "rows"
-            ]
-          },
-          {
-            "phase": "3 x 10",
-            "exercises": [
-              "Bulgarians",
-              "Straight arm pulls",
-              "Bridge tricep extension"
             ]
           }
         ]
@@ -16715,7 +16488,7 @@
             "phase": "3 x 10",
             "exercises": [
               "Renegade row",
-              "1 ½ RDL",
+              "1 \u00bd RDL",
               "Db kick back",
               "Human maker",
               "Burpee",
@@ -16738,11 +16511,14 @@
               "SP Left",
               "Sp Right",
               "Hollow hold",
-              "30x10x3",
               "Band bridge",
               "Clams L",
               "Clams R"
             ]
+          },
+          {
+            "phase": "30x10x3",
+            "exercises": []
           },
           {
             "phase": "30x15x2",
@@ -16786,11 +16562,14 @@
               "Star sit up",
               "Alt superman",
               "Half burpee sumo",
-              "30/10 x 2",
               "Band plank jack",
               "Band hip bridge",
               "Band hydrants"
             ]
+          },
+          {
+            "phase": "30/10 x 2",
+            "exercises": []
           },
           {
             "phase": "Ladder 2-12",
@@ -16844,7 +16623,7 @@
             "exercises": [
               "Db one arm row",
               "Box sl hip thrust",
-              "Db 1 ½ chest press"
+              "Db 1 \u00bd chest press"
             ]
           },
           {
@@ -17038,14 +16817,15 @@
     "2025-09-24": [
       {
         "date": "2025-09-24",
-        "filename": "revision_109592_2025-09-24_14-27-12.txt",
+        "filename": "merged_2_workouts_revision_109592_2025-09-24_14-27-12.txt",
         "phases": [
           {
             "phase": "30/10x3",
             "exercises": [
               "Basic crunch",
               "Bike crunch",
-              "Feet over kb"
+              "Feet over kb",
+              "Penguins"
             ]
           },
           {
@@ -17053,62 +16833,8 @@
             "exercises": [
               "Band f/b jack",
               "Band hydrant",
-              "Band seal",
-              "Band jump sq"
-            ]
-          },
-          {
-            "phase": "40/30/20 (15 off)",
-            "exercises": [
-              "Db goblet squat",
-              "Band swims",
-              "Db sumo dl",
-              "Band punches",
-              "Step ups"
-            ]
-          },
-          {
-            "phase": "2 x 15",
-            "exercises": [
-              "Band curls",
-              "Band kickback"
-            ]
-          },
-          {
-            "phase": "Mobility stretches",
-            "exercises": []
-          }
-        ]
-      },
-      {
-        "date": "2025-09-24",
-        "filename": "revision_109624_2025-09-24_14-46-23.txt",
-        "phases": [
-          {
-            "phase": "30/10x3",
-            "exercises": [
-              "Basic crunch",
-              "Penguins",
-              "Feet over kb"
-            ]
-          },
-          {
-            "phase": "Tabata",
-            "exercises": [
-              "Band f/b jack",
-              "Band hydrant",
-              "Band seal",
-              "Band jump sq"
-            ]
-          },
-          {
-            "phase": "40/30/20 (15 off)",
-            "exercises": [
-              "Db goblet squat",
-              "Band swims",
-              "Db sumo dl",
-              "Band punches",
-              "Dd toe touch"
+              "Band jump sq",
+              "Band seal"
             ]
           },
           {
@@ -17120,8 +16846,24 @@
             ]
           },
           {
+            "phase": "40/30/20 (15 off)",
+            "exercises": [
+              "Band punches",
+              "Band swims",
+              "Db goblet squat",
+              "Db sumo dl",
+              "Dd toe touch",
+              "Step ups"
+            ]
+          },
+          {
             "phase": "Mobility stretches",
-            "exercises": []
+            "exercises": [
+              "Cat cow",
+              "Child's pose",
+              "Hip flexor stretch",
+              "Shoulder stretch"
+            ]
           }
         ]
       }
@@ -17129,21 +16871,16 @@
     "2023-07-31": [
       {
         "date": "2023-07-31",
-        "filename": "revision_81140_2023-07-31_14-57-52.txt",
+        "filename": "merged_2_workouts_revision_81140_2023-07-31_14-57-52.txt",
         "phases": [
           {
             "phase": "30/10x3",
             "exercises": [
-              "See saw plank",
-              "Mod v ups",
-              "Bike crunch"
-            ]
-          },
-          {
-            "phase": "30/10x3",
-            "exercises": [
-              "Band single bridge l",
               "Band jump",
+              "Band single bridge l",
+              "Bike crunch",
+              "Mod v ups",
+              "See saw plank",
               "squat"
             ]
           },
@@ -17151,65 +16888,34 @@
             "phase": "Emom",
             "exercises": [
               "Band punch 50",
-              "Slider m.c. 50",
               "Db alt thruster 20",
-              "Db renegade r. 20"
+              "Db renegade r. 20",
+              "Slider m.c. 50"
             ]
           },
           {
             "phase": "3 x 10",
             "exercises": [
-              "Rdl to row",
+              "Db hammer curl to press",
               "Push up to h.b.",
-              "Db hammer curl to press"
+              "Rdl to row"
             ]
           },
           {
             "phase": "Finisher",
-            "exercises": []
-          }
-        ]
-      },
-      {
-        "date": "2023-07-31",
-        "filename": "revision_81144_2023-07-31_15-43-46.txt",
-        "phases": [
-          {
-            "phase": "30/10x3",
             "exercises": [
-              "See saw plank",
-              "Mod v ups",
-              "Bike crunch"
-            ]
-          },
-          {
-            "phase": "30/10x3",
-            "exercises": [
-              "Band single bridge l",
-              "Band jump",
-              "squat"
-            ]
-          },
-          {
-            "phase": "Emom",
-            "exercises": [
-              "Band punch 50",
-              "Slider m.c. 50",
-              "Db alt thruster 20",
-              "Db renegade r. 20"
+              "Burpee",
+              "Mountain climber",
+              "Jump squat"
             ]
           },
           {
             "phase": "2 x 12",
             "exercises": [
-              "Rdl to row",
+              "Db hammer curl to press",
               "Push up to h.b.",
-              "Db hammer curl to press"
+              "Rdl to row"
             ]
-          },
-          {
-            "phase": "Finisher",
-            "exercises": []
           }
         ]
       }
@@ -17217,45 +16923,25 @@
     "2023-08-02": [
       {
         "date": "2023-08-02",
-        "filename": "revision_81145_2023-08-02_14-57-05.txt",
+        "filename": "merged_2_workouts_revision_81145_2023-08-02_14-57-05.txt",
         "phases": [
           {
             "phase": "Spartan",
             "exercises": [
-              "Band pulls",
               "Band press",
+              "Band pulls",
               "Hip thrust"
             ]
           },
           {
             "phase": "3 x 15",
             "exercises": [
+              "Band Drag curls",
+              "Band kickbacks",
               "Db W- rows",
-              "Band Drag curls",
-              "Wall sit sup pull apart"
-            ]
-          }
-        ]
-      },
-      {
-        "date": "2023-08-02",
-        "filename": "revision_81219_2023-08-02_15-40-06.txt",
-        "phases": [
-          {
-            "phase": "Spartan",
-            "exercises": [
-              "Band pulls",
-              "Band press",
-              "Hip thrust"
-            ]
-          },
-          {
-            "phase": "3 x 15",
-            "exercises": [
               "Db t flies",
-              "Band Drag curls",
               "Wall sh glide",
-              "Band kickbacks"
+              "Wall sit sup pull apart"
             ]
           }
         ]
@@ -17297,7 +16983,12 @@
           },
           {
             "phase": "stretch",
-            "exercises": []
+            "exercises": [
+              "Cat cow",
+              "Child's pose",
+              "Hip flexor stretch",
+              "Shoulder stretch"
+            ]
           }
         ]
       }
@@ -17405,10 +17096,6 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
             "phase": "20/15/10",
             "exercises": [
               "Band seal jack",
@@ -17488,10 +17175,13 @@
               "Flutter",
               "Bikes",
               "rest",
-              "2 to 6 ladder",
               "Box jump sq",
               "Box push up"
             ]
+          },
+          {
+            "phase": "2 to 6 ladder",
+            "exercises": []
           },
           {
             "phase": "3 x 10",
@@ -17557,11 +17247,14 @@
               "Leg circles R",
               "S. P. Clam L",
               "S. P. Clam R",
-              "Ramp 3 min",
               "M.c. 20",
               "Half burpee 5",
               "Bridge 10"
             ]
+          },
+          {
+            "phase": "Ramp 3 min",
+            "exercises": []
           },
           {
             "phase": "Ladder 5 to 10",
@@ -17698,10 +17391,6 @@
               "Wide outs",
               "rest"
             ]
-          },
-          {
-            "phase": "Chipper",
-            "exercises": []
           },
           {
             "phase": "20/15/10",
@@ -17995,10 +17684,6 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
             "phase": "20/15/10",
             "exercises": [
               "Band flye",
@@ -18035,10 +17720,6 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
             "phase": "25/20/15/10",
             "exercises": [
               "Band flye",
@@ -18062,49 +17743,20 @@
     "2024-08-26": [
       {
         "date": "2024-08-26",
-        "filename": "revision_99032_2024-08-26_14-55-42.txt",
+        "filename": "merged_2_workouts_revision_99032_2024-08-26_14-55-42.txt",
         "phases": [
           {
             "phase": "3 x 10",
             "exercises": [
-              "One arm row",
-              "Rdl",
-              "Strict press"
-            ]
-          },
-          {
-            "phase": "3 x 10",
-            "exercises": [
+              "Band drag curl",
+              "Db lying tricep",
               "Floor press",
               "Heels elev squat",
-              "Band drag curl",
-              "Db lying tricep",
               "Man maker",
-              "Stretch"
-            ]
-          }
-        ]
-      },
-      {
-        "date": "2024-08-26",
-        "filename": "revision_99034_2024-08-26_15-42-57.txt",
-        "phases": [
-          {
-            "phase": "3 x 10",
-            "exercises": [
               "One arm row",
               "Rdl",
+              "Stretch",
               "Strict press"
-            ]
-          },
-          {
-            "phase": "3 x 10",
-            "exercises": [
-              "Heels elev squat",
-              "Band drag curl",
-              "Db lying tricep",
-              "Man maker",
-              "Stretch"
             ]
           }
         ]
@@ -18113,8 +17765,16 @@
     "2024-08-28": [
       {
         "date": "2024-08-28",
-        "filename": "revision_99221_2024-08-28_14-56-37.txt",
+        "filename": "merged_2_workouts_revision_99221_2024-08-28_14-56-37.txt",
         "phases": [
+          {
+            "phase": "Emom",
+            "exercises": [
+              "Db alt f. Press 20",
+              "Db ren row 16",
+              "Kb swing 20"
+            ]
+          },
           {
             "phase": "Tabata holds",
             "exercises": [
@@ -18127,18 +17787,10 @@
           {
             "phase": "Tabata hold",
             "exercises": [
-              "Ss right",
-              "Ss left",
+              "Bridges",
               "Runner lunge",
-              "Bridges"
-            ]
-          },
-          {
-            "phase": "Emom",
-            "exercises": [
-              "Db ren row 16",
-              "Kb swing 20",
-              "Db alt f. Press 20"
+              "Ss left",
+              "Ss right"
             ]
           },
           {
@@ -18147,42 +17799,6 @@
               "Man maker",
               "Stretch"
             ]
-          }
-        ]
-      },
-      {
-        "date": "2024-08-28",
-        "filename": "revision_99254_2024-08-28_15-51-44.txt",
-        "phases": [
-          {
-            "phase": "Tabata holds",
-            "exercises": [
-              "Basic crunch",
-              "Leg lift",
-              "Oblique L",
-              "Oblique R"
-            ]
-          },
-          {
-            "phase": "Tabata hold",
-            "exercises": [
-              "Ss right",
-              "Ss left",
-              "Runner lunge",
-              "Bridges"
-            ]
-          },
-          {
-            "phase": "Emom",
-            "exercises": [
-              "Db ren row 16",
-              "Kb swing 20",
-              "Db alt f. Press 20"
-            ]
-          },
-          {
-            "phase": "60 sec penguins",
-            "exercises": []
           },
           {
             "phase": "2 x 8",
@@ -18352,7 +17968,7 @@
             "phase": "3 x 12",
             "exercises": [
               "Renegade row",
-              "1 ½ RDL",
+              "1 \u00bd RDL",
               "Db kick back",
               "Human maker",
               "Burpee",
@@ -18487,10 +18103,6 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
             "phase": "20/15/10",
             "exercises": [
               "Drop squat",
@@ -18512,10 +18124,6 @@
               "Leg circle R",
               "Slider m. c."
             ]
-          },
-          {
-            "phase": "3 min 2 part get up",
-            "exercises": []
           },
           {
             "phase": "Spartan",
@@ -18593,14 +18201,10 @@
               "Single leg drops",
               "Plank march",
               "penguins",
-              "T’s, w’s, l’s",
+              "T\u2019s, w\u2019s, l\u2019s",
               "Thoracic mobility",
               "12 reps per side"
             ]
-          },
-          {
-            "phase": "Chipper",
-            "exercises": []
           },
           {
             "phase": "20/15/10",
@@ -18612,7 +18216,12 @@
           },
           {
             "phase": "Lunge matrix",
-            "exercises": []
+            "exercises": [
+              "Forward lunge",
+              "Reverse lunge",
+              "Lateral lunge",
+              "Curtsy lunge"
+            ]
           },
           {
             "phase": "5 per side",
@@ -18866,7 +18475,7 @@
             "Single leg drops",
             "Plank march",
             "penguins",
-            "T’s, w’s, l’s",
+            "T\u2019s, w\u2019s, l\u2019s",
             "Thoracic mobility",
             "12 reps per side"
           ]
@@ -18933,7 +18542,7 @@
             "Kb hike swing 10",
             "Db floor press 20",
             "Leg curls 20",
-            "21’s",
+            "21\u2019s",
             "Band curl",
             "Db tricep"
           ]
@@ -19009,7 +18618,7 @@
             "Band lat pull",
             "Db sumo d.l.",
             "Band chest cross",
-            "Db ¾ curtsy"
+            "Db \u00be curtsy"
           ]
         },
         {
@@ -19263,7 +18872,7 @@
           "phase": "3 x 10",
           "exercises": [
             "Db one arm row",
-            "Db 1 ½ rdl",
+            "Db 1 \u00bd rdl",
             "Db push press"
           ]
         },
@@ -19271,7 +18880,7 @@
           "phase": "3 x 10",
           "exercises": [
             "Bridge press",
-            "1 ½ wedge squat",
+            "1 \u00bd wedge squat",
             "Band upper back pull"
           ]
         },
@@ -19779,7 +19388,7 @@
           "phase": "Ladder 10-4",
           "exercises": [
             "Kb clean",
-            "1 ½ band chest press"
+            "1 \u00bd band chest press"
           ]
         },
         {
@@ -20275,7 +19884,7 @@
             "Single leg drops",
             "Plank march",
             "penguins",
-            "T’s, w’s, l’s",
+            "T\u2019s, w\u2019s, l\u2019s",
             "Thoracic mobility",
             "12 reps per side"
           ]
@@ -20352,9 +19961,9 @@
         {
           "phase": "3x8",
           "exercises": [
-            "1 ½ bulagarians",
+            "1 \u00bd bulagarians",
             "Renegade row",
-            "Wall sit 1 ½ bicep culs",
+            "Wall sit 1 \u00bd bicep culs",
             "finisher"
           ]
         }
@@ -20386,14 +19995,14 @@
           "exercises": [
             "10-25",
             "Seated band row",
-            "Db ¾ squats",
+            "Db \u00be squats",
             "Toe grabs"
           ]
         },
         {
           "phase": "3x8",
           "exercises": [
-            "1 ½ hip thrust",
+            "1 \u00bd hip thrust",
             "Single bridge to chest press",
             "Db hammer curls",
             "finisher"
@@ -20472,9 +20081,9 @@
         {
           "phase": "2 x 10",
           "exercises": [
-            "1 ½ band press",
-            "1 ½ band pull",
-            "1 ½ bw thrust"
+            "1 \u00bd band press",
+            "1 \u00bd band pull",
+            "1 \u00bd bw thrust"
           ]
         }
       ]
@@ -20945,7 +20554,7 @@
           "exercises": [
             "Kneeling curl press l/r",
             "Single kick back",
-            "1 ½ rdl"
+            "1 \u00bd rdl"
           ]
         }
       ]
@@ -21343,7 +20952,7 @@
         {
           "phase": "3x8",
           "exercises": [
-            "1 ½ rdl",
+            "1 \u00bd rdl",
             "One arm row",
             "Wall sit bicep curls"
           ]
@@ -21468,7 +21077,7 @@
             "Single leg drops",
             "Plank march",
             "penguins",
-            "T’s, w’s, l’s",
+            "T\u2019s, w\u2019s, l\u2019s",
             "Thoracic mobility",
             "12 reps per side"
           ]
@@ -21540,8 +21149,8 @@
           "phase": "3x8",
           "exercises": [
             "Rev. lunge to curtsy",
-            "1 ½ floor press",
-            "Db 1 ½ pullover"
+            "1 \u00bd floor press",
+            "Db 1 \u00bd pullover"
           ]
         },
         {
@@ -21842,7 +21451,7 @@
           "exercises": [
             "Side lying leg lifts L",
             "Cat cow",
-            "T’s, w’s, l’s",
+            "T\u2019s, w\u2019s, l\u2019s",
             "Thoracic mobility",
             "12 reps per side"
           ]
@@ -22322,7 +21931,7 @@
           "exercises": [
             "RDL",
             "High pull",
-            "1 ½ squat",
+            "1 \u00bd squat",
             "Hang clean"
           ]
         },
@@ -22641,7 +22250,7 @@
             "Db jack",
             "Sh. taps",
             "Db complex",
-            "1 ½"
+            "1 \u00bd"
           ]
         },
         {
@@ -22698,7 +22307,7 @@
           ]
         },
         {
-          "phase": "1 ½  3 x 6",
+          "phase": "1 \u00bd  3 x 6",
           "exercises": [
             "Rdl",
             "Push press",
@@ -22751,7 +22360,7 @@
           "phase": "3 x 10",
           "exercises": [
             "Renegade row",
-            "1 ½ RDL",
+            "1 \u00bd RDL",
             "Db kick back",
             "Human maker",
             "Burpee",
@@ -22876,7 +22485,7 @@
           "exercises": [
             "Db one arm row",
             "Box sl hip thrust",
-            "Db 1 ½ chest press"
+            "Db 1 \u00bd chest press"
           ]
         },
         {
@@ -24322,7 +23931,7 @@
           "phase": "3 x 12",
           "exercises": [
             "Renegade row",
-            "1 ½ RDL",
+            "1 \u00bd RDL",
             "Db kick back",
             "Human maker",
             "Burpee",
@@ -24553,7 +24162,7 @@
             "Single leg drops",
             "Plank march",
             "penguins",
-            "T’s, w’s, l’s",
+            "T\u2019s, w\u2019s, l\u2019s",
             "Thoracic mobility",
             "12 reps per side"
           ]
