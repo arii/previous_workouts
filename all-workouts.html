@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Workouts - Workout Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .workout-card {
+            transition: all 0.3s ease;
+        }
+        .workout-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
+        <!-- Header -->
+        <div class="text-center mb-6">
+            <h1 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">
+                <i class="fas fa-list-alt text-blue-600 mr-2"></i>
+                All Workouts
+            </h1>
+            <p class="text-sm sm:text-base text-gray-600 mb-4">Complete workout history from your training log</p>
+            
+            <!-- Navigation -->
+            <div class="flex flex-wrap justify-center gap-3 mb-6">
+                <a href="index.html" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+                    <i class="fas fa-home mr-2"></i>
+                    Home
+                </a>
+                <a href="data-exploration.html" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg transition-colors">
+                    <i class="fas fa-chart-bar mr-2"></i>
+                    Data Exploration
+                </a>
+                <a href="workout-history.html" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors">
+                    <i class="fas fa-history mr-2"></i>
+                    Workout History
+                </a>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 mb-6">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">
+                <i class="fas fa-filter mr-2 text-gray-600"></i>
+                Filter Workouts
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Intensity Filter -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Intensity</label>
+                    <select id="intensityFilter" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option value="">All Intensities</option>
+                        <option value="lower">Lower</option>
+                        <option value="normal">Normal</option>
+                        <option value="higher">Higher</option>
+                    </select>
+                </div>
+                
+                <!-- Type Filter -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Type</label>
+                    <select id="typeFilter" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option value="">All Types</option>
+                        <option value="Mixed">Mixed</option>
+                        <option value="EMOM">EMOM</option>
+                        <option value="Spartan">Spartan</option>
+                        <option value="Tabata">Tabata</option>
+                    </select>
+                </div>
+                
+                <!-- Date Range -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">From Date</label>
+                    <input type="date" id="fromDate" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">To Date</label>
+                    <input type="date" id="toDate" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-3 mt-4">
+                <button id="applyFilters" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+                    <i class="fas fa-search mr-2"></i>
+                    Apply Filters
+                </button>
+                <button id="clearFilters" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors">
+                    <i class="fas fa-times mr-2"></i>
+                    Clear Filters
+                </button>
+            </div>
+        </div>
+
+        <!-- Workouts Display -->
+        <div id="workoutsContainer" class="space-y-4">
+            <!-- Workouts will be loaded here -->
+        </div>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="text-center py-8">
+            <i class="fas fa-spinner fa-spin text-4xl text-blue-600 mb-4"></i>
+            <p class="text-gray-600">Loading workouts...</p>
+        </div>
+
+        <!-- No Results -->
+        <div id="noResults" class="text-center py-8 hidden">
+            <i class="fas fa-search text-4xl text-gray-400 mb-4"></i>
+            <p class="text-gray-600">No workouts found matching your filters.</p>
+        </div>
+    </div>
+
+    <!-- Workout Details Modal -->
+    <div id="workoutModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h2 id="modalTitle" class="text-xl font-semibold text-gray-800">Workout Details</h2>
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <div id="modalContent">
+                <!-- Workout details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="public/js/exercise-data.js"></script>
+    <script src="public/js/all-workouts-static.js"></script>
+    
+    <script>
+    // Keyboard shortcuts and accessibility improvements
+    document.addEventListener('keydown', function(e) {
+        // Escape to close modals
+        if (e.key === 'Escape') {
+            const modal = document.getElementById('workoutModal');
+            if (modal && !modal.classList.contains('hidden')) {
+                modal.classList.add('hidden');
+            }
+        }
+        
+        // Tab navigation improvements
+        if (e.key === 'Tab') {
+            const focusableElements = document.querySelectorAll(
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
+            
+            if (e.shiftKey && document.activeElement === firstElement) {
+                e.preventDefault();
+                lastElement.focus();
+            } else if (!e.shiftKey && document.activeElement === lastElement) {
+                e.preventDefault();
+                firstElement.focus();
+            }
+        }
+    });
+    
+    // Add focus indicators for better keyboard navigation
+    document.addEventListener('DOMContentLoaded', function() {
+        const style = document.createElement('style');
+        style.textContent = `
+            button:focus, input:focus, select:focus, textarea:focus {
+                outline: 2px solid #3b82f6;
+                outline-offset: 2px;
+            }
+        `;
+        document.head.appendChild(style);
+    });
+    </script>
+</body>
+</html>
