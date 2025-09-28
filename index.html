@@ -176,6 +176,10 @@
                            <i class="fas fa-list-alt mr-2"></i>
                            All Workouts
                        </a>
+                       <a href="exercise-list.html" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition-colors">
+                           <i class="fas fa-dumbbell mr-2"></i>
+                           Exercise List
+                       </a>
                    </div>
                </div>
     </div>
@@ -209,8 +213,8 @@
                     const summary = exerciseData.metadata.summary;
                     
                     // Update the statistics
-                    document.getElementById('totalWorkouts').textContent = summary.total_workouts || 141;
-                    document.getElementById('totalDays').textContent = summary.total_days || 117;
+                    document.getElementById('totalWorkouts').textContent = summary.total_workouts || 147;
+                    document.getElementById('totalDays').textContent = summary.total_days || 120;
                     document.getElementById('uniqueExercises').textContent = summary.total_unique_exercises || 659;
                     
                     // Update date range

@@ -27,8 +27,12 @@ def parse_workout_file(file_path):
     
     date = date_match.group(1)
     
+    
     # Split content into lines and clean up
     lines = [line.strip() for line in content.split('\n') if line.strip()]
+    
+    # Remove BOM and other invisible characters from lines
+    lines = [line.replace('\ufeff', '').replace('\u200b', '').strip() for line in lines if line.strip()]
     
     phases = []
     current_phase = None
@@ -40,15 +44,23 @@ def parse_workout_file(file_path):
             continue
             
         # Check if this line is a phase header
-        phase_indicators = ['Tabata', 'Spartan', 'Emom', 'EMOM', '3 x', '3x', '2 x', '2x', '4 x', '4x', '5 x', '5x', 'Chipper', 'Lunge matrix', 'Hip rotations', 'Ladder']
+        phase_indicators = ['Tabata', 'Spartan', 'Emom', 'EMOM', '3 x', '3x', '2 x', '2x', '4 x', '4x', '5 x', '5x', 'Chipper', 'Lunge matrix', 'Hip rotations', 'Ladder', 'Mobility stretches', 'Mobility', 'Stretches']
         is_phase_header = any(indicator in line for indicator in phase_indicators)
+        
+        # Special handling for workout types that might have timing on the next line
+        workout_types = ['Chipper', 'Spartan', 'Emom', 'EMOM', 'Tabata']
+        is_workout_type = any(workout_type in line for workout_type in workout_types)
         
         # Also check for timing patterns like "30/10x3", "25/5x3", "20/15/10", "Ladder 2-12", etc.
         timing_pattern = re.match(r'^(\d+/\d+x\d+|\d+/\d+/\d+|\d+\s*min|\d+\s*per\s*side|Ladder\s+\d+-\d+|\d+\s*sec)', line)
         
-        if is_phase_header or timing_pattern:
+        # Check for standalone exercise names that should be their own phase (like "Mobility stretches", "stretch")
+        standalone_exercises = ['Mobility stretches', 'Mobility', 'Stretches', 'stretch', 'Cool down', 'Cooldown', 'Finisher', "T's, w's, l's", "T's, w's, l's ", "Hip rotations"]
+        is_standalone = any(exercise in line for exercise in standalone_exercises)
+        
+        if is_phase_header or timing_pattern or is_standalone:
             # Save previous phase if it exists
-            if current_phase and current_exercises:
+            if current_phase:
                 phases.append({
                     'phase': current_phase,
                     'exercises': current_exercises
@@ -57,23 +69,44 @@ def parse_workout_file(file_path):
             # Start new phase
             current_phase = line
             current_exercises = []
+        elif is_workout_type and current_phase and timing_pattern:
+            # This is a timing specification for the current workout type
+            # Combine the workout type with the timing
+            current_phase = f"{current_phase} {line}"
         else:
-            # This is an exercise
-            if current_phase:
-                # Clean up exercise name
-                exercise = line.strip()
-                # Filter out very short entries and common non-exercise terms
-                if (exercise and len(exercise) > 2 and 
-                    not exercise.lower() in ['reps', 'rep', 'seconds', 'sec', 'minutes', 'min'] and
-                    not re.match(r'^\d+\s*(reps?|sec|min)$', exercise.lower())):
-                    current_exercises.append(exercise)
+            # Check if this line is actually a timing pattern that should start a new phase
+            timing_in_exercise = re.match(r'^(\d+/\d+\s+\d+/\d+|\d+/\d+x\d+|\d+/\d+/\d+|\d+\s*min|\d+\s*per\s*side|Ladder\s+\d+-\d+|\d+\s*sec)', line)
+            
+            if timing_in_exercise:
+                # This is a timing pattern that should start a new phase
+                # Save previous phase if it exists
+                if current_phase:
+                    phases.append({
+                        'phase': current_phase,
+                        'exercises': current_exercises
+                    })
+                
+                # Start new phase with this timing
+                current_phase = line
+                current_exercises = []
+            else:
+                # This is an exercise
+                if current_phase:
+                    # Clean up exercise name
+                    exercise = line.strip()
+                    # Filter out very short entries and common non-exercise terms
+                    if (exercise and len(exercise) > 2 and 
+                        not exercise.lower() in ['reps', 'rep', 'seconds', 'sec', 'minutes', 'min'] and
+                        not re.match(r'^\d+\s*(reps?|sec|min)$', exercise.lower())):
+                        current_exercises.append(exercise)
     
     # Don't forget the last phase
-    if current_phase and current_exercises:
+    if current_phase:
         phases.append({
             'phase': current_phase,
             'exercises': current_exercises
         })
+    
     
     if not phases:
         print(f"No phases found in {filename}")
@@ -122,15 +155,17 @@ def regenerate_workout_data():
             for phase in workout_data['phases']:
                 phase_name = phase['phase']
                 for exercise in phase['exercises']:
-                    # Simple categorization based on phase name
-                    if 'tabata' in phase_name.lower() or 'warmup' in phase_name.lower():
+                    # Improved categorization based on phase name and timing
+                    if any(keyword in phase_name.lower() for keyword in ['tabata', 'warmup', '30/10', '20/10']):
                         category = 'Warmup'
-                    elif 'cardio' in phase_name.lower() or 'bike' in phase_name.lower():
+                    elif any(keyword in phase_name.lower() for keyword in ['cardio', 'bike', 'ladder', 'chipper']):
                         category = 'Cardio'
-                    elif 'spartan' in phase_name.lower() or 'emom' in phase_name.lower():
+                    elif any(keyword in phase_name.lower() for keyword in ['spartan', 'emom', 'emom']):
                         category = 'Strength'
-                    elif '3 x' in phase_name or '2 x' in phase_name or '4 x' in phase_name:
+                    elif any(keyword in phase_name.lower() for keyword in ['3 x', '2 x', '4 x', '5 x', 'finisher']):
                         category = 'Accessory'
+                    elif any(keyword in phase_name.lower() for keyword in ['stretch', 'mobility', 'hip rotations', 't\'s, w\'s, l\'s', 'cool down', 'cooldown']):
+                        category = 'Recovery'
                     else:
                         category = 'Accessory'  # Default
                     
