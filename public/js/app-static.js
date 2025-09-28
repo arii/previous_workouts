@@ -532,11 +532,52 @@ function getTimingForPhase(phase) {
     return timingMap[phase] || '3 rounds, 30 sec rest';
 }
 
+// Function to separate combined exercises
+function separateCombinedExercises(exerciseName) {
+    // Look for patterns like "B. squat row 20 Floor press 15" or "Exercise1 10 Exercise2 15"
+    const combinedPattern = /^(.+?)\s+(\d+)\s+(.+?)\s+(\d+)$/;
+    const match = exerciseName.match(combinedPattern);
+    
+    if (match) {
+        const [, exercise1, reps1, exercise2, reps2] = match;
+        return [
+            { name: exercise1.trim(), reps: reps1 },
+            { name: exercise2.trim(), reps: reps2 }
+        ];
+    }
+    
+    // Look for single exercise with reps like "M.c. 10", "Drop squat 10", "Burpee 5"
+    const singlePattern = /^(.+?)\s+(\d+)$/;
+    const singleMatch = exerciseName.match(singlePattern);
+    
+    if (singleMatch) {
+        const [, exercise, reps] = singleMatch;
+        return [{ name: exercise.trim(), reps: reps }];
+    }
+    
+    // No pattern found, return as is
+    return [{ name: exerciseName, reps: null }];
+}
+
 // Display functions
 function displayGeneratedWorkout(workout) {
     currentWorkout = workout;
     
-    workoutStructure.innerHTML = workout.phases.map(phase => `
+    workoutStructure.innerHTML = workout.phases.map(phase => {
+        // Separate combined exercises and flatten the array
+        const separatedExercises = [];
+        phase.exercises.forEach(exercise => {
+            const separated = separateCombinedExercises(exercise.name);
+            separated.forEach(sep => {
+                separatedExercises.push({
+                    ...exercise,
+                    name: sep.name,
+                    reps: sep.reps || exercise.reps
+                });
+            });
+        });
+        
+        return `
         <div class="mb-3">
             <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-1.5 rounded-t-md">
                 <h3 class="text-xs font-semibold">${phase.name}</h3>
@@ -544,21 +585,20 @@ function displayGeneratedWorkout(workout) {
             </div>
             <div class="bg-white border border-gray-200 rounded-b-md p-2">
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-                    ${phase.exercises.map(exercise => `
+                    ${separatedExercises.map(exercise => `
                         <div class="bg-gray-50 rounded p-2 hover:shadow-sm transition-shadow">
                             <h4 class="font-medium text-gray-800 text-xs mb-1">${exercise.name}</h4>
                             <div class="text-xs text-gray-600 space-y-0.5">
-                                <div>${exercise.sets} sets</div>
-                                <div>${exercise.reps}</div>
+                                ${exercise.reps ? `<div class="font-medium">${exercise.reps}</div>` : ''}
                                 ${exercise.duration ? `<div>${exercise.duration}</div>` : ''}
-                                <div>${exercise.rest}</div>
                             </div>
                         </div>
                     `).join('')}
                 </div>
             </div>
         </div>
-    `).join('');
+    `;
+    }).join('');
 }
 
 function updateWorkoutInfo(workout, intensity, workoutType) {
@@ -638,14 +678,38 @@ function generateCopyFriendlyTable(workout) {
     // Create table headers (timing protocols)
     const headers = phases.map(phase => getSimplifiedTiming(phase)).join('</th><th>');
     
-    // Create table rows (exercises)
-    const maxExercises = Math.max(...phases.map(phase => phase.exercises.length));
+    // Create table rows (exercises) - handle separated exercises
+    const maxExercises = Math.max(...phases.map(phase => {
+        // Count separated exercises for each phase
+        let count = 0;
+        phase.exercises.forEach(exercise => {
+            const separated = separateCombinedExercises(exercise.name);
+            count += separated.length;
+        });
+        return count;
+    }));
+    
     let rows = '';
     
     for (let i = 0; i < maxExercises; i++) {
         const cells = phases.map(phase => {
-            const exercise = phase.exercises[i];
-            return exercise ? exercise.name : '';
+            // Get separated exercises for this phase
+            const separatedExercises = [];
+            phase.exercises.forEach(exercise => {
+                const separated = separateCombinedExercises(exercise.name);
+                separated.forEach(sep => {
+                    separatedExercises.push({
+                        name: sep.name,
+                        reps: sep.reps
+                    });
+                });
+            });
+            
+            const exercise = separatedExercises[i];
+            if (exercise) {
+                return exercise.reps ? `${exercise.name} (${exercise.reps} reps)` : exercise.name;
+            }
+            return '';
         }).join('</td><td>');
         
         rows += `<tr><td>${cells}</td></tr>`;
