@@ -789,7 +789,7 @@ function createWorkoutSummary(phases, intensity, workoutType) {
         
         const phaseNames = phases.map(phase => {
             const name = phase.name || phase.phase || 'Unknown';
-            return getSimplifiedTiming(phase);
+            return name; // Show actual phase names instead of simplified timing
         }).join(', ');
         
         // Get first few exercises from each phase
@@ -813,6 +813,8 @@ function createWorkoutSummary(phases, intensity, workoutType) {
             <div class="space-y-1">
                 <div class="flex items-center space-x-2">
                     <span class="font-medium text-gray-800">${totalExercises} exercises</span>
+                    <span class="text-gray-500 text-xs">•</span>
+                    <span class="text-gray-600 text-xs">${phases.length} phases</span>
                     <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${intensityBadge}">
                         ${safeIntensity.charAt(0).toUpperCase() + safeIntensity.slice(1)}
                     </span>
@@ -1112,13 +1114,17 @@ function showWorkoutDetailsModal(workout) {
                 </button>
             </div>
             
-            <div class="mb-4">
-                <div class="flex items-center space-x-4 text-sm text-gray-600">
-                    <span><strong>Intensity:</strong> ${workout.intensity || 'Normal'}</span>
-                    <span><strong>Type:</strong> ${workout.type || 'Mixed'}</span>
-                    <span><strong>Duration:</strong> ${workout.duration || 'N/A'}</span>
-                </div>
-            </div>
+                   <div class="mb-4">
+                       <div class="flex items-center space-x-4 text-sm text-gray-600">
+                           <span><strong>Intensity:</strong> ${workout.intensity || 'Normal'}</span>
+                           <span><strong>Type:</strong> ${workout.type || 'Mixed'}</span>
+                           <span><strong>Phases:</strong> ${workout.phases ? workout.phases.length : 0}</span>
+                       </div>
+                       <div class="text-xs text-gray-500 mt-1">
+                           <i class="fas fa-info-circle mr-1"></i>
+                           Historical workouts show the actual structure used on that date
+                       </div>
+                   </div>
             
             <div class="overflow-x-auto">
                 ${workoutTable}
