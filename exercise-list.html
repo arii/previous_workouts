@@ -5,34 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise List - Workout Generator</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="public/css/design-system.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="bg-gray-50 min-h-screen">
-    <div class="container mx-auto px-4 py-6">
+<body class="app-background">
+    <div class="app-container">
         <!-- Header -->
-        <div class="text-center mb-8">
-            <h1 class="text-3xl font-bold text-gray-800 mb-2">
-                <i class="fas fa-dumbbell text-blue-600 mr-2"></i>
+        <div class="app-header">
+            <h1>
+                <i class="fas fa-dumbbell"></i>
                 Exercise Database
             </h1>
-            <p class="text-gray-600">Browse and search all exercises from your workout history</p>
+            <p>Browse and search all exercises from your workout history</p>
         </div>
 
         <!-- Navigation -->
-        <div class="flex justify-center mb-6">
-            <div class="bg-white rounded-lg shadow-sm p-1">
-                <a href="index.html" class="px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors">
-                    <i class="fas fa-home mr-1"></i>Home
+        <div class="app-nav">
+            <div class="app-nav-container">
+                <a href="index.html" class="app-nav-link">
+                    <i class="fas fa-home"></i>Home
                 </a>
-                <a href="data-exploration.html" class="px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors">
-                    <i class="fas fa-chart-bar mr-1"></i>Data
+                <a href="data-exploration.html" class="app-nav-link">
+                    <i class="fas fa-chart-bar"></i>Data
                 </a>
-                <a href="workout-history.html" class="px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors">
-                    <i class="fas fa-history mr-1"></i>History
+                <a href="workout-history.html" class="app-nav-link">
+                    <i class="fas fa-history"></i>History
                 </a>
-                <span class="px-4 py-2 text-blue-600 font-medium">
-                    <i class="fas fa-list mr-1"></i>Exercises
-                </span>
+                <a href="all-workouts.html" class="app-nav-link">
+                    <i class="fas fa-list-alt"></i>All Workouts
+                </a>
+                <a href="exercise-list.html" class="app-nav-link active">
+                    <i class="fas fa-dumbbell"></i>Exercises
+                </a>
             </div>
         </div>
 
@@ -75,53 +79,51 @@
         </div>
 
         <!-- Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-            <div class="bg-white rounded-lg p-4 text-center">
-                <div class="text-2xl font-bold text-blue-600" id="totalCount">-</div>
-                <div class="text-sm text-gray-600">Total Exercises</div>
+        <div class="app-stats-grid">
+            <div class="app-stat-card">
+                <div class="app-stat-number text-blue-600" id="totalCount">-</div>
+                <div class="app-stat-label">Total Exercises</div>
             </div>
-            <div class="bg-white rounded-lg p-4 text-center">
-                <div class="text-2xl font-bold text-green-600" id="uniqueCount">-</div>
-                <div class="text-sm text-gray-600">Unique Exercises</div>
+            <div class="app-stat-card">
+                <div class="app-stat-number text-green-600" id="uniqueCount">-</div>
+                <div class="app-stat-label">Unique Exercises</div>
             </div>
-            <div class="bg-white rounded-lg p-4 text-center">
-                <div class="text-2xl font-bold text-purple-600" id="mostUsed">-</div>
-                <div class="text-sm text-gray-600">Most Used</div>
+            <div class="app-stat-card">
+                <div class="app-stat-number text-purple-600" id="mostUsed">-</div>
+                <div class="app-stat-label">Most Used</div>
             </div>
-            <div class="bg-white rounded-lg p-4 text-center">
-                <div class="text-2xl font-bold text-orange-600" id="categoriesCount">-</div>
-                <div class="text-sm text-gray-600">Categories</div>
+            <div class="app-stat-card">
+                <div class="app-stat-number text-orange-600" id="categoriesCount">-</div>
+                <div class="app-stat-label">Categories</div>
             </div>
         </div>
 
-        <!-- Exercise List -->
-        <div class="bg-white rounded-xl shadow-sm">
-            <div class="p-6 border-b border-gray-200">
-                <div class="flex justify-between items-center">
-                    <h2 class="text-lg font-semibold text-gray-800">Exercises</h2>
-                    <div class="text-sm text-gray-600">
-                        Showing <span id="showingCount">0</span> exercises
-                    </div>
-                </div>
+        <!-- Showing Count -->
+        <div class="text-center mb-4">
+            <div class="text-sm text-gray-600">
+                Showing <span id="showingCount" class="font-semibold">0</span> exercises
             </div>
-            
-            <div id="exerciseList" class="divide-y divide-gray-200">
-                <!-- Exercises will be loaded here -->
-            </div>
-            
-            <div id="noResults" class="hidden p-8 text-center text-gray-500">
-                <i class="fas fa-search text-4xl mb-4"></i>
-                <p class="text-lg">No exercises found matching your search</p>
-            </div>
+        </div>
+
+        <!-- Exercise Grid -->
+        <div id="exerciseGrid" class="space-y-8">
+            <!-- Exercise categories will be loaded here -->
+        </div>
+        
+        <div id="noResults" class="hidden p-8 text-center text-gray-500">
+            <i class="fas fa-search text-4xl mb-4"></i>
+            <p class="text-lg">No exercises found matching your search</p>
         </div>
     </div>
 
     <!-- Exercise Detail Modal -->
-    <div id="exerciseModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div id="exerciseModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" 
+         role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
         <div class="bg-white rounded-xl p-6 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
             <div class="flex justify-between items-center mb-4">
                 <h3 id="modalTitle" class="text-xl font-semibold text-gray-800">Exercise Details</h3>
-                <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700 app-focus-visible" 
+                        aria-label="Close exercise details">
                     <i class="fas fa-times text-xl"></i>
                 </button>
             </div>

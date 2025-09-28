@@ -27,15 +27,39 @@ function setupEventListeners() {
     const closeModal = document.getElementById('closeModal');
     
     if (closeModal) {
-        closeModal.addEventListener('click', () => modal.classList.add('hidden'));
+        closeModal.addEventListener('click', closeModalHandler);
+        closeModal.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                closeModalHandler();
+            }
+        });
     }
     
     if (modal) {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
-                modal.classList.add('hidden');
+                closeModalHandler();
             }
         });
+        
+        // Handle Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModalHandler();
+            }
+        });
+    }
+    
+    function closeModalHandler() {
+        modal.classList.add('hidden');
+        modal.setAttribute('aria-hidden', 'true');
+        // Return focus to the element that opened the modal
+        const lastFocusedElement = document.querySelector('[data-last-focused]');
+        if (lastFocusedElement) {
+            lastFocusedElement.focus();
+            lastFocusedElement.removeAttribute('data-last-focused');
+        }
     }
 }
 
@@ -161,17 +185,17 @@ function applyFilters() {
 }
 
 function displayExercises() {
-    const exerciseList = document.getElementById('exerciseList');
+    const exerciseGrid = document.getElementById('exerciseGrid');
     const showingCount = document.getElementById('showingCount');
     const noResults = document.getElementById('noResults');
 
-    if (!exerciseList) return;
+    if (!exerciseGrid) return;
 
     // Update count
     if (showingCount) showingCount.textContent = filteredExercises.length;
 
     // Clear existing content
-    exerciseList.innerHTML = '';
+    exerciseGrid.innerHTML = '';
 
     if (filteredExercises.length === 0) {
         if (noResults) noResults.classList.remove('hidden');
@@ -180,58 +204,114 @@ function displayExercises() {
 
     if (noResults) noResults.classList.add('hidden');
 
-    // Create exercise items
+    // Group exercises by category
+    const exercisesByCategory = {};
     filteredExercises.forEach(exercise => {
-        const exerciseItem = createExerciseItem(exercise);
-        exerciseList.appendChild(exerciseItem);
+        if (!exercisesByCategory[exercise.category]) {
+            exercisesByCategory[exercise.category] = [];
+        }
+        exercisesByCategory[exercise.category].push(exercise);
+    });
+
+    // Create category sections
+    Object.entries(exercisesByCategory).forEach(([category, exercises]) => {
+        const categorySection = createCategorySection(category, exercises);
+        exerciseGrid.appendChild(categorySection);
     });
 }
 
-function createExerciseItem(exercise) {
-    const item = document.createElement('div');
-    item.className = 'p-4 hover:bg-gray-50 cursor-pointer transition-colors';
+function createCategorySection(category, exercises) {
+    const section = document.createElement('div');
     
-    const categoryColors = {
-        'Warmup': 'bg-orange-100 text-orange-800',
-        'Cardio': 'bg-red-100 text-red-800',
-        'Strength': 'bg-blue-100 text-blue-800',
-        'Accessory': 'bg-purple-100 text-purple-800',
-        'Recovery': 'bg-green-100 text-green-800'
-    };
+    const categoryInfo = getCategoryInfo(category);
+    
+    section.innerHTML = `
+        <div class="mb-4">
+            <h2 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                <span class="w-4 h-4 rounded-full mr-3 ${categoryInfo.color}"></span>
+                ${category}
+                <span class="ml-2 text-sm font-normal text-gray-500">(${exercises.length} exercises)</span>
+            </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
+            ${exercises.map(exercise => createExerciseCard(exercise)).join('')}
+        </div>
+    `;
+    
+    return section;
+}
 
-    const categoryClass = categoryColors[exercise.category] || 'bg-gray-100 text-gray-800';
+function createExerciseCard(exercise) {
+    const intensity = getExerciseIntensity(exercise);
+    const intensityColors = getIntensityColors(intensity);
     const mostRecentDate = exercise.dates[0] ? new Date(exercise.dates[0]).toLocaleDateString() : 'Unknown';
-
-    item.innerHTML = `
-        <div class="flex justify-between items-center">
-            <div class="flex-1">
-                <h3 class="font-semibold text-gray-800 mb-1">${exercise.name}</h3>
-                <div class="flex items-center space-x-3 text-sm text-gray-600">
-                    <span class="px-2 py-1 rounded-full text-xs font-medium ${categoryClass}">
-                        ${exercise.category}
+    const safeExerciseName = exercise.name.replace(/'/g, "\\'");
+    
+    return `
+        <div class="bg-white rounded-lg shadow-sm border-l-4 ${intensityColors.border} hover:shadow-md transition-all duration-200 cursor-pointer app-focus-visible" 
+             onclick="viewExerciseDetails('${safeExerciseName}')"
+             role="button"
+             tabindex="0"
+             aria-label="View details for ${exercise.name} exercise"
+             onkeydown="handleCardKeydown(event, '${safeExerciseName}')">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-semibold text-gray-800 text-sm leading-tight">${exercise.name}</h3>
+                    <span class="text-xs px-2 py-1 rounded-full ${intensityColors.bg} ${intensityColors.text}" 
+                          aria-label="Intensity level: ${intensity}">
+                        ${intensity}
                     </span>
-                    <span>Used ${exercise.frequency} time${exercise.frequency !== 1 ? 's' : ''}</span>
-                    <span>•</span>
-                    <span>Last: ${mostRecentDate}</span>
                 </div>
-            </div>
-            <div class="ml-4">
-                <button class="text-blue-600 hover:text-blue-800 p-2" onclick="viewExerciseDetails('${exercise.name}')">
-                    <i class="fas fa-eye"></i>
-                </button>
+                <div class="space-y-1 text-xs text-gray-600">
+                    <div class="flex justify-between">
+                        <span>Used:</span>
+                        <span class="font-medium" aria-label="Used ${exercise.frequency} time${exercise.frequency !== 1 ? 's' : ''}">${exercise.frequency} time${exercise.frequency !== 1 ? 's' : ''}</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Last:</span>
+                        <span class="font-medium" aria-label="Last used on ${mostRecentDate}">${mostRecentDate}</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>Phases:</span>
+                        <span class="font-medium" aria-label="Used in ${exercise.phases.length} different phases">${exercise.phases.length}</span>
+                    </div>
+                </div>
             </div>
         </div>
     `;
+}
 
-    // Make entire item clickable
-    item.addEventListener('click', function(e) {
-        if (e.target.tagName === 'BUTTON' || e.target.tagName === 'I') {
-            return;
-        }
-        viewExerciseDetails(exercise.name);
-    });
+function getCategoryInfo(category) {
+    const categoryMap = {
+        'Warmup': { color: 'bg-orange-500', icon: 'fas fa-fire' },
+        'Cardio': { color: 'bg-red-500', icon: 'fas fa-heartbeat' },
+        'Strength': { color: 'bg-blue-500', icon: 'fas fa-dumbbell' },
+        'Accessory': { color: 'bg-purple-500', icon: 'fas fa-plus' },
+        'Recovery': { color: 'bg-green-500', icon: 'fas fa-leaf' }
+    };
+    return categoryMap[category] || { color: 'bg-gray-500', icon: 'fas fa-question' };
+}
 
-    return item;
+function getExerciseIntensity(exercise) {
+    // Determine intensity based on frequency and recency
+    const frequency = exercise.frequency;
+    const daysSinceLastUse = exercise.dates[0] ? 
+        Math.floor((new Date() - new Date(exercise.dates[0])) / (1000 * 60 * 60 * 24)) : 999;
+    
+    if (frequency >= 10 && daysSinceLastUse <= 30) return 'High';
+    if (frequency >= 5 && daysSinceLastUse <= 60) return 'Medium';
+    if (frequency >= 2 && daysSinceLastUse <= 90) return 'Low';
+    return 'Rare';
+}
+
+function getIntensityColors(intensity) {
+    const colorMap = {
+        'High': { bg: 'bg-green-100', text: 'text-green-800', border: 'border-green-500' },
+        'Medium': { bg: 'bg-yellow-100', text: 'text-yellow-800', border: 'border-yellow-500' },
+        'Low': { bg: 'bg-orange-100', text: 'text-orange-800', border: 'border-orange-500' },
+        'Rare': { bg: 'bg-gray-100', text: 'text-gray-800', border: 'border-gray-400' }
+    };
+    return colorMap[intensity] || colorMap['Rare'];
 }
 
 function viewExerciseDetails(exerciseName) {
@@ -243,6 +323,12 @@ function viewExerciseDetails(exerciseName) {
     const modalContent = document.getElementById('modalContent');
 
     if (!modal || !modalTitle || !modalContent) return;
+
+    // Store the currently focused element
+    const currentlyFocused = document.activeElement;
+    if (currentlyFocused) {
+        currentlyFocused.setAttribute('data-last-focused', 'true');
+    }
 
     modalTitle.textContent = exercise.name;
     
@@ -296,6 +382,13 @@ function viewExerciseDetails(exerciseName) {
     `;
 
     modal.classList.remove('hidden');
+    modal.setAttribute('aria-hidden', 'false');
+    
+    // Focus the close button for keyboard navigation
+    const closeButton = document.getElementById('closeModal');
+    if (closeButton) {
+        closeButton.focus();
+    }
 }
 
 // Utility function for debouncing
@@ -310,3 +403,14 @@ function debounce(func, wait) {
         timeout = setTimeout(later, wait);
     };
 }
+
+// Keyboard navigation for exercise cards
+function handleCardKeydown(event, exerciseName) {
+    if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        viewExerciseDetails(exerciseName);
+    }
+}
+
+// Global function for keyboard navigation
+window.handleCardKeydown = handleCardKeydown;
