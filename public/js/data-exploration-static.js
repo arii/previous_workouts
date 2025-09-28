@@ -183,7 +183,7 @@ function searchExercises(query) {
         <div class="text-sm text-gray-600 mb-2">Found ${uniqueResults.length} exercise${uniqueResults.length !== 1 ? 's' : ''}:</div>
         <div class="space-y-2 max-h-64 overflow-y-auto">
             ${uniqueResults.slice(0, 20).map(exercise => `
-                <div class="bg-gray-50 rounded-lg p-3">
+                <div class="bg-gray-50 rounded-lg p-3 cursor-pointer hover:bg-gray-100 transition-colors" onclick="showWorkoutFromDate('${exercise.date}')">
                     <div class="font-medium text-gray-800">${exercise.name}</div>
                     <div class="text-sm text-gray-600">
                         <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs mr-2">${exercise.category}</span>
@@ -195,6 +195,58 @@ function searchExercises(query) {
         </div>
         ${uniqueResults.length > 20 ? `<div class="text-sm text-gray-500 text-center mt-2">... and ${uniqueResults.length - 20} more</div>` : ''}
     `;
+}
+
+// Show workout from specific date
+function showWorkoutFromDate(date) {
+    const exerciseData = window.EXERCISE_DATA;
+    const dailyWorkouts = exerciseData.daily_workouts || {};
+    
+    if (!dailyWorkouts[date]) {
+        alert('No workout found for this date');
+        return;
+    }
+    
+    const workouts = dailyWorkouts[date];
+    
+    // Create modal to display the workout
+    const modal = document.createElement('div');
+    modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+    modal.innerHTML = `
+        <div class="bg-white rounded-lg shadow-xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Workout from ${formatDate(date)}</h3>
+                    <button onclick="this.closest('.fixed').remove()" class="text-gray-400 hover:text-gray-600">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="space-y-4">
+                    ${workouts.map((workout, index) => `
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <h4 class="font-medium text-gray-800 mb-3">Workout ${index + 1}</h4>
+                            <div class="space-y-3">
+                                ${workout.phases.map(phase => `
+                                    <div class="bg-gray-50 rounded-lg p-3">
+                                        <h5 class="font-medium text-gray-700 mb-2">${phase.phase}</h5>
+                                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+                                            ${phase.exercises.map(exercise => `
+                                                <div class="bg-white rounded p-2 text-sm">
+                                                    ${exercise}
+                                                </div>
+                                            `).join('')}
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
 }
 
 // Helper function to format dates
