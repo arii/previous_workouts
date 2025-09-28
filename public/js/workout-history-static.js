@@ -679,14 +679,13 @@ function createWorkoutTableRow(workout) {
     
     row.className = `${intensityColors[intensity.toLowerCase()] || intensityColors.normal} transition-colors`;
     
-    const date = new Date(workout.date || workout.created_at);
-    // Ensure we're using the correct date by adding timezone offset
-    const adjustedDate = new Date(date.getTime() + date.getTimezoneOffset() * 60000);
-    const formattedDate = adjustedDate.toLocaleDateString('en-US', {
-        month: 'short',
-        day: 'numeric',
-        year: 'numeric'
-    });
+           const date = new Date(workout.date || workout.created_at);
+           // Fix timezone issue - don't adjust the date, use it as-is
+           const formattedDate = date.toLocaleDateString('en-US', {
+               month: 'short',
+               day: 'numeric',
+               year: 'numeric'
+           });
     
     const workoutTitle = generateWorkoutTitle(workout);
     const phaseCount = workout.phases ? workout.phases.length : 0;
@@ -1099,11 +1098,12 @@ function showWorkoutDetailsModal(workout) {
     modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
     
     const workoutTable = createGoogleDocsStyleTable(workout.phases || []);
-    const formattedDate = new Date(workout.date || workout.created_at).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    });
+           const date = new Date(workout.date || workout.created_at);
+           const formattedDate = date.toLocaleDateString('en-US', {
+               year: 'numeric',
+               month: 'long',
+               day: 'numeric'
+           });
     
     modal.innerHTML = `
         <div class="bg-white rounded-xl p-6 max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">

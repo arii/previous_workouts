@@ -135,8 +135,7 @@ function displayWorkouts(workouts) {
 
 function createWorkoutCard(workout) {
     const date = new Date(workout.date);
-    const adjustedDate = new Date(date.getTime() + date.getTimezoneOffset() * 60000);
-    const formattedDate = adjustedDate.toLocaleDateString('en-US', {
+    const formattedDate = date.toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
         day: 'numeric'
@@ -219,8 +218,7 @@ function viewWorkoutDetails(workoutId) {
     const modalContent = document.getElementById('modalContent');
     
     const date = new Date(workout.date);
-    const adjustedDate = new Date(date.getTime() + date.getTimezoneOffset() * 60000);
-    const formattedDate = adjustedDate.toLocaleDateString('en-US', {
+    const formattedDate = date.toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
         day: 'numeric'
