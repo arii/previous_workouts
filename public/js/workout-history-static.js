@@ -611,8 +611,7 @@ function displayWorkouts(workouts, filter) {
     thead.innerHTML = `
         <tr>
             <th class="px-3 py-3 text-left font-semibold text-gray-700 text-xs uppercase tracking-wide">Date</th>
-            <th class="px-3 py-3 text-center font-semibold text-gray-700 text-xs uppercase tracking-wide">Intensity</th>
-            <th class="px-3 py-3 text-center font-semibold text-gray-700 text-xs uppercase tracking-wide">Type</th>
+            <th class="px-3 py-3 text-left font-semibold text-gray-700 text-xs uppercase tracking-wide">Workout Summary</th>
             <th class="px-3 py-3 text-center font-semibold text-gray-700 text-xs uppercase tracking-wide">View</th>
         </tr>
     `;
@@ -629,10 +628,6 @@ function displayWorkouts(workouts, filter) {
         try {
             const row = createWorkoutTableRow(workout);
             tbody.appendChild(row);
-            // Add the workout detail row after the main row
-            if (row.workoutDetailRow) {
-                tbody.appendChild(row.workoutDetailRow);
-            }
         } catch (error) {
             console.error('Error creating workout row:', error, workout);
         }
@@ -718,20 +713,15 @@ function createWorkoutTableRow(workout) {
         </div>
     `;
     
-    // Create Google Docs style workout display
-    const workoutTable = createGoogleDocsStyleTable(phases);
+    // Create a useful workout summary
+    const workoutSummary = createWorkoutSummary(phases, intensity, workout.type);
     
     row.innerHTML = `
         <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">
             ${formattedDate}
         </td>
-        <td class="px-3 py-2 text-center">
-            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${intensityBadge}">
-                ${intensity.charAt(0).toUpperCase() + intensity.slice(1)}
-            </span>
-        </td>
-        <td class="px-3 py-2 text-center text-sm text-gray-900">
-            ${workout.type || 'Mixed'}
+        <td class="px-3 py-2 text-sm text-gray-900">
+            ${workoutSummary}
         </td>
         <td class="px-3 py-2 text-center">
             <button onclick="viewWorkoutDetails('${workout.id || workout.date}')" 
@@ -741,24 +731,50 @@ function createWorkoutTableRow(workout) {
         </td>
     `;
     
-    // Add the workout table as a collapsible row
-    const workoutRow = document.createElement('tr');
-    workoutRow.className = 'hidden workout-detail-row';
-    workoutRow.innerHTML = `
-        <td colspan="4" class="px-3 py-4 bg-gray-50">
-            ${workoutTable}
-        </td>
-    `;
-    
-    // Add click handler to toggle workout details
-    row.addEventListener('click', function() {
-        workoutRow.classList.toggle('hidden');
-    });
-    
-    // Store reference to workout row
-    row.workoutDetailRow = workoutRow;
-    
     return row;
+}
+
+// Create a useful workout summary for the table
+function createWorkoutSummary(phases, intensity, workoutType) {
+    if (!phases || phases.length === 0) {
+        return '<span class="text-gray-500">No workout data</span>';
+    }
+    
+    try {
+        const totalExercises = phases.reduce((sum, phase) => sum + (phase.exercises ? getExerciseNames(phase.exercises).length : 0), 0);
+        const phaseNames = phases.map(phase => getSimplifiedTiming(phase)).join(', ');
+        
+        // Get first few exercises from each phase
+        const exercisePreview = phases.slice(0, 2).map(phase => {
+            const exerciseNames = getExerciseNames(phase.exercises);
+            return exerciseNames.slice(0, 2).join(', ');
+        }).join(' | ');
+        
+        const intensityBadgeColors = {
+            'lower': 'bg-green-100 text-green-800',
+            'normal': 'bg-blue-100 text-blue-800',
+            'higher': 'bg-red-100 text-red-800'
+        };
+        
+        const intensityBadge = intensityBadgeColors[intensity.toLowerCase()] || intensityBadgeColors.normal;
+        
+        return `
+            <div class="space-y-1">
+                <div class="flex items-center space-x-2">
+                    <span class="font-medium text-gray-800">${totalExercises} exercises</span>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${intensityBadge}">
+                        ${intensity.charAt(0).toUpperCase() + intensity.slice(1)}
+                    </span>
+                    <span class="text-gray-500 text-xs">${workoutType || 'Mixed'}</span>
+                </div>
+                <div class="text-gray-600 text-xs">${phaseNames}</div>
+                <div class="text-gray-500 text-xs">${exercisePreview}</div>
+            </div>
+        `;
+    } catch (error) {
+        console.error('Error creating workout summary:', error);
+        return '<span class="text-red-500">Error loading workout</span>';
+    }
 }
 
 // Create Google Docs style table with timing as headers and exercises vertically
@@ -1007,9 +1023,12 @@ function createWorkoutCard(workout) {
 
 // View workout details
 function viewWorkoutDetails(workoutId) {
-    const workout = allWorkouts.find(w => w.id === workoutId);
+    const workout = allWorkouts.find(w => w.id === workoutId || w.date === workoutId);
     if (workout) {
         showWorkoutDetailsModal(workout);
+    } else {
+        console.error('Workout not found:', workoutId);
+        alert('Workout not found');
     }
 }
 
@@ -1017,55 +1036,34 @@ function viewWorkoutDetails(workoutId) {
 function showWorkoutDetailsModal(workout) {
     const modal = document.createElement('div');
     modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+    
+    const workoutTable = createGoogleDocsStyleTable(workout.phases || []);
+    const formattedDate = new Date(workout.date || workout.created_at).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+    
     modal.innerHTML = `
-        <div class="bg-white rounded-xl p-8 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-semibold text-gray-800">${workout.name}</h2>
+        <div class="bg-white rounded-xl p-6 max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-semibold text-gray-800">Workout from ${formattedDate}</h2>
                 <button onclick="this.closest('.fixed').remove()" class="text-gray-500 hover:text-gray-700">
                     <i class="fas fa-times text-xl"></i>
                 </button>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <div class="bg-gray-50 p-4 rounded-lg">
-                    <h4 class="font-semibold text-gray-700 mb-2">Workout Info</h4>
-                    <p class="text-sm text-gray-600"><strong>Date:</strong> ${formatDate(workout.date)}</p>
-                    <p class="text-sm text-gray-600"><strong>Duration:</strong> ${workout.duration}</p>
-                    ${workout.notes ? `<p class="text-sm text-gray-600"><strong>Notes:</strong> ${workout.notes}</p>` : ''}
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg">
-                    <h4 class="font-semibold text-gray-700 mb-2">Statistics</h4>
-                    <p class="text-sm text-gray-600"><strong>Total Exercises:</strong> ${workout.exercise_count}</p>
-                    <p class="text-sm text-gray-600"><strong>Phases:</strong> ${workout.phases ? workout.phases.length : 0}</p>
+            <div class="mb-4">
+                <div class="flex items-center space-x-4 text-sm text-gray-600">
+                    <span><strong>Intensity:</strong> ${workout.intensity || 'Normal'}</span>
+                    <span><strong>Type:</strong> ${workout.type || 'Mixed'}</span>
+                    <span><strong>Duration:</strong> ${workout.duration || 'N/A'}</span>
                 </div>
             </div>
             
-            ${workout.phases && workout.phases.length > 0 ? `
-                <div>
-                    <h4 class="font-semibold text-gray-700 mb-3">Workout Phases</h4>
-                    <div class="space-y-4">
-                        ${workout.phases.map(phase => `
-                            <div class="bg-gray-50 rounded-lg p-4">
-                                <h5 class="font-semibold text-gray-800 mb-2">${phase.name}</h5>
-                                <p class="text-sm text-gray-600 mb-3">${phase.timing}</p>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-                                    ${phase.exercises.map(exercise => `
-                                        <div class="bg-white border border-gray-200 p-3 rounded">
-                                            <h6 class="font-medium text-gray-800">${exercise.name}</h6>
-                                            <div class="text-sm text-gray-600">
-                                                ${exercise.sets ? `Sets: ${exercise.sets}` : ''}
-                                                ${exercise.reps ? ` | Reps: ${exercise.reps}` : ''}
-                                                ${exercise.duration ? ` | Duration: ${exercise.duration}` : ''}
-                                                ${exercise.rest ? ` | Rest: ${exercise.rest}` : ''}
-                                            </div>
-                                        </div>
-                                    `).join('')}
-                                </div>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-            ` : '<p class="text-gray-500 text-center py-4">No exercises found for this workout.</p>'}
+            <div class="overflow-x-auto">
+                ${workoutTable}
+            </div>
         </div>
     `;
     
