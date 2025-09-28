@@ -296,7 +296,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_106331_2025-04-04_14-58-51.txt"
       },
       {
-        "exercise": "Dd Toe Touch",
+        "exercise": "Dumbbell Toe Touch",
         "phase": "3 min ramp",
         "date": "2025-04-04",
         "filename": "revision_106331_2025-04-04_14-58-51.txt"
@@ -362,12 +362,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_97582_2024-07-19_14-49-39.txt"
       },
       {
-        "exercise": "10",
-        "phase": "3 min ramp",
-        "date": "2024-07-19",
-        "filename": "revision_97582_2024-07-19_14-49-39.txt"
-      },
-      {
         "exercise": "Sh. Tap 10",
         "phase": "3 min ramp",
         "date": "2024-07-19",
@@ -375,12 +369,6 @@ window.EXERCISE_DATA = {
       },
       {
         "exercise": "March Bridge",
-        "phase": "3 min ramp",
-        "date": "2024-07-19",
-        "filename": "revision_97582_2024-07-19_14-49-39.txt"
-      },
-      {
-        "exercise": "10",
         "phase": "3 min ramp",
         "date": "2024-07-19",
         "filename": "revision_97582_2024-07-19_14-49-39.txt"
@@ -466,7 +454,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_103384_2024-11-22_15-59-55.txt"
       },
       {
-        "exercise": "Dumbbell Bent Row 15",
+        "exercise": "Dumbbell Bent Row",
         "phase": "Emom",
         "date": "2024-11-22",
         "filename": "revision_103384_2024-11-22_15-59-55.txt"
@@ -538,13 +526,13 @@ window.EXERCISE_DATA = {
         "filename": "revision_107528_2025-05-05_14-53-11.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "Tabata",
         "date": "2024-10-04",
         "filename": "revision_100576_2024-10-04_14-58-31.txt"
       },
       {
-        "exercise": "Band Kickbacks",
+        "exercise": "Band Kickback",
         "phase": "Tabata",
         "date": "2024-10-04",
         "filename": "revision_100576_2024-10-04_14-58-31.txt"
@@ -586,7 +574,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_100576_2024-10-04_14-58-31.txt"
       },
       {
-        "exercise": "21’S",
+        "exercise": "21\u2019S",
         "phase": "Emom",
         "date": "2024-10-04",
         "filename": "revision_100576_2024-10-04_14-58-31.txt"
@@ -712,31 +700,13 @@ window.EXERCISE_DATA = {
         "filename": "revision_105942_2025-03-24_14-46-45.txt"
       },
       {
-        "exercise": "21",
-        "phase": "Emom",
-        "date": "2025-03-24",
-        "filename": "revision_105942_2025-03-24_14-46-45.txt"
-      },
-      {
         "exercise": "Dumbbell Tricep",
         "phase": "Emom",
         "date": "2025-03-24",
         "filename": "revision_105942_2025-03-24_14-46-45.txt"
       },
       {
-        "exercise": "21",
-        "phase": "Emom",
-        "date": "2025-03-24",
-        "filename": "revision_105942_2025-03-24_14-46-45.txt"
-      },
-      {
         "exercise": "Jump Squat",
-        "phase": "Emom",
-        "date": "2025-03-24",
-        "filename": "revision_105942_2025-03-24_14-46-45.txt"
-      },
-      {
-        "exercise": "21",
         "phase": "Emom",
         "date": "2025-03-24",
         "filename": "revision_105942_2025-03-24_14-46-45.txt"
@@ -820,7 +790,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_100837_2024-10-07_14-54-27.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "Tabata",
         "date": "2025-02-26",
         "filename": "revision_105503_2025-02-26_15-50-13.txt"
@@ -940,7 +910,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_105830_2025-03-12_14-59-21.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "Tabata",
         "date": "2024-10-23",
         "filename": "revision_101540_2024-10-23_14-59-38.txt"
@@ -994,25 +964,19 @@ window.EXERCISE_DATA = {
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "Tabata",
         "date": "2025-09-24",
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
       },
       {
-        "exercise": "Band Seal",
+        "exercise": "Band Seal Jack",
         "phase": "Tabata",
         "date": "2025-09-24",
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
       },
       {
-        "exercise": "Band Jump Sq",
-        "phase": "Tabata",
-        "date": "2025-09-24",
-        "filename": "revision_109592_2025-09-24_14-27-12.txt"
-      },
-      {
-        "exercise": "40/30/20 (15 Off)",
+        "exercise": "Band Jump Squat",
         "phase": "Tabata",
         "date": "2025-09-24",
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
@@ -1024,19 +988,19 @@ window.EXERCISE_DATA = {
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
       },
       {
-        "exercise": "Band Swims",
+        "exercise": "Band Swim",
         "phase": "Tabata",
         "date": "2025-09-24",
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
       },
       {
-        "exercise": "Dumbbell Sumo Dl",
+        "exercise": "Dumbbell Sumo Deadlift",
         "phase": "Tabata",
         "date": "2025-09-24",
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
       },
       {
-        "exercise": "Band Puncheses",
+        "exercise": "Band Punches",
         "phase": "Tabata",
         "date": "2025-09-24",
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
@@ -1054,25 +1018,25 @@ window.EXERCISE_DATA = {
         "filename": "revision_109591_2025-09-22_14-29-59.txt"
       },
       {
-        "exercise": "Band Kick Back",
+        "exercise": "Band Kickback",
         "phase": "Tabata",
         "date": "2025-09-22",
         "filename": "revision_109591_2025-09-22_14-29-59.txt"
       },
       {
-        "exercise": "Band Clam L",
+        "exercise": "Band Clamshell Left",
         "phase": "Tabata",
         "date": "2025-09-22",
         "filename": "revision_109591_2025-09-22_14-29-59.txt"
       },
       {
-        "exercise": "Clam R",
+        "exercise": "Band Clamshell Right",
         "phase": "Tabata",
         "date": "2025-09-22",
         "filename": "revision_109591_2025-09-22_14-29-59.txt"
       },
       {
-        "exercise": "F Lunge",
+        "exercise": "Forward Lunge",
         "phase": "Tabata",
         "date": "2025-01-03",
         "filename": "revision_104138_2025-01-03_15-55-42.txt"
@@ -1270,7 +1234,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_108841_2025-07-23_14-18-34.txt"
       },
       {
-        "exercise": "1 ½ Squat",
+        "exercise": "1 \u00bd Squat",
         "phase": "Tabata",
         "date": "2025-07-23",
         "filename": "revision_108841_2025-07-23_14-18-34.txt"
@@ -1318,7 +1282,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_108848_2025-08-06_14-53-17.txt"
       },
       {
-        "exercise": "Dumbbell Bent Row 15",
+        "exercise": "Dumbbell Bent Row",
         "phase": "Emom",
         "date": "2025-08-06",
         "filename": "revision_108848_2025-08-06_14-53-17.txt"
@@ -1438,7 +1402,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_107988_2025-05-28_14-34-54.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "Tabata",
         "date": "2025-05-28",
         "filename": "revision_107988_2025-05-28_14-34-54.txt"
@@ -1642,7 +1606,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_108668_2025-07-07_14-55-39.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "Tabata",
         "date": "2024-11-27",
         "filename": "revision_103675_2024-11-27_16-40-37.txt"
@@ -1654,7 +1618,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_103675_2024-11-27_16-40-37.txt"
       },
       {
-        "exercise": "Band Kickbacks",
+        "exercise": "Band Kickback",
         "phase": "Tabata",
         "date": "2024-11-27",
         "filename": "revision_103675_2024-11-27_16-40-37.txt"
@@ -1690,7 +1654,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_103675_2024-11-27_16-40-37.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "Tabata",
         "date": "2025-04-23",
         "filename": "revision_106906_2025-04-23_15-00-35.txt"
@@ -1978,12 +1942,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_101255_2024-10-16_14-54-57.txt"
       },
       {
-        "exercise": "50",
-        "phase": "Emom",
-        "date": "2024-10-16",
-        "filename": "revision_101255_2024-10-16_14-54-57.txt"
-      },
-      {
         "exercise": "Glute Bridges Pull 20",
         "phase": "Emom",
         "date": "2024-08-19",
@@ -2033,12 +1991,6 @@ window.EXERCISE_DATA = {
       },
       {
         "exercise": "Ladder",
-        "phase": "Tabata",
-        "date": "2025-08-25",
-        "filename": "revision_108857_2025-08-25_14-56-11.txt"
-      },
-      {
-        "exercise": "12-4",
         "phase": "Tabata",
         "date": "2025-08-25",
         "filename": "revision_108857_2025-08-25_14-56-11.txt"
@@ -2110,7 +2062,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_108855_2025-08-20_14-43-50.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "Tabata",
         "date": "2024-10-30",
         "filename": "revision_101720_2024-10-30_14-58-57.txt"
@@ -2122,7 +2074,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_101720_2024-10-30_14-58-57.txt"
       },
       {
-        "exercise": "Band Kickbacks",
+        "exercise": "Band Kickback",
         "phase": "Tabata",
         "date": "2024-10-30",
         "filename": "revision_101720_2024-10-30_14-58-57.txt"
@@ -2272,7 +2224,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_99757_2024-09-13_15-32-12.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "Tabata",
         "date": "2024-09-13",
         "filename": "revision_99757_2024-09-13_15-32-12.txt"
@@ -2308,25 +2260,19 @@ window.EXERCISE_DATA = {
         "filename": "revision_108851_2025-08-13_14-27-12.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "Tabata",
         "date": "2025-08-13",
         "filename": "revision_108851_2025-08-13_14-27-12.txt"
       },
       {
-        "exercise": "Band Seal",
+        "exercise": "Band Seal Jack",
         "phase": "Tabata",
         "date": "2025-08-13",
         "filename": "revision_108851_2025-08-13_14-27-12.txt"
       },
       {
-        "exercise": "Band Jump Sq",
-        "phase": "Tabata",
-        "date": "2025-08-13",
-        "filename": "revision_108851_2025-08-13_14-27-12.txt"
-      },
-      {
-        "exercise": "40/30/20 (15 Off)",
+        "exercise": "Band Jump Squat",
         "phase": "Tabata",
         "date": "2025-08-13",
         "filename": "revision_108851_2025-08-13_14-27-12.txt"
@@ -2338,19 +2284,19 @@ window.EXERCISE_DATA = {
         "filename": "revision_108851_2025-08-13_14-27-12.txt"
       },
       {
-        "exercise": "Band Swims",
+        "exercise": "Band Swim",
         "phase": "Tabata",
         "date": "2025-08-13",
         "filename": "revision_108851_2025-08-13_14-27-12.txt"
       },
       {
-        "exercise": "Dumbbell Sumo Dl",
+        "exercise": "Dumbbell Sumo Deadlift",
         "phase": "Tabata",
         "date": "2025-08-13",
         "filename": "revision_108851_2025-08-13_14-27-12.txt"
       },
       {
-        "exercise": "Band Puncheses",
+        "exercise": "Band Punches",
         "phase": "Tabata",
         "date": "2025-08-13",
         "filename": "revision_108851_2025-08-13_14-27-12.txt"
@@ -2386,25 +2332,19 @@ window.EXERCISE_DATA = {
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "Tabata",
         "date": "2025-09-24",
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
       },
       {
-        "exercise": "Band Seal",
+        "exercise": "Band Seal Jack",
         "phase": "Tabata",
         "date": "2025-09-24",
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
       },
       {
-        "exercise": "Band Jump Sq",
-        "phase": "Tabata",
-        "date": "2025-09-24",
-        "filename": "revision_109624_2025-09-24_14-46-23.txt"
-      },
-      {
-        "exercise": "40/30/20 (15 Off)",
+        "exercise": "Band Jump Squat",
         "phase": "Tabata",
         "date": "2025-09-24",
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
@@ -2416,25 +2356,25 @@ window.EXERCISE_DATA = {
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
       },
       {
-        "exercise": "Band Swims",
+        "exercise": "Band Swim",
         "phase": "Tabata",
         "date": "2025-09-24",
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
       },
       {
-        "exercise": "Dumbbell Sumo Dl",
+        "exercise": "Dumbbell Sumo Deadlift",
         "phase": "Tabata",
         "date": "2025-09-24",
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
       },
       {
-        "exercise": "Band Puncheses",
+        "exercise": "Band Punches",
         "phase": "Tabata",
         "date": "2025-09-24",
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
       },
       {
-        "exercise": "Dd Toe Touch",
+        "exercise": "Dumbbell Toe Touch",
         "phase": "Tabata",
         "date": "2025-09-24",
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
@@ -2464,12 +2404,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_103831_2024-12-04_16-00-08.txt"
       },
       {
-        "exercise": "2 Rounds",
-        "phase": "Emom",
-        "date": "2024-12-04",
-        "filename": "revision_103831_2024-12-04_16-00-08.txt"
-      },
-      {
         "exercise": "Side Laterals 15",
         "phase": "Emom",
         "date": "2024-12-04",
@@ -2488,13 +2422,13 @@ window.EXERCISE_DATA = {
         "filename": "revision_103831_2024-12-04_16-00-08.txt"
       },
       {
-        "exercise": "Band Bicep Curls",
+        "exercise": "Band Bicep Curl",
         "phase": "Emom",
         "date": "2024-12-04",
         "filename": "revision_103831_2024-12-04_16-00-08.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "Tabata",
         "date": "2025-04-23",
         "filename": "revision_106895_2025-04-23_14-28-26.txt"
@@ -2674,13 +2608,13 @@ window.EXERCISE_DATA = {
         "filename": "revision_106959_2025-04-25_14-54-54.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "Tabata",
         "date": "2024-10-04",
         "filename": "revision_100616_2024-10-04_15-40-30.txt"
       },
       {
-        "exercise": "Band Kickbacks",
+        "exercise": "Band Kickback",
         "phase": "Tabata",
         "date": "2024-10-04",
         "filename": "revision_100616_2024-10-04_15-40-30.txt"
@@ -2770,7 +2704,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_106563_2025-04-09_14-56-42.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "Tabata",
         "date": "2025-06-18",
         "filename": "revision_108432_2025-06-18_14-52-37.txt"
@@ -2782,7 +2716,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_108432_2025-06-18_14-52-37.txt"
       },
       {
-        "exercise": "Band Kickbacks",
+        "exercise": "Band Kickback",
         "phase": "Tabata",
         "date": "2025-06-18",
         "filename": "revision_108432_2025-06-18_14-52-37.txt"
@@ -2866,12 +2800,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_103711_2024-12-04_15-42-34.txt"
       },
       {
-        "exercise": "3 Rounds",
-        "phase": "Emom",
-        "date": "2024-12-04",
-        "filename": "revision_103711_2024-12-04_15-42-34.txt"
-      },
-      {
         "exercise": "Side Laterals 15",
         "phase": "Emom",
         "date": "2024-12-04",
@@ -2914,7 +2842,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_100392_2024-10-02_14-42-17.txt"
       },
       {
-        "exercise": "Band Kickbacks",
+        "exercise": "Band Kickback",
         "phase": "Tabata",
         "date": "2024-10-02",
         "filename": "revision_100392_2024-10-02_14-42-17.txt"
@@ -2974,12 +2902,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_91428_2024-03-18_15-41-45.txt"
       },
       {
-        "exercise": "12-4",
-        "phase": "Tabata",
-        "date": "2024-03-18",
-        "filename": "revision_91428_2024-03-18_15-41-45.txt"
-      },
-      {
         "exercise": "Kettlebell Swing",
         "phase": "Tabata",
         "date": "2024-03-18",
@@ -3024,7 +2946,7 @@ window.EXERCISE_DATA = {
     ],
     "Strength": [
       {
-        "exercise": "Band Bicep Curls",
+        "exercise": "Band Bicep Curl",
         "phase": "3 x 10",
         "date": "2024-11-22",
         "filename": "revision_103384_2024-11-22_15-59-55.txt"
@@ -3042,7 +2964,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_103384_2024-11-22_15-59-55.txt"
       },
       {
-        "exercise": "Bulgarians",
+        "exercise": "Bulgarian Split Squat",
         "phase": "3 x 10",
         "date": "2025-04-07",
         "filename": "revision_106397_2025-04-07_14-51-26.txt"
@@ -3114,7 +3036,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_101539_2024-10-21_15-11-59.txt"
       },
       {
-        "exercise": "Dumbbell 1 ½ Romanian Deadlift",
+        "exercise": "Dumbbell 1 \u00bd Romanian Deadlift",
         "phase": "3 x 10",
         "date": "2024-10-21",
         "filename": "revision_101539_2024-10-21_15-11-59.txt"
@@ -3132,7 +3054,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_101539_2024-10-21_15-11-59.txt"
       },
       {
-        "exercise": "1 ½ Wedge Squat",
+        "exercise": "1 \u00bd Wedge Squat",
         "phase": "3 x 10",
         "date": "2024-10-21",
         "filename": "revision_101539_2024-10-21_15-11-59.txt"
@@ -3144,13 +3066,13 @@ window.EXERCISE_DATA = {
         "filename": "revision_109481_2025-09-17_14-51-56.txt"
       },
       {
-        "exercise": "Slider Leg Curls",
+        "exercise": "Slider Leg Curl",
         "phase": "2 x 15",
         "date": "2025-09-17",
         "filename": "revision_109481_2025-09-17_14-51-56.txt"
       },
       {
-        "exercise": "Bulgarians",
+        "exercise": "Bulgarian Split Squat",
         "phase": "3 x 10",
         "date": "2025-09-19",
         "filename": "revision_109482_2025-09-19_14-41-14.txt"
@@ -3162,7 +3084,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_109482_2025-09-19_14-41-14.txt"
       },
       {
-        "exercise": "Bulgarians",
+        "exercise": "Bulgarian Split Squat",
         "phase": "3 x 12",
         "date": "2024-10-14",
         "filename": "revision_101054_2024-10-14_14-58-07.txt"
@@ -3210,7 +3132,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_99679_2024-09-09_15-00-13.txt"
       },
       {
-        "exercise": "1 ½ Romanian Deadlift",
+        "exercise": "1 \u00bd Romanian Deadlift",
         "phase": "3 x 12",
         "date": "2024-09-09",
         "filename": "revision_99679_2024-09-09_15-00-13.txt"
@@ -3390,7 +3312,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_81144_2023-07-31_15-43-46.txt"
       },
       {
-        "exercise": "Band Bicep Curls",
+        "exercise": "Band Bicep Curl",
         "phase": "2 x 15",
         "date": "2025-09-24",
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
@@ -3402,7 +3324,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_109591_2025-09-22_14-29-59.txt"
       },
       {
-        "exercise": "Split Squats",
+        "exercise": "Split Squat",
         "phase": "3 x 10",
         "date": "2025-09-22",
         "filename": "revision_109591_2025-09-22_14-29-59.txt"
@@ -3414,7 +3336,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_109591_2025-09-22_14-29-59.txt"
       },
       {
-        "exercise": "Slider Leg Curls",
+        "exercise": "Slider Leg Curl",
         "phase": "3 x 10",
         "date": "2025-09-22",
         "filename": "revision_109591_2025-09-22_14-29-59.txt"
@@ -3546,7 +3468,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_99675_2024-09-04_15-02-11.txt"
       },
       {
-        "exercise": "Slider Leg Curls",
+        "exercise": "Slider Leg Curl",
         "phase": "3 x 10",
         "date": "2024-09-04",
         "filename": "revision_99675_2024-09-04_15-02-11.txt"
@@ -3822,7 +3744,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_104136_2024-12-23_15-40-08.txt"
       },
       {
-        "exercise": "Band Bicep Curls",
+        "exercise": "Band Bicep Curl",
         "phase": "3 x 15",
         "date": "2024-12-23",
         "filename": "revision_104136_2024-12-23_15-40-08.txt"
@@ -3846,7 +3768,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_107988_2025-05-28_14-34-54.txt"
       },
       {
-        "exercise": "Slider Leg Curls",
+        "exercise": "Slider Leg Curl",
         "phase": "3 x 12",
         "date": "2025-05-28",
         "filename": "revision_107988_2025-05-28_14-34-54.txt"
@@ -3870,7 +3792,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_102351_2024-11-08_15-46-20.txt"
       },
       {
-        "exercise": "Slider Leg Curls",
+        "exercise": "Slider Leg Curl",
         "phase": "3 x 10",
         "date": "2024-11-08",
         "filename": "revision_102351_2024-11-08_15-46-20.txt"
@@ -3924,7 +3846,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_104156_2025-01-13_16-21-56.txt"
       },
       {
-        "exercise": "1 ½ Bulgarians",
+        "exercise": "1 \u00bd Bulgarians",
         "phase": "3x8",
         "date": "2025-01-13",
         "filename": "revision_104156_2025-01-13_16-21-56.txt"
@@ -3936,7 +3858,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_104156_2025-01-13_16-21-56.txt"
       },
       {
-        "exercise": "Wall Sit 1 ½ Bicep Curls",
+        "exercise": "Wall Sit 1 \u00bd Bicep Curls",
         "phase": "3x8",
         "date": "2025-01-13",
         "filename": "revision_104156_2025-01-13_16-21-56.txt"
@@ -4050,13 +3972,13 @@ window.EXERCISE_DATA = {
         "filename": "revision_100872_2024-10-09_15-28-48.txt"
       },
       {
-        "exercise": "Slider Leg Curls",
+        "exercise": "Slider Leg Curl",
         "phase": "3 x 10",
         "date": "2024-10-09",
         "filename": "revision_100872_2024-10-09_15-28-48.txt"
       },
       {
-        "exercise": "Bulgarians",
+        "exercise": "Bulgarian Split Squat",
         "phase": "3 x 10",
         "date": "2024-11-20",
         "filename": "revision_103161_2024-11-20_15-52-44.txt"
@@ -4224,7 +4146,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_94552_2024-05-22_15-23-36.txt"
       },
       {
-        "exercise": "Band Bicep Curls",
+        "exercise": "Band Bicep Curl",
         "phase": "3 x 15",
         "date": "2024-09-11",
         "filename": "revision_99683_2024-09-11_15-03-57.txt"
@@ -4266,7 +4188,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_109228_2025-09-12_14-54-36.txt"
       },
       {
-        "exercise": "Band Bicep Curls",
+        "exercise": "Band Bicep Curl",
         "phase": "3 x 15",
         "date": "2024-09-25",
         "filename": "revision_99975_2024-09-25_15-00-08.txt"
@@ -4290,7 +4212,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_108437_2025-06-27_14-57-34.txt"
       },
       {
-        "exercise": "Slider Leg Curls",
+        "exercise": "Slider Leg Curl",
         "phase": "3x10",
         "date": "2025-06-27",
         "filename": "revision_108437_2025-06-27_14-57-34.txt"
@@ -4308,7 +4230,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_102353_2024-11-08_16-41-22.txt"
       },
       {
-        "exercise": "Slider Leg Curls",
+        "exercise": "Slider Leg Curl",
         "phase": "3 x 10",
         "date": "2024-11-08",
         "filename": "revision_102353_2024-11-08_16-41-22.txt"
@@ -4332,7 +4254,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_108874_2025-08-29_14-23-32.txt"
       },
       {
-        "exercise": "1 ½ Romanian Deadlift",
+        "exercise": "1 \u00bd Romanian Deadlift",
         "phase": "3 x 10",
         "date": "2025-08-29",
         "filename": "revision_108874_2025-08-29_14-23-32.txt"
@@ -4494,7 +4416,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_104995_2025-02-10_16-00-06.txt"
       },
       {
-        "exercise": "Bulgarians",
+        "exercise": "Bulgarian Split Squat",
         "phase": "3 x 10",
         "date": "2025-02-10",
         "filename": "revision_104995_2025-02-10_16-00-06.txt"
@@ -4530,7 +4452,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_98733_2024-08-19_14-58-57.txt"
       },
       {
-        "exercise": "Bulgarians",
+        "exercise": "Bulgarian Split Squat",
         "phase": "3 x 8",
         "date": "2024-08-19",
         "filename": "revision_98733_2024-08-19_14-58-57.txt"
@@ -4620,7 +4542,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_108911_2025-08-29_14-31-29.txt"
       },
       {
-        "exercise": "Dumbbell Bent Row 15",
+        "exercise": "Dumbbell Bent Row",
         "phase": "30x15x2",
         "date": "2025-08-29",
         "filename": "revision_108911_2025-08-29_14-31-29.txt"
@@ -4758,7 +4680,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_101729_2024-11-01_15-13-05.txt"
       },
       {
-        "exercise": "Band Bicep Curls",
+        "exercise": "Band Bicep Curl",
         "phase": "3 x 12",
         "date": "2024-11-01",
         "filename": "revision_101729_2024-11-01_15-13-05.txt"
@@ -4782,7 +4704,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_106741_2025-04-14_14-56-25.txt"
       },
       {
-        "exercise": "1 ½ Floor Press",
+        "exercise": "1 \u00bd Floor Press",
         "phase": "3x8",
         "date": "2025-04-14",
         "filename": "revision_106741_2025-04-14_14-56-25.txt"
@@ -4812,7 +4734,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_106058_2025-04-02_14-49-37.txt"
       },
       {
-        "exercise": "1 ½ Romanian Deadlift",
+        "exercise": "1 \u00bd Romanian Deadlift",
         "phase": "3x8",
         "date": "2025-04-02",
         "filename": "revision_106058_2025-04-02_14-49-37.txt"
@@ -4974,7 +4896,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_107764_2025-05-12_14-58-02.txt"
       },
       {
-        "exercise": "Split Squats",
+        "exercise": "Split Squat",
         "phase": "3 x 12",
         "date": "2025-05-12",
         "filename": "revision_107764_2025-05-12_14-58-02.txt"
@@ -5136,7 +5058,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_99757_2024-09-13_15-32-12.txt"
       },
       {
-        "exercise": "Slider Leg Curls",
+        "exercise": "Slider Leg Curl",
         "phase": "3 x 12",
         "date": "2024-09-13",
         "filename": "revision_99757_2024-09-13_15-32-12.txt"
@@ -5220,7 +5142,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_108873_2025-08-27_14-52-56.txt"
       },
       {
-        "exercise": "Bulgarians",
+        "exercise": "Bulgarian Split Squat",
         "phase": "3 x 10",
         "date": "2025-08-27",
         "filename": "revision_108873_2025-08-27_14-52-56.txt"
@@ -5238,7 +5160,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_104157_2025-01-15_15-52-22.txt"
       },
       {
-        "exercise": "Dumbbell ¾ Squats",
+        "exercise": "Dumbbell \u00be Squats",
         "phase": "Spartan",
         "date": "2025-01-15",
         "filename": "revision_104157_2025-01-15_15-52-22.txt"
@@ -5256,19 +5178,19 @@ window.EXERCISE_DATA = {
         "filename": "revision_104157_2025-01-15_15-52-22.txt"
       },
       {
-        "exercise": "1 ½ Band Press",
+        "exercise": "1 \u00bd Band Press",
         "phase": "2 x 10",
         "date": "2025-01-27",
         "filename": "revision_104160_2025-01-27_15-56-31.txt"
       },
       {
-        "exercise": "Bulgarians",
+        "exercise": "Bulgarian Split Squat",
         "phase": "3 x 10",
         "date": "2025-09-19",
         "filename": "revision_109590_2025-09-19_14-55-55.txt"
       },
       {
-        "exercise": "Alternating Leg Curls",
+        "exercise": "Alternating Leg Curl",
         "phase": "3 x 10",
         "date": "2025-09-19",
         "filename": "revision_109590_2025-09-19_14-55-55.txt"
@@ -5286,7 +5208,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_102908_2024-11-18_16-47-51.txt"
       },
       {
-        "exercise": "1 ½ Band Chest Press",
+        "exercise": "1 \u00bd Band Chest Press",
         "phase": "25/10x3",
         "date": "2024-11-18",
         "filename": "revision_102908_2024-11-18_16-47-51.txt"
@@ -5418,7 +5340,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_105827_2025-03-05_15-58-39.txt"
       },
       {
-        "exercise": "1 ½ Romanian Deadlift",
+        "exercise": "1 \u00bd Romanian Deadlift",
         "phase": "3 x 8",
         "date": "2025-03-05",
         "filename": "revision_105827_2025-03-05_15-58-39.txt"
@@ -5448,7 +5370,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_101721_2024-11-01_14-59-52.txt"
       },
       {
-        "exercise": "Band Bicep Curls",
+        "exercise": "Band Bicep Curl",
         "phase": "2 x 12",
         "date": "2024-11-01",
         "filename": "revision_101721_2024-11-01_14-59-52.txt"
@@ -5502,7 +5424,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_101719_2024-10-30_14-57-12.txt"
       },
       {
-        "exercise": "Band Bicep Curls",
+        "exercise": "Band Bicep Curl",
         "phase": "2 x 15",
         "date": "2025-09-24",
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
@@ -5526,7 +5448,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_99725_2024-09-11_15-08-17.txt"
       },
       {
-        "exercise": "Band Bicep Curls",
+        "exercise": "Band Bicep Curl",
         "phase": "3 x 15",
         "date": "2024-09-11",
         "filename": "revision_99725_2024-09-11_15-08-17.txt"
@@ -5598,7 +5520,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_109021_2025-09-10_14-57-13.txt"
       },
       {
-        "exercise": "Dumbbell 1 ½ Chest Press",
+        "exercise": "Dumbbell 1 \u00bd Chest Press",
         "phase": "3 x 10",
         "date": "2025-09-10",
         "filename": "revision_109021_2025-09-10_14-57-13.txt"
@@ -5814,7 +5736,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_108858_2025-08-27_14-51-58.txt"
       },
       {
-        "exercise": "Bulgarians",
+        "exercise": "Bulgarian Split Squat",
         "phase": "3 x 10",
         "date": "2025-08-27",
         "filename": "revision_108858_2025-08-27_14-51-58.txt"
@@ -6002,19 +5924,13 @@ window.EXERCISE_DATA = {
         "filename": "revision_106397_2025-04-07_14-51-26.txt"
       },
       {
-        "exercise": "60 Finisher Exercises",
-        "phase": "3 x 8",
-        "date": "2025-04-07",
-        "filename": "revision_106397_2025-04-07_14-51-26.txt"
-      },
-      {
         "exercise": "Sh Tap To Dd Toe Touch",
         "phase": "3 x 8",
         "date": "2025-04-07",
         "filename": "revision_106397_2025-04-07_14-51-26.txt"
       },
       {
-        "exercise": "Dead Bug Crunches",
+        "exercise": "Dead Bug Crunch",
         "phase": "3 x 8",
         "date": "2025-04-07",
         "filename": "revision_106397_2025-04-07_14-51-26.txt"
@@ -6050,12 +5966,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_108836_2025-07-11_14-58-39.txt"
       },
       {
-        "exercise": "60 Finisher Exercises",
-        "phase": "2x12",
-        "date": "2025-07-11",
-        "filename": "revision_108836_2025-07-11_14-58-39.txt"
-      },
-      {
         "exercise": "L,S,L",
         "phase": "2x12",
         "date": "2025-07-11",
@@ -6068,7 +5978,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_108836_2025-07-11_14-58-39.txt"
       },
       {
-        "exercise": "Dead Bug Crunches",
+        "exercise": "Dead Bug Crunch",
         "phase": "2x12",
         "date": "2025-07-11",
         "filename": "revision_108836_2025-07-11_14-58-39.txt"
@@ -6176,12 +6086,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_109482_2025-09-19_14-41-14.txt"
       },
       {
-        "exercise": "60 Finisher Exercises",
-        "phase": "3 x 8",
-        "date": "2025-09-19",
-        "filename": "revision_109482_2025-09-19_14-41-14.txt"
-      },
-      {
         "exercise": "L,S,L",
         "phase": "3 x 8",
         "date": "2025-09-19",
@@ -6194,7 +6098,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_109482_2025-09-19_14-41-14.txt"
       },
       {
-        "exercise": "Dead Bug Crunches",
+        "exercise": "Dead Bug Crunch",
         "phase": "3 x 8",
         "date": "2025-09-19",
         "filename": "revision_109482_2025-09-19_14-41-14.txt"
@@ -6220,12 +6124,6 @@ window.EXERCISE_DATA = {
       {
         "exercise": "Step Up L/R",
         "phase": "3 x 10",
-        "date": "2024-10-14",
-        "filename": "revision_101054_2024-10-14_14-58-07.txt"
-      },
-      {
-        "exercise": "Or",
-        "phase": "Finisher",
         "date": "2024-10-14",
         "filename": "revision_101054_2024-10-14_14-58-07.txt"
       },
@@ -6272,7 +6170,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_99679_2024-09-09_15-00-13.txt"
       },
       {
-        "exercise": "Dd Toe Touch",
+        "exercise": "Dumbbell Toe Touch",
         "phase": "3 x 12",
         "date": "2024-09-09",
         "filename": "revision_99679_2024-09-09_15-00-13.txt"
@@ -6302,7 +6200,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_100837_2024-10-07_14-54-27.txt"
       },
       {
-        "exercise": "Dumbbell ¾ Curtsy",
+        "exercise": "Dumbbell \u00be Curtsy",
         "phase": "3 x 12",
         "date": "2024-10-07",
         "filename": "revision_100837_2024-10-07_14-54-27.txt"
@@ -6368,12 +6266,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_105896_2025-03-17_14-55-46.txt"
       },
       {
-        "exercise": "2-12",
-        "phase": "25/5x3 band",
-        "date": "2025-03-17",
-        "filename": "revision_105896_2025-03-17_14-55-46.txt"
-      },
-      {
         "exercise": "Kettlebell Swing",
         "phase": "25/5x3 band",
         "date": "2025-03-17",
@@ -6416,12 +6308,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_105896_2025-03-17_14-55-46.txt"
       },
       {
-        "exercise": "R",
-        "phase": "30/10x3",
-        "date": "2023-07-31",
-        "filename": "revision_81140_2023-07-31_14-57-52.txt"
-      },
-      {
         "exercise": "Band Jump",
         "phase": "30/10x3",
         "date": "2023-07-31",
@@ -6452,28 +6338,16 @@ window.EXERCISE_DATA = {
         "filename": "revision_101540_2024-10-23_14-59-38.txt"
       },
       {
-        "exercise": "R",
-        "phase": "30/10x3",
-        "date": "2023-07-31",
-        "filename": "revision_81144_2023-07-31_15-43-46.txt"
-      },
-      {
         "exercise": "Band Jump",
         "phase": "30/10x3",
         "date": "2023-07-31",
         "filename": "revision_81144_2023-07-31_15-43-46.txt"
       },
       {
-        "exercise": "Band Kickbacks",
+        "exercise": "Band Kickback",
         "phase": "2 x 15",
         "date": "2025-09-24",
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
-      },
-      {
-        "exercise": "5 Up",
-        "phase": "5 min ladder",
-        "date": "2025-09-22",
-        "filename": "revision_109591_2025-09-22_14-29-59.txt"
       },
       {
         "exercise": "Kettlebell Clean",
@@ -6554,7 +6428,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_100575_2024-10-04_14-58-03.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "30/10x3",
         "date": "2024-08-14",
         "filename": "revision_98462_2024-08-14_15-01-48.txt"
@@ -6614,19 +6488,13 @@ window.EXERCISE_DATA = {
         "filename": "revision_98462_2024-08-14_15-01-48.txt"
       },
       {
-        "exercise": "Or",
-        "phase": "Finisher",
-        "date": "2024-10-16",
-        "filename": "revision_101268_2024-10-16_15-30-50.txt"
-      },
-      {
         "exercise": "Single Hip Thurst",
         "phase": "3x10",
         "date": "2025-07-23",
         "filename": "revision_108841_2025-07-23_14-18-34.txt"
       },
       {
-        "exercise": "Band Clam L",
+        "exercise": "Band Clamshell Left",
         "phase": "30/10x3",
         "date": "2024-09-04",
         "filename": "revision_99675_2024-09-04_15-02-11.txt"
@@ -6650,7 +6518,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_101053_2024-10-11_14-54-14.txt"
       },
       {
-        "exercise": "Dead Bug Crunches",
+        "exercise": "Dead Bug Crunch",
         "phase": "2 x 15",
         "date": "2024-10-11",
         "filename": "revision_101053_2024-10-11_14-54-14.txt"
@@ -6680,7 +6548,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_104137_2024-12-30_15-53-46.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "30/10x3",
         "date": "2025-08-06",
         "filename": "revision_108848_2025-08-06_14-53-17.txt"
@@ -6734,19 +6602,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_102022_2024-11-04_15-51-32.txt"
       },
       {
-        "exercise": "R",
-        "phase": "60 sec x 1",
-        "date": "2024-11-04",
-        "filename": "revision_102022_2024-11-04_15-51-32.txt"
-      },
-      {
         "exercise": "Band Clam R",
-        "phase": "30/10x3",
-        "date": "2025-05-19",
-        "filename": "revision_107986_2025-05-19_14-54-04.txt"
-      },
-      {
-        "exercise": "L",
         "phase": "30/10x3",
         "date": "2025-05-19",
         "filename": "revision_107986_2025-05-19_14-54-04.txt"
@@ -6771,12 +6627,6 @@ window.EXERCISE_DATA = {
       },
       {
         "exercise": "Ladder",
-        "phase": "25/5x3 band",
-        "date": "2024-09-18",
-        "filename": "revision_99961_2024-09-18_15-36-01.txt"
-      },
-      {
-        "exercise": "2-12",
         "phase": "25/5x3 band",
         "date": "2024-09-18",
         "filename": "revision_99961_2024-09-18_15-36-01.txt"
@@ -6825,12 +6675,6 @@ window.EXERCISE_DATA = {
       },
       {
         "exercise": "Dd Knee Tuck",
-        "phase": "3x12",
-        "date": "2024-09-18",
-        "filename": "revision_99961_2024-09-18_15-36-01.txt"
-      },
-      {
-        "exercise": "Up",
         "phase": "3x12",
         "date": "2024-09-18",
         "filename": "revision_99961_2024-09-18_15-36-01.txt"
@@ -6926,12 +6770,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_108434_2025-06-23_14-45-18.txt"
       },
       {
-        "exercise": "2-12",
-        "phase": "25/5x3 band",
-        "date": "2025-06-23",
-        "filename": "revision_108434_2025-06-23_14-45-18.txt"
-      },
-      {
         "exercise": "Kettlebell Swing",
         "phase": "25/5x3 band",
         "date": "2025-06-23",
@@ -6986,12 +6824,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_108434_2025-06-23_14-45-18.txt"
       },
       {
-        "exercise": "Up",
-        "phase": "25/5x3 band",
-        "date": "2025-06-23",
-        "filename": "revision_108434_2025-06-23_14-45-18.txt"
-      },
-      {
         "exercise": "Butterfly Pump",
         "phase": "25/10x3",
         "date": "2025-03-28",
@@ -7034,7 +6866,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_81145_2023-08-02_14-57-05.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "30/10x3",
         "date": "2024-12-23",
         "filename": "revision_104136_2024-12-23_15-40-08.txt"
@@ -7154,12 +6986,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_102351_2024-11-08_15-46-20.txt"
       },
       {
-        "exercise": "60 Finisher Exercises",
-        "phase": "3 x 12",
-        "date": "2024-11-08",
-        "filename": "revision_102351_2024-11-08_15-46-20.txt"
-      },
-      {
         "exercise": "L,S,L",
         "phase": "3 x 12",
         "date": "2024-11-08",
@@ -7172,7 +6998,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_102351_2024-11-08_15-46-20.txt"
       },
       {
-        "exercise": "Dead Bug Crunches",
+        "exercise": "Dead Bug Crunch",
         "phase": "3 x 12",
         "date": "2024-11-08",
         "filename": "revision_102351_2024-11-08_15-46-20.txt"
@@ -7238,7 +7064,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_104132_2024-12-06_15-52-58.txt"
       },
       {
-        "exercise": "Band Clam L",
+        "exercise": "Band Clamshell Left",
         "phase": "30/10x3",
         "date": "2024-10-09",
         "filename": "revision_100872_2024-10-09_15-28-48.txt"
@@ -7310,7 +7136,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_100574_2024-10-02_14-54-21.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "30/10x3",
         "date": "2025-04-30",
         "filename": "revision_107318_2025-04-30_14-55-31.txt"
@@ -7376,12 +7202,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_108668_2025-07-07_14-55-39.txt"
       },
       {
-        "exercise": "60 Finisher Exercises",
-        "phase": "2 x 15",
-        "date": "2025-07-07",
-        "filename": "revision_108668_2025-07-07_14-55-39.txt"
-      },
-      {
         "exercise": "L,S,L",
         "phase": "2 x 15",
         "date": "2025-07-07",
@@ -7394,19 +7214,19 @@ window.EXERCISE_DATA = {
         "filename": "revision_108668_2025-07-07_14-55-39.txt"
       },
       {
-        "exercise": "Dead Bug Crunches",
+        "exercise": "Dead Bug Crunch",
         "phase": "2 x 15",
         "date": "2025-07-07",
         "filename": "revision_108668_2025-07-07_14-55-39.txt"
       },
       {
-        "exercise": "Band Kickbacks",
+        "exercise": "Band Kickback",
         "phase": "3x10",
         "date": "2024-11-27",
         "filename": "revision_103675_2024-11-27_16-40-37.txt"
       },
       {
-        "exercise": "T Flies",
+        "exercise": "T Fly",
         "phase": "3x10",
         "date": "2024-11-27",
         "filename": "revision_103675_2024-11-27_16-40-37.txt"
@@ -7436,7 +7256,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_106035_2025-03-31_14-47-30.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "30/10x3",
         "date": "2024-05-22",
         "filename": "revision_94552_2024-05-22_15-23-36.txt"
@@ -7484,7 +7304,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_94552_2024-05-22_15-23-36.txt"
       },
       {
-        "exercise": "Band Kickbacks",
+        "exercise": "Band Kickback",
         "phase": "2 x 15",
         "date": "2024-05-22",
         "filename": "revision_94552_2024-05-22_15-23-36.txt"
@@ -7508,7 +7328,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_109228_2025-09-12_14-54-36.txt"
       },
       {
-        "exercise": "Band Kickbacks",
+        "exercise": "Band Kickback",
         "phase": "30/10x3",
         "date": "2025-09-12",
         "filename": "revision_109228_2025-09-12_14-54-36.txt"
@@ -7562,19 +7382,13 @@ window.EXERCISE_DATA = {
         "filename": "revision_108437_2025-06-27_14-57-34.txt"
       },
       {
-        "exercise": "Band Kickbacks",
+        "exercise": "Band Kickback",
         "phase": "3x10",
         "date": "2025-06-27",
         "filename": "revision_108437_2025-06-27_14-57-34.txt"
       },
       {
         "exercise": "Calf Raises",
-        "phase": "2 x 12",
-        "date": "2024-11-08",
-        "filename": "revision_102353_2024-11-08_16-41-22.txt"
-      },
-      {
-        "exercise": "60 Finisher Exercises",
         "phase": "2 x 12",
         "date": "2024-11-08",
         "filename": "revision_102353_2024-11-08_16-41-22.txt"
@@ -7592,7 +7406,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_102353_2024-11-08_16-41-22.txt"
       },
       {
-        "exercise": "Dead Bug Crunches",
+        "exercise": "Dead Bug Crunch",
         "phase": "2 x 12",
         "date": "2024-11-08",
         "filename": "revision_102353_2024-11-08_16-41-22.txt"
@@ -7622,7 +7436,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_108874_2025-08-29_14-23-32.txt"
       },
       {
-        "exercise": "Dd Toe Touch",
+        "exercise": "Dumbbell Toe Touch",
         "phase": "3 x 10",
         "date": "2025-08-29",
         "filename": "revision_108874_2025-08-29_14-23-32.txt"
@@ -7718,12 +7532,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_100391_2024-09-30_14-51-28.txt"
       },
       {
-        "exercise": "Or",
-        "phase": "Finisher",
-        "date": "2024-10-16",
-        "filename": "revision_101255_2024-10-16_14-54-57.txt"
-      },
-      {
         "exercise": "Leg Circles",
         "phase": "3 x 8",
         "date": "2024-08-19",
@@ -7736,7 +7544,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_108857_2025-08-25_14-56-11.txt"
       },
       {
-        "exercise": "Band Kickbacks",
+        "exercise": "Band Kickback",
         "phase": "3 x 10",
         "date": "2025-08-25",
         "filename": "revision_108857_2025-08-25_14-56-11.txt"
@@ -7868,7 +7676,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_105509_2025-02-28_15-53-53.txt"
       },
       {
-        "exercise": "Band Kickbacks",
+        "exercise": "Band Kickback",
         "phase": "40/10x3",
         "date": "2025-01-29",
         "filename": "revision_104161_2025-01-29_15-58-50.txt"
@@ -7910,7 +7718,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_101729_2024-11-01_15-13-05.txt"
       },
       {
-        "exercise": "Dumbbell Side Laterals",
+        "exercise": "Dumbbell Side Lateral",
         "phase": "3 x 12",
         "date": "2024-10-30",
         "filename": "revision_101720_2024-10-30_14-58-57.txt"
@@ -7928,7 +7736,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_101720_2024-10-30_14-58-57.txt"
       },
       {
-        "exercise": "Dumbbell 1 ½ Pullover",
+        "exercise": "Dumbbell 1 \u00bd Pullover",
         "phase": "3x8",
         "date": "2025-04-14",
         "filename": "revision_106741_2025-04-14_14-56-25.txt"
@@ -8138,7 +7946,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_108856_2025-08-22_14-25-17.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "30/10x3",
         "date": "2025-08-18",
         "filename": "revision_108854_2025-08-18_14-56-24.txt"
@@ -8282,12 +8090,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_106566_2025-04-11_14-48-23.txt"
       },
       {
-        "exercise": "5 Up",
-        "phase": "5 min ladder",
-        "date": "2024-08-30",
-        "filename": "revision_99510_2024-08-30_14-57-15.txt"
-      },
-      {
         "exercise": "Push Ups",
         "phase": "5 min ladder",
         "date": "2024-08-30",
@@ -8360,7 +8162,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_104465_2025-02-05_16-14-04.txt"
       },
       {
-        "exercise": "Band Kickbacks",
+        "exercise": "Band Kickback",
         "phase": "30/10x2",
         "date": "2025-08-27",
         "filename": "revision_108873_2025-08-27_14-52-56.txt"
@@ -8402,7 +8204,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_108873_2025-08-27_14-52-56.txt"
       },
       {
-        "exercise": "1 ½ 3 X 6",
+        "exercise": "1 \u00bd 3 X 6",
         "phase": "30/10x2",
         "date": "2025-08-27",
         "filename": "revision_108873_2025-08-27_14-52-56.txt"
@@ -8414,19 +8216,13 @@ window.EXERCISE_DATA = {
         "filename": "revision_108873_2025-08-27_14-52-56.txt"
       },
       {
-        "exercise": "10-25",
-        "phase": "Spartan",
-        "date": "2025-01-15",
-        "filename": "revision_104157_2025-01-15_15-52-22.txt"
-      },
-      {
         "exercise": "Toe Grabs",
         "phase": "Spartan",
         "date": "2025-01-15",
         "filename": "revision_104157_2025-01-15_15-52-22.txt"
       },
       {
-        "exercise": "1 ½ Hip Thrust",
+        "exercise": "1 \u00bd Hip Thrust",
         "phase": "3x8",
         "date": "2025-01-15",
         "filename": "revision_104157_2025-01-15_15-52-22.txt"
@@ -8450,37 +8246,31 @@ window.EXERCISE_DATA = {
         "filename": "revision_104160_2025-01-27_15-56-31.txt"
       },
       {
-        "exercise": "1 ½ Band Pull",
+        "exercise": "1 \u00bd Band Pull",
         "phase": "2 x 10",
         "date": "2025-01-27",
         "filename": "revision_104160_2025-01-27_15-56-31.txt"
       },
       {
-        "exercise": "1 ½ Bw Thrust",
+        "exercise": "1 \u00bd Bw Thrust",
         "phase": "2 x 10",
         "date": "2025-01-27",
         "filename": "revision_104160_2025-01-27_15-56-31.txt"
       },
       {
-        "exercise": "Dumbbell Side Laterals",
+        "exercise": "Dumbbell Side Lateral",
         "phase": "3 x 10",
         "date": "2025-09-19",
         "filename": "revision_109590_2025-09-19_14-55-55.txt"
       },
       {
-        "exercise": "T Flies",
+        "exercise": "T Fly",
         "phase": "2 x 15",
         "date": "2025-09-19",
         "filename": "revision_109590_2025-09-19_14-55-55.txt"
       },
       {
         "exercise": "Band Hip B. Lat Pull",
-        "phase": "2 x 15",
-        "date": "2025-09-19",
-        "filename": "revision_109590_2025-09-19_14-55-55.txt"
-      },
-      {
-        "exercise": "60 Finisher Exercises",
         "phase": "2 x 15",
         "date": "2025-09-19",
         "filename": "revision_109590_2025-09-19_14-55-55.txt"
@@ -8498,7 +8288,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_109590_2025-09-19_14-55-55.txt"
       },
       {
-        "exercise": "Dead Bug Crunches",
+        "exercise": "Dead Bug Crunch",
         "phase": "2 x 15",
         "date": "2025-09-19",
         "filename": "revision_109590_2025-09-19_14-55-55.txt"
@@ -8708,13 +8498,13 @@ window.EXERCISE_DATA = {
         "filename": "revision_101719_2024-10-30_14-57-12.txt"
       },
       {
-        "exercise": "Band Kickbacks",
+        "exercise": "Band Kickback",
         "phase": "2 x 15",
         "date": "2025-09-24",
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
       },
       {
-        "exercise": "Slider Knee Tucks",
+        "exercise": "Slider Knee Tuck",
         "phase": "2 x 15",
         "date": "2025-09-24",
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
@@ -8852,12 +8642,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_105940_2025-03-17_15-31-03.txt"
       },
       {
-        "exercise": "2-12",
-        "phase": "25/5x3 band",
-        "date": "2025-03-17",
-        "filename": "revision_105940_2025-03-17_15-31-03.txt"
-      },
-      {
         "exercise": "Kettlebell Swing",
         "phase": "25/5x3 band",
         "date": "2025-03-17",
@@ -8954,12 +8738,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_106959_2025-04-25_14-54-54.txt"
       },
       {
-        "exercise": "2-12",
-        "phase": "25/5x3 band",
-        "date": "2025-04-25",
-        "filename": "revision_106959_2025-04-25_14-54-54.txt"
-      },
-      {
         "exercise": "Kettlebell Dl Hp",
         "phase": "25/5x3 band",
         "date": "2025-04-25",
@@ -9002,12 +8780,6 @@ window.EXERCISE_DATA = {
         "filename": "revision_106959_2025-04-25_14-54-54.txt"
       },
       {
-        "exercise": "Up",
-        "phase": "25/5x3 band",
-        "date": "2025-04-25",
-        "filename": "revision_106959_2025-04-25_14-54-54.txt"
-      },
-      {
         "exercise": "Dumbbell O.H. Tricep",
         "phase": "3x10",
         "date": "2024-10-04",
@@ -9032,7 +8804,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_81393_2023-08-04_14-51-00.txt"
       },
       {
-        "exercise": "Band Clamshells",
+        "exercise": "Band Clamshell",
         "phase": "30/10x3",
         "date": "2023-12-11",
         "filename": "revision_86594_2023-12-11_15-53-52.txt"
@@ -9152,7 +8924,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_96527_2024-06-26_14-52-31.txt"
       },
       {
-        "exercise": "Dd Toe Touch",
+        "exercise": "Dumbbell Toe Touch",
         "phase": "3 x 10",
         "date": "2024-06-26",
         "filename": "revision_96527_2024-06-26_14-52-31.txt"
@@ -9164,7 +8936,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_100392_2024-10-02_14-42-17.txt"
       },
       {
-        "exercise": "Dumbbell Side Laterals",
+        "exercise": "Dumbbell Side Lateral",
         "phase": "3 x 10",
         "date": "2024-03-18",
         "filename": "revision_91428_2024-03-18_15-41-45.txt"
@@ -9176,7 +8948,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_91428_2024-03-18_15-41-45.txt"
       },
       {
-        "exercise": "Band Kickbacks",
+        "exercise": "Band Kickback",
         "phase": "3 x 10",
         "date": "2024-03-18",
         "filename": "revision_91428_2024-03-18_15-41-45.txt"
@@ -9190,12 +8962,6 @@ window.EXERCISE_DATA = {
       {
         "exercise": "Hip Thrust",
         "phase": "20/20x3",
-        "date": "2025-05-30",
-        "filename": "revision_108427_2025-05-30_14-54-56.txt"
-      },
-      {
-        "exercise": "10 Down",
-        "phase": "5 min ladder",
         "date": "2025-05-30",
         "filename": "revision_108427_2025-05-30_14-54-56.txt"
       },
@@ -9230,7 +8996,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_99918_2024-09-16_14-44-15.txt"
       },
       {
-        "exercise": "T Flies",
+        "exercise": "T Fly",
         "phase": "3 x 10",
         "date": "2024-09-16",
         "filename": "revision_99918_2024-09-16_14-44-15.txt"
@@ -9250,7 +9016,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_101054_2024-10-14_14-58-07.txt"
       },
       {
-        "exercise": "Mobility Stretchinges",
+        "exercise": "Mobility Stretches",
         "phase": "2 x 15",
         "date": "2025-09-24",
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
@@ -9280,7 +9046,7 @@ window.EXERCISE_DATA = {
         "filename": "revision_106058_2025-04-02_14-49-37.txt"
       },
       {
-        "exercise": "Mobility Stretchinges",
+        "exercise": "Mobility Stretches",
         "phase": "2 x 15",
         "date": "2025-09-24",
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
@@ -9309,7 +9075,7 @@ window.EXERCISE_DATA = {
             "phase": "Emom",
             "exercises": [
               "R Lunge Pass 16",
-              "Dumbbell Bent Row 15",
+              "Dumbbell Bent Row",
               "Kettlebell Swing 20",
               "Basic Crunch 60 Seconds"
             ]
@@ -9317,7 +9083,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 10",
             "exercises": [
-              "Band Bicep Curls",
+              "Band Bicep Curl",
               "Dumbbell Bridge Tricep",
               "Leg Curls"
             ]
@@ -9333,7 +9099,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 10",
             "exercises": [
-              "Bulgarians",
+              "Bulgarian Split Squat",
               "Dumbbell T Flies",
               "Alternating Leg Curl"
             ]
@@ -9344,10 +9110,9 @@ window.EXERCISE_DATA = {
               "Band Lateral Walk",
               "Step Up",
               "Single Hip Thrust",
-              "60 Finisher Exercises",
               "Squat Curl",
               "Sh Tap To Dd Toe Touch",
-              "Dead Bug Crunches"
+              "Dead Bug Crunch"
             ]
           }
         ]
@@ -9380,10 +9145,9 @@ window.EXERCISE_DATA = {
               "Dumbbell Hammers",
               "Wall Tricep",
               "Calf Raise X 20",
-              "60 Finisher Exercises",
               "L,S,L",
               "Sh Tap To Dd Toe Touch",
-              "Dead Bug Crunches"
+              "Dead Bug Crunch"
             ]
           }
         ]
@@ -9471,7 +9235,7 @@ window.EXERCISE_DATA = {
             "phase": "3 x 10",
             "exercises": [
               "Dumbbell One Arm Row",
-              "Dumbbell 1 ½ Romanian Deadlift",
+              "Dumbbell 1 \u00bd Romanian Deadlift",
               "Dumbbell Push Press"
             ]
           },
@@ -9479,7 +9243,7 @@ window.EXERCISE_DATA = {
             "phase": "3 x 10",
             "exercises": [
               "Bridge Press",
-              "1 ½ Wedge Squat",
+              "1 \u00bd Wedge Squat",
               "Band Upper Back Pull"
             ]
           }
@@ -9494,8 +9258,8 @@ window.EXERCISE_DATA = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Band Clamshells",
-              "Band Kickbacks",
+              "Band Clamshell",
+              "Band Kickback",
               "Band Hip Abd",
               "Glute Bridgess"
             ]
@@ -9507,7 +9271,7 @@ window.EXERCISE_DATA = {
               "Kettlebell Hike Swing 10",
               "Dumbbell Floor Press 20",
               "Leg Curls 20",
-              "21’S",
+              "21\u2019S",
               "Band Curl",
               "Dumbbell Tricep"
             ]
@@ -9538,8 +9302,8 @@ window.EXERCISE_DATA = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Band Clamshells",
-              "Band Kickbacks",
+              "Band Clamshell",
+              "Band Kickback",
               "Band Hip Abd",
               "Glute Bridgess"
             ]
@@ -9590,7 +9354,7 @@ window.EXERCISE_DATA = {
             "phase": "2 x 15",
             "exercises": [
               "B. Pressdown",
-              "Slider Leg Curls",
+              "Slider Leg Curl",
               "Calf Raises"
             ]
           }
@@ -9621,11 +9385,8 @@ window.EXERCISE_DATA = {
               "Hip Thrust 20",
               "Band Punches 50",
               "Dumbbell Curls",
-              "21",
               "Dumbbell Tricep",
-              "21",
-              "Jump Squat",
-              "21"
+              "Jump Squat"
             ]
           }
         ]
@@ -9639,7 +9400,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 10",
             "exercises": [
-              "Bulgarians",
+              "Bulgarian Split Squat",
               "Single Leg Curl",
               "Single Calf Raise"
             ]
@@ -9650,10 +9411,9 @@ window.EXERCISE_DATA = {
               "Band Lateral Walk",
               "Step Up",
               "Single Hip Thrust",
-              "60 Finisher Exercises",
               "L,S,L",
               "Sh Tap To Dd Toe Touch",
-              "Dead Bug Crunches"
+              "Dead Bug Crunch"
             ]
           }
         ]
@@ -9665,20 +9425,19 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 10",
             "exercises": [
-              "Bulgarians",
-              "Dumbbell Side Laterals",
-              "Alternating Leg Curls"
+              "Bulgarian Split Squat",
+              "Dumbbell Side Lateral",
+              "Alternating Leg Curl"
             ]
           },
           {
             "phase": "2 x 15",
             "exercises": [
-              "T Flies",
+              "T Fly",
               "Band Hip B. Lat Pull",
-              "60 Finisher Exercises",
               "L,S,L",
               "Sh Tap To Dd Toe Touch",
-              "Dead Bug Crunches"
+              "Dead Bug Crunch"
             ]
           }
         ]
@@ -9700,7 +9459,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 12",
             "exercises": [
-              "Bulgarians",
+              "Bulgarian Split Squat",
               "One Arm Row",
               "Dumbbell O.H. Triceps"
             ]
@@ -9711,12 +9470,6 @@ window.EXERCISE_DATA = {
               "Step Up L/R",
               "Floor Press",
               "Dumbbell Full B. Curl"
-            ]
-          },
-          {
-            "phase": "Finisher",
-            "exercises": [
-              "Or"
             ]
           }
         ]
@@ -9769,13 +9522,13 @@ window.EXERCISE_DATA = {
             "phase": "3 x 12",
             "exercises": [
               "Renegade Rows Row",
-              "1 ½ Romanian Deadlift",
+              "1 \u00bd Romanian Deadlift",
               "Dumbbell Kick Back",
               "Human Maker",
               "10 Reps",
               "Burpees",
               "Sh Tap",
-              "Dd Toe Touch",
+              "Dumbbell Toe Touch",
               "Knee Tuck",
               "Lunge"
             ]
@@ -9803,7 +9556,7 @@ window.EXERCISE_DATA = {
               "Band Lat Pull",
               "Dumbbell Sumo D.Left",
               "Band Chest Cross",
-              "Dumbbell ¾ Curtsy"
+              "Dumbbell \u00be Curtsy"
             ]
           },
           {
@@ -9825,7 +9578,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Band Clamshells",
+              "Band Clamshell",
               "Glute Bridges L",
               "Glute Bridges R",
               "Squat",
@@ -9875,7 +9628,6 @@ window.EXERCISE_DATA = {
               "Pulse Squat",
               "Kick Backs",
               "Ladder",
-              "2-12",
               "Kettlebell Swing",
               "Band Swim V Up"
             ]
@@ -9906,7 +9658,6 @@ window.EXERCISE_DATA = {
               "Pulse Squat",
               "Kick Backs",
               "Ladder",
-              "2-12",
               "Kettlebell Swing",
               "Band Swim V Up"
             ]
@@ -9939,7 +9690,6 @@ window.EXERCISE_DATA = {
             "phase": "30/10x3",
             "exercises": [
               "Single Leg Glute Bridge L",
-              "R",
               "Band Jump",
               "Squat"
             ]
@@ -9971,7 +9721,6 @@ window.EXERCISE_DATA = {
             "phase": "30/10x3",
             "exercises": [
               "Single Leg Glute Bridge L",
-              "R",
               "Band Jump",
               "Squat"
             ]
@@ -10038,7 +9787,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Band Clamshells",
+              "Band Clamshell",
               "Glute Bridges L",
               "Glute Bridges R",
               "Squat"
@@ -10081,23 +9830,22 @@ window.EXERCISE_DATA = {
             "phase": "Tabata",
             "exercises": [
               "Band Front/Back Jacks",
-              "Band Clamshells",
-              "Band Seal",
-              "Band Jump Sq",
-              "40/30/20 (15 Off)",
+              "Band Clamshell",
+              "Band Seal Jack",
+              "Band Jump Squat",
               "Dumbbell Goblet Squat",
-              "Band Swims",
-              "Dumbbell Sumo Dl",
-              "Band Puncheses",
+              "Band Swim",
+              "Dumbbell Sumo Deadlift",
+              "Band Punches",
               "Step Ups"
             ]
           },
           {
             "phase": "2 x 15",
             "exercises": [
-              "Band Bicep Curls",
-              "Band Kickbacks",
-              "Mobility Stretchinges"
+              "Band Bicep Curl",
+              "Band Kickback",
+              "Mobility Stretches"
             ]
           }
         ]
@@ -10110,24 +9858,23 @@ window.EXERCISE_DATA = {
             "phase": "Tabata",
             "exercises": [
               "Band Front/Back Jacks",
-              "Band Clamshells",
-              "Band Seal",
-              "Band Jump Sq",
-              "40/30/20 (15 Off)",
+              "Band Clamshell",
+              "Band Seal Jack",
+              "Band Jump Squat",
               "Dumbbell Goblet Squat",
-              "Band Swims",
-              "Dumbbell Sumo Dl",
-              "Band Puncheses",
-              "Dd Toe Touch"
+              "Band Swim",
+              "Dumbbell Sumo Deadlift",
+              "Band Punches",
+              "Dumbbell Toe Touch"
             ]
           },
           {
             "phase": "2 x 15",
             "exercises": [
-              "Band Bicep Curls",
-              "Band Kickbacks",
-              "Slider Knee Tucks",
-              "Mobility Stretchinges"
+              "Band Bicep Curl",
+              "Band Kickback",
+              "Slider Knee Tuck",
+              "Mobility Stretches"
             ]
           }
         ]
@@ -10142,15 +9889,14 @@ window.EXERCISE_DATA = {
             "phase": "Tabata",
             "exercises": [
               "Glute Bridges",
-              "Band Kick Back",
-              "Band Clam L",
-              "Clam R"
+              "Band Kickback",
+              "Band Clamshell Left",
+              "Band Clamshell Right"
             ]
           },
           {
             "phase": "5 min ladder",
             "exercises": [
-              "5 Up",
               "Kettlebell Clean",
               "Kettlebell Push Press"
             ]
@@ -10158,7 +9904,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 10",
             "exercises": [
-              "Split Squats",
+              "Split Squat",
               "Dumbbell One Arm Row",
               "Single Hip Thrust",
               "Dumbbell Side Lateral"
@@ -10167,7 +9913,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 10",
             "exercises": [
-              "Slider Leg Curls",
+              "Slider Leg Curl",
               "Dumbbell Floor Press",
               "Single Calf Raise",
               "Yoga Cooldown"
@@ -10184,7 +9930,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "Tabata",
             "exercises": [
-              "F Lunge",
+              "Forward Lunge",
               "R Lunge",
               "Lateral L",
               "Lateral R",
@@ -10256,7 +10002,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "30/10x3",
             "exercises": [
-              "Band Clamshells",
+              "Band Clamshell",
               "Kickettlebellacks L/R",
               "Ramp 3Min",
               "Band Seals 10",
@@ -10310,12 +10056,6 @@ window.EXERCISE_DATA = {
               "Lateral Step 20",
               "Dumbbell S. Lateral 15"
             ]
-          },
-          {
-            "phase": "Finisher",
-            "exercises": [
-              "Or"
-            ]
           }
         ]
       },
@@ -10341,14 +10081,7 @@ window.EXERCISE_DATA = {
               "Dumbbell Jump Squats 25",
               "Band Puncheses 50",
               "Lateral Step 20",
-              "Band Piston Row",
-              "50"
-            ]
-          },
-          {
-            "phase": "Finisher",
-            "exercises": [
-              "Or"
+              "Band Piston Row"
             ]
           }
         ]
@@ -10365,11 +10098,10 @@ window.EXERCISE_DATA = {
               "Band H. Bridge",
               "Band P. Squat",
               "Band Clamshellss",
-              "Band P. Squat",
               "Complex 5X5",
               "Romanian Deadlift",
               "High Pull",
-              "1 ½ Squat",
+              "1 \u00bd Squat",
               "Hang Clean"
             ]
           },
@@ -10400,7 +10132,7 @@ window.EXERCISE_DATA = {
             "phase": "30/10x3",
             "exercises": [
               "Glute Bridges",
-              "Band Clam L",
+              "Band Clamshell Left",
               "Band Clam R"
             ]
           },
@@ -10417,7 +10149,7 @@ window.EXERCISE_DATA = {
             "exercises": [
               "Dumbbell Side Lateral",
               "Band Drag Curls",
-              "Slider Leg Curls"
+              "Slider Leg Curl"
             ]
           }
         ]
@@ -10442,7 +10174,7 @@ window.EXERCISE_DATA = {
             "exercises": [
               "Dumbbell Kickettlebellacks",
               "Split Squat Curl L/R",
-              "Dead Bug Crunches"
+              "Dead Bug Crunch"
             ]
           }
         ]
@@ -10481,14 +10213,14 @@ window.EXERCISE_DATA = {
             "phase": "30/10x3",
             "exercises": [
               "Glute Bridges",
-              "Band Clamshells"
+              "Band Clamshell"
             ]
           },
           {
             "phase": "Emom",
             "exercises": [
               "R Lunge Pass 16",
-              "Dumbbell Bent Row 15",
+              "Dumbbell Bent Row",
               "Kettlebell Swing 20",
               "Basic Crunch 60 Seconds"
             ]
@@ -10539,8 +10271,7 @@ window.EXERCISE_DATA = {
             "phase": "60 sec x 1",
             "exercises": [
               "Wall Sit Shoulder Glide",
-              "Thoracic Mobility L",
-              "R"
+              "Thoracic Mobility L"
             ]
           }
         ]
@@ -10555,8 +10286,7 @@ window.EXERCISE_DATA = {
             "phase": "30/10x3",
             "exercises": [
               "Glute Bridges",
-              "Band Clam R",
-              "L"
+              "Band Clam R"
             ]
           },
           {
@@ -10588,7 +10318,6 @@ window.EXERCISE_DATA = {
               "Pulse Squat",
               "Kick Backs",
               "Ladder",
-              "2-12",
               "Kettlebell Swing",
               "Band Swim",
               "V Up"
@@ -10604,8 +10333,7 @@ window.EXERCISE_DATA = {
               "Burpees",
               "Push Up",
               "Sh Tap",
-              "Dd Knee Tuck",
-              "Up"
+              "Dd Knee Tuck"
             ]
           }
         ]
@@ -10820,7 +10548,6 @@ window.EXERCISE_DATA = {
               "Pulse Squat",
               "Kick Backs",
               "Ladder",
-              "2-12",
               "Kettlebell Swing",
               "Band Swim",
               "V Up",
@@ -10832,8 +10559,7 @@ window.EXERCISE_DATA = {
               "Burpees",
               "Push Up",
               "Sh Tap",
-              "Dd Knee Tuck",
-              "Up"
+              "Dd Knee Tuck"
             ]
           }
         ]
@@ -10961,7 +10687,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "30/10x3",
             "exercises": [
-              "Band Clamshells",
+              "Band Clamshell",
               "Kickettlebellacks L/R",
               "Ramp 3Min",
               "Band Seals 10",
@@ -10981,7 +10707,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 15",
             "exercises": [
-              "Band Bicep Curls",
+              "Band Bicep Curl",
               "Band Overhead Ext",
               "Travel Lunge 8/8"
             ]
@@ -11027,7 +10753,7 @@ window.EXERCISE_DATA = {
             "exercises": [
               "Band 45 Jack",
               "Band Front/Back Jacks",
-              "Band Clamshells",
+              "Band Clamshell",
               "Glute Bridges",
               "Ladder 2 To 6",
               "Dumbbell Push Up Row",
@@ -11045,7 +10771,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 12",
             "exercises": [
-              "Slider Leg Curls",
+              "Slider Leg Curl",
               "Band Chest Press",
               "Dumbbell Kickettlebellacks",
               "Chipper",
@@ -11076,7 +10802,7 @@ window.EXERCISE_DATA = {
             "exercises": [
               "Single Band Row",
               "Ss Curl L/R",
-              "Slider Leg Curls"
+              "Slider Leg Curl"
             ]
           },
           {
@@ -11085,10 +10811,9 @@ window.EXERCISE_DATA = {
               "Single Press",
               "Bridge Tricep Extension",
               "Calf Raises",
-              "60 Finisher Exercises",
               "L,S,L",
               "Sh Tap To Dd Toe Touch",
-              "Dead Bug Crunches"
+              "Dead Bug Crunch"
             ]
           }
         ]
@@ -11111,7 +10836,7 @@ window.EXERCISE_DATA = {
             "exercises": [
               "Single Band Row",
               "Ss Curl L/R",
-              "Slider Leg Curls"
+              "Slider Leg Curl"
             ]
           },
           {
@@ -11120,10 +10845,9 @@ window.EXERCISE_DATA = {
               "Single Press",
               "Bridge Tricep Extension",
               "Calf Raises",
-              "60 Finisher Exercises",
               "L,S,L",
               "Sh Tap To Dd Toe Touch",
-              "Dead Bug Crunches"
+              "Dead Bug Crunch"
             ]
           }
         ]
@@ -11190,9 +10914,9 @@ window.EXERCISE_DATA = {
           {
             "phase": "3x8",
             "exercises": [
-              "1 ½ Bulgarians",
+              "1 \u00bd Bulgarians",
               "Renegade Rows Row",
-              "Wall Sit 1 ½ Bicep Curls"
+              "Wall Sit 1 \u00bd Bicep Curls"
             ]
           }
         ]
@@ -11276,7 +11000,7 @@ window.EXERCISE_DATA = {
             "phase": "30/10x3",
             "exercises": [
               "Glute Bridges",
-              "Band Clam L",
+              "Band Clamshell Left",
               "Band Clam R"
             ]
           },
@@ -11293,7 +11017,7 @@ window.EXERCISE_DATA = {
             "exercises": [
               "Dumbbell Side Lateral",
               "Band Drag Curls",
-              "Slider Leg Curls"
+              "Slider Leg Curl"
             ]
           }
         ]
@@ -11320,7 +11044,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 10",
             "exercises": [
-              "Bulgarians",
+              "Bulgarian Split Squat",
               "Band Lat Pull",
               "Romanian Deadlift",
               "Floor Press"
@@ -11378,7 +11102,7 @@ window.EXERCISE_DATA = {
               "Band Seals",
               "Glute Bridges",
               "Band Front/Back Jacks",
-              "Band Kickbacks"
+              "Band Kickback"
             ]
           },
           {
@@ -11410,7 +11134,7 @@ window.EXERCISE_DATA = {
             "phase": "30/10x3",
             "exercises": [
               "Glute Bridges",
-              "Band Clamshells"
+              "Band Clamshell"
             ]
           },
           {
@@ -11463,10 +11187,9 @@ window.EXERCISE_DATA = {
               "Band Curl",
               "Band Oh Tricep",
               "Calf Raise",
-              "60 Finisher Exercises",
               "L,S,L",
               "Sh Tap To Dd Toe Touch",
-              "Dead Bug Crunches"
+              "Dead Bug Crunch"
             ]
           }
         ]
@@ -11480,9 +11203,9 @@ window.EXERCISE_DATA = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Band Clamshells",
+              "Band Clamshell",
               "Band Butterfly",
-              "Band Kickbacks",
+              "Band Kickback",
               "Band March"
             ]
           },
@@ -11499,8 +11222,8 @@ window.EXERCISE_DATA = {
             "phase": "3x10",
             "exercises": [
               "Wall Sit Bicep Curlss",
-              "Band Kickbacks",
-              "T Flies"
+              "Band Kickback",
+              "T Fly"
             ]
           }
         ]
@@ -11514,7 +11237,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Band Clamshells",
+              "Band Clamshell",
               "Glute Bridges L",
               "Glute Bridges R",
               "Squat"
@@ -11545,7 +11268,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Band Clamshells",
+              "Band Clamshell",
               "Glute Bridges L",
               "Glute Bridges R",
               "Squat"
@@ -11611,7 +11334,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "30/10x3",
             "exercises": [
-              "Band Clamshells",
+              "Band Clamshell",
               "Kickettlebellacks L/R",
               "Ramp 3Min",
               "Cross Mc 10",
@@ -11632,7 +11355,7 @@ window.EXERCISE_DATA = {
             "exercises": [
               "Band Face Pulls",
               "Band Preacher Curls",
-              "Band Kickbacks"
+              "Band Kickback"
             ]
           }
         ]
@@ -11646,7 +11369,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 15",
             "exercises": [
-              "Band Bicep Curls",
+              "Band Bicep Curl",
               "Dumbbell Kickettlebellacks",
               "Bag Hip Thrust"
             ]
@@ -11668,7 +11391,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 15",
             "exercises": [
-              "Band Bicep Curls",
+              "Band Bicep Curl",
               "Dumbbell Kickettlebellacks",
               "Bag Hip Thrust"
             ]
@@ -11685,7 +11408,7 @@ window.EXERCISE_DATA = {
             "phase": "30/10x3",
             "exercises": [
               "Band Seal Jack",
-              "Band Kickbacks",
+              "Band Kickback",
               "Band Plank March"
             ]
           },
@@ -11739,7 +11462,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 15",
             "exercises": [
-              "Band Bicep Curls",
+              "Band Bicep Curl",
               "Band Overhead Ext",
               "Travel Lunge 8/8"
             ]
@@ -11765,8 +11488,8 @@ window.EXERCISE_DATA = {
             "phase": "3x10",
             "exercises": [
               "Band Drag Curls",
-              "Band Kickbacks",
-              "Slider Leg Curls"
+              "Band Kickback",
+              "Slider Leg Curl"
             ]
           }
         ]
@@ -11795,13 +11518,13 @@ window.EXERCISE_DATA = {
             "phase": "3 x 10",
             "exercises": [
               "Renegade Rows Row",
-              "1 ½ Romanian Deadlift",
+              "1 \u00bd Romanian Deadlift",
               "Dumbbell Kick Back",
               "Human Maker",
               "10 Reps",
               "Burpees",
               "Sh Tap",
-              "Dd Toe Touch",
+              "Dumbbell Toe Touch",
               "Knee Tuck",
               "Lunge"
             ]
@@ -11828,7 +11551,7 @@ window.EXERCISE_DATA = {
               "1.5 Hip Thrust R",
               "Hip Flexor Mob R",
               "Every Minute On The Minute X 3",
-              "Dumbbell Bent Row 15",
+              "Dumbbell Bent Row",
               "R Lunge Pass 16",
               "Kettlebell Swing 20",
               "Basic Crunch 60 Seconds"
@@ -11891,7 +11614,7 @@ window.EXERCISE_DATA = {
               "Single Bridge R",
               "Ladder 10-4",
               "Kettlebell Clean",
-              "1 ½ Band Chest Press"
+              "1 \u00bd Band Chest Press"
             ]
           },
           {
@@ -12095,7 +11818,7 @@ window.EXERCISE_DATA = {
             "phase": "3 x 10",
             "exercises": [
               "One Arm Press W Bridge",
-              "Bulgarians",
+              "Bulgarian Split Squat",
               "Band Flyes"
             ]
           }
@@ -12162,7 +11885,7 @@ window.EXERCISE_DATA = {
             "phase": "3 x 8",
             "exercises": [
               "Curl To Arnold",
-              "Bulgarians",
+              "Bulgarian Split Squat",
               "Leg Circles"
             ]
           }
@@ -12182,7 +11905,6 @@ window.EXERCISE_DATA = {
               "Lat. Step L",
               "Lat. Step R",
               "Ladder",
-              "12-4",
               "Kettlebell Swing",
               "Band Chest Press",
               "Knee Tucks"
@@ -12196,7 +11918,7 @@ window.EXERCISE_DATA = {
               "Leg Curls",
               "21S",
               "Band Curl",
-              "Band Kickbacks"
+              "Band Kickback"
             ]
           }
         ]
@@ -12293,7 +12015,7 @@ window.EXERCISE_DATA = {
             "phase": "40/10x3",
             "exercises": [
               "Band Deep Squat",
-              "Band Kickbacks"
+              "Band Kickback"
             ]
           },
           {
@@ -12364,8 +12086,7 @@ window.EXERCISE_DATA = {
             "exercises": [
               "Single Leg Glute Bridge L",
               "Abduction",
-              "Bridge R",
-              "Abduction"
+              "Bridge R"
             ]
           },
           {
@@ -12379,7 +12100,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 12",
             "exercises": [
-              "Band Bicep Curls",
+              "Band Bicep Curl",
               "Band Kickettlebellacks",
               "Slider Curls"
             ]
@@ -12395,8 +12116,7 @@ window.EXERCISE_DATA = {
             "exercises": [
               "Single Leg Glute Bridge L",
               "Abduction",
-              "Bridge R",
-              "Abduction"
+              "Bridge R"
             ]
           },
           {
@@ -12410,7 +12130,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "2 x 12",
             "exercises": [
-              "Band Bicep Curls",
+              "Band Bicep Curl",
               "Band Kickettlebellacks"
             ]
           }
@@ -12425,9 +12145,9 @@ window.EXERCISE_DATA = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Band Clamshells",
+              "Band Clamshell",
               "Band Butterfly",
-              "Band Kickbacks",
+              "Band Kickback",
               "Band March"
             ]
           },
@@ -12444,7 +12164,7 @@ window.EXERCISE_DATA = {
             "phase": "3 x 12",
             "exercises": [
               "Glute Bridges To Lat Pull",
-              "Dumbbell Side Laterals"
+              "Dumbbell Side Lateral"
             ]
           },
           {
@@ -12499,8 +12219,8 @@ window.EXERCISE_DATA = {
             "phase": "3x8",
             "exercises": [
               "Rev. Lunge To Curtsy",
-              "1 ½ Floor Press",
-              "Dumbbell 1 ½ Pullover"
+              "1 \u00bd Floor Press",
+              "Dumbbell 1 \u00bd Pullover"
             ]
           },
           {
@@ -12541,7 +12261,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3x8",
             "exercises": [
-              "1 ½ Romanian Deadlift",
+              "1 \u00bd Romanian Deadlift",
               "One Arm Row",
               "Wall Sit Bicep Curls"
             ]
@@ -12664,7 +12384,7 @@ window.EXERCISE_DATA = {
               "10 Reps",
               "Dumbbell Jump Squats",
               "Shoulder Tap",
-              "Dd Toe Touch"
+              "Dumbbell Toe Touch"
             ]
           },
           {
@@ -12708,7 +12428,7 @@ window.EXERCISE_DATA = {
             "exercises": [
               "Band Chest Flyes",
               "Glute Bridges Lat Pull",
-              "Split Squats"
+              "Split Squat"
             ]
           },
           {
@@ -12770,7 +12490,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "30/10x3",
             "exercises": [
-              "Band Clamshells",
+              "Band Clamshell",
               "Kickettlebellacks L/R",
               "Ramp 3Min",
               "Band Seals 10",
@@ -12871,7 +12591,6 @@ window.EXERCISE_DATA = {
           {
             "phase": "5 min ladder",
             "exercises": [
-              "5 Up",
               "Push Ups",
               "Prisoner Jump Squat"
             ]
@@ -12899,7 +12618,7 @@ window.EXERCISE_DATA = {
             "exercises": [
               "Band 45 Jack",
               "Band Front/Back Jacks",
-              "Band Clamshells",
+              "Band Clamshell",
               "Glute Bridges",
               "Ladder 2 To 6",
               "Dumbbell Push Up Row",
@@ -12917,7 +12636,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 12",
             "exercises": [
-              "Slider Leg Curls",
+              "Slider Leg Curl",
               "Band Chest Press",
               "Dumbbell Kickettlebellacks",
               "Chipper",
@@ -12937,7 +12656,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "30/10x2",
             "exercises": [
-              "Band Kickbacks",
+              "Band Kickback",
               "Glute Bridges",
               "Band Plank Tap",
               "Chipper",
@@ -12946,7 +12665,7 @@ window.EXERCISE_DATA = {
               "Dumbbell Jack",
               "Sh. Taps",
               "Dumbbell Complex",
-              "1 ½ 3 X 6",
+              "1 \u00bd 3 X 6",
               "Romanian Deadlift",
               "Push Press",
               "Squat",
@@ -12956,7 +12675,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 10",
             "exercises": [
-              "Bulgarians",
+              "Bulgarian Split Squat",
               "Straight Arm Pulls",
               "Bridge Tricep Extension"
             ]
@@ -12979,7 +12698,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 10",
             "exercises": [
-              "Bulgarians",
+              "Bulgarian Split Squat",
               "Straight Arm Pulls",
               "Bridge Tricep Extension"
             ]
@@ -13003,16 +12722,15 @@ window.EXERCISE_DATA = {
           {
             "phase": "Spartan",
             "exercises": [
-              "10-25",
               "Seated Band Row",
-              "Dumbbell ¾ Squats",
+              "Dumbbell \u00be Squats",
               "Toe Grabs"
             ]
           },
           {
             "phase": "3x8",
             "exercises": [
-              "1 ½ Hip Thrust",
+              "1 \u00bd Hip Thrust",
               "Single Bridge To Chest Press",
               "Dumbbell Hammer Curls"
             ]
@@ -13036,9 +12754,9 @@ window.EXERCISE_DATA = {
           {
             "phase": "2 x 10",
             "exercises": [
-              "1 ½ Band Press",
-              "1 ½ Band Pull",
-              "1 ½ Bw Thrust"
+              "1 \u00bd Band Press",
+              "1 \u00bd Band Pull",
+              "1 \u00bd Bw Thrust"
             ]
           }
         ]
@@ -13112,10 +12830,8 @@ window.EXERCISE_DATA = {
             "phase": "3 min ramp",
             "exercises": [
               "Runner Lunge",
-              "10",
               "Sh. Tap 10",
-              "March Bridge",
-              "10"
+              "March Bridge"
             ]
           },
           {
@@ -13146,14 +12862,13 @@ window.EXERCISE_DATA = {
             "phase": "Tabata",
             "exercises": [
               "Band Front/Back Jacks",
-              "Band Clamshells",
-              "Band Seal",
-              "Band Jump Sq",
-              "40/30/20 (15 Off)",
+              "Band Clamshell",
+              "Band Seal Jack",
+              "Band Jump Squat",
               "Dumbbell Goblet Squat",
-              "Band Swims",
-              "Dumbbell Sumo Dl",
-              "Band Puncheses"
+              "Band Swim",
+              "Dumbbell Sumo Deadlift",
+              "Band Punches"
             ]
           },
           {
@@ -13200,7 +12915,7 @@ window.EXERCISE_DATA = {
             "exercises": [
               "Kneeling Curl Press L/R",
               "Single Kick Back",
-              "1 ½ Romanian Deadlift"
+              "1 \u00bd Romanian Deadlift"
             ]
           }
         ]
@@ -13265,11 +12980,10 @@ window.EXERCISE_DATA = {
               "Dumbbell Ren Row 16",
               "Dumbbell Step Up 16",
               "Slider 3 Way 8",
-              "2 Rounds",
               "Side Laterals 15",
               "Pistols 8/8",
               "Band Kick Backs 15",
-              "Band Bicep Curls"
+              "Band Bicep Curl"
             ]
           }
         ]
@@ -13294,7 +13008,6 @@ window.EXERCISE_DATA = {
               "Dumbbell Ren Row 16",
               "Dumbbell Lat Step 16",
               "Slider 3 Way 8",
-              "3 Rounds",
               "Side Laterals 15",
               "Pistols 8/8",
               "Kick Backs 8/8",
@@ -13397,7 +13110,7 @@ window.EXERCISE_DATA = {
             "exercises": [
               "Dumbbell One Arm Row",
               "Box Sl Hip Thrust",
-              "Dumbbell 1 ½ Chest Press"
+              "Dumbbell 1 \u00bd Chest Press"
             ]
           },
           {
@@ -13463,7 +13176,6 @@ window.EXERCISE_DATA = {
               "Pulse Squat",
               "Kick Backs",
               "Ladder",
-              "2-12",
               "Kettlebell Dl Hp",
               "Bench Push Up",
               "Lying Leg Lifts",
@@ -13475,8 +13187,7 @@ window.EXERCISE_DATA = {
               "Burpees",
               "Plank Up",
               "Sh Tap",
-              "Dd Knee Tuck",
-              "Up"
+              "Dd Knee Tuck"
             ]
           }
         ]
@@ -13536,7 +13247,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "30/10x3",
             "exercises": [
-              "Band Clamshells",
+              "Band Clamshell",
               "Kickettlebellacks L/R",
               "Ramp 3Min",
               "Band Seals 10",
@@ -13605,9 +13316,9 @@ window.EXERCISE_DATA = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Band Clamshells",
+              "Band Clamshell",
               "Band Butterfly",
-              "Band Kickbacks",
+              "Band Kickback",
               "Band March"
             ]
           },
@@ -13669,7 +13380,7 @@ window.EXERCISE_DATA = {
               "Burpees",
               "Sh Tap",
               "Cross Knee",
-              "Dd Toe Touch"
+              "Dumbbell Toe Touch"
             ]
           }
         ]
@@ -13688,7 +13399,6 @@ window.EXERCISE_DATA = {
               "Lat. Step L",
               "Lat. Step R",
               "Ladder",
-              "12-4",
               "Kettlebell Swing",
               "Band Chest Press",
               "Knee Tucks"
@@ -13700,10 +13410,10 @@ window.EXERCISE_DATA = {
               "Dumbbell Bent Row",
               "Single Press Bridge",
               "Leg Curls",
-              "Dumbbell Side Laterals",
+              "Dumbbell Side Lateral",
               "21S",
               "Band Curl",
-              "Band Kickbacks"
+              "Band Kickback"
             ]
           }
         ]
@@ -13759,7 +13469,6 @@ window.EXERCISE_DATA = {
           {
             "phase": "5 min ladder",
             "exercises": [
-              "10 Down",
               "Band Squat Row",
               "Dumbbell Push Press"
             ]
@@ -13793,7 +13502,7 @@ window.EXERCISE_DATA = {
           {
             "phase": "3 x 10",
             "exercises": [
-              "T Flies",
+              "T Fly",
               "Pull Thru",
               "Bridge Press Ext"
             ]
@@ -13963,7 +13672,7 @@ window.EXERCISE_DATA = {
           "phase": "3 x 10",
           "exercises": [
             "Dumbbell One Arm Row",
-            "Dumbbell 1 ½ Romanian Deadlift",
+            "Dumbbell 1 \u00bd Romanian Deadlift",
             "Dumbbell Push Press"
           ]
         },
@@ -13971,7 +13680,7 @@ window.EXERCISE_DATA = {
           "phase": "3 x 10",
           "exercises": [
             "Bridge Press",
-            "1 ½ Wedge Squat",
+            "1 \u00bd Wedge Squat",
             "Band Upper Back Pull"
           ]
         }
@@ -13997,7 +13706,7 @@ window.EXERCISE_DATA = {
             "Kettlebell Hike Swing 10",
             "Dumbbell Floor Press 20",
             "Leg Curls 20",
-            "21’S",
+            "21\u2019S",
             "Band Curl",
             "Dumbbell Tricep"
           ]
@@ -14173,7 +13882,7 @@ window.EXERCISE_DATA = {
           "phase": "3 x 12",
           "exercises": [
             "Renegade Rows Row",
-            "1 ½ Romanian Deadlift",
+            "1 \u00bd Romanian Deadlift",
             "Dumbbell Kick Back",
             "Human Maker",
             "10 Reps",
@@ -14205,7 +13914,7 @@ window.EXERCISE_DATA = {
             "Band Lat Pull",
             "Dumbbell Sumo D.Left",
             "Band Chest Cross",
-            "Dumbbell ¾ Curtsy"
+            "Dumbbell \u00be Curtsy"
           ]
         },
         {
@@ -14666,7 +14375,7 @@ window.EXERCISE_DATA = {
             "Complex 5X5",
             "Romanian Deadlift",
             "High Pull",
-            "1 ½ Squat",
+            "1 \u00bd Squat",
             "Hang Clean"
           ]
         },
@@ -15280,9 +14989,9 @@ window.EXERCISE_DATA = {
         {
           "phase": "3x8",
           "exercises": [
-            "1 ½ Bulgarians",
+            "1 \u00bd Bulgarians",
             "Renegade Rows Row",
-            "Wall Sit 1 ½ Bicep Curls"
+            "Wall Sit 1 \u00bd Bicep Curls"
           ]
         }
       ]
@@ -15826,7 +15535,7 @@ window.EXERCISE_DATA = {
           "phase": "3 x 10",
           "exercises": [
             "Renegade Rows Row",
-            "1 ½ Romanian Deadlift",
+            "1 \u00bd Romanian Deadlift",
             "Dumbbell Kick Back",
             "Human Maker",
             "10 Reps",
@@ -16373,8 +16082,8 @@ window.EXERCISE_DATA = {
           "phase": "3x8",
           "exercises": [
             "Rev. Lunge To Curtsy",
-            "1 ½ Floor Press",
-            "Dumbbell 1 ½ Pullover"
+            "1 \u00bd Floor Press",
+            "Dumbbell 1 \u00bd Pullover"
           ]
         },
         {
@@ -16413,7 +16122,7 @@ window.EXERCISE_DATA = {
         {
           "phase": "3x8",
           "exercises": [
-            "1 ½ Romanian Deadlift",
+            "1 \u00bd Romanian Deadlift",
             "One Arm Row",
             "Wall Sit Bicep Curls"
           ]
@@ -16889,7 +16598,7 @@ window.EXERCISE_DATA = {
             "Dumbbell Jack",
             "Sh. Taps",
             "Dumbbell Complex",
-            "1 ½ 3 X 6",
+            "1 \u00bd 3 X 6",
             "Romanian Deadlift",
             "Push Press",
             "Squat",
@@ -16923,14 +16632,14 @@ window.EXERCISE_DATA = {
           "exercises": [
             "10-25",
             "Seated Band Row",
-            "Dumbbell ¾ Squats",
+            "Dumbbell \u00be Squats",
             "Toe Grabs"
           ]
         },
         {
           "phase": "3x8",
           "exercises": [
-            "1 ½ Hip Thrust",
+            "1 \u00bd Hip Thrust",
             "Single Bridge To Chest Press",
             "Dumbbell Hammer Curls"
           ]
@@ -16952,9 +16661,9 @@ window.EXERCISE_DATA = {
         {
           "phase": "2 x 10",
           "exercises": [
-            "1 ½ Band Press",
-            "1 ½ Band Pull",
-            "1 ½ Bw Thrust"
+            "1 \u00bd Band Press",
+            "1 \u00bd Band Pull",
+            "1 \u00bd Bw Thrust"
           ]
         }
       ]
@@ -16996,7 +16705,7 @@ window.EXERCISE_DATA = {
             "Single Bridge R",
             "Ladder 10-4",
             "Kettlebell Clean",
-            "1 ½ Band Chest Press"
+            "1 \u00bd Band Chest Press"
           ]
         },
         {
@@ -17164,7 +16873,7 @@ window.EXERCISE_DATA = {
           "exercises": [
             "Kneeling Curl Press L/R",
             "Single Kick Back",
-            "1 ½ Romanian Deadlift"
+            "1 \u00bd Romanian Deadlift"
           ]
         }
       ]
@@ -17490,7 +17199,7 @@ window.EXERCISE_DATA = {
           "exercises": [
             "Dumbbell One Arm Row",
             "Box Sl Hip Thrust",
-            "Dumbbell 1 ½ Chest Press"
+            "Dumbbell 1 \u00bd Chest Press"
           ]
         },
         {
@@ -18129,10 +17838,10 @@ window.EXERCISE_DATA = {
     "Dd Toe Touch 8": 1,
     "Plank Jack 8": 1,
     "Dumbbell One Arm Row": 8,
-    "Dumbbell 1 ½ Romanian Deadlift": 1,
+    "Dumbbell 1 \u00bd Romanian Deadlift": 1,
     "Dumbbell Push Press": 4,
     "Bridge Press": 1,
-    "1 ½ Wedge Squat": 1,
+    "1 \u00bd Wedge Squat": 1,
     "Band Upper Back Pull": 1,
     "Band Clamshells": 21,
     "Band Kickbacks": 16,
@@ -18142,7 +17851,7 @@ window.EXERCISE_DATA = {
     "Kettlebell Hike Swing 10": 2,
     "Dumbbell Floor Press 20": 2,
     "Leg Curls 20": 2,
-    "21’S": 1,
+    "21\u2019S": 1,
     "Band Curl": 7,
     "Dumbbell Tricep": 2,
     "Single Bridge L": 9,
@@ -18194,7 +17903,7 @@ window.EXERCISE_DATA = {
     "Jump Lunge 20": 2,
     "Plank Up 10": 2,
     "Renegade Rows Row": 3,
-    "1 ½ Romanian Deadlift": 4,
+    "1 \u00bd Romanian Deadlift": 4,
     "Dumbbell Kick Back": 2,
     "Human Maker": 2,
     "10 Reps": 4,
@@ -18206,7 +17915,7 @@ window.EXERCISE_DATA = {
     "Band Lat Pull": 2,
     "Dumbbell Sumo D.Left": 1,
     "Band Chest Cross": 1,
-    "Dumbbell ¾ Curtsy": 1,
+    "Dumbbell \u00be Curtsy": 1,
     "Band Face Pulls": 9,
     "Wall Sit Bicep Curlss": 5,
     "Band Tricep Pressdowns": 1,
@@ -18322,7 +18031,7 @@ window.EXERCISE_DATA = {
     "Band Clamshellss": 1,
     "Complex 5X5": 1,
     "High Pull": 1,
-    "1 ½ Squat": 1,
+    "1 \u00bd Squat": 1,
     "Hang Clean": 1,
     "Alternating Box Ch Press": 1,
     "Single Hip Thurst": 1,
@@ -18432,8 +18141,8 @@ window.EXERCISE_DATA = {
     "Band Lat Pulldown Bridge 20": 2,
     "Step-Ups 20": 2,
     "Sandbag Pull-Through 20": 2,
-    "1 ½ Bulgarians": 1,
-    "Wall Sit 1 ½ Bicep Curls": 1,
+    "1 \u00bd Bulgarians": 1,
+    "Wall Sit 1 \u00bd Bicep Curls": 1,
     "Band Plank Jack": 1,
     "Kettlebell Deadlift": 1,
     "Dumbbell Wide Row": 2,
@@ -18564,8 +18273,8 @@ window.EXERCISE_DATA = {
     "Wall Sit Sh Glide": 2,
     "Sh Tap Dd Toe Touch": 2,
     "Rev. Lunge To Curtsy": 1,
-    "1 ½ Floor Press": 1,
-    "Dumbbell 1 ½ Pullover": 1,
+    "1 \u00bd Floor Press": 1,
+    "Dumbbell 1 \u00bd Pullover": 1,
     "Plank Tap": 1,
     "Pointers": 2,
     "Sh Tap-Dd Toe Touch": 1,
@@ -18605,26 +18314,26 @@ window.EXERCISE_DATA = {
     "Dumbbell Jack": 1,
     "Sh. Taps": 1,
     "Dumbbell Complex": 3,
-    "1 ½ 3 X 6": 1,
+    "1 \u00bd 3 X 6": 1,
     "Push Press": 4,
     "Rows": 2,
     "Straight Arm Pulls": 2,
     "10-25": 1,
     "Seated Band Row": 1,
-    "Dumbbell ¾ Squats": 1,
+    "Dumbbell \u00be Squats": 1,
     "Toe Grabs": 1,
-    "1 ½ Hip Thrust": 1,
+    "1 \u00bd Hip Thrust": 1,
     "Dumbbell Hammer Curls": 1,
     "Hip Mob Floor": 1,
     "90 Leg Rotations": 1,
     "Wall": 1,
-    "1 ½ Band Press": 1,
-    "1 ½ Band Pull": 1,
-    "1 ½ Bw Thrust": 1,
+    "1 \u00bd Band Press": 1,
+    "1 \u00bd Band Pull": 1,
+    "1 \u00bd Bw Thrust": 1,
     "Alternating Leg Curls": 1,
     "Band Hip B. Lat Pull": 1,
     "Ladder 10-4": 1,
-    "1 ½ Band Chest Press": 1,
+    "1 \u00bd Band Chest Press": 1,
     "Dumbbell Tricep Press": 1,
     "Sumo To High Pull": 1,
     "Dumbbell Crunch": 1,
@@ -18675,7 +18384,7 @@ window.EXERCISE_DATA = {
     "Lat Pull Bridge 30": 1,
     "Mod Sp Clam L": 1,
     "Mod Sp Clam R": 1,
-    "Dumbbell 1 ½ Chest Press": 1,
+    "Dumbbell 1 \u00bd Chest Press": 1,
     "Dumbbell Alternating Curl Press": 1,
     "Glute Lat Tap L": 1,
     "Stag. Pistol L": 1,

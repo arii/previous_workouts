@@ -494,21 +494,21 @@ function displayGeneratedWorkout(workout) {
     currentWorkout = workout;
     
     workoutStructure.innerHTML = workout.phases.map(phase => `
-        <div class="mb-4">
-            <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-2 rounded-t-lg">
-                <h3 class="text-sm font-semibold">${phase.name}</h3>
+        <div class="mb-3">
+            <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-1.5 rounded-t-md">
+                <h3 class="text-xs font-semibold">${phase.name}</h3>
                 <p class="text-blue-100 text-xs">${phase.timing}</p>
             </div>
-            <div class="bg-white border border-gray-200 rounded-b-lg p-3">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div class="bg-white border border-gray-200 rounded-b-md p-2">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
                     ${phase.exercises.map(exercise => `
-                        <div class="bg-gray-50 rounded-lg p-3 hover:shadow-md transition-shadow">
-                            <h4 class="font-semibold text-gray-800 mb-1 text-sm">${exercise.name}</h4>
-                            <div class="space-y-1 text-xs text-gray-600">
-                                <div><i class="fas fa-layer-group mr-1"></i>Sets: ${exercise.sets}</div>
-                                <div><i class="fas fa-repeat mr-1"></i>Reps: ${exercise.reps}</div>
-                                ${exercise.duration ? `<div><i class="fas fa-clock mr-1"></i>Duration: ${exercise.duration}</div>` : ''}
-                                <div><i class="fas fa-pause mr-1"></i>Rest: ${exercise.rest}</div>
+                        <div class="bg-gray-50 rounded p-2 hover:shadow-sm transition-shadow">
+                            <h4 class="font-medium text-gray-800 text-xs mb-1">${exercise.name}</h4>
+                            <div class="text-xs text-gray-600 space-y-0.5">
+                                <div>${exercise.sets} sets</div>
+                                <div>${exercise.reps}</div>
+                                ${exercise.duration ? `<div>${exercise.duration}</div>` : ''}
+                                <div>${exercise.rest}</div>
                             </div>
                         </div>
                     `).join('')}
@@ -558,9 +558,18 @@ function generateAndDisplayTable(workout) {
         <div class="bg-gray-50 rounded-lg p-3 overflow-x-auto">
             ${table}
         </div>
+        
+        <!-- Server Format Preview -->
+        <div class="mt-4">
+            <h4 class="text-sm font-medium text-gray-700 mb-2">Server Format Preview:</h4>
+            <div class="bg-gray-100 rounded p-3 text-xs font-mono whitespace-pre-line max-h-32 overflow-y-auto" id="serverFormatPreview">
+                ${generateServerFriendlyFormat(workout)}
+            </div>
+        </div>
+        
         <p class="text-xs text-gray-600 mt-2">
             <i class="fas fa-info-circle mr-1"></i>
-            Click "Copy" to copy this table and paste it into Google Docs.
+            Click "Copy Table" for Google Docs or "Server Format" for server integration.
         </p>
     `;
     
