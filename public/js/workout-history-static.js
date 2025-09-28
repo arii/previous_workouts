@@ -94,14 +94,9 @@ function generateHistoricalWorkouts() {
                 intensity: 'Normal', // Default intensity
                 phases: cleanedPhases.map(phase => ({
                     name: phase.phase,
+                    phase: phase.phase, // Add phase property for compatibility
                     timing: phase.phase, // Use phase name as timing
-                    exercises: phase.exercises.map(exercise => ({
-                        name: exercise,
-                        sets: getSetsForPhase(phase.phase, 'normal'),
-                        reps: getRepsForPhase(phase.phase, 'normal'),
-                        duration: getDurationForPhase(phase.phase, 'normal'),
-                        rest: getRestForPhase(phase.phase, 'normal')
-                    }))
+                    exercises: phase.exercises // Keep as simple strings for compatibility
                 }))
             });
         });
@@ -610,9 +605,9 @@ function displayWorkouts(workouts, filter) {
     thead.className = 'bg-gray-50 border-b border-gray-200';
     thead.innerHTML = `
         <tr>
-            <th class="px-3 py-3 text-left font-semibold text-gray-700 text-xs uppercase tracking-wide">Date</th>
-            <th class="px-3 py-3 text-left font-semibold text-gray-700 text-xs uppercase tracking-wide">Workout Summary</th>
-            <th class="px-3 py-3 text-center font-semibold text-gray-700 text-xs uppercase tracking-wide">View</th>
+            <th class="px-2 sm:px-3 py-2 sm:py-3 text-left font-semibold text-gray-700 text-xs uppercase tracking-wide">Date</th>
+            <th class="px-2 sm:px-3 py-2 sm:py-3 text-left font-semibold text-gray-700 text-xs uppercase tracking-wide hidden sm:table-cell">Workout Summary</th>
+            <th class="px-2 sm:px-3 py-2 sm:py-3 text-center font-semibold text-gray-700 text-xs uppercase tracking-wide">View</th>
         </tr>
     `;
     table.appendChild(thead);
@@ -640,6 +635,8 @@ function displayWorkouts(workouts, filter) {
 
 // Create a table row for a workout
 function createWorkoutTableRow(workout) {
+    console.log('Creating workout table row:', workout);
+    
     const row = document.createElement('tr');
     
     // Get intensity and set appropriate background color
@@ -717,16 +714,19 @@ function createWorkoutTableRow(workout) {
     const workoutSummary = createWorkoutSummary(phases, intensity, workout.type);
     
     row.innerHTML = `
-        <td class="px-3 py-2 whitespace-nowrap text-sm font-medium text-gray-900">
-            ${formattedDate}
+        <td class="px-2 sm:px-3 py-2 whitespace-nowrap text-xs sm:text-sm font-medium text-gray-900">
+            <div class="flex flex-col sm:block">
+                <span class="font-medium">${formattedDate}</span>
+                <span class="text-gray-500 text-xs sm:hidden">${workoutSummary}</span>
+            </div>
         </td>
-        <td class="px-3 py-2 text-sm text-gray-900">
+        <td class="px-2 sm:px-3 py-2 text-xs sm:text-sm text-gray-900 hidden sm:table-cell">
             ${workoutSummary}
         </td>
-        <td class="px-3 py-2 text-center">
+        <td class="px-2 sm:px-3 py-2 text-center">
             <button onclick="viewWorkoutDetails('${workout.id || workout.date}')" 
-                    class="text-blue-600 hover:text-blue-900 transition-colors">
-                <i class="fas fa-eye"></i>
+                    class="text-blue-600 hover:text-blue-900 transition-colors p-1">
+                <i class="fas fa-eye text-sm sm:text-base"></i>
             </button>
         </td>
     `;
@@ -736,19 +736,32 @@ function createWorkoutTableRow(workout) {
 
 // Create a useful workout summary for the table
 function createWorkoutSummary(phases, intensity, workoutType) {
+    console.log('Creating workout summary:', { phases, intensity, workoutType });
+    
     if (!phases || phases.length === 0) {
         return '<span class="text-gray-500">No workout data</span>';
     }
     
     try {
-        const totalExercises = phases.reduce((sum, phase) => sum + (phase.exercises ? getExerciseNames(phase.exercises).length : 0), 0);
-        const phaseNames = phases.map(phase => getSimplifiedTiming(phase)).join(', ');
+        const totalExercises = phases.reduce((sum, phase) => {
+            if (phase.exercises && Array.isArray(phase.exercises)) {
+                return sum + phase.exercises.length;
+            }
+            return sum;
+        }, 0);
+        
+        const phaseNames = phases.map(phase => {
+            const name = phase.name || phase.phase || 'Unknown';
+            return getSimplifiedTiming(phase);
+        }).join(', ');
         
         // Get first few exercises from each phase
         const exercisePreview = phases.slice(0, 2).map(phase => {
-            const exerciseNames = getExerciseNames(phase.exercises);
-            return exerciseNames.slice(0, 2).join(', ');
-        }).join(' | ');
+            if (phase.exercises && Array.isArray(phase.exercises)) {
+                return phase.exercises.slice(0, 2).join(', ');
+            }
+            return '';
+        }).filter(preview => preview.length > 0).join(' | ');
         
         const intensityBadgeColors = {
             'lower': 'bg-green-100 text-green-800',
@@ -756,14 +769,15 @@ function createWorkoutSummary(phases, intensity, workoutType) {
             'higher': 'bg-red-100 text-red-800'
         };
         
-        const intensityBadge = intensityBadgeColors[intensity.toLowerCase()] || intensityBadgeColors.normal;
+        const safeIntensity = intensity || 'normal';
+        const intensityBadge = intensityBadgeColors[safeIntensity.toLowerCase()] || intensityBadgeColors.normal;
         
         return `
             <div class="space-y-1">
                 <div class="flex items-center space-x-2">
                     <span class="font-medium text-gray-800">${totalExercises} exercises</span>
                     <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${intensityBadge}">
-                        ${intensity.charAt(0).toUpperCase() + intensity.slice(1)}
+                        ${safeIntensity.charAt(0).toUpperCase() + safeIntensity.slice(1)}
                     </span>
                     <span class="text-gray-500 text-xs">${workoutType || 'Mixed'}</span>
                 </div>
@@ -772,7 +786,7 @@ function createWorkoutSummary(phases, intensity, workoutType) {
             </div>
         `;
     } catch (error) {
-        console.error('Error creating workout summary:', error);
+        console.error('Error creating workout summary:', error, { phases, intensity, workoutType });
         return '<span class="text-red-500">Error loading workout</span>';
     }
 }
