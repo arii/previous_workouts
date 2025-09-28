@@ -289,7 +289,8 @@ function getSimplifiedTiming(phase) {
     
     // Map common phase names to simplified timing
     const timingMap = {
-        'Warmup': 'Tabata',
+        'Warmup Set 1': '20/10',
+        'Warmup Set 2': '40/30/20/15',
         'Cardio': 'Cardio',
         'Strength': 'Strength',
         'Finisher': 'Finisher',

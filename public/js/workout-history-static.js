@@ -78,30 +78,60 @@ function generateHistoricalWorkouts() {
     const historicalWorkouts = [];
     
     Object.entries(dailyWorkouts).forEach(([date, workouts]) => {
+        if (!Array.isArray(workouts)) {
+            console.warn('Workouts is not an array for date:', date, workouts);
+            return;
+        }
+        
         workouts.forEach((workout, index) => {
-            // Clean up exercise names and filter out invalid exercises
-            const cleanedPhases = workout.phases.map(phase => ({
-                ...phase,
-                exercises: phase.exercises
-                    .filter(exercise => isValidExercise(exercise))
-                    .map(exercise => standardizeExerciseName(exercise))
-            }));
-            
-            historicalWorkouts.push({
-                id: `${date}-${index}`,
-                date: date,
-                type: 'Mixed', // Default type
-                intensity: 'Normal', // Default intensity
-                phases: cleanedPhases.map(phase => ({
-                    name: phase.phase,
-                    phase: phase.phase, // Add phase property for compatibility
-                    timing: phase.phase, // Use phase name as timing
-                    exercises: phase.exercises // Keep as simple strings for compatibility
-                }))
-            });
+            try {
+                if (!workout.phases || !Array.isArray(workout.phases)) {
+                    console.warn('Workout has no phases or phases is not an array:', workout);
+                    return;
+                }
+                
+                // Clean up exercise names and filter out invalid exercises
+                const cleanedPhases = workout.phases.map(phase => {
+                    if (!phase.exercises || !Array.isArray(phase.exercises)) {
+                        console.warn('Phase has no exercises or exercises is not an array:', phase);
+                        return {
+                            ...phase,
+                            exercises: []
+                        };
+                    }
+                    
+                    return {
+                        ...phase,
+                        exercises: phase.exercises
+                            .filter(exercise => isValidExercise(exercise))
+                            .map(exercise => standardizeExerciseName(exercise))
+                    };
+                }).filter(phase => phase.exercises.length > 0); // Only keep phases with exercises
+                
+                if (cleanedPhases.length === 0) {
+                    console.warn('No valid phases found for workout:', workout);
+                    return;
+                }
+                
+                historicalWorkouts.push({
+                    id: `${date}-${index}`,
+                    date: date,
+                    type: 'Mixed', // Default type
+                    intensity: 'Normal', // Default intensity
+                    phases: cleanedPhases.map(phase => ({
+                        name: phase.phase || 'Unknown Phase',
+                        phase: phase.phase || 'Unknown Phase',
+                        timing: phase.phase || 'Unknown Phase',
+                        exercises: phase.exercises || []
+                    }))
+                });
+            } catch (error) {
+                console.error('Error processing workout:', error, workout);
+            }
         });
     });
     
+    console.log('Generated historical workouts:', historicalWorkouts.length);
     return historicalWorkouts.sort((a, b) => new Date(b.date) - new Date(a.date));
 }
 
@@ -862,7 +892,8 @@ function getSimplifiedTiming(phase) {
     
     // Map common phase names to simplified timing
     const timingMap = {
-        'Warmup': 'Tabata',
+        'Warmup Set 1': '20/10',
+        'Warmup Set 2': '40/30/20/15',
         'Cardio': 'Cardio',
         'Strength': 'Strength',
         'Finisher': 'Finisher',

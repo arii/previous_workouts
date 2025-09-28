@@ -148,11 +148,11 @@ function generateMixedWorkout(categories, intensity) {
 function generateEMOMWorkout(categories, intensity) {
     const phases = [];
     
-    // Warmup - Tabata style (20/10)
-    const warmupExercises = getRandomExercises(getProperWarmupExercises(), 4);
+    // Warmup - First Tabata set (20/10)
+    const warmupExercises1 = getRandomExercises(getProperWarmupExercises(), 4);
     phases.push({
-        name: 'Warmup',
-        exercises: warmupExercises.map(exercise => ({
+        name: 'Warmup Set 1',
+        exercises: warmupExercises1.map(exercise => ({
             name: standardizeExerciseName(exercise),
             sets: '8',
             reps: '20 sec work',
@@ -160,6 +160,20 @@ function generateEMOMWorkout(categories, intensity) {
             rest: '10 sec rest'
         })),
         timing: '8 rounds, 20 sec work, 10 sec rest'
+    });
+    
+    // Warmup - Second Tabata set (40/30/20/15)
+    const warmupExercises2 = getRandomExercises(getProperWarmupExercises(), 4);
+    phases.push({
+        name: 'Warmup Set 2',
+        exercises: warmupExercises2.map(exercise => ({
+            name: standardizeExerciseName(exercise),
+            sets: '4',
+            reps: '40, 30, 20, 15 sec work',
+            duration: null,
+            rest: '15 sec rest'
+        })),
+        timing: '4 rounds, 40/30/20/15 sec work, 15 sec rest'
     });
     
     // Cardio
@@ -213,11 +227,11 @@ function generateEMOMWorkout(categories, intensity) {
 function generateSpartanWorkout(categories, intensity) {
     const phases = [];
     
-    // Warmup - Tabata style (20/10)
-    const warmupExercises = getRandomExercises(getProperWarmupExercises(), 4);
+    // Warmup - First Tabata set (20/10)
+    const warmupExercises1 = getRandomExercises(getProperWarmupExercises(), 4);
     phases.push({
-        name: 'Warmup',
-        exercises: warmupExercises.map(exercise => ({
+        name: 'Warmup Set 1',
+        exercises: warmupExercises1.map(exercise => ({
             name: standardizeExerciseName(exercise),
             sets: '8',
             reps: '20 sec work',
@@ -225,6 +239,20 @@ function generateSpartanWorkout(categories, intensity) {
             rest: '10 sec rest'
         })),
         timing: '8 rounds, 20 sec work, 10 sec rest'
+    });
+    
+    // Warmup - Second Tabata set (40/30/20/15)
+    const warmupExercises2 = getRandomExercises(getProperWarmupExercises(), 4);
+    phases.push({
+        name: 'Warmup Set 2',
+        exercises: warmupExercises2.map(exercise => ({
+            name: standardizeExerciseName(exercise),
+            sets: '4',
+            reps: '40, 30, 20, 15 sec work',
+            duration: null,
+            rest: '15 sec rest'
+        })),
+        timing: '4 rounds, 40/30/20/15 sec work, 15 sec rest'
     });
     
     // Cardio
@@ -278,11 +306,11 @@ function generateSpartanWorkout(categories, intensity) {
 function generateTabataWorkout(categories, intensity) {
     const phases = [];
     
-    // Warmup - Tabata style (20/10)
-    const warmupExercises = getRandomExercises(getProperWarmupExercises(), 4);
+    // Warmup - First Tabata set (20/10)
+    const warmupExercises1 = getRandomExercises(getProperWarmupExercises(), 4);
     phases.push({
-        name: 'Warmup',
-        exercises: warmupExercises.map(exercise => ({
+        name: 'Warmup Set 1',
+        exercises: warmupExercises1.map(exercise => ({
             name: standardizeExerciseName(exercise),
             sets: '8',
             reps: '20 sec work',
@@ -290,6 +318,20 @@ function generateTabataWorkout(categories, intensity) {
             rest: '10 sec rest'
         })),
         timing: '8 rounds, 20 sec work, 10 sec rest'
+    });
+    
+    // Warmup - Second Tabata set (40/30/20/15)
+    const warmupExercises2 = getRandomExercises(getProperWarmupExercises(), 4);
+    phases.push({
+        name: 'Warmup Set 2',
+        exercises: warmupExercises2.map(exercise => ({
+            name: standardizeExerciseName(exercise),
+            sets: '4',
+            reps: '40, 30, 20, 15 sec work',
+            duration: null,
+            rest: '15 sec rest'
+        })),
+        timing: '4 rounds, 40/30/20/15 sec work, 15 sec rest'
     });
     
     // Tabata
@@ -657,7 +699,8 @@ function getSimplifiedTiming(phase) {
     
     // Map common phase names to simplified timing
     const timingMap = {
-        'Warmup': 'Tabata',
+        'Warmup Set 1': '20/10',
+        'Warmup Set 2': '40/30/20/15',
         'Cardio': 'Cardio',
         'Strength': 'Strength',
         'Finisher': 'Finisher',
