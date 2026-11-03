@@ -57,3 +57,36 @@ The categorized data includes:
 - **Data Processing**: Exercise name standardization and categorization
 
 Last updated: September 27, 2025
+
+## Incremental updates
+
+New revisions are collected without touching existing files in `revisions/`.
+
+Setup (once):
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r exercise_data/requirements.txt
+```
+
+Credentials live in the repo-root `.env` (gitignored): `GOOGLE_CLIENT_ID`,
+`GOOGLE_CLIENT_SECRET_FILE`, `GOOGLE_DRIVE_FILE_ID`, `GOOGLE_TOKEN_FILE`.
+
+```bash
+source .venv/bin/activate
+python exercise_data/collect_revisions.py --dry-run   # validate config only
+python exercise_data/collect_revisions.py --auth-url  # first run: get consent URL
+python exercise_data/collect_revisions.py --list-only --auth-code <code>
+python exercise_data/collect_revisions.py --rebuild   # download new + rebuild data
+```
+
+The first run is a two-step consent: `--auth-url` prints a Google URL;
+authorize it, then rerun with `--auth-code` and the pasted code. The token
+is cached at `exercise_data/token.json` (gitignored) for later runs.
+
+`--rebuild` regenerates `workout_history_data_categorized.json`, rebuilds
+`public/js/exercise-data.js`, sanitizes it, and verifies completeness.
+Note: the current JSON contains 13 merged same-day entries from an earlier
+manual step; a rebuild lists each revision file separately instead. The
+site already renders multi-entry dates, so this is display-safe.

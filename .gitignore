@@ -105,4 +105,9 @@ public/css/style.css
 # Google Drive API credentials and tokens
 exercise_data/token.json
 exercise_data/credentials.json
+exercise_data/.oauth_pending.json
 exercise_data/__pycache__/
+client_secret*.json
+
+# Python virtual environment
+.venv/

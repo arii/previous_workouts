@@ -13,9 +13,9 @@ def load_exercise_data():
     with open('public/js/exercise-data.js', 'r') as f:
         content = f.read()
         # Extract the JSON data from the JavaScript file
-        start = content.find('window.EXERCISE_DATA = ')
+        start = content.find('const exerciseData = ')
         if start == -1:
-            raise ValueError("Could not find EXERCISE_DATA in file")
+            raise ValueError("Could not find exerciseData in file")
         
         # Find the opening brace
         start = content.find('{', start)
@@ -40,9 +40,10 @@ def load_exercise_data():
 def save_exercise_data(data):
     """Save the sanitized data back to the JavaScript file"""
     with open('public/js/exercise-data.js', 'w') as f:
-        f.write('window.EXERCISE_DATA = ')
+        f.write('// Exercise data generated from workout_history_data_categorized.json\n')
+        f.write('const exerciseData = ')
         json.dump(data, f, indent=2)
-        f.write(';')
+        f.write(';\n\n// Make data available globally\nwindow.EXERCISE_DATA = exerciseData;\n')
 
 def get_invalid_exercises():
     """Get list of invalid exercises to filter out"""
