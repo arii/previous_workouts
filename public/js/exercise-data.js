@@ -1,7 +1,7 @@
 // Exercise data generated from workout_history_data_categorized.json
 const exerciseData = {
   "metadata": {
-    "generated_at": "2026-11-03T06:01:24.192327",
+    "generated_at": "2026-11-03T06:37:56.355131",
     "source": "raw revision files (regenerated)",
     "total_files_processed": 227,
     "summary": {
@@ -201,29 +201,30 @@ const exerciseData = {
         "2024-09-25": 1
       },
       "exercise_counts_by_category": {
-        "Warmup": 998,
-        "Cardio": 145,
-        "Strength": 376,
-        "Accessory": 1669,
+        "Warmup": 993,
+        "Cardio": 213,
+        "Strength": 369,
+        "Accessory": 1589,
         "Recovery": 14
       },
       "most_common_exercises": {
         "Db floor press": 33,
+        "Band hydrant": 31,
+        "Band kickback": 28,
         "Basic crunch": 28,
-        "Band hydrant": 26,
+        "Leg lift": 28,
+        "Sh tap": 26,
         "Band facepull": 26,
-        "Band bridge": 23,
-        "Band kickback": 23,
+        "Band bridge": 25,
         "Band press": 23,
-        "Leg lifts": 21,
+        "Leg curl": 23,
+        "Bikes": 22,
+        "Push up": 21,
         "Kb swing": 20,
         "Burpee": 20,
-        "Hip thrust": 20,
-        "Kb swing 20": 19,
-        "Stretch": 19,
-        "Rdl": 19,
-        "Butterfly pump": 18
-      }
+        "Hip thrust": 20
+      },
+      "total_unique_exercises": 911
     }
   },
   "categorized_exercises": {
@@ -247,7 +248,7 @@ const exerciseData = {
         "filename": "revision_100171_2024-09-27_14-56-28.txt"
       },
       {
-        "exercise": "Leg up crunch l",
+        "exercise": "Leg up crunch L",
         "phase": "Tabata",
         "date": "2024-09-30",
         "filename": "revision_100391_2024-09-30_14-51-28.txt"
@@ -319,7 +320,7 @@ const exerciseData = {
         "filename": "revision_100392_2024-10-02_14-42-17.txt"
       },
       {
-        "exercise": "Band seals",
+        "exercise": "Band seal",
         "phase": "Tabata",
         "date": "2024-10-02",
         "filename": "revision_100392_2024-10-02_14-42-17.txt"
@@ -355,7 +356,7 @@ const exerciseData = {
         "filename": "revision_100574_2024-10-02_14-54-21.txt"
       },
       {
-        "exercise": "Supermans",
+        "exercise": "Superman",
         "phase": "30/10x3",
         "date": "2024-10-02",
         "filename": "revision_100574_2024-10-02_14-54-21.txt"
@@ -379,7 +380,7 @@ const exerciseData = {
         "filename": "revision_100574_2024-10-02_14-54-21.txt"
       },
       {
-        "exercise": "Single leg drops",
+        "exercise": "Single leg drop",
         "phase": "30/10x2",
         "date": "2024-10-04",
         "filename": "revision_100575_2024-10-04_14-58-03.txt"
@@ -391,7 +392,7 @@ const exerciseData = {
         "filename": "revision_100575_2024-10-04_14-58-03.txt"
       },
       {
-        "exercise": "penguins",
+        "exercise": "Penguins",
         "phase": "30/10x2",
         "date": "2024-10-04",
         "filename": "revision_100575_2024-10-04_14-58-03.txt"
@@ -457,7 +458,7 @@ const exerciseData = {
         "filename": "revision_100576_2024-10-04_14-58-31.txt"
       },
       {
-        "exercise": "Band bridges",
+        "exercise": "Band bridge",
         "phase": "Tabata",
         "date": "2024-10-04",
         "filename": "revision_100576_2024-10-04_14-58-31.txt"
@@ -505,7 +506,7 @@ const exerciseData = {
         "filename": "revision_100616_2024-10-04_15-40-30.txt"
       },
       {
-        "exercise": "Band bridges",
+        "exercise": "Band bridge",
         "phase": "Tabata",
         "date": "2024-10-04",
         "filename": "revision_100616_2024-10-04_15-40-30.txt"
@@ -637,7 +638,7 @@ const exerciseData = {
         "filename": "revision_101054_2024-10-14_14-58-07.txt"
       },
       {
-        "exercise": "rest",
+        "exercise": "Rest",
         "phase": "Tabata",
         "date": "2024-10-14",
         "filename": "revision_101054_2024-10-14_14-58-07.txt"
@@ -673,7 +674,7 @@ const exerciseData = {
         "filename": "revision_101255_2024-10-16_14-54-57.txt"
       },
       {
-        "exercise": "Alt leg drops",
+        "exercise": "Alt leg drop",
         "phase": "30/10x3",
         "date": "2024-10-16",
         "filename": "revision_101255_2024-10-16_14-54-57.txt"
@@ -715,7 +716,7 @@ const exerciseData = {
         "filename": "revision_101268_2024-10-16_15-30-50.txt"
       },
       {
-        "exercise": "Alt leg drops",
+        "exercise": "Alt leg drop",
         "phase": "30/10x3",
         "date": "2024-10-16",
         "filename": "revision_101268_2024-10-16_15-30-50.txt"
@@ -757,7 +758,7 @@ const exerciseData = {
         "filename": "revision_101539_2024-10-21_15-11-59.txt"
       },
       {
-        "exercise": "Plank dips",
+        "exercise": "Plank dip",
         "phase": "Tabata",
         "date": "2024-10-21",
         "filename": "revision_101539_2024-10-21_15-11-59.txt"
@@ -823,13 +824,13 @@ const exerciseData = {
         "filename": "revision_101718_2024-10-28_14-47-01.txt"
       },
       {
-        "exercise": "Alt leg drops",
+        "exercise": "Alt leg drop",
         "phase": "30/10x3",
         "date": "2024-10-28",
         "filename": "revision_101718_2024-10-28_14-47-01.txt"
       },
       {
-        "exercise": "Pointers",
+        "exercise": "Pointer",
         "phase": "30/10x3",
         "date": "2024-10-28",
         "filename": "revision_101718_2024-10-28_14-47-01.txt"
@@ -841,7 +842,7 @@ const exerciseData = {
         "filename": "revision_101720_2024-10-30_14-58-57.txt"
       },
       {
-        "exercise": "Flutters",
+        "exercise": "Flutter",
         "phase": "Tabata",
         "date": "2024-10-30",
         "filename": "revision_101720_2024-10-30_14-58-57.txt"
@@ -853,7 +854,7 @@ const exerciseData = {
         "filename": "revision_101720_2024-10-30_14-58-57.txt"
       },
       {
-        "exercise": "bikes",
+        "exercise": "Bikes",
         "phase": "Tabata",
         "date": "2024-10-30",
         "filename": "revision_101720_2024-10-30_14-58-57.txt"
@@ -1015,7 +1016,7 @@ const exerciseData = {
         "filename": "revision_102863_2024-11-13_15-52-38.txt"
       },
       {
-        "exercise": "Supermans",
+        "exercise": "Superman",
         "phase": "30/10x3",
         "date": "2024-11-13",
         "filename": "revision_102863_2024-11-13_15-52-38.txt"
@@ -1063,13 +1064,13 @@ const exerciseData = {
         "filename": "revision_103161_2024-11-20_15-52-44.txt"
       },
       {
-        "exercise": "Single reach L",
+        "exercise": "Single reach l",
         "phase": "Tabata",
         "date": "2024-11-20",
         "filename": "revision_103161_2024-11-20_15-52-44.txt"
       },
       {
-        "exercise": "Single reach R",
+        "exercise": "Single reach r",
         "phase": "Tabata",
         "date": "2024-11-20",
         "filename": "revision_103161_2024-11-20_15-52-44.txt"
@@ -1171,7 +1172,7 @@ const exerciseData = {
         "filename": "revision_103675_2024-11-27_16-40-37.txt"
       },
       {
-        "exercise": "Flutters",
+        "exercise": "Flutter",
         "phase": "Tabata",
         "date": "2024-11-27",
         "filename": "revision_103675_2024-11-27_16-40-37.txt"
@@ -1183,7 +1184,7 @@ const exerciseData = {
         "filename": "revision_103675_2024-11-27_16-40-37.txt"
       },
       {
-        "exercise": "bikes",
+        "exercise": "Bikes",
         "phase": "Tabata",
         "date": "2024-11-27",
         "filename": "revision_103675_2024-11-27_16-40-37.txt"
@@ -1273,7 +1274,7 @@ const exerciseData = {
         "filename": "revision_104132_2024-12-06_15-52-58.txt"
       },
       {
-        "exercise": "Plank dips",
+        "exercise": "Plank dip",
         "phase": "Tabata",
         "date": "2024-12-06",
         "filename": "revision_104132_2024-12-06_15-52-58.txt"
@@ -1321,7 +1322,7 @@ const exerciseData = {
         "filename": "revision_104135_2024-12-20_15-48-57.txt"
       },
       {
-        "exercise": "reverse crunch",
+        "exercise": "Reverse crunch",
         "phase": "30/10x3",
         "date": "2024-12-20",
         "filename": "revision_104135_2024-12-20_15-48-57.txt"
@@ -1393,7 +1394,7 @@ const exerciseData = {
         "filename": "revision_104138_2025-01-03_15-55-42.txt"
       },
       {
-        "exercise": "R lunge",
+        "exercise": "R. lunge",
         "phase": "Tabata",
         "date": "2025-01-03",
         "filename": "revision_104138_2025-01-03_15-55-42.txt"
@@ -1411,7 +1412,7 @@ const exerciseData = {
         "filename": "revision_104138_2025-01-03_15-55-42.txt"
       },
       {
-        "exercise": "Single leg drops",
+        "exercise": "Single leg drop",
         "phase": "30/10x2",
         "date": "2025-01-03",
         "filename": "revision_104139_2025-01-03_15-56-42.txt"
@@ -1423,7 +1424,7 @@ const exerciseData = {
         "filename": "revision_104139_2025-01-03_15-56-42.txt"
       },
       {
-        "exercise": "penguins",
+        "exercise": "Penguins",
         "phase": "30/10x2",
         "date": "2025-01-03",
         "filename": "revision_104139_2025-01-03_15-56-42.txt"
@@ -1459,7 +1460,7 @@ const exerciseData = {
         "filename": "revision_104156_2025-01-13_16-21-56.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "Tabata holds",
         "date": "2025-01-13",
         "filename": "revision_104156_2025-01-13_16-21-56.txt"
@@ -1477,7 +1478,7 @@ const exerciseData = {
         "filename": "revision_104156_2025-01-13_16-21-56.txt"
       },
       {
-        "exercise": "Squats",
+        "exercise": "squat",
         "phase": "Tabata holds",
         "date": "2025-01-13",
         "filename": "revision_104156_2025-01-13_16-21-56.txt"
@@ -1537,7 +1538,7 @@ const exerciseData = {
         "filename": "revision_104159_2025-01-24_15-54-42.txt"
       },
       {
-        "exercise": "Side plank Pulse",
+        "exercise": "Side plank pulse",
         "phase": "Tabata",
         "date": "2025-01-24",
         "filename": "revision_104159_2025-01-24_15-54-42.txt"
@@ -1585,7 +1586,7 @@ const exerciseData = {
         "filename": "revision_104160_2025-01-27_15-56-31.txt"
       },
       {
-        "exercise": "Pointers",
+        "exercise": "Pointer",
         "phase": "30/10x3",
         "date": "2025-01-27",
         "filename": "revision_104160_2025-01-27_15-56-31.txt"
@@ -1621,7 +1622,7 @@ const exerciseData = {
         "filename": "revision_105165_2025-02-21_16-00-14.txt"
       },
       {
-        "exercise": "Supermans",
+        "exercise": "Superman",
         "phase": "30/10x3",
         "date": "2025-02-21",
         "filename": "revision_105165_2025-02-21_16-00-14.txt"
@@ -1639,7 +1640,7 @@ const exerciseData = {
         "filename": "revision_105165_2025-02-21_16-00-14.txt"
       },
       {
-        "exercise": "pointers",
+        "exercise": "Pointers",
         "phase": "30/10x3",
         "date": "2025-02-21",
         "filename": "revision_105165_2025-02-21_16-00-14.txt"
@@ -1849,7 +1850,7 @@ const exerciseData = {
         "filename": "revision_105942_2025-03-24_14-46-45.txt"
       },
       {
-        "exercise": "f/b lunge l",
+        "exercise": "f/b lunge L",
         "phase": "Tabata",
         "date": "2025-03-24",
         "filename": "revision_105942_2025-03-24_14-46-45.txt"
@@ -1945,7 +1946,7 @@ const exerciseData = {
         "filename": "revision_106035_2025-03-31_14-47-30.txt"
       },
       {
-        "exercise": "Speed skaters",
+        "exercise": "Speed skater",
         "phase": "Tabata",
         "date": "2025-03-31",
         "filename": "revision_106035_2025-03-31_14-47-30.txt"
@@ -1963,7 +1964,7 @@ const exerciseData = {
         "filename": "revision_106058_2025-04-02_14-49-37.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "Tabata holds",
         "date": "2025-04-02",
         "filename": "revision_106058_2025-04-02_14-49-37.txt"
@@ -1981,7 +1982,7 @@ const exerciseData = {
         "filename": "revision_106058_2025-04-02_14-49-37.txt"
       },
       {
-        "exercise": "Squats",
+        "exercise": "squat",
         "phase": "Tabata holds",
         "date": "2025-04-02",
         "filename": "revision_106058_2025-04-02_14-49-37.txt"
@@ -2011,7 +2012,7 @@ const exerciseData = {
         "filename": "revision_106058_2025-04-02_14-49-37.txt"
       },
       {
-        "exercise": "Flutters",
+        "exercise": "Flutter",
         "phase": "Tabata",
         "date": "2025-04-09",
         "filename": "revision_106563_2025-04-09_14-56-42.txt"
@@ -2059,7 +2060,7 @@ const exerciseData = {
         "filename": "revision_106563_2025-04-09_14-56-42.txt"
       },
       {
-        "exercise": "Single leg drops",
+        "exercise": "Single leg drop",
         "phase": "30/10x2",
         "date": "2025-04-11",
         "filename": "revision_106564_2025-04-11_14-39-29.txt"
@@ -2071,7 +2072,7 @@ const exerciseData = {
         "filename": "revision_106564_2025-04-11_14-39-29.txt"
       },
       {
-        "exercise": "penguins",
+        "exercise": "Penguins",
         "phase": "30/10x2",
         "date": "2025-04-11",
         "filename": "revision_106564_2025-04-11_14-39-29.txt"
@@ -2245,7 +2246,7 @@ const exerciseData = {
         "filename": "revision_107138_2025-04-28_14-55-47.txt"
       },
       {
-        "exercise": "Pointers",
+        "exercise": "Pointer",
         "phase": "30/10x3",
         "date": "2025-04-28",
         "filename": "revision_107138_2025-04-28_14-55-47.txt"
@@ -2467,7 +2468,7 @@ const exerciseData = {
         "filename": "revision_108432_2025-06-18_14-52-37.txt"
       },
       {
-        "exercise": "Flutters",
+        "exercise": "Flutter",
         "phase": "Tabata",
         "date": "2025-06-18",
         "filename": "revision_108432_2025-06-18_14-52-37.txt"
@@ -2479,7 +2480,7 @@ const exerciseData = {
         "filename": "revision_108432_2025-06-18_14-52-37.txt"
       },
       {
-        "exercise": "bikes",
+        "exercise": "Bikes",
         "phase": "Tabata",
         "date": "2025-06-18",
         "filename": "revision_108432_2025-06-18_14-52-37.txt"
@@ -2539,13 +2540,7 @@ const exerciseData = {
         "filename": "revision_108437_2025-06-27_14-57-34.txt"
       },
       {
-        "exercise": "pointers",
-        "phase": "Tabata",
-        "date": "2025-06-27",
-        "filename": "revision_108437_2025-06-27_14-57-34.txt"
-      },
-      {
-        "exercise": "40/10 x 2",
+        "exercise": "Pointers",
         "phase": "Tabata",
         "date": "2025-06-27",
         "filename": "revision_108437_2025-06-27_14-57-34.txt"
@@ -2557,13 +2552,13 @@ const exerciseData = {
         "filename": "revision_108437_2025-06-27_14-57-34.txt"
       },
       {
-        "exercise": "Band hydrants",
+        "exercise": "Band hydrant",
         "phase": "Tabata",
         "date": "2025-06-27",
         "filename": "revision_108437_2025-06-27_14-57-34.txt"
       },
       {
-        "exercise": "Band kickbacks",
+        "exercise": "Band kickback",
         "phase": "Tabata",
         "date": "2025-06-27",
         "filename": "revision_108437_2025-06-27_14-57-34.txt"
@@ -2611,7 +2606,7 @@ const exerciseData = {
         "filename": "revision_108668_2025-07-07_14-55-39.txt"
       },
       {
-        "exercise": "hold",
+        "exercise": "Hold",
         "phase": "Tabata",
         "date": "2025-07-07",
         "filename": "revision_108668_2025-07-07_14-55-39.txt"
@@ -2677,7 +2672,7 @@ const exerciseData = {
         "filename": "revision_108841_2025-07-23_14-18-34.txt"
       },
       {
-        "exercise": "Plank taps",
+        "exercise": "Plank tap",
         "phase": "Tabata",
         "date": "2025-07-23",
         "filename": "revision_108841_2025-07-23_14-18-34.txt"
@@ -2701,13 +2696,13 @@ const exerciseData = {
         "filename": "revision_108841_2025-07-23_14-18-34.txt"
       },
       {
-        "exercise": "Band hydrants",
+        "exercise": "Band hydrant",
         "phase": "Tabata",
         "date": "2025-07-23",
         "filename": "revision_108841_2025-07-23_14-18-34.txt"
       },
       {
-        "exercise": "Band p. squat",
+        "exercise": "Band p. Squat",
         "phase": "Tabata",
         "date": "2025-07-23",
         "filename": "revision_108841_2025-07-23_14-18-34.txt"
@@ -2749,7 +2744,7 @@ const exerciseData = {
         "filename": "revision_108849_2025-08-08_14-53-15.txt"
       },
       {
-        "exercise": "pointers",
+        "exercise": "Pointers",
         "phase": "30/10x3",
         "date": "2025-08-08",
         "filename": "revision_108849_2025-08-08_14-53-15.txt"
@@ -2845,13 +2840,13 @@ const exerciseData = {
         "filename": "revision_108855_2025-08-20_14-43-50.txt"
       },
       {
-        "exercise": "F. Lunge",
+        "exercise": "F lunge",
         "phase": "Tabata",
         "date": "2025-08-20",
         "filename": "revision_108855_2025-08-20_14-43-50.txt"
       },
       {
-        "exercise": "R. Lunge",
+        "exercise": "R. lunge",
         "phase": "Tabata",
         "date": "2025-08-20",
         "filename": "revision_108855_2025-08-20_14-43-50.txt"
@@ -3043,12 +3038,6 @@ const exerciseData = {
         "filename": "revision_108911_2025-08-29_14-31-29.txt"
       },
       {
-        "exercise": "30x10x3",
-        "phase": "Tabata",
-        "date": "2025-08-29",
-        "filename": "revision_108911_2025-08-29_14-31-29.txt"
-      },
-      {
         "exercise": "Band bridge",
         "phase": "Tabata",
         "date": "2025-08-29",
@@ -3091,12 +3080,6 @@ const exerciseData = {
         "filename": "revision_108912_2025-09-03_14-31-08.txt"
       },
       {
-        "exercise": "30/10 x 2",
-        "phase": "Tabata",
-        "date": "2025-09-03",
-        "filename": "revision_108912_2025-09-03_14-31-08.txt"
-      },
-      {
         "exercise": "Band plank jack",
         "phase": "Tabata",
         "date": "2025-09-03",
@@ -3109,7 +3092,7 @@ const exerciseData = {
         "filename": "revision_108912_2025-09-03_14-31-08.txt"
       },
       {
-        "exercise": "Band hydrants",
+        "exercise": "Band hydrant",
         "phase": "Tabata",
         "date": "2025-09-03",
         "filename": "revision_108912_2025-09-03_14-31-08.txt"
@@ -3163,7 +3146,7 @@ const exerciseData = {
         "filename": "revision_109228_2025-09-12_14-54-36.txt"
       },
       {
-        "exercise": "Pointers",
+        "exercise": "Pointer",
         "phase": "30/10x3",
         "date": "2025-09-12",
         "filename": "revision_109228_2025-09-12_14-54-36.txt"
@@ -3187,7 +3170,7 @@ const exerciseData = {
         "filename": "revision_109228_2025-09-12_14-54-36.txt"
       },
       {
-        "exercise": "Single bridge L",
+        "exercise": "Single bridge l",
         "phase": "Tabata",
         "date": "2025-09-17",
         "filename": "revision_109481_2025-09-17_14-51-56.txt"
@@ -3361,7 +3344,7 @@ const exerciseData = {
         "filename": "revision_111132_2026-01-21_16-03-29.txt"
       },
       {
-        "exercise": "Pointers",
+        "exercise": "Pointer",
         "phase": "30/10x3",
         "date": "2026-01-21",
         "filename": "revision_111132_2026-01-21_16-03-29.txt"
@@ -3391,7 +3374,7 @@ const exerciseData = {
         "filename": "revision_111132_2026-01-21_16-03-29.txt"
       },
       {
-        "exercise": "Single leg drops",
+        "exercise": "Single leg drop",
         "phase": "30/10x2",
         "date": "2026-01-30",
         "filename": "revision_111153_2026-01-30_06-32-00.txt"
@@ -3403,7 +3386,7 @@ const exerciseData = {
         "filename": "revision_111153_2026-01-30_06-32-00.txt"
       },
       {
-        "exercise": "penguins",
+        "exercise": "Penguins",
         "phase": "30/10x2",
         "date": "2026-01-30",
         "filename": "revision_111153_2026-01-30_06-32-00.txt"
@@ -3427,7 +3410,7 @@ const exerciseData = {
         "filename": "revision_111153_2026-01-30_06-32-00.txt"
       },
       {
-        "exercise": "Plank taps",
+        "exercise": "Plank tap",
         "phase": "Tabata",
         "date": "2026-02-01",
         "filename": "revision_111154_2026-02-01_23-20-31.txt"
@@ -3439,7 +3422,7 @@ const exerciseData = {
         "filename": "revision_111154_2026-02-01_23-20-31.txt"
       },
       {
-        "exercise": "Plank March",
+        "exercise": "Plank march",
         "phase": "Tabata",
         "date": "2026-02-01",
         "filename": "revision_111154_2026-02-01_23-20-31.txt"
@@ -3481,7 +3464,7 @@ const exerciseData = {
         "filename": "revision_111154_2026-02-01_23-20-31.txt"
       },
       {
-        "exercise": "Single leg drops",
+        "exercise": "Single leg drop",
         "phase": "30/10x2",
         "date": "2026-02-06",
         "filename": "revision_111240_2026-02-06_16-02-05.txt"
@@ -3493,7 +3476,7 @@ const exerciseData = {
         "filename": "revision_111240_2026-02-06_16-02-05.txt"
       },
       {
-        "exercise": "penguins",
+        "exercise": "Penguins",
         "phase": "30/10x2",
         "date": "2026-02-06",
         "filename": "revision_111240_2026-02-06_16-02-05.txt"
@@ -3523,13 +3506,7 @@ const exerciseData = {
         "filename": "revision_111247_2026-02-20_02-13-18.txt"
       },
       {
-        "exercise": "reverse crunch",
-        "phase": "30/10x3",
-        "date": "2026-02-20",
-        "filename": "revision_111247_2026-02-20_02-13-18.txt"
-      },
-      {
-        "exercise": "40/10 x 2",
+        "exercise": "Reverse crunch",
         "phase": "30/10x3",
         "date": "2026-02-20",
         "filename": "revision_111247_2026-02-20_02-13-18.txt"
@@ -3541,13 +3518,13 @@ const exerciseData = {
         "filename": "revision_111247_2026-02-20_02-13-18.txt"
       },
       {
-        "exercise": "Band hydrants",
+        "exercise": "Band hydrant",
         "phase": "30/10x3",
         "date": "2026-02-20",
         "filename": "revision_111247_2026-02-20_02-13-18.txt"
       },
       {
-        "exercise": "Band kickbacks",
+        "exercise": "Band kickback",
         "phase": "30/10x3",
         "date": "2026-02-20",
         "filename": "revision_111247_2026-02-20_02-13-18.txt"
@@ -3565,13 +3542,7 @@ const exerciseData = {
         "filename": "revision_111310_2026-02-20_16-00-33.txt"
       },
       {
-        "exercise": "pointers",
-        "phase": "30/10x3",
-        "date": "2026-02-20",
-        "filename": "revision_111310_2026-02-20_16-00-33.txt"
-      },
-      {
-        "exercise": "40/10 x 2",
+        "exercise": "Pointers",
         "phase": "30/10x3",
         "date": "2026-02-20",
         "filename": "revision_111310_2026-02-20_16-00-33.txt"
@@ -3583,13 +3554,13 @@ const exerciseData = {
         "filename": "revision_111310_2026-02-20_16-00-33.txt"
       },
       {
-        "exercise": "Band hydrants",
+        "exercise": "Band hydrant",
         "phase": "30/10x3",
         "date": "2026-02-20",
         "filename": "revision_111310_2026-02-20_16-00-33.txt"
       },
       {
-        "exercise": "Band kickbacks",
+        "exercise": "Band kickback",
         "phase": "30/10x3",
         "date": "2026-02-20",
         "filename": "revision_111310_2026-02-20_16-00-33.txt"
@@ -3631,7 +3602,7 @@ const exerciseData = {
         "filename": "revision_111535_2026-03-02_16-00-46.txt"
       },
       {
-        "exercise": "Band squats",
+        "exercise": "Band squat",
         "phase": "30/10x3",
         "date": "2026-03-11",
         "filename": "revision_111539_2026-03-11_14-30-20.txt"
@@ -3649,7 +3620,7 @@ const exerciseData = {
         "filename": "revision_111541_2026-03-16_01-07-04.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "Tabata holds",
         "date": "2026-03-16",
         "filename": "revision_111541_2026-03-16_01-07-04.txt"
@@ -3685,7 +3656,7 @@ const exerciseData = {
         "filename": "revision_111541_2026-03-16_01-07-04.txt"
       },
       {
-        "exercise": "Squat",
+        "exercise": "squat",
         "phase": "Tabata  hold",
         "date": "2026-03-16",
         "filename": "revision_111541_2026-03-16_01-07-04.txt"
@@ -3739,7 +3710,7 @@ const exerciseData = {
         "filename": "revision_111772_2026-03-25_15-03-01.txt"
       },
       {
-        "exercise": "Single bridge L",
+        "exercise": "Single bridge l",
         "phase": "Tabata",
         "date": "2026-03-27",
         "filename": "revision_111787_2026-03-27_07-34-00.txt"
@@ -3763,7 +3734,7 @@ const exerciseData = {
         "filename": "revision_111787_2026-03-27_07-34-00.txt"
       },
       {
-        "exercise": "Single bridge L",
+        "exercise": "Single bridge l",
         "phase": "Tabata",
         "date": "2026-03-30",
         "filename": "revision_111819_2026-03-30_15-01-09.txt"
@@ -3787,7 +3758,7 @@ const exerciseData = {
         "filename": "revision_111819_2026-03-30_15-01-09.txt"
       },
       {
-        "exercise": "Single bridge L",
+        "exercise": "Single bridge l",
         "phase": "Tabata",
         "date": "2026-03-30",
         "filename": "revision_111840_2026-03-30_15-43-34.txt"
@@ -3841,7 +3812,7 @@ const exerciseData = {
         "filename": "revision_111842_2026-04-03_08-17-08.txt"
       },
       {
-        "exercise": "Band bridge L",
+        "exercise": "Band bridge l",
         "phase": "Tabata",
         "date": "2026-04-03",
         "filename": "revision_111842_2026-04-03_08-17-08.txt"
@@ -3889,7 +3860,7 @@ const exerciseData = {
         "filename": "revision_111915_2026-04-08_15-17-35.txt"
       },
       {
-        "exercise": "Band bridge L",
+        "exercise": "Band bridge l",
         "phase": "Tabata",
         "date": "2026-04-08",
         "filename": "revision_111915_2026-04-08_15-17-35.txt"
@@ -4105,7 +4076,7 @@ const exerciseData = {
         "filename": "revision_112376_2026-06-19_14-54-02.txt"
       },
       {
-        "exercise": "Side plank Pulse",
+        "exercise": "Side plank pulse",
         "phase": "Tabata",
         "date": "2026-06-19",
         "filename": "revision_112376_2026-06-19_14-54-02.txt"
@@ -4249,7 +4220,7 @@ const exerciseData = {
         "filename": "revision_112512_2026-06-29_14-59-41.txt"
       },
       {
-        "exercise": "Pointers",
+        "exercise": "Pointer",
         "phase": "30/10x3",
         "date": "2026-06-29",
         "filename": "revision_112512_2026-06-29_14-59-41.txt"
@@ -4315,7 +4286,7 @@ const exerciseData = {
         "filename": "revision_112584_2026-07-03_15-00-38.txt"
       },
       {
-        "exercise": "Supermans",
+        "exercise": "Superman",
         "phase": "30/10x3",
         "date": "2026-07-03",
         "filename": "revision_112584_2026-07-03_15-00-38.txt"
@@ -4363,7 +4334,7 @@ const exerciseData = {
         "filename": "revision_112585_2026-07-06_14-47-03.txt"
       },
       {
-        "exercise": "Band seals",
+        "exercise": "Band seal",
         "phase": "Tabata",
         "date": "2026-07-06",
         "filename": "revision_112585_2026-07-06_14-47-03.txt"
@@ -4459,7 +4430,7 @@ const exerciseData = {
         "filename": "revision_112631_2026-07-08_15-37-09.txt"
       },
       {
-        "exercise": "Plank taps",
+        "exercise": "Plank tap",
         "phase": "Tabata",
         "date": "2026-07-10",
         "filename": "revision_112670_2026-07-10_15-11-12.txt"
@@ -4471,7 +4442,7 @@ const exerciseData = {
         "filename": "revision_112670_2026-07-10_15-11-12.txt"
       },
       {
-        "exercise": "Plank March",
+        "exercise": "Plank march",
         "phase": "Tabata",
         "date": "2026-07-10",
         "filename": "revision_112670_2026-07-10_15-11-12.txt"
@@ -4591,13 +4562,13 @@ const exerciseData = {
         "filename": "revision_112898_2026-07-24_15-00-41.txt"
       },
       {
-        "exercise": "Sh. taps",
+        "exercise": "Sh tap",
         "phase": "Tabata",
         "date": "2026-07-24",
         "filename": "revision_112898_2026-07-24_15-00-41.txt"
       },
       {
-        "exercise": "Flutters",
+        "exercise": "Flutter",
         "phase": "Tabata",
         "date": "2026-07-24",
         "filename": "revision_112898_2026-07-24_15-00-41.txt"
@@ -4681,7 +4652,7 @@ const exerciseData = {
         "filename": "revision_113026_2026-08-10_14-38-50.txt"
       },
       {
-        "exercise": "Flutters",
+        "exercise": "Flutter",
         "phase": "Tabata",
         "date": "2026-08-10",
         "filename": "revision_113026_2026-08-10_14-38-50.txt"
@@ -4693,7 +4664,7 @@ const exerciseData = {
         "filename": "revision_113026_2026-08-10_14-38-50.txt"
       },
       {
-        "exercise": "bikes",
+        "exercise": "Bikes",
         "phase": "Tabata",
         "date": "2026-08-10",
         "filename": "revision_113026_2026-08-10_14-38-50.txt"
@@ -4729,7 +4700,7 @@ const exerciseData = {
         "filename": "revision_113039_2026-08-10_14-58-50.txt"
       },
       {
-        "exercise": "Flutters",
+        "exercise": "Flutter",
         "phase": "Tabata",
         "date": "2026-08-10",
         "filename": "revision_113039_2026-08-10_14-58-50.txt"
@@ -4741,7 +4712,7 @@ const exerciseData = {
         "filename": "revision_113039_2026-08-10_14-58-50.txt"
       },
       {
-        "exercise": "bikes",
+        "exercise": "Bikes",
         "phase": "Tabata",
         "date": "2026-08-10",
         "filename": "revision_113039_2026-08-10_14-58-50.txt"
@@ -4825,7 +4796,7 @@ const exerciseData = {
         "filename": "revision_113166_2026-08-17_17-28-05.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "Tabata holds",
         "date": "2026-08-17",
         "filename": "revision_113166_2026-08-17_17-28-05.txt"
@@ -4891,7 +4862,7 @@ const exerciseData = {
         "filename": "revision_113251_2026-09-11_15-03-39.txt"
       },
       {
-        "exercise": "Band bridge L",
+        "exercise": "Band bridge l",
         "phase": "Tabata",
         "date": "2026-09-11",
         "filename": "revision_113251_2026-09-11_15-03-39.txt"
@@ -4939,7 +4910,7 @@ const exerciseData = {
         "filename": "revision_113303_2026-09-11_15-36-37.txt"
       },
       {
-        "exercise": "Band bridge L",
+        "exercise": "Band bridge l",
         "phase": "Tabata",
         "date": "2026-09-11",
         "filename": "revision_113303_2026-09-11_15-36-37.txt"
@@ -4957,7 +4928,7 @@ const exerciseData = {
         "filename": "revision_113303_2026-09-11_15-36-37.txt"
       },
       {
-        "exercise": "Plank taps",
+        "exercise": "Plank tap",
         "phase": "Tabata",
         "date": "2026-09-14",
         "filename": "revision_113327_2026-09-14_15-00-15.txt"
@@ -4969,7 +4940,7 @@ const exerciseData = {
         "filename": "revision_113327_2026-09-14_15-00-15.txt"
       },
       {
-        "exercise": "Plank March",
+        "exercise": "Plank march",
         "phase": "Tabata",
         "date": "2026-09-14",
         "filename": "revision_113327_2026-09-14_15-00-15.txt"
@@ -5023,13 +4994,13 @@ const exerciseData = {
         "filename": "revision_113328_2026-09-16_14-58-45.txt"
       },
       {
-        "exercise": "Oblique l",
+        "exercise": "Oblique L",
         "phase": "Tabata",
         "date": "2026-09-16",
         "filename": "revision_113328_2026-09-16_14-58-45.txt"
       },
       {
-        "exercise": "Oblique r",
+        "exercise": "Oblique R",
         "phase": "Tabata",
         "date": "2026-09-16",
         "filename": "revision_113328_2026-09-16_14-58-45.txt"
@@ -5041,7 +5012,7 @@ const exerciseData = {
         "filename": "revision_113328_2026-09-16_14-58-45.txt"
       },
       {
-        "exercise": "R lunge",
+        "exercise": "R. lunge",
         "phase": "Tabata",
         "date": "2026-09-16",
         "filename": "revision_113328_2026-09-16_14-58-45.txt"
@@ -5059,7 +5030,7 @@ const exerciseData = {
         "filename": "revision_113328_2026-09-16_14-58-45.txt"
       },
       {
-        "exercise": "Single bridge L",
+        "exercise": "Single bridge l",
         "phase": "Tabata",
         "date": "2026-09-16",
         "filename": "revision_113342_2026-09-16_14-59-47.txt"
@@ -5095,7 +5066,7 @@ const exerciseData = {
         "filename": "revision_113422_2026-09-18_15-01-44.txt"
       },
       {
-        "exercise": "Single leg drops",
+        "exercise": "Single leg drop",
         "phase": "30/10x2",
         "date": "2026-10-02",
         "filename": "revision_113666_2026-10-02_15-00-59.txt"
@@ -5107,7 +5078,7 @@ const exerciseData = {
         "filename": "revision_113666_2026-10-02_15-00-59.txt"
       },
       {
-        "exercise": "penguins",
+        "exercise": "Penguins",
         "phase": "30/10x2",
         "date": "2026-10-02",
         "filename": "revision_113666_2026-10-02_15-00-59.txt"
@@ -5161,7 +5132,7 @@ const exerciseData = {
         "filename": "revision_113868_2026-10-16_15-00-04.txt"
       },
       {
-        "exercise": "Flutters",
+        "exercise": "Flutter",
         "phase": "Tabata",
         "date": "2026-10-16",
         "filename": "revision_113868_2026-10-16_15-00-04.txt"
@@ -5173,7 +5144,7 @@ const exerciseData = {
         "filename": "revision_113868_2026-10-16_15-00-04.txt"
       },
       {
-        "exercise": "bikes",
+        "exercise": "Bikes",
         "phase": "Tabata",
         "date": "2026-10-16",
         "filename": "revision_113868_2026-10-16_15-00-04.txt"
@@ -5233,7 +5204,7 @@ const exerciseData = {
         "filename": "revision_81140_2023-07-31_14-57-52.txt"
       },
       {
-        "exercise": "Mod v ups",
+        "exercise": "Mod v up",
         "phase": "30/10x3",
         "date": "2023-07-31",
         "filename": "revision_81140_2023-07-31_14-57-52.txt"
@@ -5245,7 +5216,7 @@ const exerciseData = {
         "filename": "revision_81140_2023-07-31_14-57-52.txt"
       },
       {
-        "exercise": "Band single bridge l",
+        "exercise": "Band single bridge L",
         "phase": "30/10x3",
         "date": "2023-07-31",
         "filename": "revision_81140_2023-07-31_14-57-52.txt"
@@ -5269,7 +5240,7 @@ const exerciseData = {
         "filename": "revision_81144_2023-07-31_15-43-46.txt"
       },
       {
-        "exercise": "Mod v ups",
+        "exercise": "Mod v up",
         "phase": "30/10x3",
         "date": "2023-07-31",
         "filename": "revision_81144_2023-07-31_15-43-46.txt"
@@ -5281,7 +5252,7 @@ const exerciseData = {
         "filename": "revision_81144_2023-07-31_15-43-46.txt"
       },
       {
-        "exercise": "Band single bridge l",
+        "exercise": "Band single bridge L",
         "phase": "30/10x3",
         "date": "2023-07-31",
         "filename": "revision_81144_2023-07-31_15-43-46.txt"
@@ -5305,7 +5276,7 @@ const exerciseData = {
         "filename": "revision_81394_2023-08-09_14-58-57.txt"
       },
       {
-        "exercise": "Supermans",
+        "exercise": "Superman",
         "phase": "Tabata",
         "date": "2023-08-09",
         "filename": "revision_81394_2023-08-09_14-58-57.txt"
@@ -5353,13 +5324,13 @@ const exerciseData = {
         "filename": "revision_84564_2023-10-09_14-59-51.txt"
       },
       {
-        "exercise": "Plank jacks",
+        "exercise": "Plank jack",
         "phase": "Tabata",
         "date": "2023-10-09",
         "filename": "revision_84564_2023-10-09_14-59-51.txt"
       },
       {
-        "exercise": "Speed skaters",
+        "exercise": "Speed skater",
         "phase": "Tabata",
         "date": "2023-10-09",
         "filename": "revision_84564_2023-10-09_14-59-51.txt"
@@ -5449,7 +5420,7 @@ const exerciseData = {
         "filename": "revision_88561_2024-01-24_15-58-46.txt"
       },
       {
-        "exercise": "rest",
+        "exercise": "Rest",
         "phase": "Tabata",
         "date": "2024-01-24",
         "filename": "revision_88561_2024-01-24_15-58-46.txt"
@@ -5545,7 +5516,7 @@ const exerciseData = {
         "filename": "revision_91428_2024-03-18_15-41-45.txt"
       },
       {
-        "exercise": "Plank dips",
+        "exercise": "Plank dip",
         "phase": "Tabata",
         "date": "2024-04-19",
         "filename": "revision_93087_2024-04-19_14-57-35.txt"
@@ -5563,7 +5534,7 @@ const exerciseData = {
         "filename": "revision_93087_2024-04-19_14-57-35.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "Tabata",
         "date": "2024-04-19",
         "filename": "revision_93087_2024-04-19_14-57-35.txt"
@@ -5575,7 +5546,7 @@ const exerciseData = {
         "filename": "revision_93087_2024-04-19_14-57-35.txt"
       },
       {
-        "exercise": "M.c.",
+        "exercise": "M.c",
         "phase": "Tabata",
         "date": "2024-04-19",
         "filename": "revision_93087_2024-04-19_14-57-35.txt"
@@ -5587,7 +5558,7 @@ const exerciseData = {
         "filename": "revision_93087_2024-04-19_14-57-35.txt"
       },
       {
-        "exercise": "Sh. tap",
+        "exercise": "Sh tap",
         "phase": "Tabata",
         "date": "2024-04-19",
         "filename": "revision_93087_2024-04-19_14-57-35.txt"
@@ -5599,7 +5570,7 @@ const exerciseData = {
         "filename": "revision_93087_2024-04-19_14-57-35.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "Tabata holds",
         "date": "2024-05-08",
         "filename": "revision_93869_2024-05-08_15-04-10.txt"
@@ -5623,19 +5594,19 @@ const exerciseData = {
         "filename": "revision_93869_2024-05-08_15-04-10.txt"
       },
       {
-        "exercise": "Squat",
+        "exercise": "squat",
         "phase": "Tabata holds",
         "date": "2024-05-08",
         "filename": "revision_93869_2024-05-08_15-04-10.txt"
       },
       {
-        "exercise": "Split squat l",
+        "exercise": "Split squat L",
         "phase": "Tabata holds",
         "date": "2024-05-08",
         "filename": "revision_93869_2024-05-08_15-04-10.txt"
       },
       {
-        "exercise": "Split squat r",
+        "exercise": "Split squat R",
         "phase": "Tabata holds",
         "date": "2024-05-08",
         "filename": "revision_93869_2024-05-08_15-04-10.txt"
@@ -5647,7 +5618,7 @@ const exerciseData = {
         "filename": "revision_93869_2024-05-08_15-04-10.txt"
       },
       {
-        "exercise": "rest",
+        "exercise": "Rest",
         "phase": "Tabata holds",
         "date": "2024-05-08",
         "filename": "revision_93869_2024-05-08_15-04-10.txt"
@@ -5719,7 +5690,7 @@ const exerciseData = {
         "filename": "revision_96527_2024-06-26_14-52-31.txt"
       },
       {
-        "exercise": "Pointers",
+        "exercise": "Pointer",
         "phase": "30/10x3",
         "date": "2024-06-26",
         "filename": "revision_96527_2024-06-26_14-52-31.txt"
@@ -5905,7 +5876,7 @@ const exerciseData = {
         "filename": "revision_99221_2024-08-28_14-56-37.txt"
       },
       {
-        "exercise": "Bridges",
+        "exercise": "Bridge",
         "phase": "Tabata hold",
         "date": "2024-08-28",
         "filename": "revision_99221_2024-08-28_14-56-37.txt"
@@ -5953,7 +5924,7 @@ const exerciseData = {
         "filename": "revision_99254_2024-08-28_15-51-44.txt"
       },
       {
-        "exercise": "Bridges",
+        "exercise": "Bridge",
         "phase": "Tabata hold",
         "date": "2024-08-28",
         "filename": "revision_99254_2024-08-28_15-51-44.txt"
@@ -5971,7 +5942,7 @@ const exerciseData = {
         "filename": "revision_99510_2024-08-30_14-57-15.txt"
       },
       {
-        "exercise": "Pointers",
+        "exercise": "Pointer",
         "phase": "30/10x3",
         "date": "2024-08-30",
         "filename": "revision_99510_2024-08-30_14-57-15.txt"
@@ -6061,13 +6032,13 @@ const exerciseData = {
         "filename": "revision_99679_2024-09-09_15-00-13.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "Tabata",
         "date": "2024-09-11",
         "filename": "revision_99683_2024-09-11_15-03-57.txt"
       },
       {
-        "exercise": "Mod v ups",
+        "exercise": "Mod v up",
         "phase": "Tabata",
         "date": "2024-09-11",
         "filename": "revision_99683_2024-09-11_15-03-57.txt"
@@ -6079,19 +6050,19 @@ const exerciseData = {
         "filename": "revision_99683_2024-09-11_15-03-57.txt"
       },
       {
-        "exercise": "Plank dips",
+        "exercise": "Plank dip",
         "phase": "Tabata",
         "date": "2024-09-11",
         "filename": "revision_99683_2024-09-11_15-03-57.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "Tabata",
         "date": "2024-09-11",
         "filename": "revision_99725_2024-09-11_15-08-17.txt"
       },
       {
-        "exercise": "Mod v ups",
+        "exercise": "Mod v up",
         "phase": "Tabata",
         "date": "2024-09-11",
         "filename": "revision_99725_2024-09-11_15-08-17.txt"
@@ -6103,7 +6074,7 @@ const exerciseData = {
         "filename": "revision_99725_2024-09-11_15-08-17.txt"
       },
       {
-        "exercise": "Plank dips",
+        "exercise": "Plank dip",
         "phase": "Tabata",
         "date": "2024-09-11",
         "filename": "revision_99725_2024-09-11_15-08-17.txt"
@@ -6157,7 +6128,7 @@ const exerciseData = {
         "filename": "revision_99757_2024-09-13_15-32-12.txt"
       },
       {
-        "exercise": "Single leg drops",
+        "exercise": "Single leg drop",
         "phase": "30/10x2",
         "date": "2024-09-20",
         "filename": "revision_99974_2024-09-20_15-22-34.txt"
@@ -6169,7 +6140,7 @@ const exerciseData = {
         "filename": "revision_99974_2024-09-20_15-22-34.txt"
       },
       {
-        "exercise": "penguins",
+        "exercise": "Penguins",
         "phase": "30/10x2",
         "date": "2024-09-20",
         "filename": "revision_99974_2024-09-20_15-22-34.txt"
@@ -6218,6 +6189,42 @@ const exerciseData = {
       }
     ],
     "Cardio": [
+      {
+        "exercise": "Kb swing",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-09-30",
+        "filename": "revision_100391_2024-09-30_14-51-28.txt"
+      },
+      {
+        "exercise": "Drop squat",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-09-30",
+        "filename": "revision_100391_2024-09-30_14-51-28.txt"
+      },
+      {
+        "exercise": "Slider tucks",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-09-30",
+        "filename": "revision_100391_2024-09-30_14-51-28.txt"
+      },
+      {
+        "exercise": "Band full row",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-10-04",
+        "filename": "revision_100575_2024-10-04_14-58-03.txt"
+      },
+      {
+        "exercise": "Cross chest press",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-10-04",
+        "filename": "revision_100575_2024-10-04_14-58-03.txt"
+      },
+      {
+        "exercise": "Pull thru",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-10-04",
+        "filename": "revision_100575_2024-10-04_14-58-03.txt"
+      },
       {
         "exercise": "Kb clean",
         "phase": "Ladder 6-2",
@@ -6321,6 +6328,24 @@ const exerciseData = {
         "filename": "revision_104138_2025-01-03_15-55-42.txt"
       },
       {
+        "exercise": "Band full row",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-01-03",
+        "filename": "revision_104139_2025-01-03_15-56-42.txt"
+      },
+      {
+        "exercise": "Cross chest press",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-01-03",
+        "filename": "revision_104139_2025-01-03_15-56-42.txt"
+      },
+      {
+        "exercise": "Pull thru",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-01-03",
+        "filename": "revision_104139_2025-01-03_15-56-42.txt"
+      },
+      {
         "exercise": "Pend swing",
         "phase": "Ladder 5-10",
         "date": "2025-01-27",
@@ -6363,6 +6388,30 @@ const exerciseData = {
         "filename": "revision_105883_2025-03-14_14-53-55.txt"
       },
       {
+        "exercise": "Band press",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2025-03-14",
+        "filename": "revision_105883_2025-03-14_14-53-55.txt"
+      },
+      {
+        "exercise": "Band pull thru",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2025-03-14",
+        "filename": "revision_105883_2025-03-14_14-53-55.txt"
+      },
+      {
+        "exercise": "Band seated row",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2025-03-14",
+        "filename": "revision_105883_2025-03-14_14-53-55.txt"
+      },
+      {
+        "exercise": "Hip flexor mob",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2025-03-14",
+        "filename": "revision_105883_2025-03-14_14-53-55.txt"
+      },
+      {
         "exercise": "Kb swing",
         "phase": "Ladder",
         "date": "2025-03-17",
@@ -6399,6 +6448,30 @@ const exerciseData = {
         "filename": "revision_106034_2025-03-28_15-25-33.txt"
       },
       {
+        "exercise": "Band full row",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-04-11",
+        "filename": "revision_106564_2025-04-11_14-39-29.txt"
+      },
+      {
+        "exercise": "Cross chest press",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-04-11",
+        "filename": "revision_106564_2025-04-11_14-39-29.txt"
+      },
+      {
+        "exercise": "Pull thru",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-04-11",
+        "filename": "revision_106564_2025-04-11_14-39-29.txt"
+      },
+      {
+        "exercise": "Hip Flexor",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-04-11",
+        "filename": "revision_106564_2025-04-11_14-39-29.txt"
+      },
+      {
         "exercise": "Kb dl hp",
         "phase": "Ladder",
         "date": "2025-04-25",
@@ -6411,10 +6484,34 @@ const exerciseData = {
         "filename": "revision_106959_2025-04-25_14-54-54.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "Ladder",
         "date": "2025-04-25",
         "filename": "revision_106959_2025-04-25_14-54-54.txt"
+      },
+      {
+        "exercise": "Band full row",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-05-09",
+        "filename": "revision_107557_2025-05-09_15-00-50.txt"
+      },
+      {
+        "exercise": "Cross chest press",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-05-09",
+        "filename": "revision_107557_2025-05-09_15-00-50.txt"
+      },
+      {
+        "exercise": "Pull thru",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-05-09",
+        "filename": "revision_107557_2025-05-09_15-00-50.txt"
+      },
+      {
+        "exercise": "Hip Flexor",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-05-09",
+        "filename": "revision_107557_2025-05-09_15-00-50.txt"
       },
       {
         "exercise": "Db push up row",
@@ -6425,6 +6522,18 @@ const exerciseData = {
       {
         "exercise": "Kb deadlift to high pull",
         "phase": "Ladder 2 to 6",
+        "date": "2025-05-28",
+        "filename": "revision_107988_2025-05-28_14-34-54.txt"
+      },
+      {
+        "exercise": "Drop squat",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-05-28",
+        "filename": "revision_107988_2025-05-28_14-34-54.txt"
+      },
+      {
+        "exercise": "Double crunch",
+        "phase": "Chipper 20/15/10",
         "date": "2025-05-28",
         "filename": "revision_107988_2025-05-28_14-34-54.txt"
       },
@@ -6495,7 +6604,7 @@ const exerciseData = {
         "filename": "revision_108856_2025-08-22_14-25-17.txt"
       },
       {
-        "exercise": "Band flyes",
+        "exercise": "Band flye",
         "phase": "Ladder 2-12",
         "date": "2025-08-22",
         "filename": "revision_108856_2025-08-22_14-25-17.txt"
@@ -6519,10 +6628,64 @@ const exerciseData = {
         "filename": "revision_108857_2025-08-25_14-56-11.txt"
       },
       {
-        "exercise": "Knee tucks",
+        "exercise": "Knee tuck",
         "phase": "Ladder",
         "date": "2025-08-25",
         "filename": "revision_108857_2025-08-25_14-56-11.txt"
+      },
+      {
+        "exercise": "Swings",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108858_2025-08-27_14-51-58.txt"
+      },
+      {
+        "exercise": "Db jack",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108858_2025-08-27_14-51-58.txt"
+      },
+      {
+        "exercise": "Sh tap",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108858_2025-08-27_14-51-58.txt"
+      },
+      {
+        "exercise": "Db complex",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108858_2025-08-27_14-51-58.txt"
+      },
+      {
+        "exercise": "1 \u00bd",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108858_2025-08-27_14-51-58.txt"
+      },
+      {
+        "exercise": "Swings",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108873_2025-08-27_14-52-56.txt"
+      },
+      {
+        "exercise": "Db jack",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108873_2025-08-27_14-52-56.txt"
+      },
+      {
+        "exercise": "Sh tap",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108873_2025-08-27_14-52-56.txt"
+      },
+      {
+        "exercise": "Db complex",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108873_2025-08-27_14-52-56.txt"
       },
       {
         "exercise": "Db squat curl press",
@@ -6555,6 +6718,42 @@ const exerciseData = {
         "filename": "revision_109591_2025-09-22_14-29-59.txt"
       },
       {
+        "exercise": "Band full row",
+        "phase": "Chipper 20/15/10",
+        "date": "2026-01-30",
+        "filename": "revision_111153_2026-01-30_06-32-00.txt"
+      },
+      {
+        "exercise": "Cross chest press",
+        "phase": "Chipper 20/15/10",
+        "date": "2026-01-30",
+        "filename": "revision_111153_2026-01-30_06-32-00.txt"
+      },
+      {
+        "exercise": "Pull thru",
+        "phase": "Chipper 20/15/10",
+        "date": "2026-01-30",
+        "filename": "revision_111153_2026-01-30_06-32-00.txt"
+      },
+      {
+        "exercise": "Db wide out drops",
+        "phase": "Chipper 20/15/10",
+        "date": "2026-02-06",
+        "filename": "revision_111240_2026-02-06_16-02-05.txt"
+      },
+      {
+        "exercise": "Band Punch",
+        "phase": "Chipper 20/15/10",
+        "date": "2026-02-06",
+        "filename": "revision_111240_2026-02-06_16-02-05.txt"
+      },
+      {
+        "exercise": "Slider knee tuck",
+        "phase": "Chipper 20/15/10",
+        "date": "2026-02-06",
+        "filename": "revision_111240_2026-02-06_16-02-05.txt"
+      },
+      {
         "exercise": "Box push up",
         "phase": "Ladder 6-2",
         "date": "2026-03-18",
@@ -6585,6 +6784,24 @@ const exerciseData = {
         "filename": "revision_111927_2026-04-13_04-23-15.txt"
       },
       {
+        "exercise": "Band flye",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-04-13",
+        "filename": "revision_111927_2026-04-13_04-23-15.txt"
+      },
+      {
+        "exercise": "Band pull thru",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-04-13",
+        "filename": "revision_111927_2026-04-13_04-23-15.txt"
+      },
+      {
+        "exercise": "Band facepull",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-04-13",
+        "filename": "revision_111927_2026-04-13_04-23-15.txt"
+      },
+      {
         "exercise": "5 to 10",
         "phase": "Ladder",
         "date": "2026-04-15",
@@ -6599,6 +6816,24 @@ const exerciseData = {
       {
         "exercise": "Push up",
         "phase": "Ladder",
+        "date": "2026-04-15",
+        "filename": "revision_111985_2026-04-15_15-00-52.txt"
+      },
+      {
+        "exercise": "Band press",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-04-15",
+        "filename": "revision_111985_2026-04-15_15-00-52.txt"
+      },
+      {
+        "exercise": "Band pull thru",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-04-15",
+        "filename": "revision_111985_2026-04-15_15-00-52.txt"
+      },
+      {
+        "exercise": "Band s. Row",
+        "phase": "Chipper 25/20/15/10",
         "date": "2026-04-15",
         "filename": "revision_111985_2026-04-15_15-00-52.txt"
       },
@@ -6633,7 +6868,7 @@ const exerciseData = {
         "filename": "revision_112161_2026-05-06_15-00-52.txt"
       },
       {
-        "exercise": "Kb cleans",
+        "exercise": "Kb clean",
         "phase": "Ladder 10-2",
         "date": "2026-06-08",
         "filename": "revision_112317_2026-06-08_14-59-06.txt"
@@ -6705,7 +6940,37 @@ const exerciseData = {
         "filename": "revision_112374_2026-06-15_15-36-01.txt"
       },
       {
-        "exercise": "Heels elev. squat",
+        "exercise": "Band flye",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-06-15",
+        "filename": "revision_112374_2026-06-15_15-36-01.txt"
+      },
+      {
+        "exercise": "Band pull thru",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-06-15",
+        "filename": "revision_112374_2026-06-15_15-36-01.txt"
+      },
+      {
+        "exercise": "Band facepull",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-06-15",
+        "filename": "revision_112374_2026-06-15_15-36-01.txt"
+      },
+      {
+        "exercise": "Wide outs",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-06-15",
+        "filename": "revision_112374_2026-06-15_15-36-01.txt"
+      },
+      {
+        "exercise": "Hip flexor mob",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-06-15",
+        "filename": "revision_112374_2026-06-15_15-36-01.txt"
+      },
+      {
+        "exercise": "Heels elev squat",
         "phase": "Ladder 5 to 10",
         "date": "2026-06-26",
         "filename": "revision_112509_2026-06-26_15-02-07.txt"
@@ -6747,13 +7012,37 @@ const exerciseData = {
         "filename": "revision_113075_2026-08-12_14-58-20.txt"
       },
       {
+        "exercise": "Band flye",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-08-12",
+        "filename": "revision_113075_2026-08-12_14-58-20.txt"
+      },
+      {
+        "exercise": "Band pull thru",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-08-12",
+        "filename": "revision_113075_2026-08-12_14-58-20.txt"
+      },
+      {
+        "exercise": "Band facepull",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-08-12",
+        "filename": "revision_113075_2026-08-12_14-58-20.txt"
+      },
+      {
+        "exercise": "Hip flexor mob",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-08-12",
+        "filename": "revision_113075_2026-08-12_14-58-20.txt"
+      },
+      {
         "exercise": "Pend swing",
         "phase": "Ladder 5-10",
         "date": "2026-08-13",
         "filename": "revision_113165_2026-08-13_15-17-12.txt"
       },
       {
-        "exercise": "Db thrusters",
+        "exercise": "Db thruster",
         "phase": "Ladder 5-10",
         "date": "2026-08-13",
         "filename": "revision_113165_2026-08-13_15-17-12.txt"
@@ -6789,7 +7078,7 @@ const exerciseData = {
         "filename": "revision_113583_2026-09-30_15-01-47.txt"
       },
       {
-        "exercise": "Sumo Dl",
+        "exercise": "Sumo dl",
         "phase": "Ladder 12/2",
         "date": "2026-09-30",
         "filename": "revision_113583_2026-09-30_15-01-47.txt"
@@ -6831,6 +7120,30 @@ const exerciseData = {
         "filename": "revision_113583_2026-09-30_15-01-47.txt"
       },
       {
+        "exercise": "Band squat row",
+        "phase": "Chipper 25/20/15",
+        "date": "2026-10-02",
+        "filename": "revision_113666_2026-10-02_15-00-59.txt"
+      },
+      {
+        "exercise": "Drop squat",
+        "phase": "Chipper 25/20/15",
+        "date": "2026-10-02",
+        "filename": "revision_113666_2026-10-02_15-00-59.txt"
+      },
+      {
+        "exercise": "Pull thru",
+        "phase": "Chipper 25/20/15",
+        "date": "2026-10-02",
+        "filename": "revision_113666_2026-10-02_15-00-59.txt"
+      },
+      {
+        "exercise": "Shoulder tap",
+        "phase": "Chipper 25/20/15",
+        "date": "2026-10-02",
+        "filename": "revision_113666_2026-10-02_15-00-59.txt"
+      },
+      {
         "exercise": "Kb swing",
         "phase": "Ladder 2-10",
         "date": "2026-10-19",
@@ -6861,10 +7174,34 @@ const exerciseData = {
         "filename": "revision_81393_2023-08-04_14-51-00.txt"
       },
       {
-        "exercise": "Leg lift swipes",
+        "exercise": "Leg lift swipe",
         "phase": "Ladder 12-2",
         "date": "2023-08-04",
         "filename": "revision_81393_2023-08-04_14-51-00.txt"
+      },
+      {
+        "exercise": "Band seal jack",
+        "phase": "Chipper 20/15/10",
+        "date": "2023-10-09",
+        "filename": "revision_84564_2023-10-09_14-59-51.txt"
+      },
+      {
+        "exercise": "Band alt row",
+        "phase": "Chipper 20/15/10",
+        "date": "2023-10-09",
+        "filename": "revision_84564_2023-10-09_14-59-51.txt"
+      },
+      {
+        "exercise": "Band squat",
+        "phase": "Chipper 20/15/10",
+        "date": "2023-10-09",
+        "filename": "revision_84564_2023-10-09_14-59-51.txt"
+      },
+      {
+        "exercise": "Band Punch",
+        "phase": "Chipper 20/15/10",
+        "date": "2023-10-09",
+        "filename": "revision_84564_2023-10-09_14-59-51.txt"
       },
       {
         "exercise": "Drop squat",
@@ -6873,7 +7210,7 @@ const exerciseData = {
         "filename": "revision_90184_2024-02-28_16-03-59.txt"
       },
       {
-        "exercise": "Push ups",
+        "exercise": "Push up",
         "phase": "Ladder 5 to 10",
         "date": "2024-02-28",
         "filename": "revision_90184_2024-02-28_16-03-59.txt"
@@ -6891,10 +7228,70 @@ const exerciseData = {
         "filename": "revision_91428_2024-03-18_15-41-45.txt"
       },
       {
-        "exercise": "Knee tucks",
+        "exercise": "Knee tuck",
         "phase": "Ladder",
         "date": "2024-03-18",
         "filename": "revision_91428_2024-03-18_15-41-45.txt"
+      },
+      {
+        "exercise": "Band plank jack",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-05-08",
+        "filename": "revision_93869_2024-05-08_15-04-10.txt"
+      },
+      {
+        "exercise": "Band bridge",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-05-08",
+        "filename": "revision_93869_2024-05-08_15-04-10.txt"
+      },
+      {
+        "exercise": "Seated row",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-05-08",
+        "filename": "revision_93869_2024-05-08_15-04-10.txt"
+      },
+      {
+        "exercise": "Band flye",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98735_2024-08-23_14-55-04.txt"
+      },
+      {
+        "exercise": "Band pull thru",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98735_2024-08-23_14-55-04.txt"
+      },
+      {
+        "exercise": "Band facepull",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98735_2024-08-23_14-55-04.txt"
+      },
+      {
+        "exercise": "Hip Flexor",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98735_2024-08-23_14-55-04.txt"
+      },
+      {
+        "exercise": "Hands free hips",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98735_2024-08-23_14-55-04.txt"
+      },
+      {
+        "exercise": "Man maker",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98735_2024-08-23_14-55-04.txt"
+      },
+      {
+        "exercise": "Stretch",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98735_2024-08-23_14-55-04.txt"
       },
       {
         "exercise": "5 to 10",
@@ -6921,13 +7318,37 @@ const exerciseData = {
         "filename": "revision_98843_2024-08-23_15-20-58.txt"
       },
       {
+        "exercise": "Band flye",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98843_2024-08-23_15-20-58.txt"
+      },
+      {
+        "exercise": "Band pull thru",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98843_2024-08-23_15-20-58.txt"
+      },
+      {
+        "exercise": "Band facepull",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98843_2024-08-23_15-20-58.txt"
+      },
+      {
+        "exercise": "Hip flexor mob",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98843_2024-08-23_15-20-58.txt"
+      },
+      {
         "exercise": "5 up",
         "phase": "5 min ladder",
         "date": "2024-08-30",
         "filename": "revision_99510_2024-08-30_14-57-15.txt"
       },
       {
-        "exercise": "Push ups",
+        "exercise": "Push up",
         "phase": "5 min ladder",
         "date": "2024-08-30",
         "filename": "revision_99510_2024-08-30_14-57-15.txt"
@@ -6939,19 +7360,13 @@ const exerciseData = {
         "filename": "revision_99510_2024-08-30_14-57-15.txt"
       },
       {
-        "exercise": "Push ups",
+        "exercise": "Push up",
         "phase": "Ladder 5 up for 5 min",
         "date": "2024-09-11",
         "filename": "revision_99683_2024-09-11_15-03-57.txt"
       },
       {
         "exercise": "Pend kb swing",
-        "phase": "Ladder 5 up for 5 min",
-        "date": "2024-09-11",
-        "filename": "revision_99683_2024-09-11_15-03-57.txt"
-      },
-      {
-        "exercise": "2 rounds",
         "phase": "Ladder 5 up for 5 min",
         "date": "2024-09-11",
         "filename": "revision_99683_2024-09-11_15-03-57.txt"
@@ -6981,7 +7396,7 @@ const exerciseData = {
         "filename": "revision_99683_2024-09-11_15-03-57.txt"
       },
       {
-        "exercise": "Push ups",
+        "exercise": "Push up",
         "phase": "Ladder 5 up for 5 min",
         "date": "2024-09-11",
         "filename": "revision_99725_2024-09-11_15-08-17.txt"
@@ -7005,6 +7420,18 @@ const exerciseData = {
         "filename": "revision_99757_2024-09-13_15-32-12.txt"
       },
       {
+        "exercise": "Drop squat",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-09-13",
+        "filename": "revision_99757_2024-09-13_15-32-12.txt"
+      },
+      {
+        "exercise": "Double crunch",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-09-13",
+        "filename": "revision_99757_2024-09-13_15-32-12.txt"
+      },
+      {
         "exercise": "Kb swing",
         "phase": "Ladder",
         "date": "2024-09-18",
@@ -7021,6 +7448,24 @@ const exerciseData = {
         "phase": "Ladder",
         "date": "2024-09-18",
         "filename": "revision_99961_2024-09-18_15-36-01.txt"
+      },
+      {
+        "exercise": "Band squat row",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-09-20",
+        "filename": "revision_99974_2024-09-20_15-22-34.txt"
+      },
+      {
+        "exercise": "Punches",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-09-20",
+        "filename": "revision_99974_2024-09-20_15-22-34.txt"
+      },
+      {
+        "exercise": "Pull thru",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-09-20",
+        "filename": "revision_99974_2024-09-20_15-22-34.txt"
       }
     ],
     "Strength": [
@@ -7091,7 +7536,7 @@ const exerciseData = {
         "filename": "revision_100576_2024-10-04_14-58-31.txt"
       },
       {
-        "exercise": "21\u2019s",
+        "exercise": "21,s",
         "phase": "Emom",
         "date": "2024-10-04",
         "filename": "revision_100576_2024-10-04_14-58-31.txt"
@@ -7139,7 +7584,7 @@ const exerciseData = {
         "filename": "revision_100872_2024-10-09_15-28-48.txt"
       },
       {
-        "exercise": "band row",
+        "exercise": "Band row",
         "phase": "Spartan",
         "date": "2024-10-09",
         "filename": "revision_100872_2024-10-09_15-28-48.txt"
@@ -7415,12 +7860,6 @@ const exerciseData = {
         "filename": "revision_103711_2024-12-04_15-42-34.txt"
       },
       {
-        "exercise": "3 rounds",
-        "phase": "Emom",
-        "date": "2024-12-04",
-        "filename": "revision_103711_2024-12-04_15-42-34.txt"
-      },
-      {
         "exercise": "Side laterals 15",
         "phase": "Emom",
         "date": "2024-12-04",
@@ -7469,12 +7908,6 @@ const exerciseData = {
         "filename": "revision_103831_2024-12-04_16-00-08.txt"
       },
       {
-        "exercise": "2 rounds",
-        "phase": "Emom",
-        "date": "2024-12-04",
-        "filename": "revision_103831_2024-12-04_16-00-08.txt"
-      },
-      {
         "exercise": "Side laterals 15",
         "phase": "Emom",
         "date": "2024-12-04",
@@ -7493,7 +7926,7 @@ const exerciseData = {
         "filename": "revision_103831_2024-12-04_16-00-08.txt"
       },
       {
-        "exercise": "Band curls",
+        "exercise": "Band curl",
         "phase": "Emom",
         "date": "2024-12-04",
         "filename": "revision_103831_2024-12-04_16-00-08.txt"
@@ -7523,19 +7956,13 @@ const exerciseData = {
         "filename": "revision_104135_2024-12-20_15-48-57.txt"
       },
       {
-        "exercise": "1x10",
-        "phase": "Emom",
-        "date": "2024-12-20",
-        "filename": "revision_104135_2024-12-20_15-48-57.txt"
-      },
-      {
         "exercise": "Thoracic mob",
         "phase": "Emom",
         "date": "2024-12-20",
         "filename": "revision_104135_2024-12-20_15-48-57.txt"
       },
       {
-        "exercise": "Hip flexor",
+        "exercise": "Hip Flexor",
         "phase": "Emom",
         "date": "2024-12-20",
         "filename": "revision_104135_2024-12-20_15-48-57.txt"
@@ -7829,7 +8256,7 @@ const exerciseData = {
         "filename": "revision_105942_2025-03-24_14-46-45.txt"
       },
       {
-        "exercise": "Db curls",
+        "exercise": "Db curl",
         "phase": "Emom",
         "date": "2025-03-24",
         "filename": "revision_105942_2025-03-24_14-46-45.txt"
@@ -8225,7 +8652,7 @@ const exerciseData = {
         "filename": "revision_111099_2026-01-16_16-41-06.txt"
       },
       {
-        "exercise": "Kb sh to sh 20",
+        "exercise": "Kb sh. To sh. 20",
         "phase": "Emom",
         "date": "2026-01-16",
         "filename": "revision_111099_2026-01-16_16-41-06.txt"
@@ -8825,7 +9252,7 @@ const exerciseData = {
         "filename": "revision_113251_2026-09-11_15-03-39.txt"
       },
       {
-        "exercise": "Sh taps",
+        "exercise": "Sh tap",
         "phase": "Spartan",
         "date": "2026-09-11",
         "filename": "revision_113251_2026-09-11_15-03-39.txt"
@@ -8843,7 +9270,7 @@ const exerciseData = {
         "filename": "revision_113303_2026-09-11_15-36-37.txt"
       },
       {
-        "exercise": "Sh taps",
+        "exercise": "Sh tap",
         "phase": "Spartan",
         "date": "2026-09-11",
         "filename": "revision_113303_2026-09-11_15-36-37.txt"
@@ -9313,28 +9740,10 @@ const exerciseData = {
         "filename": "revision_100171_2024-09-27_14-56-28.txt"
       },
       {
-        "exercise": "Single leg drops",
+        "exercise": "Single leg drop",
         "phase": "60 sec.",
         "date": "2024-09-27",
         "filename": "revision_100171_2024-09-27_14-56-28.txt"
-      },
-      {
-        "exercise": "Kb swing",
-        "phase": "20/15/10",
-        "date": "2024-09-30",
-        "filename": "revision_100391_2024-09-30_14-51-28.txt"
-      },
-      {
-        "exercise": "Drop squat",
-        "phase": "20/15/10",
-        "date": "2024-09-30",
-        "filename": "revision_100391_2024-09-30_14-51-28.txt"
-      },
-      {
-        "exercise": "Slider tucks",
-        "phase": "20/15/10",
-        "date": "2024-09-30",
-        "filename": "revision_100391_2024-09-30_14-51-28.txt"
       },
       {
         "exercise": "Band drag curl",
@@ -9385,28 +9794,10 @@ const exerciseData = {
         "filename": "revision_100574_2024-10-02_14-54-21.txt"
       },
       {
-        "exercise": "Calf raises",
+        "exercise": "Calf raise",
         "phase": "3 x 10",
         "date": "2024-10-02",
         "filename": "revision_100574_2024-10-02_14-54-21.txt"
-      },
-      {
-        "exercise": "Band full row",
-        "phase": "20/15/10",
-        "date": "2024-10-04",
-        "filename": "revision_100575_2024-10-04_14-58-03.txt"
-      },
-      {
-        "exercise": "Cross chest press",
-        "phase": "20/15/10",
-        "date": "2024-10-04",
-        "filename": "revision_100575_2024-10-04_14-58-03.txt"
-      },
-      {
-        "exercise": "Pull thru",
-        "phase": "20/15/10",
-        "date": "2024-10-04",
-        "filename": "revision_100575_2024-10-04_14-58-03.txt"
       },
       {
         "exercise": "R. Lunge Row",
@@ -9415,7 +9806,7 @@ const exerciseData = {
         "filename": "revision_100575_2024-10-04_14-58-03.txt"
       },
       {
-        "exercise": "Kick Back",
+        "exercise": "Kick back",
         "phase": "2 x 10",
         "date": "2024-10-04",
         "filename": "revision_100575_2024-10-04_14-58-03.txt"
@@ -9427,7 +9818,7 @@ const exerciseData = {
         "filename": "revision_100575_2024-10-04_14-58-03.txt"
       },
       {
-        "exercise": "Db curls",
+        "exercise": "Db curl",
         "phase": "3x10",
         "date": "2024-10-04",
         "filename": "revision_100616_2024-10-04_15-40-30.txt"
@@ -9463,7 +9854,7 @@ const exerciseData = {
         "filename": "revision_100837_2024-10-07_14-54-27.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "2 x 30",
         "date": "2024-10-07",
         "filename": "revision_100837_2024-10-07_14-54-27.txt"
@@ -9499,7 +9890,7 @@ const exerciseData = {
         "filename": "revision_100837_2024-10-07_14-54-27.txt"
       },
       {
-        "exercise": "Wall sit curls",
+        "exercise": "Wall sit curl",
         "phase": "2 x 15",
         "date": "2024-10-07",
         "filename": "revision_100837_2024-10-07_14-54-27.txt"
@@ -9559,7 +9950,7 @@ const exerciseData = {
         "filename": "revision_101054_2024-10-14_14-58-07.txt"
       },
       {
-        "exercise": "Db o.h. triceps",
+        "exercise": "Db o.h. Tricep",
         "phase": "3 x 12",
         "date": "2024-10-14",
         "filename": "revision_101054_2024-10-14_14-58-07.txt"
@@ -9709,13 +10100,13 @@ const exerciseData = {
         "filename": "revision_101540_2024-10-23_14-59-38.txt"
       },
       {
-        "exercise": "tricep",
+        "exercise": "Tricep",
         "phase": "60 sec",
         "date": "2024-10-23",
         "filename": "revision_101540_2024-10-23_14-59-38.txt"
       },
       {
-        "exercise": "l/r",
+        "exercise": "L/R",
         "phase": "5 min full get up",
         "date": "2024-10-28",
         "filename": "revision_101718_2024-10-28_14-47-01.txt"
@@ -9835,7 +10226,7 @@ const exerciseData = {
         "filename": "revision_101720_2024-10-30_14-58-57.txt"
       },
       {
-        "exercise": "Db side laterals",
+        "exercise": "Db side lateral",
         "phase": "3 x 12",
         "date": "2024-10-30",
         "filename": "revision_101720_2024-10-30_14-58-57.txt"
@@ -9853,13 +10244,13 @@ const exerciseData = {
         "filename": "revision_101720_2024-10-30_14-58-57.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "25/10x3",
         "date": "2024-11-01",
         "filename": "revision_101721_2024-11-01_14-59-52.txt"
       },
       {
-        "exercise": "Flutters",
+        "exercise": "Flutter",
         "phase": "25/10x3",
         "date": "2024-11-01",
         "filename": "revision_101721_2024-11-01_14-59-52.txt"
@@ -9871,7 +10262,7 @@ const exerciseData = {
         "filename": "revision_101721_2024-11-01_14-59-52.txt"
       },
       {
-        "exercise": "Flutters",
+        "exercise": "Flutter",
         "phase": "25/10x3",
         "date": "2024-11-01",
         "filename": "revision_101721_2024-11-01_14-59-52.txt"
@@ -9901,25 +10292,25 @@ const exerciseData = {
         "filename": "revision_101721_2024-11-01_14-59-52.txt"
       },
       {
-        "exercise": "Band curls",
+        "exercise": "Band curl",
         "phase": "2 x 12",
         "date": "2024-11-01",
         "filename": "revision_101721_2024-11-01_14-59-52.txt"
       },
       {
-        "exercise": "Band  kickbacks",
+        "exercise": "Band kickbacks",
         "phase": "2 x 12",
         "date": "2024-11-01",
         "filename": "revision_101721_2024-11-01_14-59-52.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "25/10x3",
         "date": "2024-11-01",
         "filename": "revision_101729_2024-11-01_15-13-05.txt"
       },
       {
-        "exercise": "Flutters",
+        "exercise": "Flutter",
         "phase": "25/10x3",
         "date": "2024-11-01",
         "filename": "revision_101729_2024-11-01_15-13-05.txt"
@@ -9931,7 +10322,7 @@ const exerciseData = {
         "filename": "revision_101729_2024-11-01_15-13-05.txt"
       },
       {
-        "exercise": "Flutters",
+        "exercise": "Flutter",
         "phase": "25/10x3",
         "date": "2024-11-01",
         "filename": "revision_101729_2024-11-01_15-13-05.txt"
@@ -9961,13 +10352,13 @@ const exerciseData = {
         "filename": "revision_101729_2024-11-01_15-13-05.txt"
       },
       {
-        "exercise": "Band curls",
+        "exercise": "Band curl",
         "phase": "3 x 12",
         "date": "2024-11-01",
         "filename": "revision_101729_2024-11-01_15-13-05.txt"
       },
       {
-        "exercise": "Band  kickbacks",
+        "exercise": "Band kickbacks",
         "phase": "3 x 12",
         "date": "2024-11-01",
         "filename": "revision_101729_2024-11-01_15-13-05.txt"
@@ -10021,7 +10412,7 @@ const exerciseData = {
         "filename": "revision_102022_2024-11-04_15-51-32.txt"
       },
       {
-        "exercise": "Heels elev. Squat",
+        "exercise": "Heels elev squat",
         "phase": "3 x 10",
         "date": "2024-11-04",
         "filename": "revision_102022_2024-11-04_15-51-32.txt"
@@ -10075,7 +10466,7 @@ const exerciseData = {
         "filename": "revision_102351_2024-11-08_15-46-20.txt"
       },
       {
-        "exercise": "Calf raises",
+        "exercise": "Calf raise",
         "phase": "3 x 12",
         "date": "2024-11-08",
         "filename": "revision_102351_2024-11-08_15-46-20.txt"
@@ -10135,7 +10526,7 @@ const exerciseData = {
         "filename": "revision_102353_2024-11-08_16-41-22.txt"
       },
       {
-        "exercise": "Calf raises",
+        "exercise": "Calf raise",
         "phase": "2 x 12",
         "date": "2024-11-08",
         "filename": "revision_102353_2024-11-08_16-41-22.txt"
@@ -10195,7 +10586,7 @@ const exerciseData = {
         "filename": "revision_102863_2024-11-13_15-52-38.txt"
       },
       {
-        "exercise": "Plank dips",
+        "exercise": "Plank dip",
         "phase": "25/10x3",
         "date": "2024-11-18",
         "filename": "revision_102864_2024-11-18_16-00-00.txt"
@@ -10261,13 +10652,13 @@ const exerciseData = {
         "filename": "revision_102864_2024-11-18_16-00-00.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "3x12",
         "date": "2024-11-18",
         "filename": "revision_102864_2024-11-18_16-00-00.txt"
       },
       {
-        "exercise": "Plank dips",
+        "exercise": "Plank dip",
         "phase": "25/10x3",
         "date": "2024-11-18",
         "filename": "revision_102908_2024-11-18_16-47-51.txt"
@@ -10333,7 +10724,7 @@ const exerciseData = {
         "filename": "revision_102908_2024-11-18_16-47-51.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "2x12",
         "date": "2024-11-18",
         "filename": "revision_102908_2024-11-18_16-47-51.txt"
@@ -10363,7 +10754,7 @@ const exerciseData = {
         "filename": "revision_103161_2024-11-20_15-52-44.txt"
       },
       {
-        "exercise": "Db curls",
+        "exercise": "Db curl",
         "phase": "3 x 10",
         "date": "2024-11-20",
         "filename": "revision_103161_2024-11-20_15-52-44.txt"
@@ -10381,7 +10772,7 @@ const exerciseData = {
         "filename": "revision_103161_2024-11-20_15-52-44.txt"
       },
       {
-        "exercise": "Band curls",
+        "exercise": "Band curl",
         "phase": "3 x 10",
         "date": "2024-11-22",
         "filename": "revision_103384_2024-11-22_15-59-55.txt"
@@ -10393,7 +10784,7 @@ const exerciseData = {
         "filename": "revision_103384_2024-11-22_15-59-55.txt"
       },
       {
-        "exercise": "Leg curls",
+        "exercise": "Leg curl",
         "phase": "3 x 10",
         "date": "2024-11-22",
         "filename": "revision_103384_2024-11-22_15-59-55.txt"
@@ -10405,7 +10796,7 @@ const exerciseData = {
         "filename": "revision_103620_2024-11-25_15-55-04.txt"
       },
       {
-        "exercise": "Sh tap-dd toe touch",
+        "exercise": "Sh tap dd toe touch",
         "phase": "45/15x3",
         "date": "2024-11-25",
         "filename": "revision_103620_2024-11-25_15-55-04.txt"
@@ -10435,7 +10826,7 @@ const exerciseData = {
         "filename": "revision_103620_2024-11-25_15-55-04.txt"
       },
       {
-        "exercise": "Wall sit curls",
+        "exercise": "Wall sit curl",
         "phase": "3x10",
         "date": "2024-11-27",
         "filename": "revision_103675_2024-11-27_16-40-37.txt"
@@ -10483,7 +10874,7 @@ const exerciseData = {
         "filename": "revision_103710_2024-12-02_16-24-29.txt"
       },
       {
-        "exercise": "T-flies",
+        "exercise": "T flies",
         "phase": "3x10",
         "date": "2024-12-02",
         "filename": "revision_103710_2024-12-02_16-24-29.txt"
@@ -10507,7 +10898,7 @@ const exerciseData = {
         "filename": "revision_104132_2024-12-06_15-52-58.txt"
       },
       {
-        "exercise": "Side plank dips",
+        "exercise": "Side plank dip",
         "phase": "3 x 10",
         "date": "2024-12-06",
         "filename": "revision_104132_2024-12-06_15-52-58.txt"
@@ -10561,7 +10952,7 @@ const exerciseData = {
         "filename": "revision_104136_2024-12-23_15-40-08.txt"
       },
       {
-        "exercise": "Band curls",
+        "exercise": "Band curl",
         "phase": "3 x 15",
         "date": "2024-12-23",
         "filename": "revision_104136_2024-12-23_15-40-08.txt"
@@ -10579,7 +10970,7 @@ const exerciseData = {
         "filename": "revision_104136_2024-12-23_15-40-08.txt"
       },
       {
-        "exercise": "Db t- flies",
+        "exercise": "Db t flies",
         "phase": "2 x 15",
         "date": "2024-12-30",
         "filename": "revision_104137_2024-12-30_15-53-46.txt"
@@ -10597,7 +10988,7 @@ const exerciseData = {
         "filename": "revision_104137_2024-12-30_15-53-46.txt"
       },
       {
-        "exercise": "Wall sit curls",
+        "exercise": "Wall sit curl",
         "phase": "3 x 10",
         "date": "2025-01-03",
         "filename": "revision_104138_2025-01-03_15-55-42.txt"
@@ -10615,26 +11006,8 @@ const exerciseData = {
         "filename": "revision_104138_2025-01-03_15-55-42.txt"
       },
       {
-        "exercise": "Band full row",
-        "phase": "20/15/10",
-        "date": "2025-01-03",
-        "filename": "revision_104139_2025-01-03_15-56-42.txt"
-      },
-      {
-        "exercise": "Cross chest press",
-        "phase": "20/15/10",
-        "date": "2025-01-03",
-        "filename": "revision_104139_2025-01-03_15-56-42.txt"
-      },
-      {
-        "exercise": "Pull thru",
-        "phase": "20/15/10",
-        "date": "2025-01-03",
-        "filename": "revision_104139_2025-01-03_15-56-42.txt"
-      },
-      {
         "exercise": "3 way push up 5 each",
-        "phase": "5 per side",
+        "phase": "Lunge matrix 5 per side",
         "date": "2025-01-03",
         "filename": "revision_104139_2025-01-03_15-56-42.txt"
       },
@@ -10699,7 +11072,7 @@ const exerciseData = {
         "filename": "revision_104157_2025-01-15_15-52-22.txt"
       },
       {
-        "exercise": "Db hammer curls",
+        "exercise": "Db hammer curl",
         "phase": "3x8",
         "date": "2025-01-15",
         "filename": "revision_104157_2025-01-15_15-52-22.txt"
@@ -10849,7 +11222,7 @@ const exerciseData = {
         "filename": "revision_104420_2025-02-05_15-54-57.txt"
       },
       {
-        "exercise": "Pointers",
+        "exercise": "Pointer",
         "phase": "25/10x3",
         "date": "2025-02-05",
         "filename": "revision_104420_2025-02-05_15-54-57.txt"
@@ -10939,7 +11312,7 @@ const exerciseData = {
         "filename": "revision_104465_2025-02-05_16-14-04.txt"
       },
       {
-        "exercise": "Pointers",
+        "exercise": "Pointer",
         "phase": "25/10x3",
         "date": "2025-02-05",
         "filename": "revision_104465_2025-02-05_16-14-04.txt"
@@ -11083,7 +11456,7 @@ const exerciseData = {
         "filename": "revision_104995_2025-02-10_16-00-06.txt"
       },
       {
-        "exercise": "Band flyes",
+        "exercise": "Band flye",
         "phase": "3 x 10",
         "date": "2025-02-10",
         "filename": "revision_104995_2025-02-10_16-00-06.txt"
@@ -11107,7 +11480,7 @@ const exerciseData = {
         "filename": "revision_105148_2025-02-19_15-57-47.txt"
       },
       {
-        "exercise": "Kick backs",
+        "exercise": "Kick back",
         "phase": "3 x 12",
         "date": "2025-02-19",
         "filename": "revision_105148_2025-02-19_15-57-47.txt"
@@ -11131,7 +11504,7 @@ const exerciseData = {
         "filename": "revision_105165_2025-02-21_16-00-14.txt"
       },
       {
-        "exercise": "Calf raises",
+        "exercise": "Calf raise",
         "phase": "3 x 10",
         "date": "2025-02-21",
         "filename": "revision_105165_2025-02-21_16-00-14.txt"
@@ -11185,7 +11558,7 @@ const exerciseData = {
         "filename": "revision_105483_2025-02-24_16-47-32.txt"
       },
       {
-        "exercise": "Db t- flies",
+        "exercise": "Db t flies",
         "phase": "2 x 15",
         "date": "2025-02-26",
         "filename": "revision_105503_2025-02-26_15-50-13.txt"
@@ -11221,7 +11594,7 @@ const exerciseData = {
         "filename": "revision_105503_2025-02-26_15-50-13.txt"
       },
       {
-        "exercise": "tricep",
+        "exercise": "Tricep",
         "phase": "60 sec",
         "date": "2025-02-26",
         "filename": "revision_105503_2025-02-26_15-50-13.txt"
@@ -11293,19 +11666,19 @@ const exerciseData = {
         "filename": "revision_105509_2025-02-28_15-53-53.txt"
       },
       {
-        "exercise": "Plank dips",
+        "exercise": "Plank dip",
         "phase": "25/10x3",
         "date": "2025-03-03",
         "filename": "revision_105616_2025-03-03_15-56-21.txt"
       },
       {
-        "exercise": "Side plank dip L",
+        "exercise": "Side plank dip l",
         "phase": "25/10x3",
         "date": "2025-03-03",
         "filename": "revision_105616_2025-03-03_15-56-21.txt"
       },
       {
-        "exercise": "Side plank dip R",
+        "exercise": "Side plank dip r",
         "phase": "25/10x3",
         "date": "2025-03-03",
         "filename": "revision_105616_2025-03-03_15-56-21.txt"
@@ -11371,7 +11744,7 @@ const exerciseData = {
         "filename": "revision_105616_2025-03-03_15-56-21.txt"
       },
       {
-        "exercise": "Band pressdowns",
+        "exercise": "Band pressdown",
         "phase": "3x12",
         "date": "2025-03-03",
         "filename": "revision_105616_2025-03-03_15-56-21.txt"
@@ -11389,7 +11762,7 @@ const exerciseData = {
         "filename": "revision_105827_2025-03-05_15-58-39.txt"
       },
       {
-        "exercise": "Pointers",
+        "exercise": "Pointer",
         "phase": "25/10x3",
         "date": "2025-03-05",
         "filename": "revision_105827_2025-03-05_15-58-39.txt"
@@ -11425,7 +11798,7 @@ const exerciseData = {
         "filename": "revision_105827_2025-03-05_15-58-39.txt"
       },
       {
-        "exercise": "1 \u00bd rdl",
+        "exercise": "1 \u00bd RDL",
         "phase": "3 x 8",
         "date": "2025-03-05",
         "filename": "revision_105827_2025-03-05_15-58-39.txt"
@@ -11447,30 +11820,6 @@ const exerciseData = {
         "phase": "3 x 10",
         "date": "2025-03-12",
         "filename": "revision_105830_2025-03-12_14-59-21.txt"
-      },
-      {
-        "exercise": "Band press",
-        "phase": "25/20/15/10",
-        "date": "2025-03-14",
-        "filename": "revision_105883_2025-03-14_14-53-55.txt"
-      },
-      {
-        "exercise": "Band pull thru",
-        "phase": "25/20/15/10",
-        "date": "2025-03-14",
-        "filename": "revision_105883_2025-03-14_14-53-55.txt"
-      },
-      {
-        "exercise": "Band seated row",
-        "phase": "25/20/15/10",
-        "date": "2025-03-14",
-        "filename": "revision_105883_2025-03-14_14-53-55.txt"
-      },
-      {
-        "exercise": "Hip flexor mob",
-        "phase": "25/20/15/10",
-        "date": "2025-03-14",
-        "filename": "revision_105883_2025-03-14_14-53-55.txt"
       },
       {
         "exercise": "Wall sit hammer curl",
@@ -11515,7 +11864,7 @@ const exerciseData = {
         "filename": "revision_105896_2025-03-17_14-55-46.txt"
       },
       {
-        "exercise": "Kick backs",
+        "exercise": "Kick back",
         "phase": "25/5x3 band",
         "date": "2025-03-17",
         "filename": "revision_105896_2025-03-17_14-55-46.txt"
@@ -11599,7 +11948,7 @@ const exerciseData = {
         "filename": "revision_105940_2025-03-17_15-31-03.txt"
       },
       {
-        "exercise": "Kick backs",
+        "exercise": "Kick back",
         "phase": "25/5x3 band",
         "date": "2025-03-17",
         "filename": "revision_105940_2025-03-17_15-31-03.txt"
@@ -11635,7 +11984,7 @@ const exerciseData = {
         "filename": "revision_105940_2025-03-17_15-31-03.txt"
       },
       {
-        "exercise": "Leg curls",
+        "exercise": "Leg curl",
         "phase": "3x12",
         "date": "2025-03-17",
         "filename": "revision_105940_2025-03-17_15-31-03.txt"
@@ -11689,7 +12038,7 @@ const exerciseData = {
         "filename": "revision_105943_2025-03-28_14-41-32.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "3x12",
         "date": "2025-03-28",
         "filename": "revision_105943_2025-03-28_14-41-32.txt"
@@ -11773,7 +12122,7 @@ const exerciseData = {
         "filename": "revision_106035_2025-03-31_14-47-30.txt"
       },
       {
-        "exercise": "1 \u00bd rdl",
+        "exercise": "1 \u00bd RDL",
         "phase": "3x8",
         "date": "2025-04-02",
         "filename": "revision_106058_2025-04-02_14-49-37.txt"
@@ -11803,7 +12152,7 @@ const exerciseData = {
         "filename": "revision_106331_2025-04-04_14-58-51.txt"
       },
       {
-        "exercise": "pointers",
+        "exercise": "Pointers",
         "phase": "3 x 10",
         "date": "2025-04-04",
         "filename": "revision_106331_2025-04-04_14-58-51.txt"
@@ -11959,30 +12308,6 @@ const exerciseData = {
         "filename": "revision_106563_2025-04-09_14-56-42.txt"
       },
       {
-        "exercise": "Band full row",
-        "phase": "20/15/10",
-        "date": "2025-04-11",
-        "filename": "revision_106564_2025-04-11_14-39-29.txt"
-      },
-      {
-        "exercise": "Cross chest press",
-        "phase": "20/15/10",
-        "date": "2025-04-11",
-        "filename": "revision_106564_2025-04-11_14-39-29.txt"
-      },
-      {
-        "exercise": "Pull thru",
-        "phase": "20/15/10",
-        "date": "2025-04-11",
-        "filename": "revision_106564_2025-04-11_14-39-29.txt"
-      },
-      {
-        "exercise": "Hip Flexor",
-        "phase": "20/15/10",
-        "date": "2025-04-11",
-        "filename": "revision_106564_2025-04-11_14-39-29.txt"
-      },
-      {
         "exercise": "Ankle mobility 12 per side",
         "phase": "12 per side",
         "date": "2025-04-11",
@@ -12109,7 +12434,7 @@ const exerciseData = {
         "filename": "revision_106741_2025-04-14_14-56-25.txt"
       },
       {
-        "exercise": "Wall sit curls",
+        "exercise": "Wall sit curl",
         "phase": "2x15",
         "date": "2025-04-14",
         "filename": "revision_106741_2025-04-14_14-56-25.txt"
@@ -12229,13 +12554,13 @@ const exerciseData = {
         "filename": "revision_106959_2025-04-25_14-54-54.txt"
       },
       {
-        "exercise": "Kick backs",
+        "exercise": "Kick back",
         "phase": "25/5x3 band",
         "date": "2025-04-25",
         "filename": "revision_106959_2025-04-25_14-54-54.txt"
       },
       {
-        "exercise": "Plank dips",
+        "exercise": "Plank dip",
         "phase": "30/5x3",
         "date": "2025-04-28",
         "filename": "revision_106960_2025-04-28_14-29-50.txt"
@@ -12271,7 +12596,7 @@ const exerciseData = {
         "filename": "revision_107138_2025-04-28_14-55-47.txt"
       },
       {
-        "exercise": "Leg curls",
+        "exercise": "Leg curl",
         "phase": "3 x 12",
         "date": "2025-04-28",
         "filename": "revision_107138_2025-04-28_14-55-47.txt"
@@ -12367,30 +12692,6 @@ const exerciseData = {
         "filename": "revision_107528_2025-05-05_14-53-11.txt"
       },
       {
-        "exercise": "Band full row",
-        "phase": "20/15/10",
-        "date": "2025-05-09",
-        "filename": "revision_107557_2025-05-09_15-00-50.txt"
-      },
-      {
-        "exercise": "Cross chest press",
-        "phase": "20/15/10",
-        "date": "2025-05-09",
-        "filename": "revision_107557_2025-05-09_15-00-50.txt"
-      },
-      {
-        "exercise": "Pull thru",
-        "phase": "20/15/10",
-        "date": "2025-05-09",
-        "filename": "revision_107557_2025-05-09_15-00-50.txt"
-      },
-      {
-        "exercise": "Hip Flexor",
-        "phase": "20/15/10",
-        "date": "2025-05-09",
-        "filename": "revision_107557_2025-05-09_15-00-50.txt"
-      },
-      {
         "exercise": "Ankle mobility 12 per side",
         "phase": "12 per side",
         "date": "2025-05-09",
@@ -12427,7 +12728,7 @@ const exerciseData = {
         "filename": "revision_107557_2025-05-09_15-00-50.txt"
       },
       {
-        "exercise": "Band chest flyes",
+        "exercise": "Band chest flye",
         "phase": "3 x 12",
         "date": "2025-05-12",
         "filename": "revision_107764_2025-05-12_14-58-02.txt"
@@ -12457,7 +12758,7 @@ const exerciseData = {
         "filename": "revision_107764_2025-05-12_14-58-02.txt"
       },
       {
-        "exercise": "Db o.h. tricep",
+        "exercise": "Db o.h. Tricep",
         "phase": "3 x 12",
         "date": "2025-05-12",
         "filename": "revision_107764_2025-05-12_14-58-02.txt"
@@ -12505,7 +12806,7 @@ const exerciseData = {
         "filename": "revision_107988_2025-05-28_14-34-54.txt"
       },
       {
-        "exercise": "Band straight arm lat pulls",
+        "exercise": "Band straight arm lat pull",
         "phase": "3 x 10",
         "date": "2025-05-28",
         "filename": "revision_107988_2025-05-28_14-34-54.txt"
@@ -12531,18 +12832,6 @@ const exerciseData = {
       {
         "exercise": "Db kickbacks",
         "phase": "3 x 12",
-        "date": "2025-05-28",
-        "filename": "revision_107988_2025-05-28_14-34-54.txt"
-      },
-      {
-        "exercise": "Drop squat",
-        "phase": "20/15/10",
-        "date": "2025-05-28",
-        "filename": "revision_107988_2025-05-28_14-34-54.txt"
-      },
-      {
-        "exercise": "Double crunch",
-        "phase": "20/15/10",
         "date": "2025-05-28",
         "filename": "revision_107988_2025-05-28_14-34-54.txt"
       },
@@ -12679,7 +12968,7 @@ const exerciseData = {
         "filename": "revision_108434_2025-06-23_14-45-18.txt"
       },
       {
-        "exercise": "Kick backs",
+        "exercise": "Kick back",
         "phase": "25/5x3 band",
         "date": "2025-06-23",
         "filename": "revision_108434_2025-06-23_14-45-18.txt"
@@ -12703,7 +12992,7 @@ const exerciseData = {
         "filename": "revision_108436_2025-06-25_14-53-51.txt"
       },
       {
-        "exercise": "Kick backs",
+        "exercise": "Kick back",
         "phase": "3 x 12",
         "date": "2025-06-25",
         "filename": "revision_108436_2025-06-25_14-53-51.txt"
@@ -12775,7 +13064,7 @@ const exerciseData = {
         "filename": "revision_108668_2025-07-07_14-55-39.txt"
       },
       {
-        "exercise": "Heels elev. squat",
+        "exercise": "Heels elev squat",
         "phase": "3 x 12",
         "date": "2025-07-07",
         "filename": "revision_108668_2025-07-07_14-55-39.txt"
@@ -12841,6 +13130,12 @@ const exerciseData = {
         "filename": "revision_108836_2025-07-11_14-58-39.txt"
       },
       {
+        "exercise": "Cat cow 5 x",
+        "phase": "3 x 12",
+        "date": "2025-07-11",
+        "filename": "revision_108836_2025-07-11_14-58-39.txt"
+      },
+      {
         "exercise": "Db hammers",
         "phase": "2x12",
         "date": "2025-07-11",
@@ -12883,7 +13178,7 @@ const exerciseData = {
         "filename": "revision_108836_2025-07-11_14-58-39.txt"
       },
       {
-        "exercise": "RDL",
+        "exercise": "Rdl",
         "phase": "Complex 5x5",
         "date": "2025-07-23",
         "filename": "revision_108841_2025-07-23_14-18-34.txt"
@@ -12925,7 +13220,7 @@ const exerciseData = {
         "filename": "revision_108841_2025-07-23_14-18-34.txt"
       },
       {
-        "exercise": "Tricep planks",
+        "exercise": "Tricep plank",
         "phase": "3 x 12",
         "date": "2025-07-23",
         "filename": "revision_108841_2025-07-23_14-18-34.txt"
@@ -13039,7 +13334,7 @@ const exerciseData = {
         "filename": "revision_108851_2025-08-13_14-27-12.txt"
       },
       {
-        "exercise": "Band swims",
+        "exercise": "Band swim",
         "phase": "40/30/20 (15 off)",
         "date": "2025-08-13",
         "filename": "revision_108851_2025-08-13_14-27-12.txt"
@@ -13051,7 +13346,7 @@ const exerciseData = {
         "filename": "revision_108851_2025-08-13_14-27-12.txt"
       },
       {
-        "exercise": "Band punches",
+        "exercise": "Band Punch",
         "phase": "40/30/20 (15 off)",
         "date": "2025-08-13",
         "filename": "revision_108851_2025-08-13_14-27-12.txt"
@@ -13117,7 +13412,7 @@ const exerciseData = {
         "filename": "revision_108854_2025-08-18_14-56-24.txt"
       },
       {
-        "exercise": "Calf raises",
+        "exercise": "Calf raise",
         "phase": "2 x 15",
         "date": "2025-08-18",
         "filename": "revision_108854_2025-08-18_14-56-24.txt"
@@ -13147,7 +13442,7 @@ const exerciseData = {
         "filename": "revision_108856_2025-08-22_14-25-17.txt"
       },
       {
-        "exercise": "Ankle mob",
+        "exercise": "Ankle mob.",
         "phase": "60 sec",
         "date": "2025-08-22",
         "filename": "revision_108856_2025-08-22_14-25-17.txt"
@@ -13165,7 +13460,7 @@ const exerciseData = {
         "filename": "revision_108857_2025-08-25_14-56-11.txt"
       },
       {
-        "exercise": "Leg curls",
+        "exercise": "Leg curl",
         "phase": "3 x 10",
         "date": "2025-08-25",
         "filename": "revision_108857_2025-08-25_14-56-11.txt"
@@ -13189,36 +13484,6 @@ const exerciseData = {
         "filename": "revision_108857_2025-08-25_14-56-11.txt"
       },
       {
-        "exercise": "Swings",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108858_2025-08-27_14-51-58.txt"
-      },
-      {
-        "exercise": "Db jack",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108858_2025-08-27_14-51-58.txt"
-      },
-      {
-        "exercise": "Sh. taps",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108858_2025-08-27_14-51-58.txt"
-      },
-      {
-        "exercise": "Db complex",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108858_2025-08-27_14-51-58.txt"
-      },
-      {
-        "exercise": "1 \u00bd",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108858_2025-08-27_14-51-58.txt"
-      },
-      {
         "exercise": "Rdl",
         "phase": "3 x 6",
         "date": "2025-08-27",
@@ -13231,7 +13496,7 @@ const exerciseData = {
         "filename": "revision_108858_2025-08-27_14-51-58.txt"
       },
       {
-        "exercise": "Squat",
+        "exercise": "squat",
         "phase": "3 x 6",
         "date": "2025-08-27",
         "filename": "revision_108858_2025-08-27_14-51-58.txt"
@@ -13261,30 +13526,6 @@ const exerciseData = {
         "filename": "revision_108858_2025-08-27_14-51-58.txt"
       },
       {
-        "exercise": "Swings",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108873_2025-08-27_14-52-56.txt"
-      },
-      {
-        "exercise": "Db jack",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108873_2025-08-27_14-52-56.txt"
-      },
-      {
-        "exercise": "Sh. taps",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108873_2025-08-27_14-52-56.txt"
-      },
-      {
-        "exercise": "Db complex",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108873_2025-08-27_14-52-56.txt"
-      },
-      {
         "exercise": "Rdl",
         "phase": "1 \u00bd  3 x 6",
         "date": "2025-08-27",
@@ -13297,7 +13538,7 @@ const exerciseData = {
         "filename": "revision_108873_2025-08-27_14-52-56.txt"
       },
       {
-        "exercise": "Squat",
+        "exercise": "squat",
         "phase": "1 \u00bd  3 x 6",
         "date": "2025-08-27",
         "filename": "revision_108873_2025-08-27_14-52-56.txt"
@@ -13477,7 +13718,7 @@ const exerciseData = {
         "filename": "revision_109021_2025-09-10_14-57-13.txt"
       },
       {
-        "exercise": "Calf raises",
+        "exercise": "Calf raise",
         "phase": "3 x 10",
         "date": "2025-09-10",
         "filename": "revision_109021_2025-09-10_14-57-13.txt"
@@ -13489,7 +13730,7 @@ const exerciseData = {
         "filename": "revision_109228_2025-09-12_14-54-36.txt"
       },
       {
-        "exercise": "Db Rdl",
+        "exercise": "Db rdl",
         "phase": "3 x 12",
         "date": "2025-09-12",
         "filename": "revision_109228_2025-09-12_14-54-36.txt"
@@ -13525,7 +13766,7 @@ const exerciseData = {
         "filename": "revision_109481_2025-09-17_14-51-56.txt"
       },
       {
-        "exercise": "Calf raises",
+        "exercise": "Calf raise",
         "phase": "2 x 15",
         "date": "2025-09-17",
         "filename": "revision_109481_2025-09-17_14-51-56.txt"
@@ -13597,13 +13838,13 @@ const exerciseData = {
         "filename": "revision_109590_2025-09-19_14-55-55.txt"
       },
       {
-        "exercise": "Db side laterals",
+        "exercise": "Db side lateral",
         "phase": "3 x 10",
         "date": "2025-09-19",
         "filename": "revision_109590_2025-09-19_14-55-55.txt"
       },
       {
-        "exercise": "Alt leg curls",
+        "exercise": "Alt leg curl",
         "phase": "3 x 10",
         "date": "2025-09-19",
         "filename": "revision_109590_2025-09-19_14-55-55.txt"
@@ -13699,7 +13940,7 @@ const exerciseData = {
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
       },
       {
-        "exercise": "Band swims",
+        "exercise": "Band swim",
         "phase": "40/30/20 (15 off)",
         "date": "2025-09-24",
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
@@ -13711,19 +13952,19 @@ const exerciseData = {
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
       },
       {
-        "exercise": "Band punches",
+        "exercise": "Band Punch",
         "phase": "40/30/20 (15 off)",
         "date": "2025-09-24",
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
       },
       {
-        "exercise": "Step ups",
+        "exercise": "Step up",
         "phase": "40/30/20 (15 off)",
         "date": "2025-09-24",
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
       },
       {
-        "exercise": "Band curls",
+        "exercise": "Band curl",
         "phase": "2 x 15",
         "date": "2025-09-24",
         "filename": "revision_109592_2025-09-24_14-27-12.txt"
@@ -13741,7 +13982,7 @@ const exerciseData = {
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
       },
       {
-        "exercise": "Band swims",
+        "exercise": "Band swim",
         "phase": "40/30/20 (15 off)",
         "date": "2025-09-24",
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
@@ -13753,7 +13994,7 @@ const exerciseData = {
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
       },
       {
-        "exercise": "Band punches",
+        "exercise": "Band Punch",
         "phase": "40/30/20 (15 off)",
         "date": "2025-09-24",
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
@@ -13765,7 +14006,7 @@ const exerciseData = {
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
       },
       {
-        "exercise": "Band curls",
+        "exercise": "Band curl",
         "phase": "2 x 15",
         "date": "2025-09-24",
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
@@ -13777,7 +14018,7 @@ const exerciseData = {
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
       },
       {
-        "exercise": "Slider knee tucks",
+        "exercise": "Slider knee tuck",
         "phase": "2 x 15",
         "date": "2025-09-24",
         "filename": "revision_109624_2025-09-24_14-46-23.txt"
@@ -13837,7 +14078,7 @@ const exerciseData = {
         "filename": "revision_110962_2026-01-09_16-02-57.txt"
       },
       {
-        "exercise": "leg lifts",
+        "exercise": "Leg lifts",
         "phase": "3 x 10",
         "date": "2026-01-16",
         "filename": "revision_111099_2026-01-16_16-41-06.txt"
@@ -13849,7 +14090,7 @@ const exerciseData = {
         "filename": "revision_111099_2026-01-16_16-41-06.txt"
       },
       {
-        "exercise": "pointers",
+        "exercise": "Pointers",
         "phase": "3 x 10",
         "date": "2026-01-16",
         "filename": "revision_111099_2026-01-16_16-41-06.txt"
@@ -13909,7 +14150,7 @@ const exerciseData = {
         "filename": "revision_111132_2026-01-21_16-03-29.txt"
       },
       {
-        "exercise": "Leg curls",
+        "exercise": "Leg curl",
         "phase": "3 x 12",
         "date": "2026-01-21",
         "filename": "revision_111132_2026-01-21_16-03-29.txt"
@@ -13937,24 +14178,6 @@ const exerciseData = {
         "phase": "3 x 12",
         "date": "2026-01-21",
         "filename": "revision_111132_2026-01-21_16-03-29.txt"
-      },
-      {
-        "exercise": "Band full row",
-        "phase": "20/15/10",
-        "date": "2026-01-30",
-        "filename": "revision_111153_2026-01-30_06-32-00.txt"
-      },
-      {
-        "exercise": "Cross chest press",
-        "phase": "20/15/10",
-        "date": "2026-01-30",
-        "filename": "revision_111153_2026-01-30_06-32-00.txt"
-      },
-      {
-        "exercise": "Pull thru",
-        "phase": "20/15/10",
-        "date": "2026-01-30",
-        "filename": "revision_111153_2026-01-30_06-32-00.txt"
       },
       {
         "exercise": "Press bridge",
@@ -13987,7 +14210,7 @@ const exerciseData = {
         "filename": "revision_111154_2026-02-01_23-20-31.txt"
       },
       {
-        "exercise": "Squats",
+        "exercise": "squat",
         "phase": "20/15/10",
         "date": "2026-02-01",
         "filename": "revision_111154_2026-02-01_23-20-31.txt"
@@ -14023,7 +14246,7 @@ const exerciseData = {
         "filename": "revision_111154_2026-02-01_23-20-31.txt"
       },
       {
-        "exercise": "Leg curls",
+        "exercise": "Leg curl",
         "phase": "2 x 12",
         "date": "2026-02-01",
         "filename": "revision_111154_2026-02-01_23-20-31.txt"
@@ -14077,7 +14300,7 @@ const exerciseData = {
         "filename": "revision_111155_2026-02-04_15-55-36.txt"
       },
       {
-        "exercise": "band curls",
+        "exercise": "Band curls",
         "phase": "3 x 12",
         "date": "2026-02-04",
         "filename": "revision_111155_2026-02-04_15-55-36.txt"
@@ -14093,24 +14316,6 @@ const exerciseData = {
         "phase": "3 x 12",
         "date": "2026-02-04",
         "filename": "revision_111155_2026-02-04_15-55-36.txt"
-      },
-      {
-        "exercise": "Db wide out drops",
-        "phase": "20/15/10",
-        "date": "2026-02-06",
-        "filename": "revision_111240_2026-02-06_16-02-05.txt"
-      },
-      {
-        "exercise": "Band Punch",
-        "phase": "20/15/10",
-        "date": "2026-02-06",
-        "filename": "revision_111240_2026-02-06_16-02-05.txt"
-      },
-      {
-        "exercise": "Slider knee tucks",
-        "phase": "20/15/10",
-        "date": "2026-02-06",
-        "filename": "revision_111240_2026-02-06_16-02-05.txt"
       },
       {
         "exercise": "Fb lunge L",
@@ -14173,19 +14378,13 @@ const exerciseData = {
         "filename": "revision_111247_2026-02-20_02-13-18.txt"
       },
       {
-        "exercise": "1x10",
-        "phase": "3x10",
-        "date": "2026-02-20",
-        "filename": "revision_111247_2026-02-20_02-13-18.txt"
-      },
-      {
         "exercise": "Thoracic mob",
         "phase": "3x10",
         "date": "2026-02-20",
         "filename": "revision_111247_2026-02-20_02-13-18.txt"
       },
       {
-        "exercise": "Hip flexor",
+        "exercise": "Hip Flexor",
         "phase": "3x10",
         "date": "2026-02-20",
         "filename": "revision_111247_2026-02-20_02-13-18.txt"
@@ -14239,19 +14438,13 @@ const exerciseData = {
         "filename": "revision_111310_2026-02-20_16-00-33.txt"
       },
       {
-        "exercise": "1x10",
-        "phase": "3x10",
-        "date": "2026-02-20",
-        "filename": "revision_111310_2026-02-20_16-00-33.txt"
-      },
-      {
         "exercise": "Thoracic mob",
         "phase": "3x10",
         "date": "2026-02-20",
         "filename": "revision_111310_2026-02-20_16-00-33.txt"
       },
       {
-        "exercise": "Hip flexor",
+        "exercise": "Hip Flexor",
         "phase": "3x10",
         "date": "2026-02-20",
         "filename": "revision_111310_2026-02-20_16-00-33.txt"
@@ -14353,7 +14546,7 @@ const exerciseData = {
         "filename": "revision_111535_2026-03-02_16-00-46.txt"
       },
       {
-        "exercise": "Band curls",
+        "exercise": "Band curl",
         "phase": "2x15",
         "date": "2026-03-02",
         "filename": "revision_111535_2026-03-02_16-00-46.txt"
@@ -14413,7 +14606,7 @@ const exerciseData = {
         "filename": "revision_111539_2026-03-11_14-30-20.txt"
       },
       {
-        "exercise": "Db curls",
+        "exercise": "Db curl",
         "phase": "3 x 10",
         "date": "2026-03-11",
         "filename": "revision_111539_2026-03-11_14-30-20.txt"
@@ -14479,7 +14672,7 @@ const exerciseData = {
         "filename": "revision_111541_2026-03-16_01-07-04.txt"
       },
       {
-        "exercise": "Sh. tap",
+        "exercise": "Sh tap",
         "phase": "Finisher 10",
         "date": "2026-03-16",
         "filename": "revision_111541_2026-03-16_01-07-04.txt"
@@ -14509,7 +14702,7 @@ const exerciseData = {
         "filename": "revision_111727_2026-03-18_15-00-56.txt"
       },
       {
-        "exercise": "Band swims",
+        "exercise": "Band swim",
         "phase": "60/45/30",
         "date": "2026-03-18",
         "filename": "revision_111727_2026-03-18_15-00-56.txt"
@@ -14521,7 +14714,7 @@ const exerciseData = {
         "filename": "revision_111727_2026-03-18_15-00-56.txt"
       },
       {
-        "exercise": "Band punches",
+        "exercise": "Band Punch",
         "phase": "60/45/30",
         "date": "2026-03-18",
         "filename": "revision_111727_2026-03-18_15-00-56.txt"
@@ -14557,7 +14750,7 @@ const exerciseData = {
         "filename": "revision_111727_2026-03-18_15-00-56.txt"
       },
       {
-        "exercise": "Sh. tap",
+        "exercise": "Sh tap",
         "phase": "Finisher 10",
         "date": "2026-03-18",
         "filename": "revision_111727_2026-03-18_15-00-56.txt"
@@ -15067,26 +15260,8 @@ const exerciseData = {
         "filename": "revision_111927_2026-04-13_04-23-15.txt"
       },
       {
-        "exercise": "Kick backs",
+        "exercise": "Kick back",
         "phase": "25/5x3 band",
-        "date": "2026-04-13",
-        "filename": "revision_111927_2026-04-13_04-23-15.txt"
-      },
-      {
-        "exercise": "Band flye",
-        "phase": "25/20/15/10",
-        "date": "2026-04-13",
-        "filename": "revision_111927_2026-04-13_04-23-15.txt"
-      },
-      {
-        "exercise": "Band pull thru",
-        "phase": "25/20/15/10",
-        "date": "2026-04-13",
-        "filename": "revision_111927_2026-04-13_04-23-15.txt"
-      },
-      {
-        "exercise": "Band facepull",
-        "phase": "25/20/15/10",
         "date": "2026-04-13",
         "filename": "revision_111927_2026-04-13_04-23-15.txt"
       },
@@ -15127,26 +15302,8 @@ const exerciseData = {
         "filename": "revision_111985_2026-04-15_15-00-52.txt"
       },
       {
-        "exercise": "Plank jacks",
+        "exercise": "Plank jack",
         "phase": "25/5x3 band",
-        "date": "2026-04-15",
-        "filename": "revision_111985_2026-04-15_15-00-52.txt"
-      },
-      {
-        "exercise": "Band press",
-        "phase": "25/20/15/10",
-        "date": "2026-04-15",
-        "filename": "revision_111985_2026-04-15_15-00-52.txt"
-      },
-      {
-        "exercise": "Band pull thru",
-        "phase": "25/20/15/10",
-        "date": "2026-04-15",
-        "filename": "revision_111985_2026-04-15_15-00-52.txt"
-      },
-      {
-        "exercise": "Band s. row",
-        "phase": "25/20/15/10",
         "date": "2026-04-15",
         "filename": "revision_111985_2026-04-15_15-00-52.txt"
       },
@@ -15175,13 +15332,13 @@ const exerciseData = {
         "filename": "revision_111985_2026-04-15_15-00-52.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "25/10x3",
         "date": "2026-04-17",
         "filename": "revision_112017_2026-04-17_15-00-09.txt"
       },
       {
-        "exercise": "Flutters",
+        "exercise": "Flutter",
         "phase": "25/10x3",
         "date": "2026-04-17",
         "filename": "revision_112017_2026-04-17_15-00-09.txt"
@@ -15193,7 +15350,7 @@ const exerciseData = {
         "filename": "revision_112017_2026-04-17_15-00-09.txt"
       },
       {
-        "exercise": "Flutters",
+        "exercise": "Flutter",
         "phase": "25/10x3",
         "date": "2026-04-17",
         "filename": "revision_112017_2026-04-17_15-00-09.txt"
@@ -15289,7 +15446,7 @@ const exerciseData = {
         "filename": "revision_112017_2026-04-17_15-00-09.txt"
       },
       {
-        "exercise": "Plank dips",
+        "exercise": "Plank dip",
         "phase": "30/5x3",
         "date": "2026-04-22",
         "filename": "revision_112067_2026-04-22_15-02-08.txt"
@@ -15433,6 +15590,12 @@ const exerciseData = {
         "filename": "revision_112071_2026-04-27_14-46-29.txt"
       },
       {
+        "exercise": "Cat cow 5 x",
+        "phase": "3 x 12",
+        "date": "2026-04-27",
+        "filename": "revision_112071_2026-04-27_14-46-29.txt"
+      },
+      {
         "exercise": "Db hammers",
         "phase": "2x12",
         "date": "2026-04-27",
@@ -15523,7 +15686,7 @@ const exerciseData = {
         "filename": "revision_112145_2026-05-01_15-27-10.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "3x12",
         "date": "2026-05-01",
         "filename": "revision_112145_2026-05-01_15-27-10.txt"
@@ -15601,13 +15764,13 @@ const exerciseData = {
         "filename": "revision_112236_2026-05-08_14-57-25.txt"
       },
       {
-        "exercise": "Runner claps",
+        "exercise": "Runner clap",
         "phase": "3 min ramp",
         "date": "2026-05-08",
         "filename": "revision_112236_2026-05-08_14-57-25.txt"
       },
       {
-        "exercise": "Plank ups",
+        "exercise": "Plank up",
         "phase": "3 min ramp",
         "date": "2026-05-08",
         "filename": "revision_112236_2026-05-08_14-57-25.txt"
@@ -15649,7 +15812,7 @@ const exerciseData = {
         "filename": "revision_112244_2026-06-01_03-49-01.txt"
       },
       {
-        "exercise": "Db hammer curls",
+        "exercise": "Db hammer curl",
         "phase": "3x8",
         "date": "2026-06-01",
         "filename": "revision_112244_2026-06-01_03-49-01.txt"
@@ -15691,7 +15854,7 @@ const exerciseData = {
         "filename": "revision_112270_2026-06-01_15-03-56.txt"
       },
       {
-        "exercise": "Db hammer curls",
+        "exercise": "Db hammer curl",
         "phase": "3x8",
         "date": "2026-06-01",
         "filename": "revision_112270_2026-06-01_15-03-56.txt"
@@ -15721,13 +15884,13 @@ const exerciseData = {
         "filename": "revision_112278_2026-06-03_15-02-04.txt"
       },
       {
-        "exercise": "Band kickbacks",
+        "exercise": "Band kickback",
         "phase": "3 x 15",
         "date": "2026-06-03",
         "filename": "revision_112278_2026-06-03_15-02-04.txt"
       },
       {
-        "exercise": "Plank dips",
+        "exercise": "Plank dip",
         "phase": "25/10x3",
         "date": "2026-06-08",
         "filename": "revision_112317_2026-06-08_14-59-06.txt"
@@ -15793,7 +15956,7 @@ const exerciseData = {
         "filename": "revision_112317_2026-06-08_14-59-06.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "3x12",
         "date": "2026-06-08",
         "filename": "revision_112317_2026-06-08_14-59-06.txt"
@@ -15829,7 +15992,7 @@ const exerciseData = {
         "filename": "revision_112342_2026-06-10_14-58-04.txt"
       },
       {
-        "exercise": "Kick backs",
+        "exercise": "Kick back",
         "phase": "25/5x3 band",
         "date": "2026-06-10",
         "filename": "revision_112342_2026-06-10_14-58-04.txt"
@@ -15865,40 +16028,10 @@ const exerciseData = {
         "filename": "revision_112350_2026-06-10_15-31-18.txt"
       },
       {
-        "exercise": "Kick backs",
+        "exercise": "Kick back",
         "phase": "25/5x3 band",
         "date": "2026-06-10",
         "filename": "revision_112350_2026-06-10_15-31-18.txt"
-      },
-      {
-        "exercise": "Band flye",
-        "phase": "25/20/15/10",
-        "date": "2026-06-15",
-        "filename": "revision_112374_2026-06-15_15-36-01.txt"
-      },
-      {
-        "exercise": "Band pull thru",
-        "phase": "25/20/15/10",
-        "date": "2026-06-15",
-        "filename": "revision_112374_2026-06-15_15-36-01.txt"
-      },
-      {
-        "exercise": "Band facepull",
-        "phase": "25/20/15/10",
-        "date": "2026-06-15",
-        "filename": "revision_112374_2026-06-15_15-36-01.txt"
-      },
-      {
-        "exercise": "Wide outs",
-        "phase": "25/20/15/10",
-        "date": "2026-06-15",
-        "filename": "revision_112374_2026-06-15_15-36-01.txt"
-      },
-      {
-        "exercise": "Hip flexor mob",
-        "phase": "25/20/15/10",
-        "date": "2026-06-15",
-        "filename": "revision_112374_2026-06-15_15-36-01.txt"
       },
       {
         "exercise": "Wall sit hammer curl",
@@ -15943,7 +16076,7 @@ const exerciseData = {
         "filename": "revision_112376_2026-06-19_14-54-02.txt"
       },
       {
-        "exercise": "Plank dips",
+        "exercise": "Plank dip",
         "phase": "30/5x3",
         "date": "2026-06-22",
         "filename": "revision_112448_2026-06-22_15-39-54.txt"
@@ -16003,19 +16136,19 @@ const exerciseData = {
         "filename": "revision_112509_2026-06-26_15-02-07.txt"
       },
       {
-        "exercise": "Band one-arm pull",
+        "exercise": "Band one arm pull",
         "phase": "3 x 12",
         "date": "2026-06-29",
         "filename": "revision_112512_2026-06-29_14-59-41.txt"
       },
       {
-        "exercise": "Leg curls",
+        "exercise": "Leg curl",
         "phase": "3 x 12",
         "date": "2026-06-29",
         "filename": "revision_112512_2026-06-29_14-59-41.txt"
       },
       {
-        "exercise": "Band one-arm press",
+        "exercise": "Band one arm press",
         "phase": "3 x 12",
         "date": "2026-06-29",
         "filename": "revision_112512_2026-06-29_14-59-41.txt"
@@ -16039,7 +16172,7 @@ const exerciseData = {
         "filename": "revision_112512_2026-06-29_14-59-41.txt"
       },
       {
-        "exercise": "M.c.",
+        "exercise": "M.c",
         "phase": "2 x 30",
         "date": "2026-07-01",
         "filename": "revision_112560_2026-07-01_15-01-03.txt"
@@ -16057,7 +16190,7 @@ const exerciseData = {
         "filename": "revision_112560_2026-07-01_15-01-03.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "2 x 30",
         "date": "2026-07-01",
         "filename": "revision_112560_2026-07-01_15-01-03.txt"
@@ -16093,7 +16226,7 @@ const exerciseData = {
         "filename": "revision_112560_2026-07-01_15-01-03.txt"
       },
       {
-        "exercise": "Wall sit curls",
+        "exercise": "Wall sit curl",
         "phase": "2 x 15",
         "date": "2026-07-01",
         "filename": "revision_112560_2026-07-01_15-01-03.txt"
@@ -16135,7 +16268,7 @@ const exerciseData = {
         "filename": "revision_112584_2026-07-03_15-00-38.txt"
       },
       {
-        "exercise": "Calf raises",
+        "exercise": "Calf raise",
         "phase": "3 x 10",
         "date": "2026-07-03",
         "filename": "revision_112584_2026-07-03_15-00-38.txt"
@@ -16159,7 +16292,7 @@ const exerciseData = {
         "filename": "revision_112585_2026-07-06_14-47-03.txt"
       },
       {
-        "exercise": "Plank dips",
+        "exercise": "Plank dip",
         "phase": "30/5x3",
         "date": "2026-07-08",
         "filename": "revision_112607_2026-07-08_06-33-58.txt"
@@ -16195,7 +16328,7 @@ const exerciseData = {
         "filename": "revision_112607_2026-07-08_06-33-58.txt"
       },
       {
-        "exercise": "Plank dips",
+        "exercise": "Plank dip",
         "phase": "30/5x3",
         "date": "2026-07-08",
         "filename": "revision_112631_2026-07-08_15-37-09.txt"
@@ -16249,7 +16382,7 @@ const exerciseData = {
         "filename": "revision_112670_2026-07-10_15-11-12.txt"
       },
       {
-        "exercise": "Squats",
+        "exercise": "squat",
         "phase": "20/15/10",
         "date": "2026-07-10",
         "filename": "revision_112670_2026-07-10_15-11-12.txt"
@@ -16285,7 +16418,7 @@ const exerciseData = {
         "filename": "revision_112670_2026-07-10_15-11-12.txt"
       },
       {
-        "exercise": "Leg curls",
+        "exercise": "Leg curl",
         "phase": "2 x 12",
         "date": "2026-07-10",
         "filename": "revision_112670_2026-07-10_15-11-12.txt"
@@ -16381,7 +16514,7 @@ const exerciseData = {
         "filename": "revision_112804_2026-07-20_06-34-02.txt"
       },
       {
-        "exercise": "Band swims",
+        "exercise": "Band swim",
         "phase": "40/30/20 (15 off)",
         "date": "2026-07-20",
         "filename": "revision_112804_2026-07-20_06-34-02.txt"
@@ -16393,7 +16526,7 @@ const exerciseData = {
         "filename": "revision_112804_2026-07-20_06-34-02.txt"
       },
       {
-        "exercise": "Band punches",
+        "exercise": "Band Punch",
         "phase": "40/30/20 (15 off)",
         "date": "2026-07-20",
         "filename": "revision_112804_2026-07-20_06-34-02.txt"
@@ -16405,7 +16538,7 @@ const exerciseData = {
         "filename": "revision_112804_2026-07-20_06-34-02.txt"
       },
       {
-        "exercise": "Band curls",
+        "exercise": "Band curl",
         "phase": "2 x 15",
         "date": "2026-07-20",
         "filename": "revision_112804_2026-07-20_06-34-02.txt"
@@ -16417,7 +16550,7 @@ const exerciseData = {
         "filename": "revision_112804_2026-07-20_06-34-02.txt"
       },
       {
-        "exercise": "Slider knee tucks",
+        "exercise": "Slider knee tuck",
         "phase": "2 x 15",
         "date": "2026-07-20",
         "filename": "revision_112804_2026-07-20_06-34-02.txt"
@@ -16651,7 +16784,7 @@ const exerciseData = {
         "filename": "revision_113018_2026-08-07_14-56-21.txt"
       },
       {
-        "exercise": "Calf raises",
+        "exercise": "Calf raise",
         "phase": "2 x 15",
         "date": "2026-08-07",
         "filename": "revision_113018_2026-08-07_14-56-21.txt"
@@ -16699,7 +16832,7 @@ const exerciseData = {
         "filename": "revision_113025_2026-08-07_15-00-04.txt"
       },
       {
-        "exercise": "Calf raises",
+        "exercise": "Calf raise",
         "phase": "2 x 15",
         "date": "2026-08-07",
         "filename": "revision_113025_2026-08-07_15-00-04.txt"
@@ -16751,30 +16884,6 @@ const exerciseData = {
         "phase": "60 sec.",
         "date": "2026-08-10",
         "filename": "revision_113039_2026-08-10_14-58-50.txt"
-      },
-      {
-        "exercise": "Band flye",
-        "phase": "25/20/15/10",
-        "date": "2026-08-12",
-        "filename": "revision_113075_2026-08-12_14-58-20.txt"
-      },
-      {
-        "exercise": "Band pull thru",
-        "phase": "25/20/15/10",
-        "date": "2026-08-12",
-        "filename": "revision_113075_2026-08-12_14-58-20.txt"
-      },
-      {
-        "exercise": "Band facepull",
-        "phase": "25/20/15/10",
-        "date": "2026-08-12",
-        "filename": "revision_113075_2026-08-12_14-58-20.txt"
-      },
-      {
-        "exercise": "Hip flexor mob",
-        "phase": "25/20/15/10",
-        "date": "2026-08-12",
-        "filename": "revision_113075_2026-08-12_14-58-20.txt"
       },
       {
         "exercise": "Wall sit hammer curl",
@@ -16909,7 +17018,7 @@ const exerciseData = {
         "filename": "revision_113166_2026-08-17_17-28-05.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "3x12",
         "date": "2026-08-17",
         "filename": "revision_113166_2026-08-17_17-28-05.txt"
@@ -16993,7 +17102,7 @@ const exerciseData = {
         "filename": "revision_113327_2026-09-14_15-00-15.txt"
       },
       {
-        "exercise": "Squats",
+        "exercise": "squat",
         "phase": "20/15/10",
         "date": "2026-09-14",
         "filename": "revision_113327_2026-09-14_15-00-15.txt"
@@ -17035,7 +17144,7 @@ const exerciseData = {
         "filename": "revision_113327_2026-09-14_15-00-15.txt"
       },
       {
-        "exercise": "Leg curls",
+        "exercise": "Leg curl",
         "phase": "2 x 12",
         "date": "2026-09-14",
         "filename": "revision_113327_2026-09-14_15-00-15.txt"
@@ -17077,7 +17186,7 @@ const exerciseData = {
         "filename": "revision_113328_2026-09-16_14-58-45.txt"
       },
       {
-        "exercise": "Step ups",
+        "exercise": "Step up",
         "phase": "3 x 10",
         "date": "2026-09-16",
         "filename": "revision_113328_2026-09-16_14-58-45.txt"
@@ -17125,7 +17234,7 @@ const exerciseData = {
         "filename": "revision_113342_2026-09-16_14-59-47.txt"
       },
       {
-        "exercise": "Step ups",
+        "exercise": "Step up",
         "phase": "3 x 10",
         "date": "2026-09-16",
         "filename": "revision_113342_2026-09-16_14-59-47.txt"
@@ -17179,7 +17288,7 @@ const exerciseData = {
         "filename": "revision_113422_2026-09-18_15-01-44.txt"
       },
       {
-        "exercise": "Kick backs",
+        "exercise": "Kick back",
         "phase": "3 x 12",
         "date": "2026-09-18",
         "filename": "revision_113422_2026-09-18_15-01-44.txt"
@@ -17221,7 +17330,7 @@ const exerciseData = {
         "filename": "revision_113428_2026-09-21_14-57-22.txt"
       },
       {
-        "exercise": "Kick backs",
+        "exercise": "Kick back",
         "phase": "25/5x3 band",
         "date": "2026-09-21",
         "filename": "revision_113428_2026-09-21_14-57-22.txt"
@@ -17347,34 +17456,10 @@ const exerciseData = {
         "filename": "revision_113583_2026-09-30_15-01-47.txt"
       },
       {
-        "exercise": "Leg Lifts",
+        "exercise": "Leg lifts",
         "phase": "45/35/25",
         "date": "2026-09-30",
         "filename": "revision_113583_2026-09-30_15-01-47.txt"
-      },
-      {
-        "exercise": "Band squat row",
-        "phase": "25/20/15",
-        "date": "2026-10-02",
-        "filename": "revision_113666_2026-10-02_15-00-59.txt"
-      },
-      {
-        "exercise": "Drop squat",
-        "phase": "25/20/15",
-        "date": "2026-10-02",
-        "filename": "revision_113666_2026-10-02_15-00-59.txt"
-      },
-      {
-        "exercise": "Pull thru",
-        "phase": "25/20/15",
-        "date": "2026-10-02",
-        "filename": "revision_113666_2026-10-02_15-00-59.txt"
-      },
-      {
-        "exercise": "Shoulder tap",
-        "phase": "25/20/15",
-        "date": "2026-10-02",
-        "filename": "revision_113666_2026-10-02_15-00-59.txt"
       },
       {
         "exercise": "Lunge squat lunge",
@@ -17389,7 +17474,7 @@ const exerciseData = {
         "filename": "revision_113666_2026-10-02_15-00-59.txt"
       },
       {
-        "exercise": "Atwp",
+        "exercise": "atwp",
         "phase": "40/15x2",
         "date": "2026-10-02",
         "filename": "revision_113666_2026-10-02_15-00-59.txt"
@@ -17407,25 +17492,25 @@ const exerciseData = {
         "filename": "revision_113864_2026-10-14_15-01-43.txt"
       },
       {
-        "exercise": "M.c.",
+        "exercise": "M.c",
         "phase": "3 min ramp",
         "date": "2026-10-14",
         "filename": "revision_113864_2026-10-14_15-01-43.txt"
       },
       {
-        "exercise": "R. Lunge",
+        "exercise": "R. lunge",
         "phase": "3 min ramp",
         "date": "2026-10-14",
         "filename": "revision_113864_2026-10-14_15-01-43.txt"
       },
       {
-        "exercise": "Sh Taps",
+        "exercise": "Sh. taps",
         "phase": "3 min ramp",
         "date": "2026-10-14",
         "filename": "revision_113864_2026-10-14_15-01-43.txt"
       },
       {
-        "exercise": "Db curls",
+        "exercise": "Db curl",
         "phase": "3x10",
         "date": "2026-10-14",
         "filename": "revision_113864_2026-10-14_15-01-43.txt"
@@ -17521,7 +17606,7 @@ const exerciseData = {
         "filename": "revision_113956_2026-10-19_15-01-26.txt"
       },
       {
-        "exercise": "Db curls",
+        "exercise": "Db curl",
         "phase": "3x12",
         "date": "2026-10-19",
         "filename": "revision_113956_2026-10-19_15-01-26.txt"
@@ -17533,13 +17618,13 @@ const exerciseData = {
         "filename": "revision_113987_2026-10-28_15-14-52.txt"
       },
       {
-        "exercise": "Db side laterals",
+        "exercise": "Db side lateral",
         "phase": "3 x 10",
         "date": "2026-10-28",
         "filename": "revision_113987_2026-10-28_15-14-52.txt"
       },
       {
-        "exercise": "Leg curls",
+        "exercise": "Leg curl",
         "phase": "3 x 10",
         "date": "2026-10-28",
         "filename": "revision_113987_2026-10-28_15-14-52.txt"
@@ -17551,7 +17636,7 @@ const exerciseData = {
         "filename": "revision_113987_2026-10-28_15-14-52.txt"
       },
       {
-        "exercise": "Knee tucks",
+        "exercise": "Knee tuck",
         "phase": "2 x 15",
         "date": "2026-10-28",
         "filename": "revision_113987_2026-10-28_15-14-52.txt"
@@ -17587,7 +17672,7 @@ const exerciseData = {
         "filename": "revision_113988_2026-10-30_14-59-21.txt"
       },
       {
-        "exercise": "Stag. Rdl",
+        "exercise": "Stag. rdl",
         "phase": "3 x 10",
         "date": "2026-10-30",
         "filename": "revision_113988_2026-10-30_14-59-21.txt"
@@ -17605,7 +17690,7 @@ const exerciseData = {
         "filename": "revision_113988_2026-10-30_14-59-21.txt"
       },
       {
-        "exercise": "Band flyes",
+        "exercise": "Band flye",
         "phase": "3 x 10",
         "date": "2026-10-30",
         "filename": "revision_113988_2026-10-30_14-59-21.txt"
@@ -17719,7 +17804,7 @@ const exerciseData = {
         "filename": "revision_81219_2023-08-02_15-40-06.txt"
       },
       {
-        "exercise": "Band kickbacks",
+        "exercise": "Band kickback",
         "phase": "3 x 15",
         "date": "2023-08-02",
         "filename": "revision_81219_2023-08-02_15-40-06.txt"
@@ -17773,7 +17858,7 @@ const exerciseData = {
         "filename": "revision_81394_2023-08-09_14-58-57.txt"
       },
       {
-        "exercise": "Face pulls",
+        "exercise": "Face pull",
         "phase": "3 x 10",
         "date": "2023-08-09",
         "filename": "revision_81394_2023-08-09_14-58-57.txt"
@@ -17803,7 +17888,7 @@ const exerciseData = {
         "filename": "revision_81394_2023-08-09_14-58-57.txt"
       },
       {
-        "exercise": "Band seals",
+        "exercise": "Band seal",
         "phase": "25/10x3",
         "date": "2023-09-20",
         "filename": "revision_83578_2023-09-20_14-57-51.txt"
@@ -17869,7 +17954,7 @@ const exerciseData = {
         "filename": "revision_83578_2023-09-20_14-57-51.txt"
       },
       {
-        "exercise": "Squat",
+        "exercise": "squat",
         "phase": "4 x 8",
         "date": "2023-09-20",
         "filename": "revision_83578_2023-09-20_14-57-51.txt"
@@ -17887,7 +17972,7 @@ const exerciseData = {
         "filename": "revision_83578_2023-09-20_14-57-51.txt"
       },
       {
-        "exercise": "Leg curls",
+        "exercise": "Leg curl",
         "phase": "3 x 10",
         "date": "2023-09-20",
         "filename": "revision_83578_2023-09-20_14-57-51.txt"
@@ -17899,31 +17984,7 @@ const exerciseData = {
         "filename": "revision_83578_2023-09-20_14-57-51.txt"
       },
       {
-        "exercise": "Band seal jack",
-        "phase": "20/15/10",
-        "date": "2023-10-09",
-        "filename": "revision_84564_2023-10-09_14-59-51.txt"
-      },
-      {
-        "exercise": "Band alt row",
-        "phase": "20/15/10",
-        "date": "2023-10-09",
-        "filename": "revision_84564_2023-10-09_14-59-51.txt"
-      },
-      {
-        "exercise": "Band squat",
-        "phase": "20/15/10",
-        "date": "2023-10-09",
-        "filename": "revision_84564_2023-10-09_14-59-51.txt"
-      },
-      {
-        "exercise": "Band punch",
-        "phase": "20/15/10",
-        "date": "2023-10-09",
-        "filename": "revision_84564_2023-10-09_14-59-51.txt"
-      },
-      {
-        "exercise": "Db Rdl",
+        "exercise": "Db rdl",
         "phase": "4 x 8",
         "date": "2023-10-09",
         "filename": "revision_84564_2023-10-09_14-59-51.txt"
@@ -18013,13 +18074,13 @@ const exerciseData = {
         "filename": "revision_88561_2024-01-24_15-58-46.txt"
       },
       {
-        "exercise": "Db bent rows",
+        "exercise": "Db bent row",
         "phase": "3 x 10",
         "date": "2024-01-24",
         "filename": "revision_88561_2024-01-24_15-58-46.txt"
       },
       {
-        "exercise": "Knee tucks",
+        "exercise": "Knee tuck",
         "phase": "3 x 10",
         "date": "2024-01-24",
         "filename": "revision_88561_2024-01-24_15-58-46.txt"
@@ -18031,7 +18092,7 @@ const exerciseData = {
         "filename": "revision_88561_2024-01-24_15-58-46.txt"
       },
       {
-        "exercise": "Leg curls",
+        "exercise": "Leg curl",
         "phase": "3 x 10",
         "date": "2024-01-24",
         "filename": "revision_88561_2024-01-24_15-58-46.txt"
@@ -18121,13 +18182,13 @@ const exerciseData = {
         "filename": "revision_91428_2024-03-18_15-41-45.txt"
       },
       {
-        "exercise": "Leg curls",
+        "exercise": "Leg curl",
         "phase": "3 x 10",
         "date": "2024-03-18",
         "filename": "revision_91428_2024-03-18_15-41-45.txt"
       },
       {
-        "exercise": "Db side laterals",
+        "exercise": "Db side lateral",
         "phase": "3 x 10",
         "date": "2024-03-18",
         "filename": "revision_91428_2024-03-18_15-41-45.txt"
@@ -18223,24 +18284,6 @@ const exerciseData = {
         "filename": "revision_93087_2024-04-19_14-57-35.txt"
       },
       {
-        "exercise": "Band plank jack",
-        "phase": "20/15/10",
-        "date": "2024-05-08",
-        "filename": "revision_93869_2024-05-08_15-04-10.txt"
-      },
-      {
-        "exercise": "Band bridge",
-        "phase": "20/15/10",
-        "date": "2024-05-08",
-        "filename": "revision_93869_2024-05-08_15-04-10.txt"
-      },
-      {
-        "exercise": "Seated row",
-        "phase": "20/15/10",
-        "date": "2024-05-08",
-        "filename": "revision_93869_2024-05-08_15-04-10.txt"
-      },
-      {
         "exercise": "Db floor press",
         "phase": "3 x 12",
         "date": "2024-05-08",
@@ -18259,19 +18302,19 @@ const exerciseData = {
         "filename": "revision_93869_2024-05-08_15-04-10.txt"
       },
       {
-        "exercise": "Leg curls",
+        "exercise": "Leg curl",
         "phase": "3 x 12",
         "date": "2024-05-08",
         "filename": "revision_93869_2024-05-08_15-04-10.txt"
       },
       {
-        "exercise": "Wall sit curls",
+        "exercise": "Wall sit curl",
         "phase": "60/15x1",
         "date": "2024-05-08",
         "filename": "revision_93869_2024-05-08_15-04-10.txt"
       },
       {
-        "exercise": "Plank ups",
+        "exercise": "Plank up",
         "phase": "60/15x1",
         "date": "2024-05-08",
         "filename": "revision_93869_2024-05-08_15-04-10.txt"
@@ -18547,7 +18590,7 @@ const exerciseData = {
         "filename": "revision_98462_2024-08-14_15-01-48.txt"
       },
       {
-        "exercise": "Calf raises",
+        "exercise": "Calf raise",
         "phase": "2 x 15",
         "date": "2024-08-14",
         "filename": "revision_98462_2024-08-14_15-01-48.txt"
@@ -18599,72 +18642,6 @@ const exerciseData = {
         "phase": "3 x 8",
         "date": "2024-08-19",
         "filename": "revision_98733_2024-08-19_14-58-57.txt"
-      },
-      {
-        "exercise": "Band flye",
-        "phase": "20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98735_2024-08-23_14-55-04.txt"
-      },
-      {
-        "exercise": "Band pull thru",
-        "phase": "20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98735_2024-08-23_14-55-04.txt"
-      },
-      {
-        "exercise": "Band facepull",
-        "phase": "20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98735_2024-08-23_14-55-04.txt"
-      },
-      {
-        "exercise": "Hip flexor",
-        "phase": "20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98735_2024-08-23_14-55-04.txt"
-      },
-      {
-        "exercise": "Hands free hips",
-        "phase": "20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98735_2024-08-23_14-55-04.txt"
-      },
-      {
-        "exercise": "Man maker",
-        "phase": "20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98735_2024-08-23_14-55-04.txt"
-      },
-      {
-        "exercise": "Stretch",
-        "phase": "20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98735_2024-08-23_14-55-04.txt"
-      },
-      {
-        "exercise": "Band flye",
-        "phase": "25/20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98843_2024-08-23_15-20-58.txt"
-      },
-      {
-        "exercise": "Band pull thru",
-        "phase": "25/20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98843_2024-08-23_15-20-58.txt"
-      },
-      {
-        "exercise": "Band facepull",
-        "phase": "25/20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98843_2024-08-23_15-20-58.txt"
-      },
-      {
-        "exercise": "Hip flexor mob",
-        "phase": "25/20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98843_2024-08-23_15-20-58.txt"
       },
       {
         "exercise": "Wall sit hammer curl",
@@ -18841,7 +18818,7 @@ const exerciseData = {
         "filename": "revision_99675_2024-09-04_15-02-11.txt"
       },
       {
-        "exercise": "Plank dips",
+        "exercise": "Plank dip",
         "phase": "25/10x3",
         "date": "2024-09-06",
         "filename": "revision_99678_2024-09-06_15-32-34.txt"
@@ -18913,7 +18890,7 @@ const exerciseData = {
         "filename": "revision_99678_2024-09-06_15-32-34.txt"
       },
       {
-        "exercise": "Leg lifts",
+        "exercise": "Leg lift",
         "phase": "3x12",
         "date": "2024-09-06",
         "filename": "revision_99678_2024-09-06_15-32-34.txt"
@@ -18973,7 +18950,7 @@ const exerciseData = {
         "filename": "revision_99679_2024-09-09_15-00-13.txt"
       },
       {
-        "exercise": "Band curls",
+        "exercise": "Band curl",
         "phase": "3 x 15",
         "date": "2024-09-11",
         "filename": "revision_99683_2024-09-11_15-03-57.txt"
@@ -19009,7 +18986,7 @@ const exerciseData = {
         "filename": "revision_99725_2024-09-11_15-08-17.txt"
       },
       {
-        "exercise": "Band curls",
+        "exercise": "Band curl",
         "phase": "3 x 15",
         "date": "2024-09-11",
         "filename": "revision_99725_2024-09-11_15-08-17.txt"
@@ -19033,13 +19010,13 @@ const exerciseData = {
         "filename": "revision_99757_2024-09-13_15-32-12.txt"
       },
       {
-        "exercise": "Band straight arm lat pulls",
+        "exercise": "Band straight arm lat pull",
         "phase": "3 x 10",
         "date": "2024-09-13",
         "filename": "revision_99757_2024-09-13_15-32-12.txt"
       },
       {
-        "exercise": "Band chest flyes",
+        "exercise": "Band chest flye",
         "phase": "3 x 10",
         "date": "2024-09-13",
         "filename": "revision_99757_2024-09-13_15-32-12.txt"
@@ -19063,18 +19040,6 @@ const exerciseData = {
         "filename": "revision_99757_2024-09-13_15-32-12.txt"
       },
       {
-        "exercise": "Drop squat",
-        "phase": "20/15/10",
-        "date": "2024-09-13",
-        "filename": "revision_99757_2024-09-13_15-32-12.txt"
-      },
-      {
-        "exercise": "Double crunch",
-        "phase": "20/15/10",
-        "date": "2024-09-13",
-        "filename": "revision_99757_2024-09-13_15-32-12.txt"
-      },
-      {
         "exercise": "Leg circle L",
         "phase": "25/10x3",
         "date": "2024-09-16",
@@ -19087,7 +19052,7 @@ const exerciseData = {
         "filename": "revision_99918_2024-09-16_14-44-15.txt"
       },
       {
-        "exercise": "Slider m. c.",
+        "exercise": "Slider m.c.",
         "phase": "25/10x3",
         "date": "2024-09-16",
         "filename": "revision_99918_2024-09-16_14-44-15.txt"
@@ -19141,7 +19106,7 @@ const exerciseData = {
         "filename": "revision_99961_2024-09-18_15-36-01.txt"
       },
       {
-        "exercise": "Kick backs",
+        "exercise": "Kick back",
         "phase": "25/5x3 band",
         "date": "2024-09-18",
         "filename": "revision_99961_2024-09-18_15-36-01.txt"
@@ -19195,26 +19160,8 @@ const exerciseData = {
         "filename": "revision_99961_2024-09-18_15-36-01.txt"
       },
       {
-        "exercise": "Band squat row",
-        "phase": "20/15/10",
-        "date": "2024-09-20",
-        "filename": "revision_99974_2024-09-20_15-22-34.txt"
-      },
-      {
-        "exercise": "Punches",
-        "phase": "20/15/10",
-        "date": "2024-09-20",
-        "filename": "revision_99974_2024-09-20_15-22-34.txt"
-      },
-      {
-        "exercise": "Pull thru",
-        "phase": "20/15/10",
-        "date": "2024-09-20",
-        "filename": "revision_99974_2024-09-20_15-22-34.txt"
-      },
-      {
         "exercise": "3 way push up 5 each",
-        "phase": "5 per side",
+        "phase": "Lunge matrix 5 per side",
         "date": "2024-09-20",
         "filename": "revision_99974_2024-09-20_15-22-34.txt"
       },
@@ -19255,7 +19202,7 @@ const exerciseData = {
         "filename": "revision_99975_2024-09-25_15-00-08.txt"
       },
       {
-        "exercise": "Band curls",
+        "exercise": "Band curl",
         "phase": "3 x 15",
         "date": "2024-09-25",
         "filename": "revision_99975_2024-09-25_15-00-08.txt"
@@ -19299,7 +19246,7 @@ const exerciseData = {
         "filename": "revision_111497_2026-02-27_16-08-37.txt"
       },
       {
-        "exercise": "Hip flexors",
+        "exercise": "Hip Flexor",
         "phase": "Hip rotations 10",
         "date": "2026-02-27",
         "filename": "revision_111497_2026-02-27_16-08-37.txt"
@@ -19317,7 +19264,7 @@ const exerciseData = {
         "filename": "revision_111535_2026-03-02_16-00-46.txt"
       },
       {
-        "exercise": "Hip flexors",
+        "exercise": "Hip Flexor",
         "phase": "Hip rotations 10",
         "date": "2026-03-02",
         "filename": "revision_111535_2026-03-02_16-00-46.txt"
@@ -19396,8 +19343,12 @@ const exerciseData = {
             "exercises": [
               "Wall sit curl",
               "Lunge squat lunge",
-              "Single leg drops"
+              "Single leg drop"
             ]
+          },
+          {
+            "phase": "stretch",
+            "exercises": []
           }
         ]
       }
@@ -19410,7 +19361,7 @@ const exerciseData = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Leg up crunch l",
+              "Leg up crunch L",
               "Leg up crunch r",
               "Flutter",
               "Hold leg lift"
@@ -19426,7 +19377,7 @@ const exerciseData = {
             ]
           },
           {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Kb swing",
               "Drop squat",
@@ -19440,6 +19391,10 @@ const exerciseData = {
               "Band s. Pull",
               "Box squat"
             ]
+          },
+          {
+            "phase": "stretch",
+            "exercises": []
           }
         ]
       }
@@ -19461,7 +19416,7 @@ const exerciseData = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Band seals",
+              "Band seal",
               "Band bridge",
               "Band f/b jack",
               "Band kickback"
@@ -19495,7 +19450,7 @@ const exerciseData = {
             "exercises": [
               "Basic crunch",
               "Penguins",
-              "Supermans"
+              "Superman"
             ]
           },
           {
@@ -19519,7 +19474,7 @@ const exerciseData = {
             "exercises": [
               "Band drag curl",
               "Db tricep ext",
-              "Calf raises"
+              "Calf raise"
             ]
           }
         ]
@@ -19533,16 +19488,16 @@ const exerciseData = {
           {
             "phase": "30/10x2",
             "exercises": [
-              "Single leg drops",
+              "Single leg drop",
               "Plank march",
-              "penguins",
+              "Penguins",
               "T\u2019s, w\u2019s, l\u2019s",
               "Thoracic mobility",
               "12 reps per side"
             ]
           },
           {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band full row",
               "Cross chest press",
@@ -19553,7 +19508,7 @@ const exerciseData = {
             "phase": "2 x 10",
             "exercises": [
               "R. Lunge Row",
-              "Kick Back"
+              "Kick back"
             ]
           },
           {
@@ -19589,7 +19544,7 @@ const exerciseData = {
               "Band hydrant",
               "Band kickback",
               "Band hip abd",
-              "Band bridges"
+              "Band bridge"
             ]
           },
           {
@@ -19599,7 +19554,7 @@ const exerciseData = {
               "Kb hike swing 10",
               "Db floor press 20",
               "Leg curls 20",
-              "21\u2019s",
+              "21,s",
               "Band curl",
               "Db tricep"
             ]
@@ -19625,7 +19580,7 @@ const exerciseData = {
               "Band hydrant",
               "Band kickback",
               "Band hip abd",
-              "Band bridges"
+              "Band bridge"
             ]
           },
           {
@@ -19640,7 +19595,7 @@ const exerciseData = {
           {
             "phase": "3x10",
             "exercises": [
-              "Db curls",
+              "Db curl",
               "Db o.h. Tricep",
               "Stag. rdl"
             ]
@@ -19659,7 +19614,7 @@ const exerciseData = {
               "Spider climbers",
               "Bw rus twist",
               "Bikes",
-              "Leg lifts"
+              "Leg lift"
             ]
           },
           {
@@ -19684,7 +19639,7 @@ const exerciseData = {
             "phase": "2 x 15",
             "exercises": [
               "Band facepull",
-              "Wall sit curls",
+              "Wall sit curl",
               "Band tricep pressdowns"
             ]
           }
@@ -19716,7 +19671,7 @@ const exerciseData = {
             "phase": "Spartan",
             "exercises": [
               "Band pull thru",
-              "band row",
+              "Band row",
               "Band press"
             ]
           },
@@ -19783,7 +19738,7 @@ const exerciseData = {
               "Reach left",
               "Reach right",
               "Basic crunch",
-              "rest"
+              "Rest"
             ]
           },
           {
@@ -19799,7 +19754,7 @@ const exerciseData = {
             "exercises": [
               "Bulgarian Split Squat",
               "One arm row",
-              "Db o.h. triceps"
+              "Db o.h. Tricep"
             ]
           },
           {
@@ -19829,7 +19784,7 @@ const exerciseData = {
             "exercises": [
               "Weighted d.b.",
               "Db russian twist",
-              "Alt leg drops"
+              "Alt leg drop"
             ]
           },
           {
@@ -19874,7 +19829,7 @@ const exerciseData = {
             "exercises": [
               "Weighted d.b.",
               "Db russian twist",
-              "Alt leg drops"
+              "Alt leg drop"
             ]
           },
           {
@@ -19921,7 +19876,7 @@ const exerciseData = {
             "exercises": [
               "Plank march",
               "Basic crunch",
-              "Plank dips",
+              "Plank dip",
               "Bikes"
             ]
           },
@@ -19948,6 +19903,10 @@ const exerciseData = {
               "1 \u00bd wedge squat",
               "Band upper back pull"
             ]
+          },
+          {
+            "phase": "Finisher",
+            "exercises": []
           }
         ]
       }
@@ -19997,7 +19956,7 @@ const exerciseData = {
               "Wall sit bus driver",
               "Plank up knee tuck",
               "21s bicep",
-              "tricep"
+              "Tricep"
             ]
           }
         ]
@@ -20012,14 +19971,14 @@ const exerciseData = {
             "phase": "30/10x3",
             "exercises": [
               "3 way crunch",
-              "Alt leg drops",
-              "Pointers"
+              "Alt leg drop",
+              "Pointer"
             ]
           },
           {
             "phase": "5 min full get up",
             "exercises": [
-              "l/r"
+              "L/R"
             ]
           },
           {
@@ -20092,9 +20051,9 @@ const exerciseData = {
             "phase": "Tabata",
             "exercises": [
               "Heels to heav",
-              "Flutters",
+              "Flutter",
               "Coffin",
-              "bikes"
+              "Bikes"
             ]
           },
           {
@@ -20119,7 +20078,7 @@ const exerciseData = {
             "phase": "3 x 12",
             "exercises": [
               "Band bridge to lat pull",
-              "Db side laterals"
+              "Db side lateral"
             ]
           },
           {
@@ -20140,8 +20099,8 @@ const exerciseData = {
           {
             "phase": "25/10x3",
             "exercises": [
-              "Leg lifts",
-              "Flutters",
+              "Leg lift",
+              "Flutter",
               "Toe touch"
             ]
           },
@@ -20164,8 +20123,8 @@ const exerciseData = {
           {
             "phase": "2 x 12",
             "exercises": [
-              "Band curls",
-              "Band  kickbacks"
+              "Band curl",
+              "Band kickbacks"
             ]
           }
         ]
@@ -20177,8 +20136,8 @@ const exerciseData = {
           {
             "phase": "25/10x3",
             "exercises": [
-              "Leg lifts",
-              "Flutters",
+              "Leg lift",
+              "Flutter",
               "Toe touch"
             ]
           },
@@ -20201,8 +20160,8 @@ const exerciseData = {
           {
             "phase": "3 x 12",
             "exercises": [
-              "Band curls",
-              "Band  kickbacks",
+              "Band curl",
+              "Band kickbacks",
               "Slider curls"
             ]
           }
@@ -20243,7 +20202,7 @@ const exerciseData = {
             "phase": "3 x 10",
             "exercises": [
               "Db tricep floor press",
-              "Heels elev. Squat",
+              "Heels elev squat",
               "Db hammer curl"
             ]
           },
@@ -20293,7 +20252,7 @@ const exerciseData = {
             "exercises": [
               "Single press",
               "Bridge tricep extension",
-              "Calf raises",
+              "Calf raise",
               "60 finisher",
               "L,S,L",
               "Sh tap to DD toe touch",
@@ -20337,7 +20296,7 @@ const exerciseData = {
             "exercises": [
               "Single press",
               "Bridge tricep extension",
-              "Calf raises",
+              "Calf raise",
               "60 finisher",
               "L,S,L",
               "Sh tap to DD toe touch",
@@ -20357,7 +20316,7 @@ const exerciseData = {
             "exercises": [
               "3 way crunch",
               "Runner clap",
-              "Supermans"
+              "Superman"
             ]
           },
           {
@@ -20396,7 +20355,7 @@ const exerciseData = {
           {
             "phase": "25/10x3",
             "exercises": [
-              "Plank dips",
+              "Plank dip",
               "Side plank p. L",
               "Side plank p. R"
             ]
@@ -20428,7 +20387,7 @@ const exerciseData = {
             "exercises": [
               "Db floor press",
               "Kb sumo deadlift",
-              "Leg lifts"
+              "Leg lift"
             ]
           }
         ]
@@ -20440,7 +20399,7 @@ const exerciseData = {
           {
             "phase": "25/10x3",
             "exercises": [
-              "Plank dips",
+              "Plank dip",
               "Side plank p. L",
               "Side plank p. R"
             ]
@@ -20473,7 +20432,7 @@ const exerciseData = {
             "exercises": [
               "Db tricep press",
               "Kb sumo deadlift",
-              "Leg lifts"
+              "Leg lift"
             ]
           }
         ]
@@ -20489,8 +20448,8 @@ const exerciseData = {
             "exercises": [
               "Reverse crunch",
               "Bw russian twist",
-              "Single reach L",
-              "Single reach R"
+              "Single reach l",
+              "Single reach r"
             ]
           },
           {
@@ -20518,7 +20477,7 @@ const exerciseData = {
           {
             "phase": "3 x 10",
             "exercises": [
-              "Db curls",
+              "Db curl",
               "Wall tricep ext",
               "Single calf raise"
             ]
@@ -20558,10 +20517,14 @@ const exerciseData = {
           {
             "phase": "3 x 10",
             "exercises": [
-              "Band curls",
+              "Band curl",
               "Db bridge tricep",
-              "Leg curls"
+              "Leg curl"
             ]
+          },
+          {
+            "phase": "stretch",
+            "exercises": []
           }
         ]
       }
@@ -20591,7 +20554,7 @@ const exerciseData = {
             "phase": "45/15x3",
             "exercises": [
               "Lunge squat lunge",
-              "Sh tap-dd toe touch",
+              "Sh tap dd toe touch",
               "Db Rdl to row"
             ]
           },
@@ -20602,6 +20565,10 @@ const exerciseData = {
               "Single leg db row",
               "Ab mat butterfly sit up"
             ]
+          },
+          {
+            "phase": "stretch",
+            "exercises": []
           }
         ]
       }
@@ -20615,9 +20582,9 @@ const exerciseData = {
             "phase": "Tabata",
             "exercises": [
               "Heels to heav",
-              "Flutters",
+              "Flutter",
               "Coffin",
-              "bikes"
+              "Bikes"
             ]
           },
           {
@@ -20641,7 +20608,7 @@ const exerciseData = {
           {
             "phase": "3x10",
             "exercises": [
-              "Wall sit curls",
+              "Wall sit curl",
               "Band kickback",
               "T flies"
             ]
@@ -20689,7 +20656,7 @@ const exerciseData = {
             "exercises": [
               "Db squat curl",
               "Db overhead ext",
-              "T-flies"
+              "T flies"
             ]
           }
         ]
@@ -20724,7 +20691,6 @@ const exerciseData = {
               "Db ren row 16",
               "Db lat step 16",
               "Slider 3 way 8",
-              "3 rounds",
               "Side laterals 15",
               "Pistols  8/8",
               "Kick backs 8/8",
@@ -20757,11 +20723,10 @@ const exerciseData = {
               "Db ren row 16",
               "Db step up 16",
               "Slider 3 way 8",
-              "2 rounds",
               "Side laterals 15",
               "Pistols  8/8",
               "Band Kick backs 15",
-              "Band curls"
+              "Band curl"
             ]
           }
         ]
@@ -20776,7 +20741,7 @@ const exerciseData = {
             "phase": "Tabata",
             "exercises": [
               "Runner clap",
-              "Plank dips",
+              "Plank dip",
               "Leg circles L",
               "Leg circles R"
             ]
@@ -20795,7 +20760,7 @@ const exerciseData = {
             "exercises": [
               "Db one arm row",
               "Single hip thrust",
-              "Side plank dips",
+              "Side plank dip",
               "Thoracic mob l/r"
             ]
           },
@@ -20819,7 +20784,7 @@ const exerciseData = {
             "phase": "30/10x3",
             "exercises": [
               "Ab walk outs",
-              "reverse crunch"
+              "Reverse crunch"
             ]
           },
           {
@@ -20836,9 +20801,8 @@ const exerciseData = {
               "Db R. lunge curl 16",
               "Kb sh. To sh. 12",
               "Reverse hyper 20",
-              "1x10",
               "Thoracic mob",
-              "Hip flexor",
+              "Hip Flexor",
               "Ankle",
               "21s",
               "Shoulders",
@@ -20876,7 +20840,7 @@ const exerciseData = {
           {
             "phase": "3 x 15",
             "exercises": [
-              "Band curls",
+              "Band curl",
               "Band Overhead ext",
               "Travel lunge 8/8"
             ]
@@ -20900,7 +20864,7 @@ const exerciseData = {
           {
             "phase": "2 x 15",
             "exercises": [
-              "Db t- flies",
+              "Db t flies",
               "Band Drag curls",
               "Band Overhead ext"
             ]
@@ -20926,7 +20890,7 @@ const exerciseData = {
             "phase": "Tabata",
             "exercises": [
               "F lunge",
-              "R lunge",
+              "R. lunge",
               "Lateral L",
               "Lateral R"
             ]
@@ -20950,7 +20914,7 @@ const exerciseData = {
           {
             "phase": "3 x 10",
             "exercises": [
-              "Wall sit curls",
+              "Wall sit curl",
               "Db tricep ext",
               "Slider curls"
             ]
@@ -20964,16 +20928,16 @@ const exerciseData = {
           {
             "phase": "30/10x2",
             "exercises": [
-              "Single leg drops",
+              "Single leg drop",
               "Plank march",
-              "penguins",
+              "Penguins",
               "T\u2019s, w\u2019s, l\u2019s",
               "Thoracic mobility",
               "12 reps per side"
             ]
           },
           {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band full row",
               "Cross chest press",
@@ -20981,7 +20945,7 @@ const exerciseData = {
             ]
           },
           {
-            "phase": "5 per side",
+            "phase": "Lunge matrix 5 per side",
             "exercises": [
               "3 way push up 5 each"
             ]
@@ -21011,7 +20975,7 @@ const exerciseData = {
             "exercises": [
               "Single reach l",
               "Single reach r",
-              "Leg lifts",
+              "Leg lift",
               "Criss cross flutters",
               "Rest"
             ]
@@ -21019,7 +20983,7 @@ const exerciseData = {
           {
             "phase": "Tabata holds",
             "exercises": [
-              "Squats",
+              "squat",
               "Split squats l",
               "Split squats r",
               "Wide outs",
@@ -21082,7 +21046,7 @@ const exerciseData = {
             "exercises": [
               "1 \u00bd hip thrust",
               "Single bridge to chest press",
-              "Db hammer curls",
+              "Db hammer curl",
               "finisher"
             ]
           }
@@ -21098,7 +21062,6 @@ const exerciseData = {
             "phase": "Tabata",
             "exercises": [
               "Bikes",
-              "Side plank Pulse",
               "Side plank pulse",
               "Runner clap"
             ]
@@ -21141,7 +21104,7 @@ const exerciseData = {
             "phase": "30/10x3",
             "exercises": [
               "Alt leg drop",
-              "Pointers",
+              "Pointer",
               "Bridge march"
             ]
           },
@@ -21226,7 +21189,7 @@ const exerciseData = {
             "exercises": [
               "Slider tucks",
               "Bikes",
-              "Pointers"
+              "Pointer"
             ]
           },
           {
@@ -21267,7 +21230,7 @@ const exerciseData = {
             "exercises": [
               "Slider tucks",
               "Bikes",
-              "Pointers"
+              "Pointer"
             ]
           },
           {
@@ -21295,6 +21258,10 @@ const exerciseData = {
               "Ab mat coffin",
               "Calf raise"
             ]
+          },
+          {
+            "phase": "Finisher",
+            "exercises": []
           }
         ]
       }
@@ -21334,8 +21301,12 @@ const exerciseData = {
             "exercises": [
               "One arm press w bridge",
               "Bulgarian Split Squat",
-              "Band flyes"
+              "Band flye"
             ]
+          },
+          {
+            "phase": "Finisher",
+            "exercises": []
           }
         ]
       }
@@ -21372,7 +21343,7 @@ const exerciseData = {
             "phase": "3 x 12",
             "exercises": [
               "Drag curl",
-              "Kick backs",
+              "Kick back",
               "Single leg bridge pulse"
             ]
           }
@@ -21389,7 +21360,7 @@ const exerciseData = {
             "exercises": [
               "Basic crunch",
               "Penguins",
-              "Supermans"
+              "Superman"
             ]
           },
           {
@@ -21397,7 +21368,7 @@ const exerciseData = {
             "exercises": [
               "Ab mat coffin",
               "Plank tap",
-              "pointers"
+              "Pointers"
             ]
           },
           {
@@ -21421,7 +21392,7 @@ const exerciseData = {
             "exercises": [
               "Band drag curl",
               "Db tricep ext",
-              "Calf raises"
+              "Calf raise"
             ]
           }
         ]
@@ -21467,6 +21438,10 @@ const exerciseData = {
             ]
           },
           {
+            "phase": "60 sec",
+            "exercises": []
+          },
+          {
             "phase": "45 sec",
             "exercises": [
               "Wall sit",
@@ -21505,7 +21480,7 @@ const exerciseData = {
           {
             "phase": "2 x 15",
             "exercises": [
-              "Db t- flies",
+              "Db t flies",
               "Band Drag curls",
               "Band Overhead ext"
             ]
@@ -21516,7 +21491,7 @@ const exerciseData = {
               "Wall sit bus driver",
               "Plank up knee tuck",
               "21s bicep",
-              "tricep"
+              "Tricep"
             ]
           }
         ]
@@ -21564,9 +21539,9 @@ const exerciseData = {
           {
             "phase": "25/10x3",
             "exercises": [
-              "Plank dips",
-              "Side plank dip L",
-              "Side plank dip R"
+              "Plank dip",
+              "Side plank dip l",
+              "Side plank dip r"
             ]
           },
           {
@@ -21603,7 +21578,7 @@ const exerciseData = {
             "phase": "3x12",
             "exercises": [
               "Db curl arnold press",
-              "Band pressdowns"
+              "Band pressdown"
             ]
           }
         ]
@@ -21619,7 +21594,7 @@ const exerciseData = {
             "exercises": [
               "Toe touch",
               "Bikes",
-              "Pointers"
+              "Pointer"
             ]
           },
           {
@@ -21644,7 +21619,7 @@ const exerciseData = {
             "exercises": [
               "Kneeling curl press l/r",
               "Single kick back",
-              "1 \u00bd rdl"
+              "1 \u00bd RDL"
             ]
           }
         ]
@@ -21689,6 +21664,10 @@ const exerciseData = {
               "Ss hammer curl R",
               "Bridge press tricep ext."
             ]
+          },
+          {
+            "phase": "Finisher",
+            "exercises": []
           }
         ]
       }
@@ -21718,7 +21697,7 @@ const exerciseData = {
             ]
           },
           {
-            "phase": "25/20/15/10",
+            "phase": "Chipper 25/20/15/10",
             "exercises": [
               "Band press",
               "Band pull thru",
@@ -21732,6 +21711,10 @@ const exerciseData = {
               "Wall sit hammer curl",
               "Alt band pressdowns"
             ]
+          },
+          {
+            "phase": "Yoga Cooldown",
+            "exercises": []
           }
         ]
       }
@@ -21754,7 +21737,7 @@ const exerciseData = {
             "exercises": [
               "Lateral walk 3",
               "Pulse squat",
-              "Kick backs"
+              "Kick back"
             ]
           },
           {
@@ -21796,7 +21779,7 @@ const exerciseData = {
             "exercises": [
               "Lateral walk 3",
               "Pulse squat",
-              "Kick backs"
+              "Kick back"
             ]
           },
           {
@@ -21819,7 +21802,7 @@ const exerciseData = {
             "exercises": [
               "Db alt curl press",
               "Db tricep ext",
-              "Leg curls"
+              "Leg curl"
             ]
           }
         ]
@@ -21844,10 +21827,14 @@ const exerciseData = {
             "exercises": [
               "Wide outs",
               "f/b lunge r",
-              "f/b lunge l",
+              "f/b lunge L",
               "High knees",
               "Get ups"
             ]
+          },
+          {
+            "phase": "10 per side",
+            "exercises": []
           },
           {
             "phase": "Emom",
@@ -21856,7 +21843,7 @@ const exerciseData = {
               "Renegade row 8/8",
               "Hip thrust 20",
               "Band punch 50",
-              "Db curls",
+              "Db curl",
               "Db tricep",
               "Jump squat"
             ]
@@ -21903,7 +21890,7 @@ const exerciseData = {
             "exercises": [
               "Db floor press",
               "Kb sumo deadlift",
-              "Leg lifts"
+              "Leg lift"
             ]
           }
         ]
@@ -21974,7 +21961,7 @@ const exerciseData = {
               "Slow bikes",
               "Superman hold",
               "March",
-              "Speed skaters"
+              "Speed skater"
             ]
           },
           {
@@ -21992,6 +21979,10 @@ const exerciseData = {
               "Tricep extension",
               "Hip thrust"
             ]
+          },
+          {
+            "phase": "stretch",
+            "exercises": []
           }
         ]
       }
@@ -22006,7 +21997,7 @@ const exerciseData = {
             "exercises": [
               "Single reach l",
               "Single reach r",
-              "Leg lifts",
+              "Leg lift",
               "Criss cross flutters",
               "Rest"
             ]
@@ -22014,7 +22005,7 @@ const exerciseData = {
           {
             "phase": "Tabata holds",
             "exercises": [
-              "Squats",
+              "squat",
               "Split squats l",
               "Split squats r",
               "Wide outs",
@@ -22033,7 +22024,7 @@ const exerciseData = {
           {
             "phase": "3x8",
             "exercises": [
-              "1 \u00bd rdl",
+              "1 \u00bd RDL",
               "One arm row",
               "Wall sit bicep curls"
             ]
@@ -22051,7 +22042,7 @@ const exerciseData = {
             "exercises": [
               "Criss cross leg lifts",
               "Side plank clams L/R",
-              "pointers"
+              "Pointers"
             ]
           },
           {
@@ -22120,7 +22111,7 @@ const exerciseData = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Flutters",
+              "Flutter",
               "Penguins",
               "Side plank dip"
             ]
@@ -22162,16 +22153,16 @@ const exerciseData = {
           {
             "phase": "30/10x2",
             "exercises": [
-              "Single leg drops",
+              "Single leg drop",
               "Plank march",
-              "penguins",
+              "Penguins",
               "T\u2019s, w\u2019s, l\u2019s",
               "Thoracic mobility",
               "12 reps per side"
             ]
           },
           {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band full row",
               "Cross chest press",
@@ -22242,7 +22233,7 @@ const exerciseData = {
           {
             "phase": "2x15",
             "exercises": [
-              "Wall sit curls",
+              "Wall sit curl",
               "Db kickbacks",
               "Calf raise"
             ]
@@ -22350,7 +22341,7 @@ const exerciseData = {
             "exercises": [
               "Lateral walk 3",
               "Pulse squat",
-              "Kick backs"
+              "Kick back"
             ]
           },
           {
@@ -22358,7 +22349,7 @@ const exerciseData = {
             "exercises": [
               "Kb dl hp",
               "Bench push up",
-              "Leg lifts"
+              "Leg lift"
             ]
           },
           {
@@ -22385,7 +22376,7 @@ const exerciseData = {
           {
             "phase": "30/5x3",
             "exercises": [
-              "Plank dips",
+              "Plank dip",
               "Dead bug"
             ]
           },
@@ -22420,7 +22411,7 @@ const exerciseData = {
             "phase": "30/10x3",
             "exercises": [
               "Ab mat coffin",
-              "Pointers"
+              "Pointer"
             ]
           },
           {
@@ -22436,7 +22427,7 @@ const exerciseData = {
             "phase": "3 x 12",
             "exercises": [
               "Band one arm pull",
-              "Leg curls",
+              "Leg curl",
               "Band one arm press"
             ]
           },
@@ -22447,6 +22438,10 @@ const exerciseData = {
               "Heels elev squat",
               "Band chest flye"
             ]
+          },
+          {
+            "phase": "60 sec finisher",
+            "exercises": []
           }
         ]
       }
@@ -22550,7 +22545,7 @@ const exerciseData = {
             ]
           },
           {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band full row",
               "Cross chest press",
@@ -22589,7 +22584,7 @@ const exerciseData = {
           {
             "phase": "3 x 12",
             "exercises": [
-              "Band chest flyes",
+              "Band chest flye",
               "Band bridge lat pull",
               "Split squats"
             ]
@@ -22599,7 +22594,7 @@ const exerciseData = {
             "exercises": [
               "Band seated row",
               "Pull thru",
-              "Db o.h. tricep"
+              "Db o.h. Tricep"
             ]
           }
         ]
@@ -22675,7 +22670,7 @@ const exerciseData = {
             "phase": "3 x 10",
             "exercises": [
               "Bulgarians l/r",
-              "Band straight arm lat pulls",
+              "Band straight arm lat pull",
               "Db bicep curl"
             ]
           },
@@ -22688,7 +22683,7 @@ const exerciseData = {
             ]
           },
           {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Drop squat",
               "Double crunch"
@@ -22750,9 +22745,9 @@ const exerciseData = {
             "phase": "Tabata",
             "exercises": [
               "Heels to heav",
-              "Flutters",
+              "Flutter",
               "Coffin",
-              "bikes"
+              "Bikes"
             ]
           },
           {
@@ -22808,7 +22803,7 @@ const exerciseData = {
             "exercises": [
               "Lateral walk 3",
               "Pulse squat",
-              "Kick backs"
+              "Kick back"
             ]
           },
           {
@@ -22867,7 +22862,7 @@ const exerciseData = {
             "phase": "3 x 12",
             "exercises": [
               "Drag curl",
-              "Kick backs",
+              "Kick back",
               "Easy leg curls"
             ]
           }
@@ -22885,11 +22880,10 @@ const exerciseData = {
               "Leg flutters",
               "Basic crunch",
               "Shoulder tap",
-              "pointers",
-              "40/10 x 2",
+              "Pointers",
               "Band bridge",
-              "Band hydrants",
-              "Band kickbacks"
+              "Band hydrant",
+              "Band kickback"
             ]
           },
           {
@@ -22923,8 +22917,7 @@ const exerciseData = {
               "Plank tap",
               "Hold",
               "Plank march",
-              "Single sh tap",
-              "hold"
+              "Single sh tap"
             ]
           },
           {
@@ -22942,7 +22935,7 @@ const exerciseData = {
               "Db floor press",
               "Rdl",
               "One arm row",
-              "Heels elev. squat"
+              "Heels elev squat"
             ]
           },
           {
@@ -22984,7 +22977,8 @@ const exerciseData = {
             "exercises": [
               "Band s. Row",
               "Rdl",
-              "Band press"
+              "Band press",
+              "Cat cow 5 x"
             ]
           },
           {
@@ -23012,7 +23006,7 @@ const exerciseData = {
             "exercises": [
               "Plank reach",
               "Bikes",
-              "Plank taps",
+              "Plank tap",
               "Reverse crunch"
             ]
           },
@@ -23021,14 +23015,13 @@ const exerciseData = {
             "exercises": [
               "Band h. Bridge",
               "Band p. Squat",
-              "Band hydrants",
-              "Band p. squat"
+              "Band hydrant"
             ]
           },
           {
             "phase": "Complex 5x5",
             "exercises": [
-              "RDL",
+              "Rdl",
               "High pull",
               "1 \u00bd squat",
               "Hang clean"
@@ -23045,7 +23038,7 @@ const exerciseData = {
             "phase": "3 x 12",
             "exercises": [
               "Kb curl",
-              "Tricep planks",
+              "Tricep plank",
               "Butterfly bridge"
             ]
           }
@@ -23102,7 +23095,7 @@ const exerciseData = {
             "exercises": [
               "Ab mat coffin",
               "Plank tap",
-              "pointers"
+              "Pointers"
             ]
           },
           {
@@ -23161,9 +23154,9 @@ const exerciseData = {
             "phase": "40/30/20 (15 off)",
             "exercises": [
               "Db goblet squat",
-              "Band swims",
+              "Band swim",
               "Db sumo dl",
-              "Band punches"
+              "Band Punch"
             ]
           },
           {
@@ -23213,7 +23206,7 @@ const exerciseData = {
             "exercises": [
               "Band facepull",
               "Band Drag curls",
-              "Calf raises"
+              "Calf raise"
             ]
           }
         ]
@@ -23234,8 +23227,8 @@ const exerciseData = {
           {
             "phase": "Tabata",
             "exercises": [
-              "F. Lunge",
-              "R. Lunge",
+              "F lunge",
+              "R. lunge",
               "Speed skater",
               "Bridge"
             ]
@@ -23255,6 +23248,10 @@ const exerciseData = {
               "Band curl",
               "Bridge chest tricep"
             ]
+          },
+          {
+            "phase": "stretch",
+            "exercises": []
           }
         ]
       }
@@ -23284,7 +23281,7 @@ const exerciseData = {
           {
             "phase": "Ladder 2-12",
             "exercises": [
-              "Band flyes",
+              "Band flye",
               "Db squat curl"
             ]
           },
@@ -23293,7 +23290,7 @@ const exerciseData = {
             "exercises": [
               "Back bridge",
               "Hip mob",
-              "Ankle mob"
+              "Ankle mob."
             ]
           }
         ]
@@ -23318,7 +23315,7 @@ const exerciseData = {
             "exercises": [
               "Kb swing",
               "Band chest press",
-              "Knee tucks"
+              "Knee tuck"
             ]
           },
           {
@@ -23326,7 +23323,7 @@ const exerciseData = {
             "exercises": [
               "Db bent row",
               "Single press bridge",
-              "Leg curls",
+              "Leg curl",
               "21s",
               "Band curl",
               "Band kickback"
@@ -23350,11 +23347,11 @@ const exerciseData = {
             ]
           },
           {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Swings",
               "Db jack",
-              "Sh. taps",
+              "Sh tap",
               "Db complex",
               "1 \u00bd"
             ]
@@ -23364,7 +23361,7 @@ const exerciseData = {
             "exercises": [
               "Rdl",
               "Push press",
-              "Squat",
+              "squat",
               "rows"
             ]
           },
@@ -23400,11 +23397,11 @@ const exerciseData = {
             ]
           },
           {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Swings",
               "Db jack",
-              "Sh. taps",
+              "Sh tap",
               "Db complex"
             ]
           },
@@ -23413,7 +23410,7 @@ const exerciseData = {
             "exercises": [
               "Rdl",
               "Push press",
-              "Squat",
+              "squat",
               "rows"
             ]
           },
@@ -23487,7 +23484,6 @@ const exerciseData = {
               "SP Left",
               "Sp Right",
               "Hollow hold",
-              "30x10x3",
               "Band bridge",
               "Clams L",
               "Clams R"
@@ -23535,10 +23531,9 @@ const exerciseData = {
               "Star sit up",
               "Alt superman",
               "Half burpee sumo",
-              "30/10 x 2",
               "Band plank jack",
               "Band hip bridge",
-              "Band hydrants"
+              "Band hydrant"
             ]
           },
           {
@@ -23601,7 +23596,7 @@ const exerciseData = {
             "exercises": [
               "Band drag curl",
               "Db tricep ext",
-              "Calf raises"
+              "Calf raise"
             ]
           }
         ]
@@ -23617,7 +23612,7 @@ const exerciseData = {
             "exercises": [
               "3 way crunch",
               "Slider cross tuck",
-              "Pointers"
+              "Pointer"
             ]
           },
           {
@@ -23632,7 +23627,7 @@ const exerciseData = {
             "phase": "3 x 12",
             "exercises": [
               "Band seated row",
-              "Db Rdl",
+              "Db rdl",
               "Db push press"
             ]
           },
@@ -23654,7 +23649,7 @@ const exerciseData = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Single bridge L",
+              "Single bridge l",
               "Single b. R",
               "Abduction L",
               "Abduction R"
@@ -23673,7 +23668,7 @@ const exerciseData = {
             "exercises": [
               "B. pressdown",
               "Slider leg curl",
-              "Calf raises"
+              "Calf raise"
             ]
           }
         ]
@@ -23714,8 +23709,8 @@ const exerciseData = {
             "phase": "3 x 10",
             "exercises": [
               "Bulgarian Split Squat",
-              "Db side laterals",
-              "Alt leg curls"
+              "Db side lateral",
+              "Alt leg curl"
             ]
           },
           {
@@ -23810,18 +23805,22 @@ const exerciseData = {
             "phase": "40/30/20 (15 off)",
             "exercises": [
               "Db goblet squat",
-              "Band swims",
+              "Band swim",
               "Db sumo dl",
-              "Band punches",
-              "Step ups"
+              "Band Punch",
+              "Step up"
             ]
           },
           {
             "phase": "2 x 15",
             "exercises": [
-              "Band curls",
+              "Band curl",
               "Band kickback"
             ]
+          },
+          {
+            "phase": "Mobility stretches",
+            "exercises": []
           }
         ]
       },
@@ -23850,19 +23849,23 @@ const exerciseData = {
             "phase": "40/30/20 (15 off)",
             "exercises": [
               "Db goblet squat",
-              "Band swims",
+              "Band swim",
               "Db sumo dl",
-              "Band punches",
+              "Band Punch",
               "Dd toe touch"
             ]
           },
           {
             "phase": "2 x 15",
             "exercises": [
-              "Band curls",
+              "Band curl",
               "Band kickback",
-              "Slider knee tucks"
+              "Slider knee tuck"
             ]
+          },
+          {
+            "phase": "Mobility stretches",
+            "exercises": []
           }
         ]
       }
@@ -23914,9 +23917,9 @@ const exerciseData = {
           {
             "phase": "3 x 10",
             "exercises": [
-              "leg lifts",
+              "Leg lifts",
               "Side plank clams L/R",
-              "pointers"
+              "Pointers"
             ]
           },
           {
@@ -23932,7 +23935,7 @@ const exerciseData = {
             "exercises": [
               "Wide outs 40",
               "Kb clean 15",
-              "Kb sh to sh 20",
+              "Kb sh. To sh. 20",
               "Bike crunch 60"
             ]
           },
@@ -23958,7 +23961,7 @@ const exerciseData = {
             "phase": "30/10x3",
             "exercises": [
               "Ab mat coffin",
-              "Pointers"
+              "Pointer"
             ]
           },
           {
@@ -23974,7 +23977,7 @@ const exerciseData = {
             "phase": "3 x 12",
             "exercises": [
               "Band one arm pull",
-              "Leg curls",
+              "Leg curl",
               "Band one arm press"
             ]
           },
@@ -23985,6 +23988,10 @@ const exerciseData = {
               "Heels elev squat",
               "Band chest flye"
             ]
+          },
+          {
+            "phase": "60 sec finisher",
+            "exercises": []
           }
         ]
       }
@@ -23997,16 +24004,16 @@ const exerciseData = {
           {
             "phase": "30/10x2",
             "exercises": [
-              "Single leg drops",
+              "Single leg drop",
               "Plank march",
-              "penguins",
+              "Penguins",
               "T\u2019s, w\u2019s, l\u2019s",
               "Thoracic mobility",
               "12 reps per side"
             ]
           },
           {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band full row",
               "Cross chest press",
@@ -24038,9 +24045,9 @@ const exerciseData = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Plank taps",
+              "Plank tap",
               "Oblique L",
-              "Plank March",
+              "Plank march",
               "Oblique R"
             ]
           },
@@ -24058,7 +24065,7 @@ const exerciseData = {
             "phase": "20/15/10",
             "exercises": [
               "X - Jacks",
-              "Squats",
+              "squat",
               "Seated Rows"
             ]
           },
@@ -24074,7 +24081,7 @@ const exerciseData = {
             "phase": "2 x 12",
             "exercises": [
               "Band pressdown",
-              "Leg curls",
+              "Leg curl",
               "Db curl to arnold press"
             ]
           }
@@ -24109,7 +24116,7 @@ const exerciseData = {
           {
             "phase": "3 x 12",
             "exercises": [
-              "band curls",
+              "Band curls",
               "Band kick back",
               "Bw calf raise"
             ]
@@ -24125,20 +24132,20 @@ const exerciseData = {
           {
             "phase": "30/10x2",
             "exercises": [
-              "Single leg drops",
+              "Single leg drop",
               "Plank march",
-              "penguins",
+              "Penguins",
               "T\u2019s, w\u2019s, l\u2019s",
               "Thoracic mobility",
               "12 reps per side"
             ]
           },
           {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Db wide out drops",
               "Band Punch",
-              "Slider knee tucks"
+              "Slider knee tuck"
             ]
           },
           {
@@ -24172,11 +24179,10 @@ const exerciseData = {
             "phase": "30/10x3",
             "exercises": [
               "Ab walk outs",
-              "reverse crunch",
-              "40/10 x 2",
+              "Reverse crunch",
               "Band bridge",
-              "Band hydrants",
-              "Band kickbacks"
+              "Band hydrant",
+              "Band kickback"
             ]
           },
           {
@@ -24194,9 +24200,8 @@ const exerciseData = {
               "Band drag curl",
               "Band kickback",
               "Slider leg curl",
-              "1x10",
               "Thoracic mob",
-              "Hip flexor",
+              "Hip Flexor",
               "Ankle"
             ]
           }
@@ -24211,11 +24216,10 @@ const exerciseData = {
             "exercises": [
               "Ab rev. crunch",
               "Bikes",
-              "pointers",
-              "40/10 x 2",
+              "Pointers",
               "Band bridge march",
-              "Band hydrants",
-              "Band kickbacks"
+              "Band hydrant",
+              "Band kickback"
             ]
           },
           {
@@ -24233,9 +24237,8 @@ const exerciseData = {
               "Db curl",
               "Band kickback",
               "Slider leg curl",
-              "1x10",
               "Thoracic mob",
-              "Hip flexor",
+              "Hip Flexor",
               "Ankle"
             ]
           }
@@ -24308,10 +24311,14 @@ const exerciseData = {
             ]
           },
           {
+            "phase": "Mobility",
+            "exercises": []
+          },
+          {
             "phase": "Hip rotations 10",
             "exercises": [
               "Wall thoracic",
-              "Hip flexors",
+              "Hip Flexor",
               "Ankle mob."
             ]
           },
@@ -24348,16 +24355,20 @@ const exerciseData = {
           {
             "phase": "2x15",
             "exercises": [
-              "Band curls",
+              "Band curl",
               "B. kickback",
               "Butterfly sit up"
             ]
           },
           {
+            "phase": "Mobility",
+            "exercises": []
+          },
+          {
             "phase": "Hip rotations 10",
             "exercises": [
               "Wall thoracic",
-              "Hip flexors",
+              "Hip Flexor",
               "Ankle mob."
             ]
           }
@@ -24372,7 +24383,7 @@ const exerciseData = {
           {
             "phase": "30/10x3",
             "exercises": [
-              "Band squats",
+              "Band squat",
               "Band lateral taps"
             ]
           },
@@ -24396,7 +24407,7 @@ const exerciseData = {
             "phase": "3 x 10",
             "exercises": [
               "Db tricep ext",
-              "Db curls",
+              "Db curl",
               "Box jump squat"
             ]
           }
@@ -24412,7 +24423,7 @@ const exerciseData = {
             "phase": "Tabata holds",
             "exercises": [
               "Basic crunch",
-              "Leg lifts",
+              "Leg lift",
               "Star crunch L",
               "Star crunch R"
             ]
@@ -24423,7 +24434,7 @@ const exerciseData = {
               "Bridge",
               "Hydrant L",
               "Hydrant R",
-              "Squat"
+              "squat"
             ]
           },
           {
@@ -24448,7 +24459,7 @@ const exerciseData = {
             "phase": "Finisher 10",
             "exercises": [
               "Plank up",
-              "Sh. tap",
+              "Sh tap",
               "Dd toe touch"
             ]
           }
@@ -24478,9 +24489,9 @@ const exerciseData = {
           {
             "phase": "60/45/30",
             "exercises": [
-              "Band swims",
+              "Band swim",
               "Kb elev squat",
-              "Band punches",
+              "Band Punch",
               "L sits"
             ]
           },
@@ -24496,7 +24507,7 @@ const exerciseData = {
             "phase": "Finisher 10",
             "exercises": [
               "Plank up",
-              "Sh. tap",
+              "Sh tap",
               "Dd toe touch"
             ]
           }
@@ -24554,7 +24565,7 @@ const exerciseData = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Single bridge L",
+              "Single bridge l",
               "Single b. R",
               "Abduction L",
               "Abduction R"
@@ -24594,7 +24605,7 @@ const exerciseData = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Single bridge L",
+              "Single bridge l",
               "Single b. R",
               "Abduction L",
               "Abduction R"
@@ -24632,7 +24643,7 @@ const exerciseData = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Single bridge L",
+              "Single bridge l",
               "Single b. R",
               "Abduction L",
               "Abduction R"
@@ -24729,7 +24740,7 @@ const exerciseData = {
             "phase": "Tabata",
             "exercises": [
               "Band hydrant L",
-              "Band bridge L",
+              "Band bridge l",
               "Band hydrant R",
               "Bridge R"
             ]
@@ -24748,6 +24759,10 @@ const exerciseData = {
               "Alt curl to arnolds",
               "Single rdl"
             ]
+          },
+          {
+            "phase": "60 sec.",
+            "exercises": []
           }
         ]
       },
@@ -24839,7 +24854,7 @@ const exerciseData = {
             "phase": "Tabata",
             "exercises": [
               "Band hydrant L",
-              "Band bridge L",
+              "Band bridge l",
               "Band hydrant R",
               "Bridge R"
             ]
@@ -24858,6 +24873,10 @@ const exerciseData = {
               "Alt curl to arnolds",
               "Single rdl"
             ]
+          },
+          {
+            "phase": "60 sec.",
+            "exercises": []
           }
         ]
       }
@@ -24917,7 +24936,7 @@ const exerciseData = {
             "exercises": [
               "Lateral walk 3",
               "Pulse squat",
-              "Kick backs"
+              "Kick back"
             ]
           },
           {
@@ -24929,7 +24948,7 @@ const exerciseData = {
             ]
           },
           {
-            "phase": "25/20/15/10",
+            "phase": "Chipper 25/20/15/10",
             "exercises": [
               "Band flye",
               "Band pull thru",
@@ -24958,7 +24977,7 @@ const exerciseData = {
             "exercises": [
               "f/b b. walk 3",
               "Pulse squat",
-              "Plank jacks"
+              "Plank jack"
             ]
           },
           {
@@ -24970,11 +24989,11 @@ const exerciseData = {
             ]
           },
           {
-            "phase": "25/20/15/10",
+            "phase": "Chipper 25/20/15/10",
             "exercises": [
               "Band press",
               "Band pull thru",
-              "Band s. row"
+              "Band s. Row"
             ]
           },
           {
@@ -24997,8 +25016,8 @@ const exerciseData = {
           {
             "phase": "25/10x3",
             "exercises": [
-              "Leg lifts",
-              "Flutters",
+              "Leg lift",
+              "Flutter",
               "Toe touch"
             ]
           },
@@ -25046,7 +25065,7 @@ const exerciseData = {
           {
             "phase": "30/5x3",
             "exercises": [
-              "Plank dips",
+              "Plank dip",
               "Dead bug"
             ]
           },
@@ -25148,7 +25167,8 @@ const exerciseData = {
             "exercises": [
               "Band s. Row",
               "Rdl",
-              "Band press"
+              "Band press",
+              "Cat cow 5 x"
             ]
           },
           {
@@ -25208,7 +25228,7 @@ const exerciseData = {
             "exercises": [
               "Db floor press",
               "Kb sumo deadlift",
-              "Leg lifts"
+              "Leg lift"
             ]
           }
         ]
@@ -25281,8 +25301,8 @@ const exerciseData = {
               "60,45,30 sec.(20)",
               "Dd toe touch",
               "3 way squat",
-              "Runner claps",
-              "Plank ups"
+              "Runner clap",
+              "Plank up"
             ]
           },
           {
@@ -25335,7 +25355,7 @@ const exerciseData = {
             "exercises": [
               "1 \u00bd hip thrust",
               "Single bridge to chest press",
-              "Db hammer curls",
+              "Db hammer curl",
               "finisher"
             ]
           }
@@ -25375,7 +25395,7 @@ const exerciseData = {
             "exercises": [
               "1 \u00bd hip thrust",
               "Single bridge to chest press",
-              "Db hammer curls",
+              "Db hammer curl",
               "finisher"
             ]
           }
@@ -25401,7 +25421,7 @@ const exerciseData = {
               "Db t flies",
               "Band Drag curls",
               "Wall sh glide",
-              "Band kickbacks"
+              "Band kickback"
             ]
           }
         ]
@@ -25415,7 +25435,7 @@ const exerciseData = {
           {
             "phase": "25/10x3",
             "exercises": [
-              "Plank dips",
+              "Plank dip",
               "Side plank p. L",
               "Side plank p. R"
             ]
@@ -25431,7 +25451,7 @@ const exerciseData = {
           {
             "phase": "Ladder 10-2",
             "exercises": [
-              "Kb cleans",
+              "Kb clean",
               "Db thruster"
             ]
           },
@@ -25448,7 +25468,7 @@ const exerciseData = {
             "exercises": [
               "Db floor press",
               "Kb sumo deadlift",
-              "Leg lifts"
+              "Leg lift"
             ]
           }
         ]
@@ -25471,7 +25491,7 @@ const exerciseData = {
             "exercises": [
               "Lateral walk 3",
               "Pulse squat",
-              "Kick backs"
+              "Kick back"
             ]
           },
           {
@@ -25513,7 +25533,7 @@ const exerciseData = {
             "exercises": [
               "Lateral walk 3",
               "Pulse squat",
-              "Kick backs"
+              "Kick back"
             ]
           },
           {
@@ -25565,7 +25585,7 @@ const exerciseData = {
             ]
           },
           {
-            "phase": "25/20/15/10",
+            "phase": "Chipper 25/20/15/10",
             "exercises": [
               "Band flye",
               "Band pull thru",
@@ -25595,7 +25615,6 @@ const exerciseData = {
             "phase": "Tabata",
             "exercises": [
               "Bikes",
-              "Side plank Pulse",
               "Side plank pulse",
               "Runner clap"
             ]
@@ -25637,7 +25656,7 @@ const exerciseData = {
           {
             "phase": "30/5x3",
             "exercises": [
-              "Plank dips",
+              "Plank dip",
               "Dead bug"
             ]
           },
@@ -25661,6 +25680,10 @@ const exerciseData = {
               "Curl press",
               "Db alt kickback"
             ]
+          },
+          {
+            "phase": "Long stretch",
+            "exercises": []
           }
         ]
       }
@@ -25686,7 +25709,7 @@ const exerciseData = {
           {
             "phase": "Ladder 5 to 10",
             "exercises": [
-              "Heels elev. squat",
+              "Heels elev squat",
               "Face pull",
               "Butterfly sit up"
             ]
@@ -25718,7 +25741,7 @@ const exerciseData = {
             "phase": "30/10x3",
             "exercises": [
               "Ab mat coffin",
-              "Pointers"
+              "Pointer"
             ]
           },
           {
@@ -25733,9 +25756,9 @@ const exerciseData = {
           {
             "phase": "3 x 12",
             "exercises": [
-              "Band one-arm pull",
-              "Leg curls",
-              "Band one-arm press"
+              "Band one arm pull",
+              "Leg curl",
+              "Band one arm press"
             ]
           },
           {
@@ -25745,6 +25768,10 @@ const exerciseData = {
               "Heels elev squat",
               "Band chest flye"
             ]
+          },
+          {
+            "phase": "60 sec finisher",
+            "exercises": []
           }
         ]
       }
@@ -25757,10 +25784,10 @@ const exerciseData = {
           {
             "phase": "2 x 30",
             "exercises": [
-              "M.c.",
+              "M.c",
               "Bw rus twist",
               "Bikes",
-              "Leg lifts"
+              "Leg lift"
             ]
           },
           {
@@ -25785,7 +25812,7 @@ const exerciseData = {
             "phase": "2 x 15",
             "exercises": [
               "Band facepull",
-              "Wall sit curls",
+              "Wall sit curl",
               "Band tricep pressdowns"
             ]
           }
@@ -25802,7 +25829,7 @@ const exerciseData = {
             "exercises": [
               "Basic crunch",
               "Penguins",
-              "Supermans"
+              "Superman"
             ]
           },
           {
@@ -25826,7 +25853,7 @@ const exerciseData = {
             "exercises": [
               "Db inc. curls",
               "Db tricep ext",
-              "Calf raises"
+              "Calf raise"
             ]
           }
         ]
@@ -25849,7 +25876,7 @@ const exerciseData = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Band seals",
+              "Band seal",
               "Band bridge",
               "Band f/b jack",
               "Band kickback"
@@ -25883,7 +25910,7 @@ const exerciseData = {
           {
             "phase": "30/5x3",
             "exercises": [
-              "Plank dips",
+              "Plank dip",
               "Dead bug"
             ]
           },
@@ -25926,7 +25953,7 @@ const exerciseData = {
           {
             "phase": "30/5x3",
             "exercises": [
-              "Plank dips",
+              "Plank dip",
               "Dead bug"
             ]
           },
@@ -25973,9 +26000,9 @@ const exerciseData = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Plank taps",
+              "Plank tap",
               "Oblique L",
-              "Plank March",
+              "Plank march",
               "Oblique R"
             ]
           },
@@ -25993,7 +26020,7 @@ const exerciseData = {
             "phase": "20/15/10",
             "exercises": [
               "X - Jacks",
-              "Squats",
+              "squat",
               "Seated Rows"
             ]
           },
@@ -26009,7 +26036,7 @@ const exerciseData = {
             "phase": "2 x 12",
             "exercises": [
               "Band pressdown",
-              "Leg curls",
+              "Leg curl",
               "Db curl to arnold press"
             ]
           }
@@ -26088,18 +26115,18 @@ const exerciseData = {
             "phase": "40/30/20 (15 off)",
             "exercises": [
               "Db goblet squat",
-              "Band swims",
+              "Band swim",
               "Db sumo dl",
-              "Band punches",
+              "Band Punch",
               "Dd toe touch"
             ]
           },
           {
             "phase": "2 x 15",
             "exercises": [
-              "Band curls",
+              "Band curl",
               "Band kickback",
-              "Slider knee tucks"
+              "Slider knee tuck"
             ]
           }
         ]
@@ -26124,8 +26151,8 @@ const exerciseData = {
             "exercises": [
               "M.c",
               "Wide outs",
-              "Sh. taps",
-              "Flutters"
+              "Sh tap",
+              "Flutter"
             ]
           },
           {
@@ -26143,6 +26170,10 @@ const exerciseData = {
               "Alt curl to arnolds",
               "Single rdl"
             ]
+          },
+          {
+            "phase": "60 sec.",
+            "exercises": []
           }
         ]
       }
@@ -26259,7 +26290,7 @@ const exerciseData = {
               "Band facepull",
               "Band Drag curls",
               "Band Overhead ext",
-              "Calf raises"
+              "Calf raise"
             ]
           }
         ]
@@ -26294,7 +26325,7 @@ const exerciseData = {
               "Band facepull",
               "Band Drag curls",
               "Band Overhead ext",
-              "Calf raises"
+              "Calf raise"
             ]
           }
         ]
@@ -26309,9 +26340,9 @@ const exerciseData = {
             "phase": "Tabata",
             "exercises": [
               "Heels to heav",
-              "Flutters",
+              "Flutter",
               "Coffin",
-              "bikes"
+              "Bikes"
             ]
           },
           {
@@ -26356,9 +26387,9 @@ const exerciseData = {
             "phase": "Tabata",
             "exercises": [
               "Heels to heav",
-              "Flutters",
+              "Flutter",
               "Coffin",
-              "bikes"
+              "Bikes"
             ]
           },
           {
@@ -26420,7 +26451,7 @@ const exerciseData = {
             ]
           },
           {
-            "phase": "25/20/15/10",
+            "phase": "Chipper 25/20/15/10",
             "exercises": [
               "Band flye",
               "Band pull thru",
@@ -26457,7 +26488,7 @@ const exerciseData = {
             "phase": "Ladder 5-10",
             "exercises": [
               "Pend swing",
-              "Db thrusters"
+              "Db thruster"
             ]
           },
           {
@@ -26498,7 +26529,7 @@ const exerciseData = {
             "exercises": [
               "Leg up reach L",
               "Leg up reach R",
-              "Leg lifts",
+              "Leg lift",
               "Bikes"
             ]
           },
@@ -26529,7 +26560,7 @@ const exerciseData = {
             "exercises": [
               "Db floor press",
               "Kb sumo deadlift",
-              "Leg lifts"
+              "Leg lift"
             ]
           }
         ]
@@ -26595,7 +26626,7 @@ const exerciseData = {
             "phase": "Tabata",
             "exercises": [
               "Band hydrant L",
-              "Band bridge L",
+              "Band bridge l",
               "Band hydrant R",
               "Bridge R"
             ]
@@ -26604,7 +26635,7 @@ const exerciseData = {
             "phase": "Spartan",
             "exercises": [
               "Band squat row",
-              "Sh taps",
+              "Sh tap",
               "Kb swing"
             ]
           },
@@ -26614,6 +26645,10 @@ const exerciseData = {
               "Alt curl to arnolds",
               "Single rdl"
             ]
+          },
+          {
+            "phase": "60 sec.",
+            "exercises": []
           }
         ]
       },
@@ -26634,7 +26669,7 @@ const exerciseData = {
             "phase": "Tabata",
             "exercises": [
               "Band hydrant L",
-              "Band bridge L",
+              "Band bridge l",
               "Band hydrant R",
               "Bridge R"
             ]
@@ -26643,7 +26678,7 @@ const exerciseData = {
             "phase": "Spartan",
             "exercises": [
               "Band squat row",
-              "Sh taps",
+              "Sh tap",
               "Kb swing"
             ]
           },
@@ -26654,6 +26689,10 @@ const exerciseData = {
               "Wall tricep ext",
               "Wall thoracic mob"
             ]
+          },
+          {
+            "phase": "60 sec.",
+            "exercises": []
           }
         ]
       }
@@ -26666,9 +26705,9 @@ const exerciseData = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Plank taps",
+              "Plank tap",
               "Oblique L",
-              "Plank March",
+              "Plank march",
               "Oblique R"
             ]
           },
@@ -26686,7 +26725,7 @@ const exerciseData = {
             "phase": "20/15/10",
             "exercises": [
               "X - Jacks",
-              "Squats",
+              "squat",
               "Seated Rows"
             ]
           },
@@ -26703,7 +26742,7 @@ const exerciseData = {
             "phase": "2 x 12",
             "exercises": [
               "Band pressdown",
-              "Leg curls",
+              "Leg curl",
               "Db curl to arnold press"
             ]
           }
@@ -26720,15 +26759,15 @@ const exerciseData = {
             "exercises": [
               "Mod v up",
               "Plank tap",
-              "Oblique l",
-              "Oblique r"
+              "Oblique L",
+              "Oblique R"
             ]
           },
           {
             "phase": "Tabata",
             "exercises": [
               "F lunge",
-              "R lunge",
+              "R. lunge",
               "Lateral lunge",
               "Runner lunge"
             ]
@@ -26746,7 +26785,7 @@ const exerciseData = {
             "phase": "3 x 10",
             "exercises": [
               "Db side lateral",
-              "Step ups",
+              "Step up",
               "B. drag curls",
               "B. kick backs"
             ]
@@ -26760,7 +26799,7 @@ const exerciseData = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Single bridge L",
+              "Single bridge l",
               "Single b. R",
               "Abduction L",
               "Abduction R"
@@ -26779,7 +26818,7 @@ const exerciseData = {
             "phase": "3 x 10",
             "exercises": [
               "Db side lateral",
-              "Step ups",
+              "Step up",
               "B. drag curls",
               "B. kick backs"
             ]
@@ -26822,7 +26861,7 @@ const exerciseData = {
             "phase": "3 x 12",
             "exercises": [
               "Drag curl",
-              "Kick backs",
+              "Kick back",
               "Easy leg curls"
             ]
           }
@@ -26847,7 +26886,7 @@ const exerciseData = {
             "exercises": [
               "Lateral walk 3",
               "Pulse squat",
-              "Kick backs"
+              "Kick back"
             ]
           },
           {
@@ -26940,14 +26979,14 @@ const exerciseData = {
               "Kb swing",
               "V up",
               "Band Skiers",
-              "Leg Lifts"
+              "Leg lifts"
             ]
           },
           {
             "phase": "Ladder 12/2",
             "exercises": [
               "Band row",
-              "Sumo Dl",
+              "Sumo dl",
               "Band chest press",
               "10 man maker",
               "Burpee",
@@ -26967,16 +27006,16 @@ const exerciseData = {
           {
             "phase": "30/10x2",
             "exercises": [
-              "Single leg drops",
+              "Single leg drop",
               "Toe touch",
-              "penguins",
+              "Penguins",
               "T\u2019s, w\u2019s, l\u2019s",
               "Thoracic mobility",
               "12 reps per side"
             ]
           },
           {
-            "phase": "25/20/15",
+            "phase": "Chipper 25/20/15",
             "exercises": [
               "Band squat row",
               "Drop squat",
@@ -26989,7 +27028,7 @@ const exerciseData = {
             "exercises": [
               "Lunge squat lunge",
               "Push up knee tuck",
-              "Atwp"
+              "atwp"
             ]
           },
           {
@@ -27025,9 +27064,9 @@ const exerciseData = {
             "phase": "3 min ramp",
             "exercises": [
               "Wide drops",
-              "M.c.",
-              "R. Lunge",
-              "Sh Taps"
+              "M.c",
+              "R. lunge",
+              "Sh. taps"
             ]
           },
           {
@@ -27042,7 +27081,7 @@ const exerciseData = {
           {
             "phase": "3x10",
             "exercises": [
-              "Db curls",
+              "Db curl",
               "Db tricep ext",
               "Step out lunge",
               "finisher"
@@ -27060,9 +27099,9 @@ const exerciseData = {
             "phase": "Tabata",
             "exercises": [
               "Heels to heav",
-              "Flutters",
+              "Flutter",
               "Coffin",
-              "bikes"
+              "Bikes"
             ]
           },
           {
@@ -27142,7 +27181,7 @@ const exerciseData = {
             "exercises": [
               "Band pull-thu",
               "Db tricep ext",
-              "Db curls"
+              "Db curl"
             ]
           }
         ]
@@ -27157,15 +27196,15 @@ const exerciseData = {
             "phase": "3 x 10",
             "exercises": [
               "Bulgarian Split Squat",
-              "Db side laterals",
-              "Leg curls"
+              "Db side lateral",
+              "Leg curl"
             ]
           },
           {
             "phase": "2 x 15",
             "exercises": [
               "T flies",
-              "Knee tucks",
+              "Knee tuck",
               "60 finisher",
               "L,S,L",
               "Sh tap to DD toe touch",
@@ -27184,7 +27223,7 @@ const exerciseData = {
             "phase": "3 x 10",
             "exercises": [
               "One arm row",
-              "Stag. Rdl",
+              "Stag. rdl",
               "Strict press"
             ]
           },
@@ -27192,7 +27231,7 @@ const exerciseData = {
             "phase": "3 x 10",
             "exercises": [
               "Heels elev squat",
-              "Band flyes",
+              "Band flye",
               "Db t flies"
             ]
           },
@@ -27218,14 +27257,14 @@ const exerciseData = {
             "phase": "30/10x3",
             "exercises": [
               "See saw plank",
-              "Mod v ups",
+              "Mod v up",
               "Bike crunch"
             ]
           },
           {
             "phase": "30/10x3",
             "exercises": [
-              "Band single bridge l",
+              "Band single bridge L",
               "Band jump",
               "squat"
             ]
@@ -27246,6 +27285,10 @@ const exerciseData = {
               "Push up to h.b.",
               "Db hammer curl to press"
             ]
+          },
+          {
+            "phase": "Finisher",
+            "exercises": []
           }
         ]
       },
@@ -27257,14 +27300,14 @@ const exerciseData = {
             "phase": "30/10x3",
             "exercises": [
               "See saw plank",
-              "Mod v ups",
+              "Mod v up",
               "Bike crunch"
             ]
           },
           {
             "phase": "30/10x3",
             "exercises": [
-              "Band single bridge l",
+              "Band single bridge L",
               "Band jump",
               "squat"
             ]
@@ -27285,6 +27328,10 @@ const exerciseData = {
               "Push up to h.b.",
               "Db hammer curl to press"
             ]
+          },
+          {
+            "phase": "Finisher",
+            "exercises": []
           }
         ]
       }
@@ -27330,7 +27377,7 @@ const exerciseData = {
               "Db t flies",
               "Band Drag curls",
               "Wall sh glide",
-              "Band kickbacks"
+              "Band kickback"
             ]
           }
         ]
@@ -27352,7 +27399,7 @@ const exerciseData = {
             "exercises": [
               "Band squ. Row",
               "Pend kb swing",
-              "Leg lift swipes"
+              "Leg lift swipe"
             ]
           },
           {
@@ -27369,6 +27416,10 @@ const exerciseData = {
               "Press",
               "Thoracic mob"
             ]
+          },
+          {
+            "phase": "stretch",
+            "exercises": []
           }
         ]
       }
@@ -27382,7 +27433,7 @@ const exerciseData = {
             "phase": "Tabata",
             "exercises": [
               "Runner crunch",
-              "Supermans",
+              "Superman",
               "Leg lift swipe",
               "Wide knee tuck"
             ]
@@ -27402,7 +27453,7 @@ const exerciseData = {
               "Sumo deadlift",
               "Shoulder press",
               "Rdl",
-              "Face pulls"
+              "Face pull"
             ]
           },
           {
@@ -27425,7 +27476,7 @@ const exerciseData = {
           {
             "phase": "25/10x3",
             "exercises": [
-              "Band seals",
+              "Band seal",
               "Band leg lift adb",
               "Band jump squat",
               "Band plank jack"
@@ -27446,7 +27497,7 @@ const exerciseData = {
             "exercises": [
               "Sumo dead",
               "Push press",
-              "Squat",
+              "squat",
               "Rdl w row"
             ]
           },
@@ -27454,7 +27505,7 @@ const exerciseData = {
             "phase": "3 x 10",
             "exercises": [
               "Floor press",
-              "Leg curls",
+              "Leg curl",
               "Tucks"
             ]
           }
@@ -27470,24 +27521,24 @@ const exerciseData = {
             "phase": "Tabata",
             "exercises": [
               "High knees",
-              "Plank jacks",
-              "Speed skaters",
+              "Plank jack",
+              "Speed skater",
               "Dd toe touch"
             ]
           },
           {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band seal jack",
               "Band alt row",
               "Band squat",
-              "Band punch"
+              "Band Punch"
             ]
           },
           {
             "phase": "4 x 8",
             "exercises": [
-              "Db Rdl",
+              "Db rdl",
               "Db push press",
               "Sumo to high pull",
               "Db crunch"
@@ -27553,7 +27604,7 @@ const exerciseData = {
               "Leg lift",
               "Flutter",
               "Bikes",
-              "rest",
+              "Rest",
               "2 to 6 ladder",
               "Box jump sq",
               "Box push up"
@@ -27564,15 +27615,15 @@ const exerciseData = {
             "exercises": [
               "Db floor press",
               "Kb sumos",
-              "Db bent rows",
-              "Knee tucks"
+              "Db bent row",
+              "Knee tuck"
             ]
           },
           {
             "phase": "3 x 10",
             "exercises": [
               "Db curl press",
-              "Leg curls",
+              "Leg curl",
               "Db tricep ext"
             ]
           },
@@ -27633,7 +27684,7 @@ const exerciseData = {
             "phase": "Ladder 5 to 10",
             "exercises": [
               "Drop squat",
-              "Push ups"
+              "Push up"
             ]
           },
           {
@@ -27673,7 +27724,7 @@ const exerciseData = {
             "exercises": [
               "Kb swing",
               "Band chest press",
-              "Knee tucks"
+              "Knee tuck"
             ]
           },
           {
@@ -27681,8 +27732,8 @@ const exerciseData = {
             "exercises": [
               "Db bent row",
               "Single press bridge",
-              "Leg curls",
-              "Db side laterals",
+              "Leg curl",
+              "Db side lateral",
               "21s",
               "Band curl",
               "Band kickback"
@@ -27699,19 +27750,19 @@ const exerciseData = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Plank dips",
+              "Plank dip",
               "Runner clap",
               "Plank march",
-              "Leg lifts"
+              "Leg lift"
             ]
           },
           {
             "phase": "Tabata",
             "exercises": [
               "Drop squat",
-              "M.c.",
+              "M.c",
               "Runner lunge",
-              "Sh. tap",
+              "Sh tap",
               "Db complex"
             ]
           },
@@ -27748,7 +27799,7 @@ const exerciseData = {
           {
             "phase": "Tabata holds",
             "exercises": [
-              "Leg lifts",
+              "Leg lift",
               "Toe touch",
               "Side plank pulse"
             ]
@@ -27756,15 +27807,15 @@ const exerciseData = {
           {
             "phase": "Tabata holds",
             "exercises": [
-              "Squat",
-              "Split squat l",
-              "Split squat r",
+              "squat",
+              "Split squat L",
+              "Split squat R",
               "Wide outs",
-              "rest"
+              "Rest"
             ]
           },
           {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band plank jack",
               "Band bridge",
@@ -27777,14 +27828,14 @@ const exerciseData = {
               "Db floor press",
               "Kb deadlift",
               "Db wide row",
-              "Leg curls"
+              "Leg curl"
             ]
           },
           {
             "phase": "60/15x1",
             "exercises": [
-              "Wall sit curls",
-              "Plank ups",
+              "Wall sit curl",
+              "Plank up",
               "Lunge squat lunge"
             ]
           }
@@ -27882,7 +27933,7 @@ const exerciseData = {
             "phase": "30/10x3",
             "exercises": [
               "3 way crunch",
-              "Pointers"
+              "Pointer"
             ]
           },
           {
@@ -27988,7 +28039,7 @@ const exerciseData = {
               "Band facepull",
               "Band Drag curls",
               "Band Overhead ext",
-              "Calf raises"
+              "Calf raise"
             ]
           }
         ]
@@ -28055,12 +28106,12 @@ const exerciseData = {
             ]
           },
           {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band flye",
               "Band pull thru",
               "Band facepull",
-              "Hip flexor",
+              "Hip Flexor",
               "Hands free hips",
               "Man maker",
               "Stretch"
@@ -28091,7 +28142,7 @@ const exerciseData = {
             ]
           },
           {
-            "phase": "25/20/15/10",
+            "phase": "Chipper 25/20/15/10",
             "exercises": [
               "Band flye",
               "Band pull thru",
@@ -28182,7 +28233,7 @@ const exerciseData = {
               "Ss right",
               "Ss left",
               "Runner lunge",
-              "Bridges"
+              "Bridge"
             ]
           },
           {
@@ -28221,7 +28272,7 @@ const exerciseData = {
               "Ss right",
               "Ss left",
               "Runner lunge",
-              "Bridges"
+              "Bridge"
             ]
           },
           {
@@ -28253,14 +28304,14 @@ const exerciseData = {
             "exercises": [
               "Reach crunch",
               "Reverse crunch",
-              "Pointers"
+              "Pointer"
             ]
           },
           {
             "phase": "5 min ladder",
             "exercises": [
               "5 up",
-              "Push ups",
+              "Push up",
               "Prisoner jump squat"
             ]
           },
@@ -28326,7 +28377,7 @@ const exerciseData = {
           {
             "phase": "25/10x3",
             "exercises": [
-              "Plank dips",
+              "Plank dip",
               "Side plank p. L",
               "Side plank p. R"
             ]
@@ -28358,7 +28409,7 @@ const exerciseData = {
             "exercises": [
               "Db floor press",
               "Kb sumo deadlift",
-              "Leg lifts"
+              "Leg lift"
             ]
           }
         ]
@@ -28421,18 +28472,17 @@ const exerciseData = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Leg lifts",
-              "Mod v ups",
+              "Leg lift",
+              "Mod v up",
               "Bikes",
-              "Plank dips"
+              "Plank dip"
             ]
           },
           {
             "phase": "Ladder 5 up for 5 min",
             "exercises": [
-              "Push ups",
+              "Push up",
               "Pend kb swing",
-              "2 rounds",
               "Db s.s. press l 15",
               "Db s.sq press r 15",
               "P.u.p. Row l 15",
@@ -28442,7 +28492,7 @@ const exerciseData = {
           {
             "phase": "3 x 15",
             "exercises": [
-              "Band curls",
+              "Band curl",
               "Db kickbacks",
               "Bag hip thrust"
             ]
@@ -28456,16 +28506,16 @@ const exerciseData = {
           {
             "phase": "Tabata",
             "exercises": [
-              "Leg lifts",
-              "Mod v ups",
+              "Leg lift",
+              "Mod v up",
               "Bikes",
-              "Plank dips"
+              "Plank dip"
             ]
           },
           {
             "phase": "Ladder 5 up for 5 min",
             "exercises": [
-              "Push ups",
+              "Push up",
               "Pend kb swing"
             ]
           },
@@ -28480,7 +28530,7 @@ const exerciseData = {
           {
             "phase": "3 x 15",
             "exercises": [
-              "Band curls",
+              "Band curl",
               "Db kickbacks",
               "Bag hip thrust"
             ]
@@ -28522,8 +28572,8 @@ const exerciseData = {
             "phase": "3 x 10",
             "exercises": [
               "Stag. rdl",
-              "Band straight arm lat pulls",
-              "Band chest flyes"
+              "Band straight arm lat pull",
+              "Band chest flye"
             ]
           },
           {
@@ -28535,7 +28585,7 @@ const exerciseData = {
             ]
           },
           {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Drop squat",
               "Double crunch"
@@ -28554,7 +28604,7 @@ const exerciseData = {
             "exercises": [
               "Leg circle L",
               "Leg circle R",
-              "Slider m. c."
+              "Slider m.c."
             ]
           },
           {
@@ -28594,7 +28644,7 @@ const exerciseData = {
             "exercises": [
               "Lateral walk 3",
               "Pulse squat",
-              "Kick backs"
+              "Kick back"
             ]
           },
           {
@@ -28629,16 +28679,16 @@ const exerciseData = {
           {
             "phase": "30/10x2",
             "exercises": [
-              "Single leg drops",
+              "Single leg drop",
               "Plank march",
-              "penguins",
+              "Penguins",
               "T\u2019s, w\u2019s, l\u2019s",
               "Thoracic mobility",
               "12 reps per side"
             ]
           },
           {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band squat row",
               "Punches",
@@ -28646,7 +28696,7 @@ const exerciseData = {
             ]
           },
           {
-            "phase": "5 per side",
+            "phase": "Lunge matrix 5 per side",
             "exercises": [
               "3 way push up 5 each"
             ]
@@ -28707,7 +28757,7 @@ const exerciseData = {
           {
             "phase": "3 x 15",
             "exercises": [
-              "Band curls",
+              "Band curl",
               "Band Overhead ext",
               "Travel lunge 8/8"
             ]
@@ -28751,7 +28801,7 @@ const exerciseData = {
           "exercises": [
             "Wall sit curl",
             "Lunge squat lunge",
-            "Single leg drops"
+            "Single leg drop"
           ]
         },
         {
@@ -28767,7 +28817,7 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "Leg up crunch l",
+            "Leg up crunch L",
             "Leg up crunch r",
             "Flutter",
             "Hold leg lift"
@@ -28783,11 +28833,7 @@ const exerciseData = {
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Kb swing",
             "Drop squat",
@@ -28824,7 +28870,7 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "Band seals",
+            "Band seal",
             "Band bridge",
             "Band f/b jack",
             "Band kickback"
@@ -28858,7 +28904,7 @@ const exerciseData = {
           "exercises": [
             "Basic crunch",
             "Penguins",
-            "Supermans"
+            "Superman"
           ]
         },
         {
@@ -28882,7 +28928,7 @@ const exerciseData = {
           "exercises": [
             "Band drag curl",
             "Db tricep ext",
-            "Calf raises"
+            "Calf raise"
           ]
         }
       ]
@@ -28894,20 +28940,16 @@ const exerciseData = {
         {
           "phase": "30/10x2",
           "exercises": [
-            "Single leg drops",
+            "Single leg drop",
             "Plank march",
-            "penguins",
+            "Penguins",
             "T\u2019s, w\u2019s, l\u2019s",
             "Thoracic mobility",
             "12 reps per side"
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band full row",
             "Cross chest press",
@@ -28918,7 +28960,7 @@ const exerciseData = {
           "phase": "2 x 10",
           "exercises": [
             "R. Lunge Row",
-            "Kick Back"
+            "Kick back"
           ]
         },
         {
@@ -28954,7 +28996,7 @@ const exerciseData = {
             "Band hydrant",
             "Band kickback",
             "Band hip abd",
-            "Band bridges"
+            "Band bridge"
           ]
         },
         {
@@ -28964,7 +29006,7 @@ const exerciseData = {
             "Kb hike swing 10",
             "Db floor press 20",
             "Leg curls 20",
-            "21\u2019s",
+            "21,s",
             "Band curl",
             "Db tricep"
           ]
@@ -28990,7 +29032,7 @@ const exerciseData = {
             "Band hydrant",
             "Band kickback",
             "Band hip abd",
-            "Band bridges"
+            "Band bridge"
           ]
         },
         {
@@ -29005,7 +29047,7 @@ const exerciseData = {
         {
           "phase": "3x10",
           "exercises": [
-            "Db curls",
+            "Db curl",
             "Db o.h. Tricep",
             "Stag. rdl"
           ]
@@ -29022,7 +29064,7 @@ const exerciseData = {
             "Spider climbers",
             "Bw rus twist",
             "Bikes",
-            "Leg lifts"
+            "Leg lift"
           ]
         },
         {
@@ -29047,7 +29089,7 @@ const exerciseData = {
           "phase": "2 x 15",
           "exercises": [
             "Band facepull",
-            "Wall sit curls",
+            "Wall sit curl",
             "Band tricep pressdowns"
           ]
         }
@@ -29077,7 +29119,7 @@ const exerciseData = {
           "phase": "Spartan",
           "exercises": [
             "Band pull thru",
-            "band row",
+            "Band row",
             "Band press"
           ]
         },
@@ -29099,8 +29141,6 @@ const exerciseData = {
           "phase": "Tabata",
           "exercises": [
             "Single leg drop",
-            "Single leg drop",
-            "Oblique reach",
             "Oblique reach"
           ]
         },
@@ -29140,11 +29180,9 @@ const exerciseData = {
             "Leg lift",
             "Hold",
             "Reach left",
-            "Hold",
             "Reach right",
-            "Hold",
             "Basic crunch",
-            "rest"
+            "Rest"
           ]
         },
         {
@@ -29158,9 +29196,9 @@ const exerciseData = {
         {
           "phase": "3 x 12",
           "exercises": [
-            "Bulgarians",
+            "Bulgarian Split Squat",
             "One arm row",
-            "Db o.h. triceps"
+            "Db o.h. Tricep"
           ]
         },
         {
@@ -29188,7 +29226,7 @@ const exerciseData = {
           "exercises": [
             "Weighted d.b.",
             "Db russian twist",
-            "Alt leg drops"
+            "Alt leg drop"
           ]
         },
         {
@@ -29233,7 +29271,7 @@ const exerciseData = {
           "exercises": [
             "Weighted d.b.",
             "Db russian twist",
-            "Alt leg drops"
+            "Alt leg drop"
           ]
         },
         {
@@ -29278,7 +29316,7 @@ const exerciseData = {
           "exercises": [
             "Plank march",
             "Basic crunch",
-            "Plank dips",
+            "Plank dip",
             "Bikes"
           ]
         },
@@ -29356,7 +29394,7 @@ const exerciseData = {
             "Wall sit bus driver",
             "Plank up knee tuck",
             "21s bicep",
-            "tricep"
+            "Tricep"
           ]
         }
       ]
@@ -29369,14 +29407,14 @@ const exerciseData = {
           "phase": "30/10x3",
           "exercises": [
             "3 way crunch",
-            "Alt leg drops",
-            "Pointers"
+            "Alt leg drop",
+            "Pointer"
           ]
         },
         {
           "phase": "5 min full get up",
           "exercises": [
-            "l/r"
+            "L/R"
           ]
         },
         {
@@ -29447,9 +29485,9 @@ const exerciseData = {
           "phase": "Tabata",
           "exercises": [
             "Heels to heav",
-            "Flutters",
+            "Flutter",
             "Coffin",
-            "bikes"
+            "Bikes"
           ]
         },
         {
@@ -29474,7 +29512,7 @@ const exerciseData = {
           "phase": "3 x 12",
           "exercises": [
             "Band bridge to lat pull",
-            "Db side laterals"
+            "Db side lateral"
           ]
         },
         {
@@ -29493,10 +29531,9 @@ const exerciseData = {
         {
           "phase": "25/10x3",
           "exercises": [
-            "Leg lifts",
-            "Flutters",
-            "Toe touch",
-            "Flutters"
+            "Leg lift",
+            "Flutter",
+            "Toe touch"
           ]
         },
         {
@@ -29504,8 +29541,7 @@ const exerciseData = {
           "exercises": [
             "Band single bridge L",
             "Abduction",
-            "Bridge R",
-            "Abduction"
+            "Bridge R"
           ]
         },
         {
@@ -29519,8 +29555,8 @@ const exerciseData = {
         {
           "phase": "2 x 12",
           "exercises": [
-            "Band curls",
-            "Band  kickbacks"
+            "Band curl",
+            "Band kickbacks"
           ]
         }
       ]
@@ -29532,10 +29568,9 @@ const exerciseData = {
         {
           "phase": "25/10x3",
           "exercises": [
-            "Leg lifts",
-            "Flutters",
-            "Toe touch",
-            "Flutters"
+            "Leg lift",
+            "Flutter",
+            "Toe touch"
           ]
         },
         {
@@ -29543,8 +29578,7 @@ const exerciseData = {
           "exercises": [
             "Band single bridge L",
             "Abduction",
-            "Bridge R",
-            "Abduction"
+            "Bridge R"
           ]
         },
         {
@@ -29558,8 +29592,8 @@ const exerciseData = {
         {
           "phase": "3 x 12",
           "exercises": [
-            "Band curls",
-            "Band  kickbacks",
+            "Band curl",
+            "Band kickbacks",
             "Slider curls"
           ]
         }
@@ -29598,7 +29632,7 @@ const exerciseData = {
           "phase": "3 x 10",
           "exercises": [
             "Db tricep floor press",
-            "Heels elev. Squat",
+            "Heels elev squat",
             "Db hammer curl"
           ]
         },
@@ -29646,7 +29680,7 @@ const exerciseData = {
           "exercises": [
             "Single press",
             "Bridge tricep extension",
-            "Calf raises",
+            "Calf raise",
             "60 finisher",
             "L,S,L",
             "Sh tap to DD toe touch",
@@ -29690,7 +29724,7 @@ const exerciseData = {
           "exercises": [
             "Single press",
             "Bridge tricep extension",
-            "Calf raises",
+            "Calf raise",
             "60 finisher",
             "L,S,L",
             "Sh tap to DD toe touch",
@@ -29708,7 +29742,7 @@ const exerciseData = {
           "exercises": [
             "3 way crunch",
             "Runner clap",
-            "Supermans"
+            "Superman"
           ]
         },
         {
@@ -29728,10 +29762,6 @@ const exerciseData = {
           ]
         },
         {
-          "phase": "Horse thoracic Mobility",
-          "exercises": []
-        },
-        {
           "phase": "3 x 15",
           "exercises": [
             "Seated row",
@@ -29749,7 +29779,7 @@ const exerciseData = {
         {
           "phase": "25/10x3",
           "exercises": [
-            "Plank dips",
+            "Plank dip",
             "Side plank p. L",
             "Side plank p. R"
           ]
@@ -29781,7 +29811,7 @@ const exerciseData = {
           "exercises": [
             "Db floor press",
             "Kb sumo deadlift",
-            "Leg lifts"
+            "Leg lift"
           ]
         }
       ]
@@ -29793,7 +29823,7 @@ const exerciseData = {
         {
           "phase": "25/10x3",
           "exercises": [
-            "Plank dips",
+            "Plank dip",
             "Side plank p. L",
             "Side plank p. R"
           ]
@@ -29826,7 +29856,7 @@ const exerciseData = {
           "exercises": [
             "Db tricep press",
             "Kb sumo deadlift",
-            "Leg lifts"
+            "Leg lift"
           ]
         }
       ]
@@ -29840,8 +29870,8 @@ const exerciseData = {
           "exercises": [
             "Reverse crunch",
             "Bw russian twist",
-            "Single reach L",
-            "Single reach R"
+            "Single reach l",
+            "Single reach r"
           ]
         },
         {
@@ -29860,7 +29890,7 @@ const exerciseData = {
         {
           "phase": "3 x 10",
           "exercises": [
-            "Bulgarians",
+            "Bulgarian Split Squat",
             "Band lat pull",
             "Rdl",
             "Floor press"
@@ -29869,7 +29899,7 @@ const exerciseData = {
         {
           "phase": "3 x 10",
           "exercises": [
-            "Db curls",
+            "Db curl",
             "Wall tricep ext",
             "Single calf raise"
           ]
@@ -29907,9 +29937,9 @@ const exerciseData = {
         {
           "phase": "3 x 10",
           "exercises": [
-            "Band curls",
+            "Band curl",
             "Db bridge tricep",
-            "Leg curls"
+            "Leg curl"
           ]
         },
         {
@@ -29942,7 +29972,7 @@ const exerciseData = {
           "phase": "45/15x3",
           "exercises": [
             "Lunge squat lunge",
-            "Sh tap-dd toe touch",
+            "Sh tap dd toe touch",
             "Db Rdl to row"
           ]
         },
@@ -29968,9 +29998,9 @@ const exerciseData = {
           "phase": "Tabata",
           "exercises": [
             "Heels to heav",
-            "Flutters",
+            "Flutter",
             "Coffin",
-            "bikes"
+            "Bikes"
           ]
         },
         {
@@ -29994,7 +30024,7 @@ const exerciseData = {
         {
           "phase": "3x10",
           "exercises": [
-            "Wall sit curls",
+            "Wall sit curl",
             "Band kickback",
             "T flies"
           ]
@@ -30040,7 +30070,7 @@ const exerciseData = {
           "exercises": [
             "Db squat curl",
             "Db overhead ext",
-            "T-flies"
+            "T flies"
           ]
         }
       ]
@@ -30060,7 +30090,7 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "F. lunge",
+            "Forward Lunge",
             "R. lunge",
             "45 d lunge",
             "Lateral lunge"
@@ -30073,7 +30103,6 @@ const exerciseData = {
             "Db ren row 16",
             "Db lat step 16",
             "Slider 3 way 8",
-            "3 rounds",
             "Side laterals 15",
             "Pistols  8/8",
             "Kick backs 8/8",
@@ -30106,11 +30135,10 @@ const exerciseData = {
             "Db ren row 16",
             "Db step up 16",
             "Slider 3 way 8",
-            "2 rounds",
             "Side laterals 15",
             "Pistols  8/8",
             "Band Kick backs 15",
-            "Band curls"
+            "Band curl"
           ]
         }
       ]
@@ -30123,7 +30151,7 @@ const exerciseData = {
           "phase": "Tabata",
           "exercises": [
             "Runner clap",
-            "Plank dips",
+            "Plank dip",
             "Leg circles L",
             "Leg circles R"
           ]
@@ -30142,7 +30170,7 @@ const exerciseData = {
           "exercises": [
             "Db one arm row",
             "Single hip thrust",
-            "Side plank dips",
+            "Side plank dip",
             "Thoracic mob l/r"
           ]
         },
@@ -30164,7 +30192,7 @@ const exerciseData = {
           "phase": "30/10x3",
           "exercises": [
             "Ab walk outs",
-            "reverse crunch"
+            "Reverse crunch"
           ]
         },
         {
@@ -30181,9 +30209,8 @@ const exerciseData = {
             "Db R. lunge curl 16",
             "Kb sh. To sh. 12",
             "Reverse hyper 20",
-            "1x10",
             "Thoracic mob",
-            "Hip flexor",
+            "Hip Flexor",
             "Ankle",
             "21s",
             "Shoulders",
@@ -30219,7 +30246,7 @@ const exerciseData = {
         {
           "phase": "3 x 15",
           "exercises": [
-            "Band curls",
+            "Band curl",
             "Band Overhead ext",
             "Travel lunge 8/8"
           ]
@@ -30241,7 +30268,7 @@ const exerciseData = {
         {
           "phase": "2 x 15",
           "exercises": [
-            "Db t- flies",
+            "Db t flies",
             "Band Drag curls",
             "Band Overhead ext"
           ]
@@ -30265,7 +30292,7 @@ const exerciseData = {
           "phase": "Tabata",
           "exercises": [
             "F lunge",
-            "R lunge",
+            "R. lunge",
             "Lateral L",
             "Lateral R"
           ]
@@ -30289,7 +30316,7 @@ const exerciseData = {
         {
           "phase": "3 x 10",
           "exercises": [
-            "Wall sit curls",
+            "Wall sit curl",
             "Db tricep ext",
             "Slider curls"
           ]
@@ -30303,20 +30330,16 @@ const exerciseData = {
         {
           "phase": "30/10x2",
           "exercises": [
-            "Single leg drops",
+            "Single leg drop",
             "Plank march",
-            "penguins",
+            "Penguins",
             "T\u2019s, w\u2019s, l\u2019s",
             "Thoracic mobility",
             "12 reps per side"
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band full row",
             "Cross chest press",
@@ -30324,11 +30347,7 @@ const exerciseData = {
           ]
         },
         {
-          "phase": "Lunge matrix",
-          "exercises": []
-        },
-        {
-          "phase": "5 per side",
+          "phase": "Lunge matrix 5 per side",
           "exercises": [
             "3 way push up 5 each"
           ]
@@ -30356,7 +30375,7 @@ const exerciseData = {
           "exercises": [
             "Single reach l",
             "Single reach r",
-            "Leg lifts",
+            "Leg lift",
             "Criss cross flutters",
             "Rest"
           ]
@@ -30364,7 +30383,7 @@ const exerciseData = {
         {
           "phase": "Tabata holds",
           "exercises": [
-            "Squats",
+            "squat",
             "Split squats l",
             "Split squats r",
             "Wide outs",
@@ -30415,7 +30434,6 @@ const exerciseData = {
         {
           "phase": "Spartan",
           "exercises": [
-            "10-25",
             "Seated band row",
             "Db \u00be squats",
             "Toe grabs"
@@ -30426,7 +30444,7 @@ const exerciseData = {
           "exercises": [
             "1 \u00bd hip thrust",
             "Single bridge to chest press",
-            "Db hammer curls",
+            "Db hammer curl",
             "finisher"
           ]
         }
@@ -30440,7 +30458,6 @@ const exerciseData = {
           "phase": "Tabata",
           "exercises": [
             "Bikes",
-            "Side plank Pulse",
             "Side plank pulse",
             "Runner clap"
           ]
@@ -30481,7 +30498,7 @@ const exerciseData = {
           "phase": "30/10x3",
           "exercises": [
             "Alt leg drop",
-            "Pointers",
+            "Pointer",
             "Bridge march"
           ]
         },
@@ -30562,7 +30579,7 @@ const exerciseData = {
           "exercises": [
             "Slider tucks",
             "Bikes",
-            "Pointers"
+            "Pointer"
           ]
         },
         {
@@ -30603,7 +30620,7 @@ const exerciseData = {
           "exercises": [
             "Slider tucks",
             "Bikes",
-            "Pointers"
+            "Pointer"
           ]
         },
         {
@@ -30671,8 +30688,8 @@ const exerciseData = {
           "phase": "3 x 10",
           "exercises": [
             "One arm press w bridge",
-            "Bulgarians",
-            "Band flyes"
+            "Bulgarian Split Squat",
+            "Band flye"
           ]
         },
         {
@@ -30712,7 +30729,7 @@ const exerciseData = {
           "phase": "3 x 12",
           "exercises": [
             "Drag curl",
-            "Kick backs",
+            "Kick back",
             "Single leg bridge pulse"
           ]
         }
@@ -30727,7 +30744,7 @@ const exerciseData = {
           "exercises": [
             "Basic crunch",
             "Penguins",
-            "Supermans"
+            "Superman"
           ]
         },
         {
@@ -30735,7 +30752,7 @@ const exerciseData = {
           "exercises": [
             "Ab mat coffin",
             "Plank tap",
-            "pointers"
+            "Pointers"
           ]
         },
         {
@@ -30759,7 +30776,7 @@ const exerciseData = {
           "exercises": [
             "Band drag curl",
             "Db tricep ext",
-            "Calf raises"
+            "Calf raise"
           ]
         }
       ]
@@ -30843,7 +30860,7 @@ const exerciseData = {
         {
           "phase": "2 x 15",
           "exercises": [
-            "Db t- flies",
+            "Db t flies",
             "Band Drag curls",
             "Band Overhead ext"
           ]
@@ -30854,7 +30871,7 @@ const exerciseData = {
             "Wall sit bus driver",
             "Plank up knee tuck",
             "21s bicep",
-            "tricep"
+            "Tricep"
           ]
         }
       ]
@@ -30898,9 +30915,9 @@ const exerciseData = {
         {
           "phase": "25/10x3",
           "exercises": [
-            "Plank dips",
-            "Side plank dip L",
-            "Side plank dip R"
+            "Plank dip",
+            "Side plank dip l",
+            "Side plank dip r"
           ]
         },
         {
@@ -30937,7 +30954,7 @@ const exerciseData = {
           "phase": "3x12",
           "exercises": [
             "Db curl arnold press",
-            "Band pressdowns"
+            "Band pressdown"
           ]
         }
       ]
@@ -30951,7 +30968,7 @@ const exerciseData = {
           "exercises": [
             "Toe touch",
             "Bikes",
-            "Pointers"
+            "Pointer"
           ]
         },
         {
@@ -30976,7 +30993,7 @@ const exerciseData = {
           "exercises": [
             "Kneeling curl press l/r",
             "Single kick back",
-            "1 \u00bd rdl"
+            "1 \u00bd RDL"
           ]
         }
       ]
@@ -31050,11 +31067,7 @@ const exerciseData = {
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "25/20/15/10",
+          "phase": "Chipper 25/20/15/10",
           "exercises": [
             "Band press",
             "Band pull thru",
@@ -31092,13 +31105,12 @@ const exerciseData = {
           "exercises": [
             "Lateral walk 3",
             "Pulse squat",
-            "Kick backs"
+            "Kick back"
           ]
         },
         {
           "phase": "Ladder",
           "exercises": [
-            "2-12",
             "Kb swing",
             "Band swim V up"
           ]
@@ -31135,13 +31147,12 @@ const exerciseData = {
           "exercises": [
             "Lateral walk 3",
             "Pulse squat",
-            "Kick backs"
+            "Kick back"
           ]
         },
         {
           "phase": "Ladder",
           "exercises": [
-            "2-12",
             "Kb swing",
             "Band swim V up"
           ]
@@ -31159,7 +31170,7 @@ const exerciseData = {
           "exercises": [
             "Db alt curl press",
             "Db tricep ext",
-            "Leg curls"
+            "Leg curl"
           ]
         }
       ]
@@ -31182,7 +31193,7 @@ const exerciseData = {
           "exercises": [
             "Wide outs",
             "f/b lunge r",
-            "f/b lunge l",
+            "f/b lunge L",
             "High knees",
             "Get ups"
           ]
@@ -31198,7 +31209,7 @@ const exerciseData = {
             "Renegade row 8/8",
             "Hip thrust 20",
             "Band punch 50",
-            "Db curls",
+            "Db curl",
             "Db tricep",
             "Jump squat"
           ]
@@ -31243,7 +31254,7 @@ const exerciseData = {
           "exercises": [
             "Db floor press",
             "Kb sumo deadlift",
-            "Leg lifts"
+            "Leg lift"
           ]
         }
       ]
@@ -31257,7 +31268,6 @@ const exerciseData = {
           "exercises": [
             "Leg up reach L",
             "Leg up reach R",
-            "Wide knee touch",
             "Wide knee touch"
           ]
         },
@@ -31313,7 +31323,7 @@ const exerciseData = {
             "Slow bikes",
             "Superman hold",
             "March",
-            "Speed skaters"
+            "Speed skater"
           ]
         },
         {
@@ -31347,7 +31357,7 @@ const exerciseData = {
           "exercises": [
             "Single reach l",
             "Single reach r",
-            "Leg lifts",
+            "Leg lift",
             "Criss cross flutters",
             "Rest"
           ]
@@ -31355,7 +31365,7 @@ const exerciseData = {
         {
           "phase": "Tabata holds",
           "exercises": [
-            "Squats",
+            "squat",
             "Split squats l",
             "Split squats r",
             "Wide outs",
@@ -31374,7 +31384,7 @@ const exerciseData = {
         {
           "phase": "3x8",
           "exercises": [
-            "1 \u00bd rdl",
+            "1 \u00bd RDL",
             "One arm row",
             "Wall sit bicep curls"
           ]
@@ -31390,7 +31400,7 @@ const exerciseData = {
           "exercises": [
             "Criss cross leg lifts",
             "Side plank clams L/R",
-            "pointers"
+            "Pointers"
           ]
         },
         {
@@ -31429,7 +31439,7 @@ const exerciseData = {
         {
           "phase": "3 x 10",
           "exercises": [
-            "Bulgarians",
+            "Bulgarian Split Squat",
             "Db t flies",
             "Alt leg curl"
           ]
@@ -31455,16 +31465,15 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "Flutters",
+            "Flutter",
             "Penguins",
-            "Side plank dip",
             "Side plank dip"
           ]
         },
         {
           "phase": "Tabata",
           "exercises": [
-            "F. lunge",
+            "Forward Lunge",
             "R. lunge",
             "Curtsy L",
             "Curtsy R"
@@ -31496,20 +31505,16 @@ const exerciseData = {
         {
           "phase": "30/10x2",
           "exercises": [
-            "Single leg drops",
+            "Single leg drop",
             "Plank march",
-            "penguins",
+            "Penguins",
             "T\u2019s, w\u2019s, l\u2019s",
             "Thoracic mobility",
             "12 reps per side"
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band full row",
             "Cross chest press",
@@ -31578,7 +31583,7 @@ const exerciseData = {
         {
           "phase": "2x15",
           "exercises": [
-            "Wall sit curls",
+            "Wall sit curl",
             "Db kickbacks",
             "Calf raise"
           ]
@@ -31682,16 +31687,15 @@ const exerciseData = {
           "exercises": [
             "Lateral walk 3",
             "Pulse squat",
-            "Kick backs"
+            "Kick back"
           ]
         },
         {
           "phase": "Ladder",
           "exercises": [
-            "2-12",
             "Kb dl hp",
             "Bench push up",
-            "Leg lifts"
+            "Leg lift"
           ]
         },
         {
@@ -31716,14 +31720,14 @@ const exerciseData = {
         {
           "phase": "30/5x3",
           "exercises": [
-            "Plank dips",
+            "Plank dip",
             "Dead bug"
           ]
         },
         {
           "phase": "Tabata",
           "exercises": [
-            "F. lunge",
+            "Forward Lunge",
             "45 lunge",
             "Lateral",
             "Reverse",
@@ -31751,7 +31755,7 @@ const exerciseData = {
           "phase": "30/10x3",
           "exercises": [
             "Ab mat coffin",
-            "Pointers"
+            "Pointer"
           ]
         },
         {
@@ -31767,7 +31771,7 @@ const exerciseData = {
           "phase": "3 x 12",
           "exercises": [
             "Band one arm pull",
-            "Leg curls",
+            "Leg curl",
             "Band one arm press"
           ]
         },
@@ -31839,7 +31843,7 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "F. lunge",
+            "Forward Lunge",
             "R. lunge",
             "Curtsy L",
             "Curtsy R"
@@ -31879,11 +31883,7 @@ const exerciseData = {
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band full row",
             "Cross chest press",
@@ -31920,7 +31920,7 @@ const exerciseData = {
         {
           "phase": "3 x 12",
           "exercises": [
-            "Band chest flyes",
+            "Band chest flye",
             "Band bridge lat pull",
             "Split squats"
           ]
@@ -31930,7 +31930,7 @@ const exerciseData = {
           "exercises": [
             "Band seated row",
             "Pull thru",
-            "Db o.h. tricep"
+            "Db o.h. Tricep"
           ]
         }
       ]
@@ -32002,7 +32002,7 @@ const exerciseData = {
           "phase": "3 x 10",
           "exercises": [
             "Bulgarians l/r",
-            "Band straight arm lat pulls",
+            "Band straight arm lat pull",
             "Db bicep curl"
           ]
         },
@@ -32015,11 +32015,7 @@ const exerciseData = {
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Drop squat",
             "Double crunch"
@@ -32077,9 +32073,9 @@ const exerciseData = {
           "phase": "Tabata",
           "exercises": [
             "Heels to heav",
-            "Flutters",
+            "Flutter",
             "Coffin",
-            "bikes"
+            "Bikes"
           ]
         },
         {
@@ -32133,13 +32129,12 @@ const exerciseData = {
           "exercises": [
             "Lateral walk 3",
             "Pulse squat",
-            "Kick backs"
+            "Kick back"
           ]
         },
         {
           "phase": "Ladder",
           "exercises": [
-            "2-12",
             "Kb swing",
             "Band swim",
             "V up"
@@ -32191,7 +32186,7 @@ const exerciseData = {
           "phase": "3 x 12",
           "exercises": [
             "Drag curl",
-            "Kick backs",
+            "Kick back",
             "Easy leg curls"
           ]
         }
@@ -32207,11 +32202,10 @@ const exerciseData = {
             "Leg flutters",
             "Basic crunch",
             "Shoulder tap",
-            "pointers",
-            "40/10 x 2",
+            "Pointers",
             "Band bridge",
-            "Band hydrants",
-            "Band kickbacks"
+            "Band hydrant",
+            "Band kickback"
           ]
         },
         {
@@ -32243,17 +32237,13 @@ const exerciseData = {
             "Plank tap",
             "Hold",
             "Plank march",
-            "Hold",
-            "Single sh tap",
-            "Hold",
-            "Single sh tap",
-            "hold"
+            "Single sh tap"
           ]
         },
         {
           "phase": "Tabata",
           "exercises": [
-            "F. lunge",
+            "Forward Lunge",
             "R. lunge",
             "Curtsy L",
             "Curtsy R"
@@ -32265,7 +32255,7 @@ const exerciseData = {
             "Db floor press",
             "Rdl",
             "One arm row",
-            "Heels elev. squat"
+            "Heels elev squat"
           ]
         },
         {
@@ -32305,12 +32295,9 @@ const exerciseData = {
           "exercises": [
             "Band s. Row",
             "Rdl",
-            "Band press"
+            "Band press",
+            "Cat cow 5 x"
           ]
-        },
-        {
-          "phase": "Cat cow 5 x",
-          "exercises": []
         },
         {
           "phase": "2x12",
@@ -32335,7 +32322,7 @@ const exerciseData = {
           "exercises": [
             "Plank reach",
             "Bikes",
-            "Plank taps",
+            "Plank tap",
             "Reverse crunch"
           ]
         },
@@ -32344,14 +32331,13 @@ const exerciseData = {
           "exercises": [
             "Band h. Bridge",
             "Band p. Squat",
-            "Band hydrants",
-            "Band p. squat"
+            "Band hydrant"
           ]
         },
         {
           "phase": "Complex 5x5",
           "exercises": [
-            "RDL",
+            "Rdl",
             "High pull",
             "1 \u00bd squat",
             "Hang clean"
@@ -32368,7 +32354,7 @@ const exerciseData = {
           "phase": "3 x 12",
           "exercises": [
             "Kb curl",
-            "Tricep planks",
+            "Tricep plank",
             "Butterfly bridge"
           ]
         }
@@ -32421,7 +32407,7 @@ const exerciseData = {
           "exercises": [
             "Ab mat coffin",
             "Plank tap",
-            "pointers"
+            "Pointers"
           ]
         },
         {
@@ -32478,9 +32464,9 @@ const exerciseData = {
           "phase": "40/30/20 (15 off)",
           "exercises": [
             "Db goblet squat",
-            "Band swims",
+            "Band swim",
             "Db sumo dl",
-            "Band punches"
+            "Band Punch"
           ]
         },
         {
@@ -32528,7 +32514,7 @@ const exerciseData = {
           "exercises": [
             "Band facepull",
             "Band Drag curls",
-            "Calf raises"
+            "Calf raise"
           ]
         }
       ]
@@ -32547,8 +32533,8 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "F. Lunge",
-            "R. Lunge",
+            "F lunge",
+            "R. lunge",
             "Speed skater",
             "Bridge"
           ]
@@ -32599,7 +32585,7 @@ const exerciseData = {
         {
           "phase": "Ladder 2-12",
           "exercises": [
-            "Band flyes",
+            "Band flye",
             "Db squat curl"
           ]
         },
@@ -32608,7 +32594,7 @@ const exerciseData = {
           "exercises": [
             "Back bridge",
             "Hip mob",
-            "Ankle mob"
+            "Ankle mob."
           ]
         }
       ]
@@ -32629,10 +32615,9 @@ const exerciseData = {
         {
           "phase": "Ladder",
           "exercises": [
-            "12-4",
             "Kb swing",
             "Band chest press",
-            "Knee tucks"
+            "Knee tuck"
           ]
         },
         {
@@ -32640,7 +32625,7 @@ const exerciseData = {
           "exercises": [
             "Db bent row",
             "Single press bridge",
-            "Leg curls",
+            "Leg curl",
             "21s",
             "Band curl",
             "Band kickback"
@@ -32662,15 +32647,11 @@ const exerciseData = {
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Swings",
             "Db jack",
-            "Sh. taps",
+            "Sh tap",
             "Db complex",
             "1 \u00bd"
           ]
@@ -32680,14 +32661,14 @@ const exerciseData = {
           "exercises": [
             "Rdl",
             "Push press",
-            "Squat",
+            "squat",
             "rows"
           ]
         },
         {
           "phase": "3 x 10",
           "exercises": [
-            "Bulgarians",
+            "Bulgarian Split Squat",
             "Straight arm pulls",
             "Bridge tricep extension"
           ]
@@ -32716,15 +32697,11 @@ const exerciseData = {
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Swings",
             "Db jack",
-            "Sh. taps",
+            "Sh tap",
             "Db complex"
           ]
         },
@@ -32733,14 +32710,14 @@ const exerciseData = {
           "exercises": [
             "Rdl",
             "Push press",
-            "Squat",
+            "squat",
             "rows"
           ]
         },
         {
           "phase": "3 x 10",
           "exercises": [
-            "Bulgarians",
+            "Bulgarian Split Squat",
             "Straight arm pulls",
             "Bridge tricep extension"
           ]
@@ -32805,7 +32782,6 @@ const exerciseData = {
             "SP Left",
             "Sp Right",
             "Hollow hold",
-            "30x10x3",
             "Band bridge",
             "Clams L",
             "Clams R"
@@ -32851,10 +32827,9 @@ const exerciseData = {
             "Star sit up",
             "Alt superman",
             "Half burpee sumo",
-            "30/10 x 2",
             "Band plank jack",
             "Band hip bridge",
-            "Band hydrants"
+            "Band hydrant"
           ]
         },
         {
@@ -32915,7 +32890,7 @@ const exerciseData = {
           "exercises": [
             "Band drag curl",
             "Db tricep ext",
-            "Calf raises"
+            "Calf raise"
           ]
         }
       ]
@@ -32929,7 +32904,7 @@ const exerciseData = {
           "exercises": [
             "3 way crunch",
             "Slider cross tuck",
-            "Pointers"
+            "Pointer"
           ]
         },
         {
@@ -32944,7 +32919,7 @@ const exerciseData = {
           "phase": "3 x 12",
           "exercises": [
             "Band seated row",
-            "Db Rdl",
+            "Db rdl",
             "Db push press"
           ]
         },
@@ -32964,7 +32939,7 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "Single bridge L",
+            "Single bridge l",
             "Single b. R",
             "Abduction L",
             "Abduction R"
@@ -32983,7 +32958,7 @@ const exerciseData = {
           "exercises": [
             "B. pressdown",
             "Slider leg curl",
-            "Calf raises"
+            "Calf raise"
           ]
         }
       ]
@@ -32995,7 +32970,7 @@ const exerciseData = {
         {
           "phase": "3 x 10",
           "exercises": [
-            "Bulgarians",
+            "Bulgarian Split Squat",
             "Single leg curl",
             "Single calf raise"
           ]
@@ -33021,9 +32996,9 @@ const exerciseData = {
         {
           "phase": "3 x 10",
           "exercises": [
-            "Bulgarians",
-            "Db side laterals",
-            "Alt leg curls"
+            "Bulgarian Split Squat",
+            "Db side lateral",
+            "Alt leg curl"
           ]
         },
         {
@@ -33058,7 +33033,7 @@ const exerciseData = {
             "Band bridge",
             "Band kick back",
             "Band clam L",
-            "Clam R"
+            "Band Clamshell Right"
           ]
         },
         {
@@ -33114,16 +33089,16 @@ const exerciseData = {
           "phase": "40/30/20 (15 off)",
           "exercises": [
             "Db goblet squat",
-            "Band swims",
+            "Band swim",
             "Db sumo dl",
-            "Band punches",
-            "Step ups"
+            "Band Punch",
+            "Step up"
           ]
         },
         {
           "phase": "2 x 15",
           "exercises": [
-            "Band curls",
+            "Band curl",
             "Band kickback"
           ]
         },
@@ -33158,18 +33133,18 @@ const exerciseData = {
           "phase": "40/30/20 (15 off)",
           "exercises": [
             "Db goblet squat",
-            "Band swims",
+            "Band swim",
             "Db sumo dl",
-            "Band punches",
+            "Band Punch",
             "Dd toe touch"
           ]
         },
         {
           "phase": "2 x 15",
           "exercises": [
-            "Band curls",
+            "Band curl",
             "Band kickback",
-            "Slider knee tucks"
+            "Slider knee tuck"
           ]
         },
         {
@@ -33222,9 +33197,9 @@ const exerciseData = {
         {
           "phase": "3 x 10",
           "exercises": [
-            "leg lifts",
+            "Leg lifts",
             "Side plank clams L/R",
-            "pointers"
+            "Pointers"
           ]
         },
         {
@@ -33240,7 +33215,7 @@ const exerciseData = {
           "exercises": [
             "Wide outs 40",
             "Kb clean 15",
-            "Kb sh to sh 20",
+            "Kb sh. To sh. 20",
             "Bike crunch 60"
           ]
         },
@@ -33264,7 +33239,7 @@ const exerciseData = {
           "phase": "30/10x3",
           "exercises": [
             "Ab mat coffin",
-            "Pointers"
+            "Pointer"
           ]
         },
         {
@@ -33280,7 +33255,7 @@ const exerciseData = {
           "phase": "3 x 12",
           "exercises": [
             "Band one arm pull",
-            "Leg curls",
+            "Leg curl",
             "Band one arm press"
           ]
         },
@@ -33305,20 +33280,16 @@ const exerciseData = {
         {
           "phase": "30/10x2",
           "exercises": [
-            "Single leg drops",
+            "Single leg drop",
             "Plank march",
-            "penguins",
+            "Penguins",
             "T\u2019s, w\u2019s, l\u2019s",
             "Thoracic mobility",
             "12 reps per side"
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band full row",
             "Cross chest press",
@@ -33348,9 +33319,9 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "Plank taps",
+            "Plank tap",
             "Oblique L",
-            "Plank March",
+            "Plank march",
             "Oblique R"
           ]
         },
@@ -33368,7 +33339,7 @@ const exerciseData = {
           "phase": "20/15/10",
           "exercises": [
             "X - Jacks",
-            "Squats",
+            "squat",
             "Seated Rows"
           ]
         },
@@ -33384,7 +33355,7 @@ const exerciseData = {
           "phase": "2 x 12",
           "exercises": [
             "Band pressdown",
-            "Leg curls",
+            "Leg curl",
             "Db curl to arnold press"
           ]
         }
@@ -33417,7 +33388,7 @@ const exerciseData = {
         {
           "phase": "3 x 12",
           "exercises": [
-            "band curls",
+            "Band curls",
             "Band kick back",
             "Bw calf raise"
           ]
@@ -33431,24 +33402,20 @@ const exerciseData = {
         {
           "phase": "30/10x2",
           "exercises": [
-            "Single leg drops",
+            "Single leg drop",
             "Plank march",
-            "penguins",
+            "Penguins",
             "T\u2019s, w\u2019s, l\u2019s",
             "Thoracic mobility",
             "12 reps per side"
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Db wide out drops",
-            "Band Punches",
-            "Slider knee tucks"
+            "Band Punch",
+            "Slider knee tuck"
           ]
         },
         {
@@ -33480,11 +33447,10 @@ const exerciseData = {
           "phase": "30/10x3",
           "exercises": [
             "Ab walk outs",
-            "reverse crunch",
-            "40/10 x 2",
+            "Reverse crunch",
             "Band bridge",
-            "Band hydrants",
-            "Band kickbacks"
+            "Band hydrant",
+            "Band kickback"
           ]
         },
         {
@@ -33502,9 +33468,8 @@ const exerciseData = {
             "Band drag curl",
             "Band kickback",
             "Slider leg curl",
-            "1x10",
             "Thoracic mob",
-            "Hip flexor",
+            "Hip Flexor",
             "Ankle"
           ]
         }
@@ -33519,11 +33484,10 @@ const exerciseData = {
           "exercises": [
             "Ab rev. crunch",
             "Bikes",
-            "pointers",
-            "40/10 x 2",
+            "Pointers",
             "Band bridge march",
-            "Band hydrants",
-            "Band kickbacks"
+            "Band hydrant",
+            "Band kickback"
           ]
         },
         {
@@ -33541,9 +33505,8 @@ const exerciseData = {
             "Db curl",
             "Band kickback",
             "Slider leg curl",
-            "1x10",
             "Thoracic mob",
-            "Hip flexor",
+            "Hip Flexor",
             "Ankle"
           ]
         }
@@ -33619,7 +33582,7 @@ const exerciseData = {
           "phase": "Hip rotations 10",
           "exercises": [
             "Wall thoracic",
-            "Hip flexors",
+            "Hip Flexor",
             "Ankle mob."
           ]
         },
@@ -33654,7 +33617,7 @@ const exerciseData = {
         {
           "phase": "2x15",
           "exercises": [
-            "Band curls",
+            "Band curl",
             "B. kickback",
             "Butterfly sit up"
           ]
@@ -33667,7 +33630,7 @@ const exerciseData = {
           "phase": "Hip rotations 10",
           "exercises": [
             "Wall thoracic",
-            "Hip flexors",
+            "Hip Flexor",
             "Ankle mob."
           ]
         }
@@ -33680,7 +33643,7 @@ const exerciseData = {
         {
           "phase": "30/10x3",
           "exercises": [
-            "Band squats",
+            "Band squat",
             "Band lateral taps"
           ]
         },
@@ -33695,7 +33658,7 @@ const exerciseData = {
         {
           "phase": "3 x 10",
           "exercises": [
-            "Bulgarians",
+            "Bulgarian Split Squat",
             "Single leg curl",
             "Single calf raise"
           ]
@@ -33704,7 +33667,7 @@ const exerciseData = {
           "phase": "3 x 10",
           "exercises": [
             "Db tricep ext",
-            "Db curls",
+            "Db curl",
             "Box jump squat"
           ]
         }
@@ -33718,7 +33681,7 @@ const exerciseData = {
           "phase": "Tabata holds",
           "exercises": [
             "Basic crunch",
-            "Leg lifts",
+            "Leg lift",
             "Star crunch L",
             "Star crunch R"
           ]
@@ -33729,7 +33692,7 @@ const exerciseData = {
             "Bridge",
             "Hydrant L",
             "Hydrant R",
-            "Squat"
+            "squat"
           ]
         },
         {
@@ -33754,7 +33717,7 @@ const exerciseData = {
           "phase": "Finisher 10",
           "exercises": [
             "Plank up",
-            "Sh. tap",
+            "Sh tap",
             "Dd toe touch"
           ]
         }
@@ -33782,9 +33745,9 @@ const exerciseData = {
         {
           "phase": "60/45/30",
           "exercises": [
-            "Band swims",
+            "Band swim",
             "Kb elev squat",
-            "Band punches",
+            "Band Punch",
             "L sits"
           ]
         },
@@ -33800,7 +33763,7 @@ const exerciseData = {
           "phase": "Finisher 10",
           "exercises": [
             "Plank up",
-            "Sh. tap",
+            "Sh tap",
             "Dd toe touch"
           ]
         }
@@ -33854,7 +33817,7 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "Single bridge L",
+            "Single bridge l",
             "Single b. R",
             "Abduction L",
             "Abduction R"
@@ -33892,7 +33855,7 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "Single bridge L",
+            "Single bridge l",
             "Single b. R",
             "Abduction L",
             "Abduction R"
@@ -33930,7 +33893,7 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "Single bridge L",
+            "Single bridge l",
             "Single b. R",
             "Abduction L",
             "Abduction R"
@@ -34023,7 +33986,7 @@ const exerciseData = {
           "phase": "Tabata",
           "exercises": [
             "Band hydrant L",
-            "Band bridge L",
+            "Band bridge l",
             "Band hydrant R",
             "Bridge R"
           ]
@@ -34135,7 +34098,7 @@ const exerciseData = {
           "phase": "Tabata",
           "exercises": [
             "Band hydrant L",
-            "Band bridge L",
+            "Band bridge l",
             "Band hydrant R",
             "Bridge R"
           ]
@@ -34213,7 +34176,7 @@ const exerciseData = {
           "exercises": [
             "Lateral walk 3",
             "Pulse squat",
-            "Kick backs"
+            "Kick back"
           ]
         },
         {
@@ -34225,11 +34188,7 @@ const exerciseData = {
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "25/20/15/10",
+          "phase": "Chipper 25/20/15/10",
           "exercises": [
             "Band flye",
             "Band pull thru",
@@ -34256,7 +34215,7 @@ const exerciseData = {
           "exercises": [
             "f/b b. walk 3",
             "Pulse squat",
-            "Plank jacks"
+            "Plank jack"
           ]
         },
         {
@@ -34268,15 +34227,11 @@ const exerciseData = {
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "25/20/15/10",
+          "phase": "Chipper 25/20/15/10",
           "exercises": [
             "Band press",
             "Band pull thru",
-            "Band s. row"
+            "Band s. Row"
           ]
         },
         {
@@ -34297,10 +34252,9 @@ const exerciseData = {
         {
           "phase": "25/10x3",
           "exercises": [
-            "Leg lifts",
-            "Flutters",
-            "Toe touch",
-            "Flutters"
+            "Leg lift",
+            "Flutter",
+            "Toe touch"
           ]
         },
         {
@@ -34309,7 +34263,6 @@ const exerciseData = {
             "Band single bridge L",
             "Abduction",
             "Bridge R",
-            "Abduction",
             "Ramp 3min",
             "Band seals 10",
             "Band f/b 10",
@@ -34346,14 +34299,14 @@ const exerciseData = {
         {
           "phase": "30/5x3",
           "exercises": [
-            "Plank dips",
+            "Plank dip",
             "Dead bug"
           ]
         },
         {
           "phase": "Tabata",
           "exercises": [
-            "F. lunge",
+            "Forward Lunge",
             "45 lunge",
             "Lateral",
             "Reverse"
@@ -34444,12 +34397,9 @@ const exerciseData = {
           "exercises": [
             "Band s. Row",
             "Rdl",
-            "Band press"
+            "Band press",
+            "Cat cow 5 x"
           ]
-        },
-        {
-          "phase": "Cat cow 5 x",
-          "exercises": []
         },
         {
           "phase": "2x12",
@@ -34506,7 +34456,7 @@ const exerciseData = {
           "exercises": [
             "Db floor press",
             "Kb sumo deadlift",
-            "Leg lifts"
+            "Leg lift"
           ]
         }
       ]
@@ -34534,7 +34484,6 @@ const exerciseData = {
         {
           "phase": "Ladder",
           "exercises": [
-            "2-12",
             "Kb swing",
             "Band skier",
             "V up"
@@ -34576,8 +34525,8 @@ const exerciseData = {
             "60,45,30 sec.(20)",
             "Dd toe touch",
             "3 way squat",
-            "Runner claps",
-            "Plank ups"
+            "Runner clap",
+            "Plank up"
           ]
         },
         {
@@ -34618,7 +34567,6 @@ const exerciseData = {
         {
           "phase": "Spartan",
           "exercises": [
-            "10-25",
             "Seated band row",
             "Db \u00be squats",
             "Toe grabs"
@@ -34629,7 +34577,7 @@ const exerciseData = {
           "exercises": [
             "1 \u00bd hip thrust",
             "Single bridge to chest press",
-            "Db hammer curls",
+            "Db hammer curl",
             "finisher"
           ]
         }
@@ -34659,7 +34607,6 @@ const exerciseData = {
         {
           "phase": "Spartan",
           "exercises": [
-            "10-25",
             "Seated band row",
             "Db \u00be squats",
             "Slider tucks"
@@ -34670,7 +34617,7 @@ const exerciseData = {
           "exercises": [
             "1 \u00bd hip thrust",
             "Single bridge to chest press",
-            "Db hammer curls",
+            "Db hammer curl",
             "finisher"
           ]
         }
@@ -34694,7 +34641,7 @@ const exerciseData = {
             "Db t flies",
             "Band Drag curls",
             "Wall sh glide",
-            "Band kickbacks"
+            "Band kickback"
           ]
         }
       ]
@@ -34706,7 +34653,7 @@ const exerciseData = {
         {
           "phase": "25/10x3",
           "exercises": [
-            "Plank dips",
+            "Plank dip",
             "Side plank p. L",
             "Side plank p. R"
           ]
@@ -34722,7 +34669,7 @@ const exerciseData = {
         {
           "phase": "Ladder 10-2",
           "exercises": [
-            "Kb cleans",
+            "Kb clean",
             "Db thruster"
           ]
         },
@@ -34739,7 +34686,7 @@ const exerciseData = {
           "exercises": [
             "Db floor press",
             "Kb sumo deadlift",
-            "Leg lifts"
+            "Leg lift"
           ]
         }
       ]
@@ -34752,7 +34699,6 @@ const exerciseData = {
           "phase": "25/5x3",
           "exercises": [
             "Plank reach",
-            "Side reach t",
             "Side reach t"
           ]
         },
@@ -34761,13 +34707,12 @@ const exerciseData = {
           "exercises": [
             "Lateral walk 3",
             "Pulse squat",
-            "Kick backs"
+            "Kick back"
           ]
         },
         {
           "phase": "Ladder",
           "exercises": [
-            "2-12",
             "Kb swing",
             "Band swim",
             "V up"
@@ -34796,7 +34741,6 @@ const exerciseData = {
           "phase": "25/5x3",
           "exercises": [
             "Plank reach",
-            "Side reach t",
             "Side reach t"
           ]
         },
@@ -34805,13 +34749,12 @@ const exerciseData = {
           "exercises": [
             "Lateral walk 3",
             "Pulse squat",
-            "Kick backs"
+            "Kick back"
           ]
         },
         {
           "phase": "Ladder",
           "exercises": [
-            "2-12",
             "Kb swing",
             "Band swim",
             "V up"
@@ -34856,11 +34799,7 @@ const exerciseData = {
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "25/20/15/10",
+          "phase": "Chipper 25/20/15/10",
           "exercises": [
             "Band flye",
             "Band pull thru",
@@ -34888,7 +34827,6 @@ const exerciseData = {
           "phase": "Tabata",
           "exercises": [
             "Bikes",
-            "Side plank Pulse",
             "Side plank pulse",
             "Runner clap"
           ]
@@ -34928,14 +34866,14 @@ const exerciseData = {
         {
           "phase": "30/5x3",
           "exercises": [
-            "Plank dips",
+            "Plank dip",
             "Dead bug"
           ]
         },
         {
           "phase": "Tabata",
           "exercises": [
-            "F. lunge",
+            "Forward Lunge",
             "45 lunge",
             "Lateral",
             "Reverse",
@@ -34979,7 +34917,7 @@ const exerciseData = {
         {
           "phase": "Ladder 5 to 10",
           "exercises": [
-            "Heels elev. squat",
+            "Heels elev squat",
             "Face pull",
             "Butterfly sit up"
           ]
@@ -35009,7 +34947,7 @@ const exerciseData = {
           "phase": "30/10x3",
           "exercises": [
             "Ab mat coffin",
-            "Pointers"
+            "Pointer"
           ]
         },
         {
@@ -35024,9 +34962,9 @@ const exerciseData = {
         {
           "phase": "3 x 12",
           "exercises": [
-            "Band one-arm pull",
-            "Leg curls",
-            "Band one-arm press"
+            "Band one arm pull",
+            "Leg curl",
+            "Band one arm press"
           ]
         },
         {
@@ -35050,10 +34988,10 @@ const exerciseData = {
         {
           "phase": "2 x 30",
           "exercises": [
-            "M.c.",
+            "M.c",
             "Bw rus twist",
             "Bikes",
-            "Leg lifts"
+            "Leg lift"
           ]
         },
         {
@@ -35078,7 +35016,7 @@ const exerciseData = {
           "phase": "2 x 15",
           "exercises": [
             "Band facepull",
-            "Wall sit curls",
+            "Wall sit curl",
             "Band tricep pressdowns"
           ]
         }
@@ -35093,7 +35031,7 @@ const exerciseData = {
           "exercises": [
             "Basic crunch",
             "Penguins",
-            "Supermans"
+            "Superman"
           ]
         },
         {
@@ -35117,7 +35055,7 @@ const exerciseData = {
           "exercises": [
             "Db inc. curls",
             "Db tricep ext",
-            "Calf raises"
+            "Calf raise"
           ]
         }
       ]
@@ -35138,7 +35076,7 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "Band seals",
+            "Band seal",
             "Band bridge",
             "Band f/b jack",
             "Band kickback"
@@ -35170,14 +35108,14 @@ const exerciseData = {
         {
           "phase": "30/5x3",
           "exercises": [
-            "Plank dips",
+            "Plank dip",
             "Dead bug"
           ]
         },
         {
           "phase": "Tabata",
           "exercises": [
-            "F. lunge",
+            "Forward Lunge",
             "45 lunge",
             "Lateral",
             "Reverse"
@@ -35213,14 +35151,14 @@ const exerciseData = {
         {
           "phase": "30/5x3",
           "exercises": [
-            "Plank dips",
+            "Plank dip",
             "Dead bug"
           ]
         },
         {
           "phase": "Tabata",
           "exercises": [
-            "F. lunge",
+            "Forward Lunge",
             "45 lunge",
             "Lateral",
             "Reverse"
@@ -35258,9 +35196,9 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "Plank taps",
+            "Plank tap",
             "Oblique L",
-            "Plank March",
+            "Plank march",
             "Oblique R"
           ]
         },
@@ -35278,7 +35216,7 @@ const exerciseData = {
           "phase": "20/15/10",
           "exercises": [
             "X - Jacks",
-            "Squats",
+            "squat",
             "Seated Rows"
           ]
         },
@@ -35294,7 +35232,7 @@ const exerciseData = {
           "phase": "2 x 12",
           "exercises": [
             "Band pressdown",
-            "Leg curls",
+            "Leg curl",
             "Db curl to arnold press"
           ]
         }
@@ -35369,18 +35307,18 @@ const exerciseData = {
           "phase": "40/30/20 (15 off)",
           "exercises": [
             "Db goblet squat",
-            "Band swims",
+            "Band swim",
             "Db sumo dl",
-            "Band punches",
+            "Band Punch",
             "Dd toe touch"
           ]
         },
         {
           "phase": "2 x 15",
           "exercises": [
-            "Band curls",
+            "Band curl",
             "Band kickback",
-            "Slider knee tucks"
+            "Slider knee tuck"
           ]
         }
       ]
@@ -35403,8 +35341,8 @@ const exerciseData = {
           "exercises": [
             "M.c",
             "Wide outs",
-            "Sh. taps",
-            "Flutters"
+            "Sh tap",
+            "Flutter"
           ]
         },
         {
@@ -35538,7 +35476,7 @@ const exerciseData = {
             "Band facepull",
             "Band Drag curls",
             "Band Overhead ext",
-            "Calf raises"
+            "Calf raise"
           ]
         }
       ]
@@ -35573,7 +35511,7 @@ const exerciseData = {
             "Band facepull",
             "Band Drag curls",
             "Band Overhead ext",
-            "Calf raises"
+            "Calf raise"
           ]
         }
       ]
@@ -35586,15 +35524,15 @@ const exerciseData = {
           "phase": "Tabata",
           "exercises": [
             "Heels to heav",
-            "Flutters",
+            "Flutter",
             "Coffin",
-            "bikes"
+            "Bikes"
           ]
         },
         {
           "phase": "Tabata",
           "exercises": [
-            "F. lunge",
+            "Forward Lunge",
             "R. lunge",
             "L. lunge L",
             "L. lunge R"
@@ -35633,15 +35571,15 @@ const exerciseData = {
           "phase": "Tabata",
           "exercises": [
             "Heels to heav",
-            "Flutters",
+            "Flutter",
             "Coffin",
-            "bikes"
+            "Bikes"
           ]
         },
         {
           "phase": "Tabata",
           "exercises": [
-            "F. lunge",
+            "Forward Lunge",
             "R. lunge",
             "L. lunge L",
             "L. lunge R"
@@ -35695,11 +35633,7 @@ const exerciseData = {
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "25/20/15/10",
+          "phase": "Chipper 25/20/15/10",
           "exercises": [
             "Band flye",
             "Band pull thru",
@@ -35734,7 +35668,7 @@ const exerciseData = {
           "phase": "Ladder 5-10",
           "exercises": [
             "Pend swing",
-            "Db thrusters"
+            "Db thruster"
           ]
         },
         {
@@ -35773,7 +35707,7 @@ const exerciseData = {
           "exercises": [
             "Leg up reach L",
             "Leg up reach R",
-            "Leg lifts",
+            "Leg lift",
             "Bikes"
           ]
         },
@@ -35804,7 +35738,7 @@ const exerciseData = {
           "exercises": [
             "Db floor press",
             "Kb sumo deadlift",
-            "Leg lifts"
+            "Leg lift"
           ]
         }
       ]
@@ -35833,7 +35767,6 @@ const exerciseData = {
         {
           "phase": "Spartan",
           "exercises": [
-            "10-25",
             "Seated band row",
             "Db \u00be squats",
             "Toe grabs"
@@ -35867,7 +35800,7 @@ const exerciseData = {
           "phase": "Tabata",
           "exercises": [
             "Band hydrant L",
-            "Band bridge L",
+            "Band bridge l",
             "Band hydrant R",
             "Bridge R"
           ]
@@ -35876,7 +35809,7 @@ const exerciseData = {
           "phase": "Spartan",
           "exercises": [
             "Band squat row",
-            "Sh taps",
+            "Sh tap",
             "Kb swing"
           ]
         },
@@ -35910,7 +35843,7 @@ const exerciseData = {
           "phase": "Tabata",
           "exercises": [
             "Band hydrant L",
-            "Band bridge L",
+            "Band bridge l",
             "Band hydrant R",
             "Bridge R"
           ]
@@ -35919,7 +35852,7 @@ const exerciseData = {
           "phase": "Spartan",
           "exercises": [
             "Band squat row",
-            "Sh taps",
+            "Sh tap",
             "Kb swing"
           ]
         },
@@ -35944,9 +35877,9 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "Plank taps",
+            "Plank tap",
             "Oblique L",
-            "Plank March",
+            "Plank march",
             "Oblique R"
           ]
         },
@@ -35964,7 +35897,7 @@ const exerciseData = {
           "phase": "20/15/10",
           "exercises": [
             "X - Jacks",
-            "Squats",
+            "squat",
             "Seated Rows"
           ]
         },
@@ -35981,7 +35914,7 @@ const exerciseData = {
           "phase": "2 x 12",
           "exercises": [
             "Band pressdown",
-            "Leg curls",
+            "Leg curl",
             "Db curl to arnold press"
           ]
         }
@@ -35996,15 +35929,15 @@ const exerciseData = {
           "exercises": [
             "Mod v up",
             "Plank tap",
-            "Oblique l",
-            "Oblique r"
+            "Oblique L",
+            "Oblique R"
           ]
         },
         {
           "phase": "Tabata",
           "exercises": [
             "F lunge",
-            "R lunge",
+            "R. lunge",
             "Lateral lunge",
             "Runner lunge"
           ]
@@ -36022,7 +35955,7 @@ const exerciseData = {
           "phase": "3 x 10",
           "exercises": [
             "Db side lateral",
-            "Step ups",
+            "Step up",
             "B. drag curls",
             "B. kick backs"
           ]
@@ -36036,7 +35969,7 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "Single bridge L",
+            "Single bridge l",
             "Single b. R",
             "Abduction L",
             "Abduction R"
@@ -36055,7 +35988,7 @@ const exerciseData = {
           "phase": "3 x 10",
           "exercises": [
             "Db side lateral",
-            "Step ups",
+            "Step up",
             "B. drag curls",
             "B. kick backs"
           ]
@@ -36096,7 +36029,7 @@ const exerciseData = {
           "phase": "3 x 12",
           "exercises": [
             "Drag curl",
-            "Kick backs",
+            "Kick back",
             "Easy leg curls"
           ]
         }
@@ -36119,13 +36052,12 @@ const exerciseData = {
           "exercises": [
             "Lateral walk 3",
             "Pulse squat",
-            "Kick backs"
+            "Kick back"
           ]
         },
         {
           "phase": "Ladder",
           "exercises": [
-            "2-12",
             "Kb swing",
             "Band skier",
             "V up"
@@ -36209,14 +36141,14 @@ const exerciseData = {
             "Kb swing",
             "V up",
             "Band Skiers",
-            "Leg Lifts"
+            "Leg lifts"
           ]
         },
         {
           "phase": "Ladder 12/2",
           "exercises": [
             "Band row",
-            "Sumo Dl",
+            "Sumo dl",
             "Band chest press",
             "10 man maker",
             "Burpee",
@@ -36234,20 +36166,16 @@ const exerciseData = {
         {
           "phase": "30/10x2",
           "exercises": [
-            "Single leg drops",
+            "Single leg drop",
             "Toe touch",
-            "penguins",
+            "Penguins",
             "T\u2019s, w\u2019s, l\u2019s",
             "Thoracic mobility",
             "12 reps per side"
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "25/20/15",
+          "phase": "Chipper 25/20/15",
           "exercises": [
             "Band squat row",
             "Drop squat",
@@ -36260,7 +36188,7 @@ const exerciseData = {
           "exercises": [
             "Lunge squat lunge",
             "Push up knee tuck",
-            "Atwp"
+            "atwp"
           ]
         },
         {
@@ -36294,9 +36222,9 @@ const exerciseData = {
           "phase": "3 min ramp",
           "exercises": [
             "Wide drops",
-            "M.c.",
-            "R. Lunge",
-            "Sh Taps"
+            "M.c",
+            "R. lunge",
+            "Sh. taps"
           ]
         },
         {
@@ -36311,7 +36239,7 @@ const exerciseData = {
         {
           "phase": "3x10",
           "exercises": [
-            "Db curls",
+            "Db curl",
             "Db tricep ext",
             "Step out lunge",
             "finisher"
@@ -36327,9 +36255,9 @@ const exerciseData = {
           "phase": "Tabata",
           "exercises": [
             "Heels to heav",
-            "Flutters",
+            "Flutter",
             "Coffin",
-            "bikes"
+            "Bikes"
           ]
         },
         {
@@ -36407,7 +36335,7 @@ const exerciseData = {
           "exercises": [
             "Band pull-thu",
             "Db tricep ext",
-            "Db curls"
+            "Db curl"
           ]
         }
       ]
@@ -36419,16 +36347,16 @@ const exerciseData = {
         {
           "phase": "3 x 10",
           "exercises": [
-            "Bulgarians",
-            "Db side laterals",
-            "Leg curls"
+            "Bulgarian Split Squat",
+            "Db side lateral",
+            "Leg curl"
           ]
         },
         {
           "phase": "2 x 15",
           "exercises": [
             "T flies",
-            "Knee tucks",
+            "Knee tuck",
             "60 finisher",
             "L,S,L",
             "Sh tap to DD toe touch",
@@ -36445,7 +36373,7 @@ const exerciseData = {
           "phase": "3 x 10",
           "exercises": [
             "One arm row",
-            "Stag. Rdl",
+            "Stag. rdl",
             "Strict press"
           ]
         },
@@ -36453,7 +36381,7 @@ const exerciseData = {
           "phase": "3 x 10",
           "exercises": [
             "Heels elev squat",
-            "Band flyes",
+            "Band flye",
             "Db t flies"
           ]
         },
@@ -36477,14 +36405,14 @@ const exerciseData = {
           "phase": "30/10x3",
           "exercises": [
             "See saw plank",
-            "Mod v ups",
+            "Mod v up",
             "Bike crunch"
           ]
         },
         {
           "phase": "30/10x3",
           "exercises": [
-            "Band single bridge l",
+            "Band single bridge L",
             "Band jump",
             "squat"
           ]
@@ -36520,14 +36448,14 @@ const exerciseData = {
           "phase": "30/10x3",
           "exercises": [
             "See saw plank",
-            "Mod v ups",
+            "Mod v up",
             "Bike crunch"
           ]
         },
         {
           "phase": "30/10x3",
           "exercises": [
-            "Band single bridge l",
+            "Band single bridge L",
             "Band jump",
             "squat"
           ]
@@ -36595,7 +36523,7 @@ const exerciseData = {
             "Db t flies",
             "Band Drag curls",
             "Wall sh glide",
-            "Band kickbacks"
+            "Band kickback"
           ]
         }
       ]
@@ -36615,7 +36543,7 @@ const exerciseData = {
           "exercises": [
             "Band squ. Row",
             "Pend kb swing",
-            "Leg lift swipes"
+            "Leg lift swipe"
           ]
         },
         {
@@ -36647,7 +36575,7 @@ const exerciseData = {
           "phase": "Tabata",
           "exercises": [
             "Runner crunch",
-            "Supermans",
+            "Superman",
             "Leg lift swipe",
             "Wide knee tuck"
           ]
@@ -36667,7 +36595,7 @@ const exerciseData = {
             "Sumo deadlift",
             "Shoulder press",
             "Rdl",
-            "Face pulls"
+            "Face pull"
           ]
         },
         {
@@ -36688,7 +36616,7 @@ const exerciseData = {
         {
           "phase": "25/10x3",
           "exercises": [
-            "Band seals",
+            "Band seal",
             "Band leg lift adb",
             "Band jump squat",
             "Band plank jack"
@@ -36709,7 +36637,7 @@ const exerciseData = {
           "exercises": [
             "Sumo dead",
             "Push press",
-            "Squat",
+            "squat",
             "Rdl w row"
           ]
         },
@@ -36717,7 +36645,7 @@ const exerciseData = {
           "phase": "3 x 10",
           "exercises": [
             "Floor press",
-            "Leg curls",
+            "Leg curl",
             "Tucks"
           ]
         }
@@ -36731,28 +36659,24 @@ const exerciseData = {
           "phase": "Tabata",
           "exercises": [
             "High knees",
-            "Plank jacks",
-            "Speed skaters",
+            "Plank jack",
+            "Speed skater",
             "Dd toe touch"
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band seal jack",
             "Band alt row",
             "Band squat",
-            "Band punch"
+            "Band Punch"
           ]
         },
         {
           "phase": "4 x 8",
           "exercises": [
-            "Db Rdl",
+            "Db rdl",
             "Db push press",
             "Sumo to high pull",
             "Db crunch"
@@ -36811,11 +36735,10 @@ const exerciseData = {
             "Reach left",
             "Hold",
             "Reach right",
-            "Hold",
             "Leg lift",
             "Flutter",
             "Bikes",
-            "rest",
+            "Rest",
             "2 to 6 ladder",
             "Box jump sq",
             "Box push up"
@@ -36826,15 +36749,15 @@ const exerciseData = {
           "exercises": [
             "Db floor press",
             "Kb sumos",
-            "Db bent rows",
-            "Knee tucks"
+            "Db bent row",
+            "Knee tuck"
           ]
         },
         {
           "phase": "3 x 10",
           "exercises": [
             "Db curl press",
-            "Leg curls",
+            "Leg curl",
             "Db tricep ext"
           ]
         },
@@ -36891,7 +36814,7 @@ const exerciseData = {
           "phase": "Ladder 5 to 10",
           "exercises": [
             "Drop squat",
-            "Push ups"
+            "Push up"
           ]
         },
         {
@@ -36927,10 +36850,9 @@ const exerciseData = {
         {
           "phase": "Ladder",
           "exercises": [
-            "12-4",
             "Kb swing",
             "Band chest press",
-            "Knee tucks"
+            "Knee tuck"
           ]
         },
         {
@@ -36938,8 +36860,8 @@ const exerciseData = {
           "exercises": [
             "Db bent row",
             "Single press bridge",
-            "Leg curls",
-            "Db side laterals",
+            "Leg curl",
+            "Db side lateral",
             "21s",
             "Band curl",
             "Band kickback"
@@ -36954,19 +36876,19 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "Plank dips",
+            "Plank dip",
             "Runner clap",
             "Plank march",
-            "Leg lifts"
+            "Leg lift"
           ]
         },
         {
           "phase": "Tabata",
           "exercises": [
             "Drop squat",
-            "M.c.",
+            "M.c",
             "Runner lunge",
-            "Sh. tap",
+            "Sh tap",
             "Db complex"
           ]
         },
@@ -37001,28 +36923,23 @@ const exerciseData = {
         {
           "phase": "Tabata holds",
           "exercises": [
-            "Leg lifts",
+            "Leg lift",
             "Toe touch",
-            "Side plank pulse",
             "Side plank pulse"
           ]
         },
         {
           "phase": "Tabata holds",
           "exercises": [
-            "Squat",
-            "Split squat l",
-            "Split squat r",
+            "squat",
+            "Split squat L",
+            "Split squat R",
             "Wide outs",
-            "rest"
+            "Rest"
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band plank jack",
             "Band bridge",
@@ -37035,14 +36952,14 @@ const exerciseData = {
             "Db floor press",
             "Kb deadlift",
             "Db wide row",
-            "Leg curls"
+            "Leg curl"
           ]
         },
         {
           "phase": "60/15x1",
           "exercises": [
-            "Wall sit curls",
-            "Plank ups",
+            "Wall sit curl",
+            "Plank up",
             "Lunge squat lunge"
           ]
         }
@@ -37134,7 +37051,7 @@ const exerciseData = {
           "phase": "30/10x3",
           "exercises": [
             "3 way crunch",
-            "Pointers"
+            "Pointer"
           ]
         },
         {
@@ -37236,7 +37153,7 @@ const exerciseData = {
             "Band facepull",
             "Band Drag curls",
             "Band Overhead ext",
-            "Calf raises"
+            "Calf raise"
           ]
         }
       ]
@@ -37277,7 +37194,7 @@ const exerciseData = {
           "phase": "3 x 8",
           "exercises": [
             "Curl to arnold",
-            "Bulgarians",
+            "Bulgarian Split Squat",
             "Leg circles"
           ]
         }
@@ -37299,16 +37216,12 @@ const exerciseData = {
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band flye",
             "Band pull thru",
             "Band facepull",
-            "Hip flexor",
+            "Hip Flexor",
             "Hands free hips",
             "Man maker",
             "Stretch"
@@ -37339,11 +37252,7 @@ const exerciseData = {
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "25/20/15/10",
+          "phase": "Chipper 25/20/15/10",
           "exercises": [
             "Band flye",
             "Band pull thru",
@@ -37430,7 +37339,7 @@ const exerciseData = {
             "Ss right",
             "Ss left",
             "Runner lunge",
-            "Bridges"
+            "Bridge"
           ]
         },
         {
@@ -37469,7 +37378,7 @@ const exerciseData = {
             "Ss right",
             "Ss left",
             "Runner lunge",
-            "Bridges"
+            "Bridge"
           ]
         },
         {
@@ -37479,10 +37388,6 @@ const exerciseData = {
             "Kb swing 20",
             "Db alt f. Press 20"
           ]
-        },
-        {
-          "phase": "60 sec penguins",
-          "exercises": []
         },
         {
           "phase": "2 x 8",
@@ -37503,14 +37408,14 @@ const exerciseData = {
           "exercises": [
             "Reach crunch",
             "Reverse crunch",
-            "Pointers"
+            "Pointer"
           ]
         },
         {
           "phase": "5 min ladder",
           "exercises": [
             "5 up",
-            "Push ups",
+            "Push up",
             "Prisoner jump squat"
           ]
         },
@@ -37572,7 +37477,7 @@ const exerciseData = {
         {
           "phase": "25/10x3",
           "exercises": [
-            "Plank dips",
+            "Plank dip",
             "Side plank p. L",
             "Side plank p. R"
           ]
@@ -37604,7 +37509,7 @@ const exerciseData = {
           "exercises": [
             "Db floor press",
             "Kb sumo deadlift",
-            "Leg lifts"
+            "Leg lift"
           ]
         }
       ]
@@ -37663,18 +37568,17 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "Leg lifts",
-            "Mod v ups",
+            "Leg lift",
+            "Mod v up",
             "Bikes",
-            "Plank dips"
+            "Plank dip"
           ]
         },
         {
           "phase": "Ladder 5 up for 5 min",
           "exercises": [
-            "Push ups",
+            "Push up",
             "Pend kb swing",
-            "2 rounds",
             "Db s.s. press l 15",
             "Db s.sq press r 15",
             "P.u.p. Row l 15",
@@ -37684,7 +37588,7 @@ const exerciseData = {
         {
           "phase": "3 x 15",
           "exercises": [
-            "Band curls",
+            "Band curl",
             "Db kickbacks",
             "Bag hip thrust"
           ]
@@ -37698,16 +37602,16 @@ const exerciseData = {
         {
           "phase": "Tabata",
           "exercises": [
-            "Leg lifts",
-            "Mod v ups",
+            "Leg lift",
+            "Mod v up",
             "Bikes",
-            "Plank dips"
+            "Plank dip"
           ]
         },
         {
           "phase": "Ladder 5 up for 5 min",
           "exercises": [
-            "Push ups",
+            "Push up",
             "Pend kb swing"
           ]
         },
@@ -37722,7 +37626,7 @@ const exerciseData = {
         {
           "phase": "3 x 15",
           "exercises": [
-            "Band curls",
+            "Band curl",
             "Db kickbacks",
             "Bag hip thrust"
           ]
@@ -37762,8 +37666,8 @@ const exerciseData = {
           "phase": "3 x 10",
           "exercises": [
             "Stag. rdl",
-            "Band straight arm lat pulls",
-            "Band chest flyes"
+            "Band straight arm lat pull",
+            "Band chest flye"
           ]
         },
         {
@@ -37775,11 +37679,7 @@ const exerciseData = {
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Drop squat",
             "Double crunch"
@@ -37796,12 +37696,8 @@ const exerciseData = {
           "exercises": [
             "Leg circle L",
             "Leg circle R",
-            "Slider m. c."
+            "Slider m.c."
           ]
-        },
-        {
-          "phase": "3 min 2 part get up",
-          "exercises": []
         },
         {
           "phase": "Spartan",
@@ -37838,13 +37734,12 @@ const exerciseData = {
           "exercises": [
             "Lateral walk 3",
             "Pulse squat",
-            "Kick backs"
+            "Kick back"
           ]
         },
         {
           "phase": "Ladder",
           "exercises": [
-            "2-12",
             "Kb swing",
             "Band swim",
             "V up"
@@ -37872,20 +37767,16 @@ const exerciseData = {
         {
           "phase": "30/10x2",
           "exercises": [
-            "Single leg drops",
+            "Single leg drop",
             "Plank march",
-            "penguins",
+            "Penguins",
             "T\u2019s, w\u2019s, l\u2019s",
             "Thoracic mobility",
             "12 reps per side"
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band squat row",
             "Punches",
@@ -37893,11 +37784,7 @@ const exerciseData = {
           ]
         },
         {
-          "phase": "Lunge matrix",
-          "exercises": []
-        },
-        {
-          "phase": "5 per side",
+          "phase": "Lunge matrix 5 per side",
           "exercises": [
             "3 way push up 5 each"
           ]
@@ -37956,7 +37843,7 @@ const exerciseData = {
         {
           "phase": "3 x 15",
           "exercises": [
-            "Band curls",
+            "Band curl",
             "Band Overhead ext",
             "Travel lunge 8/8"
           ]

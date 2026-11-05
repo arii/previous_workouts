@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-11-03T06:01:24.192327",
+    "generated_at": "2026-11-03T06:37:56.355131",
     "source": "raw revision files (regenerated)",
     "total_files_processed": 227,
     "summary": {
@@ -201,9 +201,9 @@
       },
       "exercise_counts_by_category": {
         "Warmup": 998,
-        "Cardio": 145,
+        "Cardio": 225,
         "Strength": 376,
-        "Accessory": 1669,
+        "Accessory": 1591,
         "Recovery": 14
       },
       "most_common_exercises": {
@@ -218,11 +218,12 @@
         "Kb swing": 20,
         "Burpee": 20,
         "Hip thrust": 20,
-        "Kb swing 20": 19,
         "Stretch": 19,
+        "Kb swing 20": 19,
         "Rdl": 19,
         "Butterfly pump": 18
-      }
+      },
+      "total_unique_exercises": 1023
     }
   },
   "categorized_exercises": {
@@ -6218,6 +6219,42 @@
     ],
     "Cardio": [
       {
+        "exercise": "Kb swing",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-09-30",
+        "filename": "revision_100391_2024-09-30_14-51-28.txt"
+      },
+      {
+        "exercise": "Drop squat",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-09-30",
+        "filename": "revision_100391_2024-09-30_14-51-28.txt"
+      },
+      {
+        "exercise": "Slider tucks",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-09-30",
+        "filename": "revision_100391_2024-09-30_14-51-28.txt"
+      },
+      {
+        "exercise": "Band full row",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-10-04",
+        "filename": "revision_100575_2024-10-04_14-58-03.txt"
+      },
+      {
+        "exercise": "Cross chest press",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-10-04",
+        "filename": "revision_100575_2024-10-04_14-58-03.txt"
+      },
+      {
+        "exercise": "Pull thru",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-10-04",
+        "filename": "revision_100575_2024-10-04_14-58-03.txt"
+      },
+      {
         "exercise": "Kb clean",
         "phase": "Ladder 6-2",
         "date": "2024-10-11",
@@ -6320,6 +6357,24 @@
         "filename": "revision_104138_2025-01-03_15-55-42.txt"
       },
       {
+        "exercise": "Band full row",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-01-03",
+        "filename": "revision_104139_2025-01-03_15-56-42.txt"
+      },
+      {
+        "exercise": "Cross chest press",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-01-03",
+        "filename": "revision_104139_2025-01-03_15-56-42.txt"
+      },
+      {
+        "exercise": "Pull thru",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-01-03",
+        "filename": "revision_104139_2025-01-03_15-56-42.txt"
+      },
+      {
         "exercise": "Pend swing",
         "phase": "Ladder 5-10",
         "date": "2025-01-27",
@@ -6358,6 +6413,30 @@
       {
         "exercise": "Wall t spine mob 12",
         "phase": "Ladder",
+        "date": "2025-03-14",
+        "filename": "revision_105883_2025-03-14_14-53-55.txt"
+      },
+      {
+        "exercise": "Band press",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2025-03-14",
+        "filename": "revision_105883_2025-03-14_14-53-55.txt"
+      },
+      {
+        "exercise": "Band pull thru",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2025-03-14",
+        "filename": "revision_105883_2025-03-14_14-53-55.txt"
+      },
+      {
+        "exercise": "Band seated row",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2025-03-14",
+        "filename": "revision_105883_2025-03-14_14-53-55.txt"
+      },
+      {
+        "exercise": "Hip flexor mob",
+        "phase": "Chipper 25/20/15/10",
         "date": "2025-03-14",
         "filename": "revision_105883_2025-03-14_14-53-55.txt"
       },
@@ -6410,6 +6489,30 @@
         "filename": "revision_106034_2025-03-28_15-25-33.txt"
       },
       {
+        "exercise": "Band full row",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-04-11",
+        "filename": "revision_106564_2025-04-11_14-39-29.txt"
+      },
+      {
+        "exercise": "Cross chest press",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-04-11",
+        "filename": "revision_106564_2025-04-11_14-39-29.txt"
+      },
+      {
+        "exercise": "Pull thru",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-04-11",
+        "filename": "revision_106564_2025-04-11_14-39-29.txt"
+      },
+      {
+        "exercise": "Hip Flexor",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-04-11",
+        "filename": "revision_106564_2025-04-11_14-39-29.txt"
+      },
+      {
         "exercise": "2-12",
         "phase": "Ladder",
         "date": "2025-04-25",
@@ -6434,6 +6537,30 @@
         "filename": "revision_106959_2025-04-25_14-54-54.txt"
       },
       {
+        "exercise": "Band full row",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-05-09",
+        "filename": "revision_107557_2025-05-09_15-00-50.txt"
+      },
+      {
+        "exercise": "Cross chest press",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-05-09",
+        "filename": "revision_107557_2025-05-09_15-00-50.txt"
+      },
+      {
+        "exercise": "Pull thru",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-05-09",
+        "filename": "revision_107557_2025-05-09_15-00-50.txt"
+      },
+      {
+        "exercise": "Hip Flexor",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-05-09",
+        "filename": "revision_107557_2025-05-09_15-00-50.txt"
+      },
+      {
         "exercise": "Db push up row",
         "phase": "Ladder 2 to 6",
         "date": "2025-05-28",
@@ -6442,6 +6569,18 @@
       {
         "exercise": "Kb deadlift to high pull",
         "phase": "Ladder 2 to 6",
+        "date": "2025-05-28",
+        "filename": "revision_107988_2025-05-28_14-34-54.txt"
+      },
+      {
+        "exercise": "Drop squat",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-05-28",
+        "filename": "revision_107988_2025-05-28_14-34-54.txt"
+      },
+      {
+        "exercise": "Double crunch",
+        "phase": "Chipper 20/15/10",
         "date": "2025-05-28",
         "filename": "revision_107988_2025-05-28_14-34-54.txt"
       },
@@ -6554,6 +6693,60 @@
         "filename": "revision_108857_2025-08-25_14-56-11.txt"
       },
       {
+        "exercise": "Swings",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108858_2025-08-27_14-51-58.txt"
+      },
+      {
+        "exercise": "Db jack",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108858_2025-08-27_14-51-58.txt"
+      },
+      {
+        "exercise": "Sh. taps",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108858_2025-08-27_14-51-58.txt"
+      },
+      {
+        "exercise": "Db complex",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108858_2025-08-27_14-51-58.txt"
+      },
+      {
+        "exercise": "1 ½",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108858_2025-08-27_14-51-58.txt"
+      },
+      {
+        "exercise": "Swings",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108873_2025-08-27_14-52-56.txt"
+      },
+      {
+        "exercise": "Db jack",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108873_2025-08-27_14-52-56.txt"
+      },
+      {
+        "exercise": "Sh. taps",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108873_2025-08-27_14-52-56.txt"
+      },
+      {
+        "exercise": "Db complex",
+        "phase": "Chipper 20/15/10",
+        "date": "2025-08-27",
+        "filename": "revision_108873_2025-08-27_14-52-56.txt"
+      },
+      {
         "exercise": "Db squat curl press",
         "phase": "Ladder 2-12",
         "date": "2025-09-03",
@@ -6582,6 +6775,42 @@
         "phase": "5 min ladder",
         "date": "2025-09-22",
         "filename": "revision_109591_2025-09-22_14-29-59.txt"
+      },
+      {
+        "exercise": "Band full row",
+        "phase": "Chipper 20/15/10",
+        "date": "2026-01-30",
+        "filename": "revision_111153_2026-01-30_06-32-00.txt"
+      },
+      {
+        "exercise": "Cross chest press",
+        "phase": "Chipper 20/15/10",
+        "date": "2026-01-30",
+        "filename": "revision_111153_2026-01-30_06-32-00.txt"
+      },
+      {
+        "exercise": "Pull thru",
+        "phase": "Chipper 20/15/10",
+        "date": "2026-01-30",
+        "filename": "revision_111153_2026-01-30_06-32-00.txt"
+      },
+      {
+        "exercise": "Db wide out drops",
+        "phase": "Chipper 20/15/10",
+        "date": "2026-02-06",
+        "filename": "revision_111240_2026-02-06_16-02-05.txt"
+      },
+      {
+        "exercise": "Band Punches",
+        "phase": "Chipper 20/15/10",
+        "date": "2026-02-06",
+        "filename": "revision_111240_2026-02-06_16-02-05.txt"
+      },
+      {
+        "exercise": "Slider knee tucks",
+        "phase": "Chipper 20/15/10",
+        "date": "2026-02-06",
+        "filename": "revision_111240_2026-02-06_16-02-05.txt"
       },
       {
         "exercise": "Box push up",
@@ -6614,6 +6843,24 @@
         "filename": "revision_111927_2026-04-13_04-23-15.txt"
       },
       {
+        "exercise": "Band flye",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-04-13",
+        "filename": "revision_111927_2026-04-13_04-23-15.txt"
+      },
+      {
+        "exercise": "Band pull thru",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-04-13",
+        "filename": "revision_111927_2026-04-13_04-23-15.txt"
+      },
+      {
+        "exercise": "Band facepull",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-04-13",
+        "filename": "revision_111927_2026-04-13_04-23-15.txt"
+      },
+      {
         "exercise": "5 to 10",
         "phase": "Ladder",
         "date": "2026-04-15",
@@ -6628,6 +6875,24 @@
       {
         "exercise": "Push up",
         "phase": "Ladder",
+        "date": "2026-04-15",
+        "filename": "revision_111985_2026-04-15_15-00-52.txt"
+      },
+      {
+        "exercise": "Band press",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-04-15",
+        "filename": "revision_111985_2026-04-15_15-00-52.txt"
+      },
+      {
+        "exercise": "Band pull thru",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-04-15",
+        "filename": "revision_111985_2026-04-15_15-00-52.txt"
+      },
+      {
+        "exercise": "Band s. row",
+        "phase": "Chipper 25/20/15/10",
         "date": "2026-04-15",
         "filename": "revision_111985_2026-04-15_15-00-52.txt"
       },
@@ -6752,6 +7017,36 @@
         "filename": "revision_112374_2026-06-15_15-36-01.txt"
       },
       {
+        "exercise": "Band flye",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-06-15",
+        "filename": "revision_112374_2026-06-15_15-36-01.txt"
+      },
+      {
+        "exercise": "Band pull thru",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-06-15",
+        "filename": "revision_112374_2026-06-15_15-36-01.txt"
+      },
+      {
+        "exercise": "Band facepull",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-06-15",
+        "filename": "revision_112374_2026-06-15_15-36-01.txt"
+      },
+      {
+        "exercise": "Wide outs",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-06-15",
+        "filename": "revision_112374_2026-06-15_15-36-01.txt"
+      },
+      {
+        "exercise": "Hip flexor mob",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-06-15",
+        "filename": "revision_112374_2026-06-15_15-36-01.txt"
+      },
+      {
         "exercise": "Heels elev. squat",
         "phase": "Ladder 5 to 10",
         "date": "2026-06-26",
@@ -6790,6 +7085,30 @@
       {
         "exercise": "Wall t spine mob 12",
         "phase": "Ladder",
+        "date": "2026-08-12",
+        "filename": "revision_113075_2026-08-12_14-58-20.txt"
+      },
+      {
+        "exercise": "Band flye",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-08-12",
+        "filename": "revision_113075_2026-08-12_14-58-20.txt"
+      },
+      {
+        "exercise": "Band pull thru",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-08-12",
+        "filename": "revision_113075_2026-08-12_14-58-20.txt"
+      },
+      {
+        "exercise": "Band facepull",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2026-08-12",
+        "filename": "revision_113075_2026-08-12_14-58-20.txt"
+      },
+      {
+        "exercise": "Hip flexor mob",
+        "phase": "Chipper 25/20/15/10",
         "date": "2026-08-12",
         "filename": "revision_113075_2026-08-12_14-58-20.txt"
       },
@@ -6884,6 +7203,30 @@
         "filename": "revision_113583_2026-09-30_15-01-47.txt"
       },
       {
+        "exercise": "Band squat row",
+        "phase": "Chipper 25/20/15",
+        "date": "2026-10-02",
+        "filename": "revision_113666_2026-10-02_15-00-59.txt"
+      },
+      {
+        "exercise": "Drop squat",
+        "phase": "Chipper 25/20/15",
+        "date": "2026-10-02",
+        "filename": "revision_113666_2026-10-02_15-00-59.txt"
+      },
+      {
+        "exercise": "Pull thru",
+        "phase": "Chipper 25/20/15",
+        "date": "2026-10-02",
+        "filename": "revision_113666_2026-10-02_15-00-59.txt"
+      },
+      {
+        "exercise": "Shoulder tap",
+        "phase": "Chipper 25/20/15",
+        "date": "2026-10-02",
+        "filename": "revision_113666_2026-10-02_15-00-59.txt"
+      },
+      {
         "exercise": "Kb swing",
         "phase": "Ladder 2-10",
         "date": "2026-10-19",
@@ -6918,6 +7261,30 @@
         "phase": "Ladder 12-2",
         "date": "2023-08-04",
         "filename": "revision_81393_2023-08-04_14-51-00.txt"
+      },
+      {
+        "exercise": "Band seal jack",
+        "phase": "Chipper 20/15/10",
+        "date": "2023-10-09",
+        "filename": "revision_84564_2023-10-09_14-59-51.txt"
+      },
+      {
+        "exercise": "Band alt row",
+        "phase": "Chipper 20/15/10",
+        "date": "2023-10-09",
+        "filename": "revision_84564_2023-10-09_14-59-51.txt"
+      },
+      {
+        "exercise": "Band squat",
+        "phase": "Chipper 20/15/10",
+        "date": "2023-10-09",
+        "filename": "revision_84564_2023-10-09_14-59-51.txt"
+      },
+      {
+        "exercise": "Band punch",
+        "phase": "Chipper 20/15/10",
+        "date": "2023-10-09",
+        "filename": "revision_84564_2023-10-09_14-59-51.txt"
       },
       {
         "exercise": "Drop squat",
@@ -6956,6 +7323,66 @@
         "filename": "revision_91428_2024-03-18_15-41-45.txt"
       },
       {
+        "exercise": "Band plank jack",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-05-08",
+        "filename": "revision_93869_2024-05-08_15-04-10.txt"
+      },
+      {
+        "exercise": "Band bridge",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-05-08",
+        "filename": "revision_93869_2024-05-08_15-04-10.txt"
+      },
+      {
+        "exercise": "Seated row",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-05-08",
+        "filename": "revision_93869_2024-05-08_15-04-10.txt"
+      },
+      {
+        "exercise": "Band flye",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98735_2024-08-23_14-55-04.txt"
+      },
+      {
+        "exercise": "Band pull thru",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98735_2024-08-23_14-55-04.txt"
+      },
+      {
+        "exercise": "Band facepull",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98735_2024-08-23_14-55-04.txt"
+      },
+      {
+        "exercise": "Hip flexor",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98735_2024-08-23_14-55-04.txt"
+      },
+      {
+        "exercise": "Hands free hips",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98735_2024-08-23_14-55-04.txt"
+      },
+      {
+        "exercise": "Man maker",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98735_2024-08-23_14-55-04.txt"
+      },
+      {
+        "exercise": "Stretch",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98735_2024-08-23_14-55-04.txt"
+      },
+      {
         "exercise": "5 to 10",
         "phase": "Ladder",
         "date": "2024-08-23",
@@ -6976,6 +7403,30 @@
       {
         "exercise": "Wall t spine mob 12",
         "phase": "Ladder",
+        "date": "2024-08-23",
+        "filename": "revision_98843_2024-08-23_15-20-58.txt"
+      },
+      {
+        "exercise": "Band flye",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98843_2024-08-23_15-20-58.txt"
+      },
+      {
+        "exercise": "Band pull thru",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98843_2024-08-23_15-20-58.txt"
+      },
+      {
+        "exercise": "Band facepull",
+        "phase": "Chipper 25/20/15/10",
+        "date": "2024-08-23",
+        "filename": "revision_98843_2024-08-23_15-20-58.txt"
+      },
+      {
+        "exercise": "Hip flexor mob",
+        "phase": "Chipper 25/20/15/10",
         "date": "2024-08-23",
         "filename": "revision_98843_2024-08-23_15-20-58.txt"
       },
@@ -7064,6 +7515,18 @@
         "filename": "revision_99757_2024-09-13_15-32-12.txt"
       },
       {
+        "exercise": "Drop squat",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-09-13",
+        "filename": "revision_99757_2024-09-13_15-32-12.txt"
+      },
+      {
+        "exercise": "Double crunch",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-09-13",
+        "filename": "revision_99757_2024-09-13_15-32-12.txt"
+      },
+      {
         "exercise": "2-12",
         "phase": "Ladder",
         "date": "2024-09-18",
@@ -7086,6 +7549,24 @@
         "phase": "Ladder",
         "date": "2024-09-18",
         "filename": "revision_99961_2024-09-18_15-36-01.txt"
+      },
+      {
+        "exercise": "Band squat row",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-09-20",
+        "filename": "revision_99974_2024-09-20_15-22-34.txt"
+      },
+      {
+        "exercise": "Punches",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-09-20",
+        "filename": "revision_99974_2024-09-20_15-22-34.txt"
+      },
+      {
+        "exercise": "Pull thru",
+        "phase": "Chipper 20/15/10",
+        "date": "2024-09-20",
+        "filename": "revision_99974_2024-09-20_15-22-34.txt"
       }
     ],
     "Strength": [
@@ -9408,24 +9889,6 @@
         "filename": "revision_100171_2024-09-27_14-56-28.txt"
       },
       {
-        "exercise": "Kb swing",
-        "phase": "20/15/10",
-        "date": "2024-09-30",
-        "filename": "revision_100391_2024-09-30_14-51-28.txt"
-      },
-      {
-        "exercise": "Drop squat",
-        "phase": "20/15/10",
-        "date": "2024-09-30",
-        "filename": "revision_100391_2024-09-30_14-51-28.txt"
-      },
-      {
-        "exercise": "Slider tucks",
-        "phase": "20/15/10",
-        "date": "2024-09-30",
-        "filename": "revision_100391_2024-09-30_14-51-28.txt"
-      },
-      {
         "exercise": "Band drag curl",
         "phase": "3 x 12",
         "date": "2024-10-02",
@@ -9478,24 +9941,6 @@
         "phase": "3 x 10",
         "date": "2024-10-02",
         "filename": "revision_100574_2024-10-02_14-54-21.txt"
-      },
-      {
-        "exercise": "Band full row",
-        "phase": "20/15/10",
-        "date": "2024-10-04",
-        "filename": "revision_100575_2024-10-04_14-58-03.txt"
-      },
-      {
-        "exercise": "Cross chest press",
-        "phase": "20/15/10",
-        "date": "2024-10-04",
-        "filename": "revision_100575_2024-10-04_14-58-03.txt"
-      },
-      {
-        "exercise": "Pull thru",
-        "phase": "20/15/10",
-        "date": "2024-10-04",
-        "filename": "revision_100575_2024-10-04_14-58-03.txt"
       },
       {
         "exercise": "R. Lunge Row",
@@ -10704,26 +11149,8 @@
         "filename": "revision_104138_2025-01-03_15-55-42.txt"
       },
       {
-        "exercise": "Band full row",
-        "phase": "20/15/10",
-        "date": "2025-01-03",
-        "filename": "revision_104139_2025-01-03_15-56-42.txt"
-      },
-      {
-        "exercise": "Cross chest press",
-        "phase": "20/15/10",
-        "date": "2025-01-03",
-        "filename": "revision_104139_2025-01-03_15-56-42.txt"
-      },
-      {
-        "exercise": "Pull thru",
-        "phase": "20/15/10",
-        "date": "2025-01-03",
-        "filename": "revision_104139_2025-01-03_15-56-42.txt"
-      },
-      {
         "exercise": "3 way push up 5 each",
-        "phase": "5 per side",
+        "phase": "Lunge matrix 5 per side",
         "date": "2025-01-03",
         "filename": "revision_104139_2025-01-03_15-56-42.txt"
       },
@@ -11538,30 +11965,6 @@
         "filename": "revision_105830_2025-03-12_14-59-21.txt"
       },
       {
-        "exercise": "Band press",
-        "phase": "25/20/15/10",
-        "date": "2025-03-14",
-        "filename": "revision_105883_2025-03-14_14-53-55.txt"
-      },
-      {
-        "exercise": "Band pull thru",
-        "phase": "25/20/15/10",
-        "date": "2025-03-14",
-        "filename": "revision_105883_2025-03-14_14-53-55.txt"
-      },
-      {
-        "exercise": "Band seated row",
-        "phase": "25/20/15/10",
-        "date": "2025-03-14",
-        "filename": "revision_105883_2025-03-14_14-53-55.txt"
-      },
-      {
-        "exercise": "Hip flexor mob",
-        "phase": "25/20/15/10",
-        "date": "2025-03-14",
-        "filename": "revision_105883_2025-03-14_14-53-55.txt"
-      },
-      {
         "exercise": "Wall sit hammer curl",
         "phase": "60 sec",
         "date": "2025-03-14",
@@ -12048,30 +12451,6 @@
         "filename": "revision_106563_2025-04-09_14-56-42.txt"
       },
       {
-        "exercise": "Band full row",
-        "phase": "20/15/10",
-        "date": "2025-04-11",
-        "filename": "revision_106564_2025-04-11_14-39-29.txt"
-      },
-      {
-        "exercise": "Cross chest press",
-        "phase": "20/15/10",
-        "date": "2025-04-11",
-        "filename": "revision_106564_2025-04-11_14-39-29.txt"
-      },
-      {
-        "exercise": "Pull thru",
-        "phase": "20/15/10",
-        "date": "2025-04-11",
-        "filename": "revision_106564_2025-04-11_14-39-29.txt"
-      },
-      {
-        "exercise": "Hip Flexor",
-        "phase": "20/15/10",
-        "date": "2025-04-11",
-        "filename": "revision_106564_2025-04-11_14-39-29.txt"
-      },
-      {
         "exercise": "Ankle mobility 12 per side",
         "phase": "12 per side",
         "date": "2025-04-11",
@@ -12456,30 +12835,6 @@
         "filename": "revision_107528_2025-05-05_14-53-11.txt"
       },
       {
-        "exercise": "Band full row",
-        "phase": "20/15/10",
-        "date": "2025-05-09",
-        "filename": "revision_107557_2025-05-09_15-00-50.txt"
-      },
-      {
-        "exercise": "Cross chest press",
-        "phase": "20/15/10",
-        "date": "2025-05-09",
-        "filename": "revision_107557_2025-05-09_15-00-50.txt"
-      },
-      {
-        "exercise": "Pull thru",
-        "phase": "20/15/10",
-        "date": "2025-05-09",
-        "filename": "revision_107557_2025-05-09_15-00-50.txt"
-      },
-      {
-        "exercise": "Hip Flexor",
-        "phase": "20/15/10",
-        "date": "2025-05-09",
-        "filename": "revision_107557_2025-05-09_15-00-50.txt"
-      },
-      {
         "exercise": "Ankle mobility 12 per side",
         "phase": "12 per side",
         "date": "2025-05-09",
@@ -12620,18 +12975,6 @@
       {
         "exercise": "Db kickbacks",
         "phase": "3 x 12",
-        "date": "2025-05-28",
-        "filename": "revision_107988_2025-05-28_14-34-54.txt"
-      },
-      {
-        "exercise": "Drop squat",
-        "phase": "20/15/10",
-        "date": "2025-05-28",
-        "filename": "revision_107988_2025-05-28_14-34-54.txt"
-      },
-      {
-        "exercise": "Double crunch",
-        "phase": "20/15/10",
         "date": "2025-05-28",
         "filename": "revision_107988_2025-05-28_14-34-54.txt"
       },
@@ -12925,6 +13268,12 @@
       },
       {
         "exercise": "Band press",
+        "phase": "3 x 12",
+        "date": "2025-07-11",
+        "filename": "revision_108836_2025-07-11_14-58-39.txt"
+      },
+      {
+        "exercise": "Cat cow 5 x",
         "phase": "3 x 12",
         "date": "2025-07-11",
         "filename": "revision_108836_2025-07-11_14-58-39.txt"
@@ -13278,36 +13627,6 @@
         "filename": "revision_108857_2025-08-25_14-56-11.txt"
       },
       {
-        "exercise": "Swings",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108858_2025-08-27_14-51-58.txt"
-      },
-      {
-        "exercise": "Db jack",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108858_2025-08-27_14-51-58.txt"
-      },
-      {
-        "exercise": "Sh. taps",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108858_2025-08-27_14-51-58.txt"
-      },
-      {
-        "exercise": "Db complex",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108858_2025-08-27_14-51-58.txt"
-      },
-      {
-        "exercise": "1 ½",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108858_2025-08-27_14-51-58.txt"
-      },
-      {
         "exercise": "Rdl",
         "phase": "3 x 6",
         "date": "2025-08-27",
@@ -13348,30 +13667,6 @@
         "phase": "3 x 10",
         "date": "2025-08-27",
         "filename": "revision_108858_2025-08-27_14-51-58.txt"
-      },
-      {
-        "exercise": "Swings",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108873_2025-08-27_14-52-56.txt"
-      },
-      {
-        "exercise": "Db jack",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108873_2025-08-27_14-52-56.txt"
-      },
-      {
-        "exercise": "Sh. taps",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108873_2025-08-27_14-52-56.txt"
-      },
-      {
-        "exercise": "Db complex",
-        "phase": "20/15/10",
-        "date": "2025-08-27",
-        "filename": "revision_108873_2025-08-27_14-52-56.txt"
       },
       {
         "exercise": "Rdl",
@@ -14028,24 +14323,6 @@
         "filename": "revision_111132_2026-01-21_16-03-29.txt"
       },
       {
-        "exercise": "Band full row",
-        "phase": "20/15/10",
-        "date": "2026-01-30",
-        "filename": "revision_111153_2026-01-30_06-32-00.txt"
-      },
-      {
-        "exercise": "Cross chest press",
-        "phase": "20/15/10",
-        "date": "2026-01-30",
-        "filename": "revision_111153_2026-01-30_06-32-00.txt"
-      },
-      {
-        "exercise": "Pull thru",
-        "phase": "20/15/10",
-        "date": "2026-01-30",
-        "filename": "revision_111153_2026-01-30_06-32-00.txt"
-      },
-      {
         "exercise": "Press bridge",
         "phase": "3 x 12",
         "date": "2026-01-30",
@@ -14182,24 +14459,6 @@
         "phase": "3 x 12",
         "date": "2026-02-04",
         "filename": "revision_111155_2026-02-04_15-55-36.txt"
-      },
-      {
-        "exercise": "Db wide out drops",
-        "phase": "20/15/10",
-        "date": "2026-02-06",
-        "filename": "revision_111240_2026-02-06_16-02-05.txt"
-      },
-      {
-        "exercise": "Band Punches",
-        "phase": "20/15/10",
-        "date": "2026-02-06",
-        "filename": "revision_111240_2026-02-06_16-02-05.txt"
-      },
-      {
-        "exercise": "Slider knee tucks",
-        "phase": "20/15/10",
-        "date": "2026-02-06",
-        "filename": "revision_111240_2026-02-06_16-02-05.txt"
       },
       {
         "exercise": "Fb lunge L",
@@ -15162,24 +15421,6 @@
         "filename": "revision_111927_2026-04-13_04-23-15.txt"
       },
       {
-        "exercise": "Band flye",
-        "phase": "25/20/15/10",
-        "date": "2026-04-13",
-        "filename": "revision_111927_2026-04-13_04-23-15.txt"
-      },
-      {
-        "exercise": "Band pull thru",
-        "phase": "25/20/15/10",
-        "date": "2026-04-13",
-        "filename": "revision_111927_2026-04-13_04-23-15.txt"
-      },
-      {
-        "exercise": "Band facepull",
-        "phase": "25/20/15/10",
-        "date": "2026-04-13",
-        "filename": "revision_111927_2026-04-13_04-23-15.txt"
-      },
-      {
         "exercise": "Wall sit hammer curl",
         "phase": "60 sec",
         "date": "2026-04-13",
@@ -15218,24 +15459,6 @@
       {
         "exercise": "Plank jacks",
         "phase": "25/5x3 band",
-        "date": "2026-04-15",
-        "filename": "revision_111985_2026-04-15_15-00-52.txt"
-      },
-      {
-        "exercise": "Band press",
-        "phase": "25/20/15/10",
-        "date": "2026-04-15",
-        "filename": "revision_111985_2026-04-15_15-00-52.txt"
-      },
-      {
-        "exercise": "Band pull thru",
-        "phase": "25/20/15/10",
-        "date": "2026-04-15",
-        "filename": "revision_111985_2026-04-15_15-00-52.txt"
-      },
-      {
-        "exercise": "Band s. row",
-        "phase": "25/20/15/10",
         "date": "2026-04-15",
         "filename": "revision_111985_2026-04-15_15-00-52.txt"
       },
@@ -15517,6 +15740,12 @@
       },
       {
         "exercise": "Band press",
+        "phase": "3 x 12",
+        "date": "2026-04-27",
+        "filename": "revision_112071_2026-04-27_14-46-29.txt"
+      },
+      {
+        "exercise": "Cat cow 5 x",
         "phase": "3 x 12",
         "date": "2026-04-27",
         "filename": "revision_112071_2026-04-27_14-46-29.txt"
@@ -15958,36 +16187,6 @@
         "phase": "25/5x3 band",
         "date": "2026-06-10",
         "filename": "revision_112350_2026-06-10_15-31-18.txt"
-      },
-      {
-        "exercise": "Band flye",
-        "phase": "25/20/15/10",
-        "date": "2026-06-15",
-        "filename": "revision_112374_2026-06-15_15-36-01.txt"
-      },
-      {
-        "exercise": "Band pull thru",
-        "phase": "25/20/15/10",
-        "date": "2026-06-15",
-        "filename": "revision_112374_2026-06-15_15-36-01.txt"
-      },
-      {
-        "exercise": "Band facepull",
-        "phase": "25/20/15/10",
-        "date": "2026-06-15",
-        "filename": "revision_112374_2026-06-15_15-36-01.txt"
-      },
-      {
-        "exercise": "Wide outs",
-        "phase": "25/20/15/10",
-        "date": "2026-06-15",
-        "filename": "revision_112374_2026-06-15_15-36-01.txt"
-      },
-      {
-        "exercise": "Hip flexor mob",
-        "phase": "25/20/15/10",
-        "date": "2026-06-15",
-        "filename": "revision_112374_2026-06-15_15-36-01.txt"
       },
       {
         "exercise": "Wall sit hammer curl",
@@ -16842,30 +17041,6 @@
         "filename": "revision_113039_2026-08-10_14-58-50.txt"
       },
       {
-        "exercise": "Band flye",
-        "phase": "25/20/15/10",
-        "date": "2026-08-12",
-        "filename": "revision_113075_2026-08-12_14-58-20.txt"
-      },
-      {
-        "exercise": "Band pull thru",
-        "phase": "25/20/15/10",
-        "date": "2026-08-12",
-        "filename": "revision_113075_2026-08-12_14-58-20.txt"
-      },
-      {
-        "exercise": "Band facepull",
-        "phase": "25/20/15/10",
-        "date": "2026-08-12",
-        "filename": "revision_113075_2026-08-12_14-58-20.txt"
-      },
-      {
-        "exercise": "Hip flexor mob",
-        "phase": "25/20/15/10",
-        "date": "2026-08-12",
-        "filename": "revision_113075_2026-08-12_14-58-20.txt"
-      },
-      {
         "exercise": "Wall sit hammer curl",
         "phase": "60 sec",
         "date": "2026-08-12",
@@ -17442,30 +17617,6 @@
         "filename": "revision_113583_2026-09-30_15-01-47.txt"
       },
       {
-        "exercise": "Band squat row",
-        "phase": "25/20/15",
-        "date": "2026-10-02",
-        "filename": "revision_113666_2026-10-02_15-00-59.txt"
-      },
-      {
-        "exercise": "Drop squat",
-        "phase": "25/20/15",
-        "date": "2026-10-02",
-        "filename": "revision_113666_2026-10-02_15-00-59.txt"
-      },
-      {
-        "exercise": "Pull thru",
-        "phase": "25/20/15",
-        "date": "2026-10-02",
-        "filename": "revision_113666_2026-10-02_15-00-59.txt"
-      },
-      {
-        "exercise": "Shoulder tap",
-        "phase": "25/20/15",
-        "date": "2026-10-02",
-        "filename": "revision_113666_2026-10-02_15-00-59.txt"
-      },
-      {
         "exercise": "Lunge squat lunge",
         "phase": "40/15x2",
         "date": "2026-10-02",
@@ -17988,30 +18139,6 @@
         "filename": "revision_83578_2023-09-20_14-57-51.txt"
       },
       {
-        "exercise": "Band seal jack",
-        "phase": "20/15/10",
-        "date": "2023-10-09",
-        "filename": "revision_84564_2023-10-09_14-59-51.txt"
-      },
-      {
-        "exercise": "Band alt row",
-        "phase": "20/15/10",
-        "date": "2023-10-09",
-        "filename": "revision_84564_2023-10-09_14-59-51.txt"
-      },
-      {
-        "exercise": "Band squat",
-        "phase": "20/15/10",
-        "date": "2023-10-09",
-        "filename": "revision_84564_2023-10-09_14-59-51.txt"
-      },
-      {
-        "exercise": "Band punch",
-        "phase": "20/15/10",
-        "date": "2023-10-09",
-        "filename": "revision_84564_2023-10-09_14-59-51.txt"
-      },
-      {
         "exercise": "Db Rdl",
         "phase": "4 x 8",
         "date": "2023-10-09",
@@ -18310,24 +18437,6 @@
         "phase": "2 x 10",
         "date": "2024-04-19",
         "filename": "revision_93087_2024-04-19_14-57-35.txt"
-      },
-      {
-        "exercise": "Band plank jack",
-        "phase": "20/15/10",
-        "date": "2024-05-08",
-        "filename": "revision_93869_2024-05-08_15-04-10.txt"
-      },
-      {
-        "exercise": "Band bridge",
-        "phase": "20/15/10",
-        "date": "2024-05-08",
-        "filename": "revision_93869_2024-05-08_15-04-10.txt"
-      },
-      {
-        "exercise": "Seated row",
-        "phase": "20/15/10",
-        "date": "2024-05-08",
-        "filename": "revision_93869_2024-05-08_15-04-10.txt"
       },
       {
         "exercise": "Db floor press",
@@ -18688,72 +18797,6 @@
         "phase": "3 x 8",
         "date": "2024-08-19",
         "filename": "revision_98733_2024-08-19_14-58-57.txt"
-      },
-      {
-        "exercise": "Band flye",
-        "phase": "20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98735_2024-08-23_14-55-04.txt"
-      },
-      {
-        "exercise": "Band pull thru",
-        "phase": "20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98735_2024-08-23_14-55-04.txt"
-      },
-      {
-        "exercise": "Band facepull",
-        "phase": "20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98735_2024-08-23_14-55-04.txt"
-      },
-      {
-        "exercise": "Hip flexor",
-        "phase": "20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98735_2024-08-23_14-55-04.txt"
-      },
-      {
-        "exercise": "Hands free hips",
-        "phase": "20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98735_2024-08-23_14-55-04.txt"
-      },
-      {
-        "exercise": "Man maker",
-        "phase": "20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98735_2024-08-23_14-55-04.txt"
-      },
-      {
-        "exercise": "Stretch",
-        "phase": "20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98735_2024-08-23_14-55-04.txt"
-      },
-      {
-        "exercise": "Band flye",
-        "phase": "25/20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98843_2024-08-23_15-20-58.txt"
-      },
-      {
-        "exercise": "Band pull thru",
-        "phase": "25/20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98843_2024-08-23_15-20-58.txt"
-      },
-      {
-        "exercise": "Band facepull",
-        "phase": "25/20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98843_2024-08-23_15-20-58.txt"
-      },
-      {
-        "exercise": "Hip flexor mob",
-        "phase": "25/20/15/10",
-        "date": "2024-08-23",
-        "filename": "revision_98843_2024-08-23_15-20-58.txt"
       },
       {
         "exercise": "Wall sit hammer curl",
@@ -19152,18 +19195,6 @@
         "filename": "revision_99757_2024-09-13_15-32-12.txt"
       },
       {
-        "exercise": "Drop squat",
-        "phase": "20/15/10",
-        "date": "2024-09-13",
-        "filename": "revision_99757_2024-09-13_15-32-12.txt"
-      },
-      {
-        "exercise": "Double crunch",
-        "phase": "20/15/10",
-        "date": "2024-09-13",
-        "filename": "revision_99757_2024-09-13_15-32-12.txt"
-      },
-      {
         "exercise": "Leg circle L",
         "phase": "25/10x3",
         "date": "2024-09-16",
@@ -19284,26 +19315,8 @@
         "filename": "revision_99961_2024-09-18_15-36-01.txt"
       },
       {
-        "exercise": "Band squat row",
-        "phase": "20/15/10",
-        "date": "2024-09-20",
-        "filename": "revision_99974_2024-09-20_15-22-34.txt"
-      },
-      {
-        "exercise": "Punches",
-        "phase": "20/15/10",
-        "date": "2024-09-20",
-        "filename": "revision_99974_2024-09-20_15-22-34.txt"
-      },
-      {
-        "exercise": "Pull thru",
-        "phase": "20/15/10",
-        "date": "2024-09-20",
-        "filename": "revision_99974_2024-09-20_15-22-34.txt"
-      },
-      {
         "exercise": "3 way push up 5 each",
-        "phase": "5 per side",
+        "phase": "Lunge matrix 5 per side",
         "date": "2024-09-20",
         "filename": "revision_99974_2024-09-20_15-22-34.txt"
       },
@@ -19519,11 +19532,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Kb swing",
               "Drop squat",
@@ -19643,11 +19652,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band full row",
               "Cross chest press",
@@ -21102,11 +21107,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band full row",
               "Cross chest press",
@@ -21114,11 +21115,7 @@
             ]
           },
           {
-            "phase": "Lunge matrix",
-            "exercises": []
-          },
-          {
-            "phase": "5 per side",
+            "phase": "Lunge matrix 5 per side",
             "exercises": [
               "3 way push up 5 each"
             ]
@@ -21872,11 +21869,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "25/20/15/10",
+            "phase": "Chipper 25/20/15/10",
             "exercises": [
               "Band press",
               "Band pull thru",
@@ -22345,11 +22338,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band full row",
               "Cross chest press",
@@ -22733,11 +22722,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band full row",
               "Cross chest press",
@@ -22875,11 +22860,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Drop squat",
               "Double crunch"
@@ -23179,12 +23160,9 @@
             "exercises": [
               "Band s. Row",
               "Rdl",
-              "Band press"
+              "Band press",
+              "Cat cow 5 x"
             ]
-          },
-          {
-            "phase": "Cat cow 5 x",
-            "exercises": []
           },
           {
             "phase": "2x12",
@@ -23554,11 +23532,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Swings",
               "Db jack",
@@ -23608,11 +23582,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Swings",
               "Db jack",
@@ -24230,11 +24200,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band full row",
               "Cross chest press",
@@ -24362,11 +24328,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Db wide out drops",
               "Band Punches",
@@ -25177,11 +25139,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "25/20/15/10",
+            "phase": "Chipper 25/20/15/10",
             "exercises": [
               "Band flye",
               "Band pull thru",
@@ -25222,11 +25180,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "25/20/15/10",
+            "phase": "Chipper 25/20/15/10",
             "exercises": [
               "Band press",
               "Band pull thru",
@@ -25406,12 +25360,9 @@
             "exercises": [
               "Band s. Row",
               "Rdl",
-              "Band press"
+              "Band press",
+              "Cat cow 5 x"
             ]
-          },
-          {
-            "phase": "Cat cow 5 x",
-            "exercises": []
           },
           {
             "phase": "2x12",
@@ -25834,11 +25785,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "25/20/15/10",
+            "phase": "Chipper 25/20/15/10",
             "exercises": [
               "Band flye",
               "Band pull thru",
@@ -26705,11 +26652,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "25/20/15/10",
+            "phase": "Chipper 25/20/15/10",
             "exercises": [
               "Band flye",
               "Band pull thru",
@@ -27275,11 +27218,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "25/20/15",
+            "phase": "Chipper 25/20/15",
             "exercises": [
               "Band squat row",
               "Drop squat",
@@ -27791,11 +27730,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band seal jack",
               "Band alt row",
@@ -28086,11 +28021,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band plank jack",
               "Band bridge",
@@ -28381,11 +28312,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band flye",
               "Band pull thru",
@@ -28421,11 +28348,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "25/20/15/10",
+            "phase": "Chipper 25/20/15/10",
             "exercises": [
               "Band flye",
               "Band pull thru",
@@ -28873,11 +28796,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Drop squat",
               "Double crunch"
@@ -28985,11 +28904,7 @@
             ]
           },
           {
-            "phase": "Chipper",
-            "exercises": []
-          },
-          {
-            "phase": "20/15/10",
+            "phase": "Chipper 20/15/10",
             "exercises": [
               "Band squat row",
               "Punches",
@@ -28997,11 +28912,7 @@
             ]
           },
           {
-            "phase": "Lunge matrix",
-            "exercises": []
-          },
-          {
-            "phase": "5 per side",
+            "phase": "Lunge matrix 5 per side",
             "exercises": [
               "3 way push up 5 each"
             ]
@@ -29138,11 +29049,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Kb swing",
             "Drop squat",
@@ -29258,11 +29165,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band full row",
             "Cross chest press",
@@ -30667,11 +30570,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band full row",
             "Cross chest press",
@@ -30679,11 +30578,7 @@
           ]
         },
         {
-          "phase": "Lunge matrix",
-          "exercises": []
-        },
-        {
-          "phase": "5 per side",
+          "phase": "Lunge matrix 5 per side",
           "exercises": [
             "3 way push up 5 each"
           ]
@@ -31405,11 +31300,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "25/20/15/10",
+          "phase": "Chipper 25/20/15/10",
           "exercises": [
             "Band press",
             "Band pull thru",
@@ -31860,11 +31751,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band full row",
             "Cross chest press",
@@ -32234,11 +32121,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band full row",
             "Cross chest press",
@@ -32370,11 +32253,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Drop squat",
             "Double crunch"
@@ -32660,12 +32539,9 @@
           "exercises": [
             "Band s. Row",
             "Rdl",
-            "Band press"
+            "Band press",
+            "Cat cow 5 x"
           ]
-        },
-        {
-          "phase": "Cat cow 5 x",
-          "exercises": []
         },
         {
           "phase": "2x12",
@@ -33017,11 +32893,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Swings",
             "Db jack",
@@ -33071,11 +32943,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Swings",
             "Db jack",
@@ -33669,11 +33537,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band full row",
             "Cross chest press",
@@ -33795,11 +33659,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Db wide out drops",
             "Band Punches",
@@ -34580,11 +34440,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "25/20/15/10",
+          "phase": "Chipper 25/20/15/10",
           "exercises": [
             "Band flye",
             "Band pull thru",
@@ -34623,11 +34479,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "25/20/15/10",
+          "phase": "Chipper 25/20/15/10",
           "exercises": [
             "Band press",
             "Band pull thru",
@@ -34799,12 +34651,9 @@
           "exercises": [
             "Band s. Row",
             "Rdl",
-            "Band press"
+            "Band press",
+            "Cat cow 5 x"
           ]
-        },
-        {
-          "phase": "Cat cow 5 x",
-          "exercises": []
         },
         {
           "phase": "2x12",
@@ -35211,11 +35060,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "25/20/15/10",
+          "phase": "Chipper 25/20/15/10",
           "exercises": [
             "Band flye",
             "Band pull thru",
@@ -36050,11 +35895,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "25/20/15/10",
+          "phase": "Chipper 25/20/15/10",
           "exercises": [
             "Band flye",
             "Band pull thru",
@@ -36598,11 +36439,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "25/20/15",
+          "phase": "Chipper 25/20/15",
           "exercises": [
             "Band squat row",
             "Drop squat",
@@ -37092,11 +36929,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band seal jack",
             "Band alt row",
@@ -37373,11 +37206,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band plank jack",
             "Band bridge",
@@ -37654,11 +37483,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band flye",
             "Band pull thru",
@@ -37694,11 +37519,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "25/20/15/10",
+          "phase": "Chipper 25/20/15/10",
           "exercises": [
             "Band flye",
             "Band pull thru",
@@ -38130,11 +37951,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Drop squat",
             "Double crunch"
@@ -38236,11 +38053,7 @@
           ]
         },
         {
-          "phase": "Chipper",
-          "exercises": []
-        },
-        {
-          "phase": "20/15/10",
+          "phase": "Chipper 20/15/10",
           "exercises": [
             "Band squat row",
             "Punches",
@@ -38248,11 +38061,7 @@
           ]
         },
         {
-          "phase": "Lunge matrix",
-          "exercises": []
-        },
-        {
-          "phase": "5 per side",
+          "phase": "Lunge matrix 5 per side",
           "exercises": [
             "3 way push up 5 each"
           ]

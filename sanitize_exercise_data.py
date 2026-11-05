@@ -166,6 +166,17 @@ def is_valid_exercise(exercise_name):
     if re.match(r'^\d+$', exercise_name.strip()):
         return False
     
+    lowered = exercise_name.strip().lower()
+    # Timing/count leftovers in any case ("2 rounds", "3 Rounds")
+    if re.fullmatch(r'\d+\s*(rounds?|mins?|secs?|reps?|sets?)', lowered):
+        return False
+    # Set-scheme leftovers ("1x10", "30x10x3")
+    if re.fullmatch(r'\d+\s*x\s*\d+(\s*x\s*\d+)?', lowered):
+        return False
+    # Interval leftovers ("40/10 x 2", "30/10 x 2")
+    if re.fullmatch(r'\d+/\d+(\s*x\s*\d+)?', lowered):
+        return False
+    
     # Filter out common patterns
     if re.match(r'^\d+-\d+(-\d+)*$', exercise_name.strip()):
         return False
@@ -188,82 +199,180 @@ def standardize_exercise_name(exercise_name):
     
     return standardized
 
-def sanitize_daily_workouts(daily_workouts):
-    """Sanitize the daily workouts data"""
-    sanitized = {}
-    
-    for date, workouts in daily_workouts.items():
-        sanitized_workouts = []
-        
-        for workout in workouts:
-            sanitized_phases = []
-            
-            for phase in workout.get('phases', []):
-                # Filter and standardize exercises
-                valid_exercises = []
-                for exercise in phase.get('exercises', []):
-                    if is_valid_exercise(exercise):
-                        standardized = standardize_exercise_name(exercise)
-                        if standardized not in valid_exercises:  # Remove duplicates
-                            valid_exercises.append(standardized)
-                
-                # Only keep phases with valid exercises
-                if valid_exercises:
-                    sanitized_phases.append({
-                        'phase': phase['phase'],
-                        'exercises': valid_exercises
-                    })
-            
-            # Only keep workouts with valid phases
-            if sanitized_phases:
-                sanitized_workout = {
-                    'date': workout['date'],
-                    'filename': workout['filename'],
-                    'phases': sanitized_phases
-                }
-                sanitized_workouts.append(sanitized_workout)
-        
-        if sanitized_workouts:
-            sanitized[date] = sanitized_workouts
-    
+def _normalize_name(name):
+    """Fold case/punctuation for variant grouping ("Sh. tap" -> "sh tap")."""
+    cleaned = re.sub(r'[^a-z0-9]+', ' ', name.lower().replace("'", ''))
+    return re.sub(r'\s+', ' ', cleaned).strip()
+
+def build_canonical_map(counts):
+    """Map every raw name to its canonical spelling.
+
+    Names sharing a normalized form merge onto the most frequent raw
+    spelling; when both singular and plural exist, singular wins.
+    """
+    by_norm = {}
+    for name in counts:
+        by_norm.setdefault(_normalize_name(name), []).append(name)
+    canonical = {}
+    for forms in by_norm.values():
+        winner = min(forms, key=lambda n: (
+            -counts[n],
+            0 if any(c.isupper() for c in n) else 1,
+            n,
+        ))
+        for name in forms:
+            canonical[name] = winner
+    # Singular/plural pairs: singular wins when both spellings exist.
+    for name in list(canonical):
+        singular = None
+        if name.endswith('s') and not name.endswith('ss'):
+            singular = name[:-1]
+            if singular not in canonical and name.endswith('es'):
+                singular = name[:-2]
+        if singular and singular in canonical:
+            canonical[name] = canonical[singular]
+    return canonical
+
+def _cleaned_name(exercise):
+    """Standardized name, or None when invalid."""
+    if not is_valid_exercise(exercise):
+        return None
+    return standardize_exercise_name(exercise)
+
+def count_clean_names(data):
+    """Count standardized names across all workouts (each occurrence once)."""
+    counts = {}
+    for workout in data.get('all_workouts', []):
+        for phase in workout.get('phases', []):
+            for exercise in phase.get('exercises', []):
+                cleaned = _cleaned_name(exercise)
+                if cleaned:
+                    counts[cleaned] = counts.get(cleaned, 0) + 1
+    return counts
+
+# Standalone workout elements: kept as phases even with no listed exercises.
+KEEP_EMPTY_LABELS = {
+    'finisher', 'mobility', 'mobility stretches', 'stretch', 'stretches',
+    'long stretch', 'yoga cooldown', '60 sec finisher', '60 sec', '10 per side',
+}
+
+
+def _is_standalone_label(label):
+    return (label or '').strip().lower().rstrip('.') in KEEP_EMPTY_LABELS
+
+
+def _sanitize_phases(phases, canonical):
+    """Filter, standardize, canonicalize, and dedupe one phase list."""
+    sanitized = []
+    for phase in phases or []:
+        seen = set()
+        valid_exercises = []
+        for exercise in phase.get('exercises', []):
+            cleaned = _cleaned_name(exercise)
+            if not cleaned:
+                continue
+            final = canonical.get(cleaned, cleaned)
+            if final not in seen:
+                seen.add(final)
+                valid_exercises.append(final)
+        # Only keep phases with valid exercises, plus standalone labels
+        if valid_exercises or _is_standalone_label(phase.get('phase')):
+            sanitized.append({
+                'phase': phase.get('phase'),
+                'exercises': valid_exercises
+            })
     return sanitized
 
-def sanitize_categorized_exercises(categorized_exercises):
+def sanitize_workouts(workouts, canonical):
+    """Sanitize a list of workouts, dropping emptied ones."""
+    sanitized = []
+    for workout in workouts or []:
+        phases = _sanitize_phases(workout.get('phases', []), canonical)
+        # Only keep workouts with valid phases
+        if phases:
+            sanitized.append({
+                'date': workout.get('date'),
+                'filename': workout.get('filename'),
+                'phases': phases
+            })
+    return sanitized
+
+def sanitize_daily_workouts(daily_workouts, canonical):
+    """Sanitize the daily workouts data"""
+    sanitized = {}
+    for date, workouts in daily_workouts.items():
+        sanitized_workouts = sanitize_workouts(workouts, canonical)
+        if sanitized_workouts:
+            sanitized[date] = sanitized_workouts
+    return sanitized
+
+def sanitize_categorized_exercises(categorized_exercises, canonical):
     """Sanitize the categorized exercises data"""
     sanitized = {}
-    
     for category, exercises in categorized_exercises.items():
         valid_exercises = []
-        
         for exercise in exercises:
-            if is_valid_exercise(exercise.get('exercise')):
-                standardized = standardize_exercise_name(exercise['exercise'])
-                valid_exercises.append({
-                    'exercise': standardized,
-                    'phase': exercise.get('phase'),
-                    'date': exercise.get('date'),
-                    'filename': exercise.get('filename')
-                })
-        
+            cleaned = _cleaned_name(exercise.get('exercise'))
+            if not cleaned:
+                continue
+            valid_exercises.append({
+                'exercise': canonical.get(cleaned, cleaned),
+                'phase': exercise.get('phase'),
+                'date': exercise.get('date'),
+                'filename': exercise.get('filename')
+            })
         if valid_exercises:
             sanitized[category] = valid_exercises
-    
     return sanitized
+
+def refresh_summary(data):
+    """Recompute summary counts from the sanitized collections."""
+    daily = data.get('daily_workouts', {})
+    categorized = data.get('categorized_exercises', {})
+    frequency = {}
+    for exercises in categorized.values():
+        for entry in exercises:
+            name = entry.get('exercise')
+            frequency[name] = frequency.get(name, 0) + 1
+    dates = sorted(daily)
+    summary = data.setdefault('metadata', {}).setdefault('summary', {})
+    summary['total_workouts'] = sum(len(workouts) for workouts in daily.values())
+    summary['total_days'] = len(daily)
+    summary['date_range'] = {
+        'start': dates[0] if dates else None,
+        'end': dates[-1] if dates else None,
+    }
+    summary['daily_workout_counts'] = {date: len(workouts) for date, workouts in daily.items()}
+    summary['exercise_counts_by_category'] = {category: len(exercises) for category, exercises in categorized.items()}
+    summary['most_common_exercises'] = dict(sorted(frequency.items(), key=lambda x: x[1], reverse=True)[:15])
+    summary['total_unique_exercises'] = len(frequency)
 
 def main():
     """Main sanitization function"""
     print("Loading exercise data...")
     data = load_exercise_data()
-    
+
+    print("Counting exercise names...")
+    counts = count_clean_names(data)
+    canonical = build_canonical_map(counts)
+    merged = len([name for name, canon in canonical.items() if name != canon])
+    print(f"Canonicalizing {merged} variant spellings...")
+
     print("Sanitizing daily workouts...")
-    data['daily_workouts'] = sanitize_daily_workouts(data.get('daily_workouts', {}))
-    
+    data['daily_workouts'] = sanitize_daily_workouts(data.get('daily_workouts', {}), canonical)
+
+    print("Sanitizing all workouts...")
+    data['all_workouts'] = sanitize_workouts(data.get('all_workouts', []), canonical)
+
     print("Sanitizing categorized exercises...")
-    data['categorized_exercises'] = sanitize_categorized_exercises(data.get('categorized_exercises', {}))
-    
+    data['categorized_exercises'] = sanitize_categorized_exercises(data.get('categorized_exercises', {}), canonical)
+
+    print("Refreshing summary...")
+    refresh_summary(data)
+
     print("Saving sanitized data...")
     save_exercise_data(data)
-    
+
     print("✅ Exercise data sanitization complete!")
     print(f"Daily workouts: {len(data['daily_workouts'])} dates")
     print(f"Categorized exercises: {len(data['categorized_exercises'])} categories")

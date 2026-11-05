@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Exploration & Insights</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="public/css/style.css" rel="stylesheet">
+    <link href="public/css/design-system.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .fade-in {
@@ -16,54 +18,42 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 min-h-screen">
-    <!-- Header -->
-    <header class="bg-white shadow-sm border-b">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
-                    <a href="index.html" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors">
-                        <i class="fas fa-dumbbell mr-2 text-blue-600"></i>
-                        Workout Generator
-                    </a>
-                </div>
-                <nav class="flex space-x-4">
-                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors">
-                        <i class="fas fa-home mr-1"></i>
-                        Home
-                    </a>
-                    <a href="workout-history.html" class="text-gray-600 hover:text-blue-600 transition-colors">
-                        <i class="fas fa-history mr-1"></i>
-                        Workout History
-                    </a>
-                    <a href="all-workouts.html" class="text-gray-600 hover:text-blue-600 transition-colors">
-                        <i class="fas fa-list-alt mr-1"></i>
-                        All Workouts
-                    </a>
-                    <a href="exercise-list.html" class="text-gray-600 hover:text-blue-600 transition-colors">
-                        <i class="fas fa-dumbbell mr-1"></i>
-                        Exercise List
-                    </a>
-                    <span class="text-blue-600 font-medium">
-                        <i class="fas fa-chart-line mr-1"></i>
-                        Data Exploration
-                    </span>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-
-    <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-        <!-- Page Header -->
-        <div class="mb-8">
-            <h1 class="text-3xl font-bold text-gray-800 mb-2">
-                <i class="fas fa-chart-line mr-3 text-blue-600"></i>
+<body class="app-background">
+    <div class="app-container">
+        <!-- Header -->
+        <div class="app-header">
+            <h1>
+                <i class="fas fa-chart-line"></i>
                 Data Exploration & Insights
             </h1>
-            <p class="text-gray-600">Explore your workout data and discover patterns</p>
+            <p>Explore your workout data and discover patterns</p>
         </div>
+
+        <!-- Navigation -->
+        <div class="app-nav">
+            <div class="app-nav-container">
+                <a href="index.html" class="app-nav-link">
+                    <i class="fas fa-home"></i>Home
+                </a>
+                <a href="data-exploration.html" class="app-nav-link active">
+                    <i class="fas fa-chart-bar"></i>Data
+                </a>
+                <a href="workout-history.html" class="app-nav-link">
+                    <i class="fas fa-history"></i>History
+                </a>
+                <a href="all-workouts.html" class="app-nav-link">
+                    <i class="fas fa-list-alt"></i>All Workouts
+                </a>
+                <a href="exercise-list.html" class="app-nav-link">
+                    <i class="fas fa-dumbbell"></i>Exercises
+                </a>
+                <a href="select-exercise.html" class="app-nav-link">
+                    <i class="fas fa-hand-pointer"></i>Select
+                </a>
+            </div>
+        </div>
+        <!-- Page content -->
+        <main class="pb-8">
 
         <!-- Data Insights -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
@@ -129,7 +119,8 @@
                 <!-- Will be populated by JavaScript -->
             </div>
         </div>
-    </main>
+        </main>
+    </div>
 
     <script src="public/js/exercise-data.js"></script>
     <script src="public/js/data-exploration-static.js"></script>

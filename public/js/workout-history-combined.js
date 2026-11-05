@@ -2,6 +2,7 @@
 let allWorkouts = [];
 let filteredWorkouts = [];
 let currentView = 'table'; // 'table' or 'card'
+let modalWorkout = null;
 
 document.addEventListener('DOMContentLoaded', function() {
     loadAllWorkouts();
@@ -362,6 +363,7 @@ function viewWorkoutDetails(workoutId) {
     });
     
     modalTitle.textContent = `Workout from ${formattedDate}`;
+    modalWorkout = workout;
     
     const workoutTable = createGoogleDocsStyleTable(workout.phases || []);
     
@@ -378,10 +380,18 @@ function viewWorkoutDetails(workoutId) {
             </div>
         </div>
         
+        <div class="mt-3 mb-3">
+            <button id="modalCopyBtn" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors text-sm">
+                <i class="fas fa-copy mr-2"></i>Copy Table
+            </button>
+        </div>
+
         <div class="overflow-x-auto">
             ${workoutTable}
         </div>
     `;
+    const copyBtn = document.getElementById('modalCopyBtn');
+    if (copyBtn) copyBtn.addEventListener('click', copyModalTable);
     
     modal.classList.remove('hidden');
 }
@@ -519,6 +529,90 @@ function clearFilters() {
     
     filteredWorkouts = [...allWorkouts];
     displayWorkouts(filteredWorkouts);
+}
+
+function escapeHtml(text) {
+    return String(text)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+function buildCleanCopyTable(phases) {
+    const usable = (phases || []).filter(p => p.exercises && p.exercises.length > 0);
+    if (usable.length === 0) return '';
+    const headers = usable.map(p => escapeHtml(p.phase || p.name || 'Unknown')).join('</th><th>');
+    const maxRows = Math.max(...usable.map(p => p.exercises.length));
+    let rows = '';
+    for (let i = 0; i < maxRows; i++) {
+        const cells = usable.map(p => {
+            const ex = p.exercises[i];
+            if (ex === undefined || ex === null) return '';
+            const name = typeof ex === 'string' ? ex : (ex.name || ex.exercise || String(ex));
+            return escapeHtml(name);
+        }).join('</td><td>');
+        rows += `<tr><td>${cells}</td></tr>`;
+    }
+    return `<table border="1" style="border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px;"><thead><tr><th style="padding: 8px; background-color: #f5f5f5; text-align: center; font-weight: bold;">${headers}</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+
+function buildCopyText(phases) {
+    const usable = (phases || []).filter(p => p.exercises && p.exercises.length > 0);
+    const lines = [usable.map(p => p.phase || p.name || 'Unknown').join('\t')];
+    const maxRows = usable.length ? Math.max(...usable.map(p => p.exercises.length)) : 0;
+    for (let i = 0; i < maxRows; i++) {
+        lines.push(usable.map(p => {
+            const ex = p.exercises[i];
+            if (ex === undefined || ex === null) return '';
+            return typeof ex === 'string' ? ex : (ex.name || ex.exercise || String(ex));
+        }).join('\t'));
+    }
+    return lines.join('\n');
+}
+
+function copyModalTable() {
+    if (!modalWorkout || !modalWorkout.phases) return;
+    const table = buildCleanCopyTable(modalWorkout.phases);
+    if (!table) return;
+    const text = buildCopyText(modalWorkout.phases);
+    const done = () => flashCopyButton();
+    if (navigator.clipboard && typeof ClipboardItem !== 'undefined') {
+        const item = new ClipboardItem({
+            'text/html': new Blob([table], { type: 'text/html' }),
+            'text/plain': new Blob([text], { type: 'text/plain' })
+        });
+        navigator.clipboard.write([item]).then(done).catch(() => fallbackCopyText(text, done));
+    } else if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopyText(text, done));
+    } else {
+        fallbackCopyText(text, done);
+    }
+}
+
+function fallbackCopyText(text, done) {
+    try {
+        const area = document.createElement('textarea');
+        area.value = text;
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand('copy');
+        document.body.removeChild(area);
+        done();
+    } catch (e) {
+        flashCopyButton(true);
+    }
+}
+
+function flashCopyButton(failed) {
+    const btn = document.getElementById('modalCopyBtn');
+    if (!btn) return;
+    const original = btn.innerHTML;
+    btn.innerHTML = failed
+        ? '<i class="fas fa-times mr-2"></i>Copy failed'
+        : '<i class="fas fa-check mr-2"></i>Copied!';
+    setTimeout(() => { btn.innerHTML = original; }, 2000);
 }
 
 function closeModal() {

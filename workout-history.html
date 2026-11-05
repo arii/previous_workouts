@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout History - Workout Generator</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="public/css/style.css" rel="stylesheet">
+    <link href="public/css/design-system.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .workout-card {
@@ -16,29 +18,37 @@
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
+<body class="app-background">
+    <div class="app-container">
         <!-- Header -->
-        <div class="text-center mb-6">
-            <h1 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">
-                <i class="fas fa-history text-blue-600 mr-2"></i>
+        <div class="app-header">
+            <h1>
+                <i class="fas fa-history"></i>
                 Workout History
             </h1>
-            <p class="text-sm sm:text-base text-gray-600 mb-4">Complete workout history from your training log</p>
+            <p>Complete workout history from your training log</p>
+        </div>
             
-            <!-- Navigation -->
-            <div class="flex flex-wrap justify-center gap-3 mb-6">
-                <a href="index.html" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
-                    <i class="fas fa-home mr-2"></i>
-                    Home
+        <!-- Navigation -->
+        <div class="app-nav">
+            <div class="app-nav-container">
+                <a href="index.html" class="app-nav-link">
+                    <i class="fas fa-home"></i>Home
                 </a>
-                <a href="data-exploration.html" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg transition-colors">
-                    <i class="fas fa-chart-bar mr-2"></i>
-                    Data Exploration
+                <a href="data-exploration.html" class="app-nav-link">
+                    <i class="fas fa-chart-bar"></i>Data
                 </a>
-                <a href="exercise-list.html" class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg transition-colors">
-                    <i class="fas fa-list mr-2"></i>
-                    Exercise List
+                <a href="workout-history.html" class="app-nav-link active">
+                    <i class="fas fa-history"></i>History
+                </a>
+                <a href="all-workouts.html" class="app-nav-link">
+                    <i class="fas fa-list-alt"></i>All Workouts
+                </a>
+                <a href="exercise-list.html" class="app-nav-link">
+                    <i class="fas fa-dumbbell"></i>Exercises
+                </a>
+                <a href="select-exercise.html" class="app-nav-link">
+                    <i class="fas fa-hand-pointer"></i>Select
                 </a>
             </div>
         </div>

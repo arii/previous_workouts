@@ -9,6 +9,16 @@ import re
 from datetime import datetime
 from pathlib import Path
 
+_SCHEME_ONLY_RE = re.compile(
+    r'^\d[\d\sx/\.\-]*$|^\d+\s*per\s*side$|^\d+\s*(?:min|sec)\.?$|^\d+\s*x\s*\d+$',
+    re.IGNORECASE,
+)
+
+
+def _is_pure_scheme(text):
+    """True when a line is only a set/rep scheme ("3 x 12", "20/15/10")."""
+    return bool(_SCHEME_ONLY_RE.match(text.strip()))
+
 def parse_workout_file(file_path):
     """Parse a workout file and extract all phases and exercises"""
     try:
@@ -47,9 +57,7 @@ def parse_workout_file(file_path):
         phase_indicators = ['Tabata', 'Spartan', 'Emom', 'EMOM', '3 x', '3x', '2 x', '2x', '4 x', '4x', '5 x', '5x', 'Chipper', 'Lunge matrix', 'Hip rotations', 'Ladder', 'Mobility stretches', 'Mobility', 'Stretches']
         is_phase_header = any(indicator in line for indicator in phase_indicators)
         
-        # Special handling for workout types that might have timing on the next line
-        workout_types = ['Chipper', 'Spartan', 'Emom', 'EMOM', 'Tabata']
-        is_workout_type = any(workout_type in line for workout_type in workout_types)
+        # (Workout-type + timing combining is handled just below, before the header branch.)
         
         # Also check for timing patterns like "30/10x3", "25/5x3", "20/15/10", "Ladder 2-12", etc.
         timing_pattern = re.match(r'^(\d+/\d+x\d+|\d+/\d+/\d+|\d+\s*min|\d+\s*per\s*side|Ladder\s+\d+-\d+|\d+\s*sec)', line)
@@ -58,7 +66,20 @@ def parse_workout_file(file_path):
         standalone_exercises = ['Mobility stretches', 'Mobility', 'Stretches', 'stretch', 'Cool down', 'Cooldown', 'Finisher', "T's, w's, l's", "T's, w's, l's ", "Hip rotations"]
         is_standalone = any(exercise in line for exercise in standalone_exercises)
         
-        if is_phase_header or timing_pattern or is_standalone:
+        # A bare descriptor header followed by a pure scheme line keeps them
+        # together ("Chipper" + "20/15/10" -> "Chipper 20/15/10") instead of
+        # stranding an empty phase. Pure-scheme headers still split.
+        if (timing_pattern and current_phase and not current_exercises
+                and not _is_pure_scheme(current_phase) and _is_pure_scheme(line)):
+            current_phase = f"{current_phase} {line}"
+            continue
+        # Words ending in a bare set scheme ("Cat cow 5 x") are exercises.
+        force_exercise = (
+            not _is_pure_scheme(line)
+            and re.search(r'[A-Za-z]{3,}', line) is not None
+            and re.search(r'\d+\s*x\s*$', line) is not None
+        )
+        if not force_exercise and (is_phase_header or timing_pattern or is_standalone):
             # Save previous phase if it exists
             if current_phase:
                 phases.append({
@@ -69,10 +90,6 @@ def parse_workout_file(file_path):
             # Start new phase
             current_phase = line
             current_exercises = []
-        elif is_workout_type and current_phase and timing_pattern:
-            # This is a timing specification for the current workout type
-            # Combine the workout type with the timing
-            current_phase = f"{current_phase} {line}"
         else:
             # Check if this line is actually a timing pattern that should start a new phase
             timing_in_exercise = re.match(r'^(\d+/\d+\s+\d+/\d+|\d+/\d+x\d+|\d+/\d+/\d+|\d+\s*min|\d+\s*per\s*side|Ladder\s+\d+-\d+|\d+\s*sec)', line)
@@ -211,7 +228,8 @@ def regenerate_workout_data():
                 'date_range': date_range,
                 'daily_workout_counts': {date: len(workouts) for date, workouts in daily_workouts.items()},
                 'exercise_counts_by_category': exercise_counts,
-                'most_common_exercises': dict(most_common)
+                'most_common_exercises': dict(most_common),
+                'total_unique_exercises': len(exercise_frequency)
             }
         },
         'categorized_exercises': categorized_exercises,

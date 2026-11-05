@@ -96,6 +96,9 @@ This project is configured for GitHub Pages deployment:
 4. **Folder**: Select `/ (root)`
 5. **Save**: The site will be available at `https://username.github.io/previous_workouts/`
 
+See [DEPLOY.md](DEPLOY.md) for the full workflow: local preview, committing,
+publishing to Pages, updating the dev box, and refreshing the workout data.
+
 ## Features in Detail
 
 ### Workout Generation
