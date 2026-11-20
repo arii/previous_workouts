@@ -111,3 +111,11 @@ client_secret*.json
 
 # Python virtual environment
 .venv/
+
+# Local tool runtime state (generated per checkout, never commit)
+.td_rag/
+.agent_tool_receipt.json
+.agents/plans/
+
+# Bytecode caches outside exercise_data
+__pycache__/
