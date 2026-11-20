@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Workout - Workout Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="public/css/style.css" rel="stylesheet">
+    <link href="public/css/design-system.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="app-background">
+    <div class="app-container">
+        <!-- Header -->
+        <div class="app-header">
+            <h1>
+                <i class="fas fa-hand-pointer"></i>
+                Select Workout
+            </h1>
+            <p>Pull a complete past workout — take a surprise pick or browse history</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="app-nav">
+            <div class="app-nav-container">
+                <a href="index.html" class="app-nav-link">
+                    <i class="fas fa-home"></i>Home
+                </a>
+                <a href="data-exploration.html" class="app-nav-link">
+                    <i class="fas fa-chart-bar"></i>Data
+                </a>
+                <a href="workout-history.html" class="app-nav-link">
+                    <i class="fas fa-history"></i>History
+                </a>
+                <a href="all-workouts.html" class="app-nav-link">
+                    <i class="fas fa-list-alt"></i>All Workouts
+                </a>
+                <a href="exercise-list.html" class="app-nav-link">
+                    <i class="fas fa-dumbbell"></i>Exercises
+                </a>
+                <a href="select-exercise.html" class="app-nav-link active">
+                    <i class="fas fa-hand-pointer"></i>Select
+                </a>
+            </div>
+        </div>
+
+        <!-- Current Selection -->
+        <div class="bg-white rounded-xl shadow-sm p-4 sm:p-6 mb-6" aria-live="polite">
+            <div class="text-sm font-medium text-gray-500 mb-2">Current selection</div>
+            <div id="noSelection" class="py-4 text-center text-gray-500">
+                <i class="fas fa-dice text-3xl mb-3 block text-gray-300"></i>
+                <p>Nothing selected yet — hit <strong>Surprise Me</strong> or pick from history below.</p>
+            </div>
+            <div id="selectionDetail" class="hidden">
+                <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-4">
+                    <div class="flex-1 min-w-0">
+                        <div id="currentName" class="text-2xl sm:text-3xl font-bold text-gray-900">-</div>
+                        <div id="currentMeta" class="mt-1 text-sm text-gray-600">-</div>
+                    </div>
+                    <button id="copyBtn" class="shrink-0 bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg transition-colors text-sm font-medium">
+                        <i class="fas fa-copy mr-2"></i>Copy table
+                    </button>
+                </div>
+                <div id="currentTable" class="overflow-x-auto"></div>
+            </div>
+        </div>
+
+        <!-- Surprise -->
+        <div class="text-center mb-6">
+            <button id="surpriseBtn" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-200 shadow-lg">
+                <i class="fas fa-dice mr-2"></i>Surprise Me
+            </button>
+            <p class="text-sm text-gray-500 mt-2">Random past workout from the current filters — confirm before it updates.</p>
+        </div>
+
+        <!-- Candidate Preview -->
+        <div id="previewCard" class="hidden bg-white rounded-xl shadow-md p-4 sm:p-6 mb-6 border-2 border-blue-200">
+            <div class="text-sm font-medium text-blue-600 mb-2">
+                <i class="fas fa-eye mr-1"></i>Candidate — not selected yet
+            </div>
+            <div id="previewName" class="text-xl sm:text-2xl font-bold text-gray-900">-</div>
+            <div id="previewMeta" class="mt-1 text-sm text-gray-600">-</div>
+            <div class="flex flex-col sm:flex-row gap-3 mt-4">
+                <button id="confirmBtn" class="flex-1 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-lg font-semibold transition-colors">
+                    <i class="fas fa-check mr-2"></i>Use this workout
+                </button>
+                <button id="shuffleBtn" class="flex-1 bg-blue-100 hover:bg-blue-200 text-blue-800 px-4 py-3 rounded-lg font-semibold transition-colors">
+                    <i class="fas fa-shuffle mr-2"></i>Shuffle
+                </button>
+                <button id="dismissBtn" class="sm:w-auto bg-gray-100 hover:bg-gray-200 text-gray-600 px-4 py-3 rounded-lg transition-colors" aria-label="Dismiss candidate">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Browse Filters -->
+        <div class="bg-white rounded-xl shadow-sm p-4 sm:p-6 mb-6">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+                <div>
+                    <label for="searchInput" class="block text-sm font-medium text-gray-700 mb-2">Contains exercise</label>
+                    <div class="relative">
+                        <input type="text" id="searchInput" placeholder="e.g. squat..."
+                               class="w-full pl-10 pr-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base">
+                        <i class="fas fa-search absolute left-3 top-3 sm:top-4 text-gray-400"></i>
+                    </div>
+                </div>
+                <div>
+                    <label for="dateFilter" class="block text-sm font-medium text-gray-700 mb-2">Workout date</label>
+                    <select id="dateFilter" class="w-full px-3 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base">
+                        <option value="">Any date</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="sortBy" class="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
+                    <select id="sortBy" class="w-full px-3 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Showing Count -->
+        <div class="text-center mb-4">
+            <div class="text-sm text-gray-600">
+                <span id="showingCount" class="font-semibold">0</span> workouts — tap one to preview it
+            </div>
+        </div>
+
+        <!-- Workout Grid -->
+        <div id="exerciseGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-8">
+            <!-- Workout buttons will be loaded here -->
+        </div>
+
+        <div id="noResults" class="hidden p-8 text-center text-gray-500 mb-8">
+            <i class="fas fa-search text-4xl mb-4"></i>
+            <p class="text-lg">No workouts match — loosen the filters</p>
+        </div>
+
+        <!-- Recent Picks -->
+        <div id="recentPicks" class="hidden bg-white rounded-xl shadow-sm p-4 sm:p-6 mb-8">
+            <div class="text-sm font-medium text-gray-500 mb-3">Recent picks — tap to select again</div>
+            <div id="recentRow" class="flex flex-wrap gap-2"></div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="hidden fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50">
+        <div class="flex items-center">
+            <i class="fas fa-check mr-2"></i>
+            <span id="toastText">Done</span>
+        </div>
+    </div>
+
+    <script src="public/js/exercise-data.js"></script>
+    <script src="public/js/select-exercise.js"></script>
+</body>
+</html>
